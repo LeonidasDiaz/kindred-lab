@@ -1,0 +1,28 @@
+{
+  "runas": {
+    "PressTheAttack": {
+      "var": "var1",
+      "div": 1
+    },
+    "Triumph": {
+      "var": "var1",
+      "div": 1
+    },
+    "LastStand": {
+      "var": "var1",
+      "div": 1
+    },
+    "BonePlating": {
+      "var": "var1",
+      "div": 1
+    },
+    "Unflinching": {
+      "var": "var1",
+      "div": 1
+    },
+    "LethalTempo": {
+      "var": "var2",
+      "div": 1
+    }
+  }
+}

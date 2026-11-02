@@ -1,0 +1,88 @@
+{
+  "descripcion": "Reglas de runas para Kindred. Se responden 3 preguntas en la selección de campeones. Editable a mano; las claves de runa son las de Data Dragon.",
+  "fijas": {
+    "arbol_principal": "Precision",
+    "fila_1": "Triumph",
+    "fila_2": "LegendAlacrity"
+  },
+  "preguntas": [
+    {
+      "id": "alcance_temprano",
+      "pregunta": "¿Alguien me puede alcanzar sin fallar en los primeros 5 minutos? Habilidad que no se puede esquivar, como la W de Pantheon, el R de Jarvan o la W de Ryze",
+      "si": {
+        "secundaria": "Resolve",
+        "incluye": [
+          "Unflinching"
+        ],
+        "fila_3": "LastStand"
+      },
+      "no": {
+        "secundaria": "Domination",
+        "incluye": [
+          "SuddenImpact",
+          "TreasureHunter"
+        ],
+        "fila_3": "CutDown"
+      }
+    },
+    {
+      "id": "tipo_de_dano",
+      "aplica_si": {
+        "alcance_temprano": "si"
+      },
+      "pregunta": "¿Qué daño me mata más?",
+      "opciones": {
+        "AP": {
+          "incluye": [
+            "Conditioning"
+          ]
+        },
+        "AD": {
+          "incluye": [
+            "BonePlating"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duracion_peleas",
+      "pregunta": "¿Cómo van a ser las peleas?",
+      "opciones": {
+        "cortas_burst": {
+          "piedra_angular": "PressTheAttack"
+        },
+        "largas_contra_tanques": {
+          "piedra_angular": "LethalTempo"
+        }
+      },
+      "por_defecto": "cortas_burst"
+    }
+  ],
+  "excepciones": [
+    {
+      "cuando": "El equipo enemigo es casi todo tanques, sin burst: no vas a bajar del 60% de vida aunque te alcancen. Aun con Valor, usa Corte.",
+      "cambia": {
+        "fila_3": "CutDown"
+      },
+      "estado": "hipotesis: probar al menos 5 partidas antes de volverla regla"
+    },
+    {
+      "cuando": "Con Valor, si el enemigo tiene daño verdadero importante (Maestro Yi, Vayne, Fiora, Camille): Crecimiento Excesivo en lugar de Inquebrantable. La vida sirve contra el daño verdadero y además agranda el escudo de Sterak (60% de la vida adicional). Contra mucho control, se queda Inquebrantable.",
+      "cambia": {
+        "incluye": [
+          "Overgrowth"
+        ]
+      },
+      "estado": "hipotesis: 1 partida (victoria vs Maestro Yi); probar al menos 5"
+    }
+  ],
+  "notas": [
+    "La fila 3 sigue a la secundaria: Valor (me alcanzan, bajo de vida) -> La Última Batalla; Dominación (no me alcanzan, peleo con vida alta) -> Corte.",
+    "Esa relación es una hipótesis: validarla con 'partidas resumen' comparando La Última Batalla con Valor y Corte con Dominación, y llenando alcance_temprano en el registro.",
+    "Coraza Ósea (BonePlating) y Acondicionamiento (Conditioning) están en la misma fila de Valor: no se combinan.",
+    "Acondicionamiento se activa a los 12 min. Si el daño que te mata en los primeros minutos es AD (p. ej. Lee Sin), Coraza Ósea protege antes.",
+    "Revitalizar y Inquebrantable están en la misma fila: no se combinan. Revitalizar no mostró ventaja medible (su número incluye la curación a aliados y enemigos de tu definitiva).",
+    "Golpe de Gracia (CoupDeGrace) rindió poco (20 de daño por minuto frente a 70-115 de las demás de su fila).",
+    "Inquebrantable con Coraza Ósea rindió mejor contra equipos con mucho control (p. ej. Rengar, Akali, Nautilus, Samira, Garen)."
+  ]
+}

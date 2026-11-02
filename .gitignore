@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+data/raw/
+secretos.json
+# El registro de partidas es personal: no se publica.
+registro/

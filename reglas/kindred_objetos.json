@@ -1,0 +1,106 @@
+{
+  "descripcion": "Objetos defensivos para Kindred según lo que te mata. Editable a mano. 'probado' = te funcionó en partida; 'hipotesis' = falta probarlo. Datos de objetos del parche 16.15.1: confirma precios y pasivas en la tienda.",
+  "base_de_dano": {
+    "nota": "Filo del Infinito y Lord Dominik o Recordatorio Mortal son fijos. Recordatorio Mortal en lugar de Dominik cuando el rival se cura mucho (Briar, Mundo, Maestro Yi, Sylas, Zac, Kayn rojo)."
+  },
+  "situaciones": [
+    {
+      "contra": "Críticos (Caitlyn, Jhin, Tristana, Samira) o peleadores cuerpo a cuerpo que se lanzan encima (Briar, Garen, Tryndamere)",
+      "objeto": "Presagio de Randuin",
+      "por_que": "75 de armadura, 350 de vida, 30% menos daño de críticos y activa que ralentiza 70% durante 2 s.",
+      "estado": "probado",
+      "evidencia": [
+        "vs Briar, Caitlyn, Brand, Lulu, Kayn: la activa frenó a Briar en su frenesí"
+      ]
+    },
+    {
+      "contra": "Daño mágico repartido (varios AP, ninguno muy fedeado)",
+      "objeto": "Fauces de Malmortius",
+      "por_que": "60 AD, 40 RM, escudo mágico al bajar del 30% y 10% de omnivampirismo. Es Salvavidas: no se combina con Sterak ni Arcoescudo.",
+      "estado": "probado",
+      "evidencia": [
+        "vs Fizz, Hwei, Nami, Jhin, Tryndamere: Fauces + Filo de la Noche para no morir de un combo (victoria)"
+      ]
+    },
+    {
+      "contra": "Un mago de burst AP fedeado que te mata de un combo",
+      "objeto": "Rukerno Kaénico",
+      "por_que": "80 RM, 400 de vida y un escudo mágico del 15% de tu vida máxima antes de la pelea. No da daño; contra magos de poke (Lux, Vel'Koz, Xerath) llegas sin el escudo. No es Salvavidas: se combina con Sterak (Fauces no).",
+      "estado": "hipotesis",
+      "evidencia": [
+        "vs Katarina con 25 cargas de Mejai: habría sido el siguiente objeto tras Sterak (no probado)"
+      ]
+    },
+    {
+      "contra": "Asesinos que abren con una habilidad (atadura de Morgana o Lux, marca de Zed, definitiva de Veigar o Cho'Gath)",
+      "objeto": "Filo de la Noche",
+      "por_que": "50 AD, 250 de vida, 15 de letalidad y un escudo antihechizos cada 40 s. Contra 2 asesinos solo frena al primero.",
+      "estado": "probado",
+      "evidencia": [
+        "junto con Fauces vs Fizz y Hwei (victoria)"
+      ]
+    },
+    {
+      "contra": "Daño mezclado (AD y AP) o mucho control",
+      "objeto": "Guantelete de Sterak",
+      "por_que": "400 de vida, 20% de tenacidad y escudo del 60% de tu vida adicional al bajar del 30% (más grande con Crecimiento Excesivo). Es Salvavidas.",
+      "estado": "hipotesis",
+      "evidencia": [
+        "vs Naafiri, Sylas, Lux, Miss Fortune, Mundo: habría servido más que la Placa por la tenacidad",
+        "vs Katarina, Seraphine, Viego, Ezreal, Mundo: Sterak 1º estaba bien (daño mezclado), pero Katarina juntó 25 cargas de Mejai y me borraba: faltó resistencia mágica (derrota)"
+      ]
+    },
+    {
+      "contra": "Equipo casi todo de daño físico",
+      "objeto": "Danza de la Muerte",
+      "por_que": "60 AD, 50 de armadura, 15 AH. Como campeón de rango solo retrasa el 10% del daño; su valor es la armadura y el daño. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura.",
+      "estado": "hipotesis"
+    },
+    {
+      "contra": "2 o más asesinos de daño físico con poco control",
+      "objeto": "Placa Hexperimental",
+      "por_que": "40 AD, 20% de VA, 450 de vida y definitiva cerca de un 25% más seguido; al usarla, +50% de VA y +20% de velocidad 8 s. No da tenacidad.",
+      "estado": "hipotesis",
+      "evidencia": [
+        "vs Naafiri, Sylas, Lux, Miss Fortune, Mundo (3er objeto): neutral; se notó la movilidad con la definitiva"
+      ]
+    },
+    {
+      "contra": "Peleas en grupo donde tu equipo puede aprovechar tu reaparición",
+      "objeto": "Ángel Guardián",
+      "por_que": "55 AD, 45 de armadura, revive. Si te atrapan solo, solo alarga tu muerte.",
+      "estado": "hipotesis"
+    },
+    {
+      "contra": "Supresión (definitiva de Malzahar, Warwick, Skarner, Urgot) o ceguera (Q de Teemo)",
+      "objeto": "Cimitarra Mercurial",
+      "por_que": "50 AD, 35 RM, 10% de robo de vida. Su activa quita supresión, ceguera, aturdimientos y raíces (no levantamientos por el aire) y te da 50% de velocidad 2 s. La ceguera de Teemo anula tus ataques básicos.",
+      "estado": "probado",
+      "evidencia": [
+        "regla del jugador: siempre contra Malzahar y Teemo",
+        "vs Alistar, Zed, Ekko, Singed, Teemo: sirvió (victoria)",
+        "vs Pyke, Warwick, Sylas, Yunara, Kled: en cuanto la compré, Warwick dejó de usar su definitiva en mí (disuasión) (victoria)"
+      ]
+    },
+    {
+      "contra": "Equipos AP con control",
+      "objeto": "Al Filo de la Cordura",
+      "por_que": "50% de velocidad de ataque, 45 RM, 20% de tenacidad y 45 de daño mágico por golpe. Es objeto de daño para Kindred y defensa a la vez. No es Salvavidas: se combina con Fauces o Sterak. No reemplaza al Rey Arruinado: misma VA con Berserker, pero sin AD ni daño por % de vida. Solo como respuesta tardía si vas atrás contra mucho AP y control sin otra fuente de RM.",
+      "estado": "dudoso (2 partidas sin convencer)",
+      "evidencia": [
+        "vs Alistar, Zed, Ekko, Singed, Teemo (junto con Cimitarra): no convenció, vendida por Filo del Infinito (victoria). Posible causa: ya tenía RM de la Cimitarra y faltaba el daño crítico.",
+        "vs Kai'Sa, Xerath, Orianna, Jax, Cho'Gath (2º objeto, con Botas de Mercurio, yendo adelante): quitó daño; misma VA que Berserker + Rey Arruinado pero sin 40 AD ni el 6% de vida actual por golpe, clave contra Cho'Gath (victoria)"
+      ]
+    }
+  ],
+  "descartados": [
+    "Velo de la Banshee y Zhonya: dan AP.",
+    "Placa del Hombre Muerto y objetos de tanque puros: sin daño.",
+    "Randuin contra asesinos de letalidad: su pasiva contra críticos no hace nada.",
+    "Objetos de peleador (Shojin, Hambre Infinita, Cielo Desgarrado, Cuchilla Oscura, Rompeavances, Hidra Titánica): vida y AD sin velocidad de ataque ni crítico; Shojin además potencia habilidades, no ataques básicos.",
+    "Apariencia Espiritual: +25% de curaciones recibidas combina con tu definitiva y Triunfo, pero no da daño; contra AP, Rukerno Kaénico protege más."
+  ],
+  "reglas_generales": [
+    "Volver a preguntar '¿quién me mata?' en cada vuelta a base: si un enemigo se dispara (p. ej. Katarina con Mejai, Viego con sus bajas), el siguiente objeto defensivo responde a esa persona aunque el plan inicial fuera otro."
+  ]
+}

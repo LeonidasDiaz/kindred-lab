@@ -1,0 +1,26 @@
+name: Pruebas
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pruebas:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.10", "3.13"]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONPATH: src
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Pruebas (sin red, datos sintéticos)
+        run: python -m unittest discover -s tests -v
+      - name: Reglas válidas para el parche guardado
+        run: python -m kindred_lab reglas validar

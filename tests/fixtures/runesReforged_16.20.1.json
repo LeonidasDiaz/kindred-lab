@@ -1,0 +1,137 @@
+[
+ {
+  "id": 8000,
+  "key": "Precision",
+  "icon": "x",
+  "name": "Precisión",
+  "slots": [
+   {
+    "runes": [
+     {
+      "id": 8005,
+      "key": "PressTheAttack",
+      "icon": "x.png",
+      "name": "Estrategia Ofensiva",
+      "shortDesc": "Tras <b>3</b> ataques básicos consecutiv",
+      "longDesc": "Tras <b>3</b> ataques básicos consecutivos<br>inflige 40-160 de daño adaptable y aumenta tu daño un 9%."
+     },
+     {
+      "id": 8008,
+      "key": "LethalTempo",
+      "icon": "x.png",
+      "name": "Cadencia Letal",
+      "shortDesc": "Atacar a un campeón otorga 6% (4% a dist",
+      "longDesc": "Atacar a un campeón otorga 6% (4% a distancia) de Velocidad de Ataque hasta 6 veces."
+     }
+    ]
+   },
+   {
+    "runes": [
+     {
+      "id": 9111,
+      "key": "Triumph",
+      "icon": "x.png",
+      "name": "Triunfo",
+      "shortDesc": "Los derribos restauran 5% de vida faltan",
+      "longDesc": "Los derribos restauran 5% de vida faltante y 20 de oro."
+     }
+    ]
+   },
+   {
+    "runes": [
+     {
+      "id": 9104,
+      "key": "LegendAlacrity",
+      "icon": "x.png",
+      "name": "Leyenda: Celeridad",
+      "shortDesc": "3% de Velocidad de Ataque más 1.5% por a",
+      "longDesc": "3% de Velocidad de Ataque más 1.5% por acumulación (10)."
+     }
+    ]
+   },
+   {
+    "runes": [
+     {
+      "id": 8014,
+      "key": "CoupDeGrace",
+      "icon": "x.png",
+      "name": "Golpe de Gracia",
+      "shortDesc": "8% más de daño a campeones con menos del",
+      "longDesc": "8% más de daño a campeones con menos del 40% de vida."
+     },
+     {
+      "id": 8299,
+      "key": "LastStand",
+      "icon": "x.png",
+      "name": "La Última Batalla",
+      "shortDesc": "5%-11% más de daño mientras tengas menos",
+      "longDesc": "5%-11% más de daño mientras tengas menos del 60% de vida."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 8400,
+  "key": "Resolve",
+  "icon": "x",
+  "name": "Valor",
+  "slots": [
+   {
+    "runes": [
+     {
+      "id": 8437,
+      "key": "GraspOfTheUndying",
+      "icon": "x.png",
+      "name": "Agarre del Inmortal",
+      "shortDesc": "...",
+      "longDesc": "..."
+     }
+    ]
+   },
+   {
+    "runes": []
+   },
+   {
+    "runes": [
+     {
+      "id": 8429,
+      "key": "Conditioning",
+      "icon": "x.png",
+      "name": "Acondicionamiento",
+      "shortDesc": "Tras 12 min obtienes resistencias.",
+      "longDesc": "Tras 12 min obtienes resistencias."
+     },
+     {
+      "id": 8473,
+      "key": "BonePlating",
+      "icon": "x.png",
+      "name": "Coraza Ósea",
+      "shortDesc": "Reduce el daño de los siguientes 3 ataqu",
+      "longDesc": "Reduce el daño de los siguientes 3 ataques."
+     }
+    ]
+   },
+   {
+    "runes": [
+     {
+      "id": 8242,
+      "key": "Unflinching",
+      "icon": "x.png",
+      "name": "Inquebrantable",
+      "shortDesc": "Al ser controlado ganas resistencias.",
+      "longDesc": "Al ser controlado ganas resistencias."
+     },
+     {
+      "id": 8453,
+      "key": "Revitalize",
+      "icon": "x.png",
+      "name": "Revitalizar",
+      "shortDesc": "Aumenta curaciones y escudos.",
+      "longDesc": "Aumenta curaciones y escudos."
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {"id": 8005, "name": "Estrategia Ofensiva", "endOfGameStatDescs": ["Total de daño: @eogvar1@", "Daño adicional: @eogvar2@"]},
+ {"id": 9111, "name": "Triunfo", "endOfGameStatDescs": ["Total de vida restaurada: @eogvar1@", "Total de oro adicional otorgado: @eogvar2@"]},
+ {"id": 9104, "name": "Leyenda: Celeridad", "endOfGameStatDescs": ["Tiempo completado: @eogvar1@:@eogvar2@"]},
+ {"id": 8299, "name": "La Última Batalla", "endOfGameStatDescs": ["Total de daño adicional: @eogvar1@"]},
+ {"id": 8473, "name": "Coraza Ósea", "endOfGameStatDescs": ["Total de daño bloqueado: @eogvar1@"]},
+ {"id": 8242, "name": "Inquebrantable", "endOfGameStatDescs": ["Seg en combate con resistencias adicionales: @eogvar1@"]},
+ {"id": 8008, "name": "Cadencia Letal", "endOfGameStatDescs": ["Tiempo de Velocidad de Ataque Máxima: @eogvar1@:@eogvar2@<br>Daño infligido: @eogvar2@"]},
+ {"id": 8135, "name": "Cazador de Tesoros", "endOfGameStatDescs": ["Acumulaciones totales: @eogvar2@", "Oro recolectado: @eogvar1@"]},
+ {"id": 8429, "name": "Acondicionamiento", "endOfGameStatDescs": ["Porcentaje de tiempo activa en partida: @eogvar1@%", "Total de armadura adicional: @eogvar2@", "Total de resistencia mágica adicional: @eogvar3@"]},
+ {"id": 8000, "name": "sin estadísticas", "endOfGameStatDescs": []}
+]
