@@ -134,8 +134,15 @@ python -m kindred_lab partidas resumen --registro ejemplos/partidas_ejemplo.csv 
 ```
 
 Muestra, por runa: partidas, victorias, valor medio y valor por minuto (para comparar partidas largas y
-cortas). Las rendiciones tempranas y las partidas marcadas con `excluir` se ignoran. Los tiempos (Leyenda) se
-muestran en m:ss y no tienen "por minuto". Con pocas partidas esto es anécdota: no cambies una regla por 3 partidas.
+cortas). Las rendiciones tempranas y las partidas marcadas con `excluir` se ignoran. Con pocas partidas esto es
+anécdota: no cambies una regla por 3 partidas.
+
+Los tiempos se muestran en m:ss y no tienen "por minuto":
+- **Leyenda: Celeridad**: minuto en que completaste las acumulaciones.
+- **Concentración Absoluta** y **Caminata Sobre Agua** (Brujería): *tiempo total activo* según Community Dragon,
+  es decir, cuánto tiempo tuviste el efecto: más del 70% de vida (Concentración Absoluta) o estar en el río
+  (Caminata Sobre Agua). Para comparar partidas de distinta duración, divídelo entre la duración: p. ej. 18:30
+  en una partida de 28.7 min = 64% del tiempo con más del 70% de vida.
 
 ## Extra: los primeros minutos (no afecta las runas)
 
@@ -204,7 +211,8 @@ propio historial, y se actualiza con:
   licencia y workflow). Nunca copia `registro/`, `secretos.json`, `data/raw/`, `CLAUDE.md` ni `publicar.ps1`.
 - Es un espejo: lo que sale de la lista blanca desaparece del público en la siguiente publicación.
 - Quita los match_id reales entre paréntesis (p. ej. en `hallazgos.md`).
-- Antes del commit busca tu clave, tu Riot ID (sin espacios ni mayúsculas), match_id reales, tu correo privado y
+- Antes del commit busca tu clave, tu Riot ID (sin espacios ni mayúsculas), match_id reales, tus correos privados
+  (todos los de autor del historial privado menos el `noreply`, aunque cambies tu `user.email`) y
   cualquier `RGAPI-` con forma de clave; si encuentra algo, no publica y solo dice en qué archivo.
 - Corre las pruebas y `reglas validar` en la copia pública.
 - Hace commit como `Leonidas Diaz <99288021+LeonidasDiaz@users.noreply.github.com>`. **Nunca hace push**: eso

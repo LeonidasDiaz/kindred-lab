@@ -139,18 +139,29 @@ Lista completa y editable en [`reglas/kindred_objetos.json`](../reglas/kindred_o
 
 | Contra | Objeto | Estado |
 |---|---|---|
-| Críticos (Caitlyn, Jhin) o peleadores que se lanzan (Briar, Garen) | Presagio de Randuin | probado |
+| Sobre todo críticos (Caitlyn, Jhin); su pasiva no hace nada contra habilidades | Presagio de Randuin | probado |
+| Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) | Danza de la Muerte o Randuin | Danza: hipótesis |
 | Daño mágico repartido o un combo AP | Fauces de Malmortius | probado |
-| Habilidad que abre el combo (atadura, marca) | Filo de la Noche | probado |
+| Una habilidad que abre el combo: asesinos AD (Zed, Talon, Pantheon, Kha'Zix, Qiyana), atadura, marca | Filo de la Noche | probado |
 | Supresión (Malzahar, Warwick, Urgot) o ceguera (Teemo) | Cimitarra Mercurial | probado |
 | Mago AP muy fedeado | Rukerno Kaénico | hipótesis |
-| AP con control, solo si vas atrás y sin otra RM | Al Filo de la Cordura | dudoso (2 partidas: quita daño frente al Rey Arruinado) |
+| AP con control, solo si vas atrás y sin otra RM | Al Filo de la Cordura | dudoso (3 partidas: quita daño frente al Rey Arruinado; el 02/11 sobró RM y faltó armadura) |
 | Daño mezclado o mucho control | Guantelete de Sterak | hipótesis |
-| Equipo casi todo AD | Danza de la Muerte | hipótesis |
+| Equipo casi todo AD, o asesinos AD que te matan de golpe | Danza de la Muerte | hipótesis: hay que probarla |
 | 2+ asesinos AD con poco control | Placa Hexperimental | hipótesis (neutral en 1 partida) |
 | Peleas en grupo donde aprovechan tu reaparición | Ángel Guardián | hipótesis |
 
 **Reglas de decisión:**
+- **La selección decide runas y primer defensivo; el marcador, los siguientes.** Lo que lees del equipo enemigo en
+  la selección elige tus runas y tu primer objeto defensivo. Los siguientes se deciden por quién te está pegando
+  (marcador), porque el campeón engaña: el 02/11 el equipo parecía "de AP" (Lissandra, Fiddlesticks, Lux) y
+  recibiste 74% de daño AD.
+- **Defensivo contra AD:**
+  - Críticos → **Randuin**. Su pasiva no hace nada contra habilidades.
+  - Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) → **Danza de la Muerte** o **Randuin**.
+  - Asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana) → **Filo de la Noche** si una habilidad
+    abre el combo; **Danza de la Muerte** si te matan de golpe.
+  - Danza sigue en hipótesis: hay que probarla.
 - **Fauces o Cordura:** ¿te matan de un combo? → Fauces. ¿Te controlan y te bajan poco a poco? → Cordura.
   ¿Ya llevas Sterak? → Cordura (Fauces y Sterak son Salvavidas, no se combinan).
 - **Objetos sin daño** solo cuando su efecto no lo da ningún objeto con daño: Randuin (críticos y ralentización)

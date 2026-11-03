@@ -5,9 +5,9 @@
   },
   "situaciones": [
     {
-      "contra": "Críticos (Caitlyn, Jhin, Tristana, Samira) o peleadores cuerpo a cuerpo que se lanzan encima (Briar, Garen, Tryndamere)",
+      "contra": "Sobre todo críticos (Caitlyn, Jhin, Tristana, Samira). También luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox, Briar), igual que Danza de la Muerte.",
       "objeto": "Presagio de Randuin",
-      "por_que": "75 de armadura, 350 de vida, 30% menos daño de críticos y activa que ralentiza 70% durante 2 s.",
+      "por_que": "75 de armadura, 350 de vida, 30% menos daño de críticos y activa que ralentiza 70% durante 2 s. Su pasiva solo reduce críticos: no hace nada contra habilidades.",
       "estado": "probado",
       "evidencia": [
         "vs Briar, Caitlyn, Brand, Lulu, Kayn: la activa frenó a Briar en su frenesí"
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "contra": "Asesinos que abren con una habilidad (atadura de Morgana o Lux, marca de Zed, definitiva de Veigar o Cho'Gath)",
+      "contra": "Una habilidad que abre el combo: asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana), atadura de Morgana o Lux, definitiva de Veigar o Cho'Gath",
       "objeto": "Filo de la Noche",
       "por_que": "50 AD, 250 de vida, 15 de letalidad y un escudo antihechizos cada 40 s. Contra 2 asesinos solo frena al primero.",
       "estado": "probado",
@@ -51,10 +51,13 @@
       ]
     },
     {
-      "contra": "Equipo casi todo de daño físico",
+      "contra": "Equipo casi todo de daño físico; luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox), igual que Randuin; asesinos AD que te matan de golpe (Zed, Talon, Pantheon, Kha'Zix, Qiyana)",
       "objeto": "Danza de la Muerte",
       "por_que": "60 AD, 50 de armadura, 15 AH. Como campeón de rango solo retrasa el 10% del daño; su valor es la armadura y el daño. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura.",
-      "estado": "hipotesis"
+      "estado": "hipotesis: hay que probarla",
+      "evidencia": [
+        "02/11, vs Lissandra, Fiddlesticks, Mundo, Jinx, Lux: con 74% de daño AD recibido y Mundo matándome 2 veces, habría servido más que Cordura (no probada)"
+      ]
     },
     {
       "contra": "2 o más asesinos de daño físico con poco control",
@@ -89,7 +92,8 @@
       "estado": "dudoso (2 partidas sin convencer)",
       "evidencia": [
         "vs Alistar, Zed, Ekko, Singed, Teemo (junto con Cimitarra): no convenció, vendida por Filo del Infinito (victoria). Posible causa: ya tenía RM de la Cimitarra y faltaba el daño crítico.",
-        "vs Kai'Sa, Xerath, Orianna, Jax, Cho'Gath (2º objeto, con Botas de Mercurio, yendo adelante): quitó daño; misma VA que Berserker + Rey Arruinado pero sin 40 AD ni el 6% de vida actual por golpe, clave contra Cho'Gath (victoria)"
+        "vs Kai'Sa, Xerath, Orianna, Jax, Cho'Gath (2º objeto, con Botas de Mercurio, yendo adelante): quitó daño; misma VA que Berserker + Rey Arruinado pero sin 40 AD ni el 6% de vida actual por golpe, clave contra Cho'Gath (victoria)",
+        "02/11, vs Lissandra, Fiddlesticks, Mundo, Jinx, Lux (victoria 10/2/6): recibí 74% AD; con Cordura y Mercurio llegué a 55% de tenacidad y me sobró resistencia mágica. Mundo me mató las 2 veces. Gané la jungla y su daño mágico se quedó atrás; habría servido más armadura (Randuin o Danza)."
       ]
     }
   ],
@@ -101,6 +105,8 @@
     "Apariencia Espiritual: +25% de curaciones recibidas combina con tu definitiva y Triunfo, pero no da daño; contra AP, Rukerno Kaénico protege más."
   ],
   "reglas_generales": [
+    "Defensivo contra AD: críticos -> Randuin (su pasiva no hace nada contra habilidades). Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) -> Danza de la Muerte o Randuin. Asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana) -> Filo de la Noche si una habilidad abre el combo; Danza de la Muerte si te matan de golpe.",
+    "La lectura del equipo en la selección decide runas y primer defensivo; los siguientes se deciden por quién te está pegando (marcador), porque el campeón engaña: el 02/11 el equipo parecía 'de AP' y recibí 74% de daño AD.",
     "Volver a preguntar '¿quién me mata?' en cada vuelta a base: si un enemigo se dispara (p. ej. Katarina con Mejai, Viego con sus bajas), el siguiente objeto defensivo responde a esa persona aunque el plan inicial fuera otro."
   ]
 }
