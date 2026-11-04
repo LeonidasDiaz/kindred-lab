@@ -168,6 +168,7 @@ Lista completa y editable en [`reglas/kindred_objetos.json`](../reglas/kindred_o
   y Rukerno (mago fedeado). Contra asesinos de letalidad, Randuin rinde poco.
 - **Contra asesinos que te atrapan solo**, Ángel Guardián solo alarga tu muerte: mejor evitar la atrapada
   (visión, Filo de la Noche) o aguantar el combo (vida).
+- **Si un mismo enemigo te mata 2 o 3 veces,** el siguiente objeto es contra él y en las peleas te colocas lejos de él.
 - **Vuelve a preguntar "¿quién me mata?" en cada vuelta a base.** Si un enemigo se dispara (Katarina con
   cargas de Mejai, Viego con sus bajas), tu siguiente defensivo responde a esa persona. Rukerno Kaénico no es
   Salvavidas: se combina con Sterak (Fauces no).

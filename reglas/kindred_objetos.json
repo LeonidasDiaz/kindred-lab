@@ -56,7 +56,8 @@
       "por_que": "60 AD, 50 de armadura, 15 AH. Como campeón de rango solo retrasa el 10% del daño; su valor es la armadura y el daño. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura.",
       "estado": "hipotesis: hay que probarla",
       "evidencia": [
-        "02/11, vs Lissandra, Fiddlesticks, Mundo, Jinx, Lux: con 74% de daño AD recibido y Mundo matándome 2 veces, habría servido más que Cordura (no probada)"
+        "02/11, vs Lissandra, Fiddlesticks, Mundo, Jinx, Lux: con 74% de daño AD recibido y Mundo matándome 2 veces, habría servido más que Cordura (no probada)",
+        "03/11, vs Camille, Syndra, Jhin, Xin Zhao, Sett (derrota 10/8/12): recibí 76% AD; Sett me mató 6 de 8 veces, 4 de esas 6 en el río. Build: Matakrakens, Berserker, Rey Arruinado, Danza; iba por Fauces (error: debía ser Randuin). Impresión de 1 partida: sentí que sí aguanta un poco más."
       ]
     },
     {
@@ -107,6 +108,7 @@
   "reglas_generales": [
     "Defensivo contra AD: críticos -> Randuin (su pasiva no hace nada contra habilidades). Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) -> Danza de la Muerte o Randuin. Asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana) -> Filo de la Noche si una habilidad abre el combo; Danza de la Muerte si te matan de golpe.",
     "La lectura del equipo en la selección decide runas y primer defensivo; los siguientes se deciden por quién te está pegando (marcador), porque el campeón engaña: el 02/11 el equipo parecía 'de AP' y recibí 74% de daño AD.",
+    "Si un mismo enemigo te mata 2 o 3 veces, el siguiente objeto es contra él y en las peleas te colocas lejos de él.",
     "Volver a preguntar '¿quién me mata?' en cada vuelta a base: si un enemigo se dispara (p. ej. Katarina con Mejai, Viego con sus bajas), el siguiente objeto defensivo responde a esa persona aunque el plan inicial fuera otro."
   ]
 }
