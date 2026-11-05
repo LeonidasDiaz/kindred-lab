@@ -445,10 +445,30 @@ def cmd_objetos_actualizar(a) -> int:
         for x in res["avisos"]:
             print(f"  {x['id']} {x['nombre']} (verificada en {x['parche_verificado']})")
         print("Revísalos y después: python -m kindred_lab objetos verificar <id>")
-    atrasadas = sum(1 for o in objs if o["mecanicas"] and not o["revisar"] and o["parche_verificado"] != res["version"])
+    if res["error_juego"]:
+        print(f"\nAviso: no se pudieron bajar los archivos del juego ({res['error_juego']}); "
+              "esta vez no se comparan sus valores.")
+    if res["avisos_valores"]:
+        print(f"\nAVISO: cambiaron valores del juego de {len(res['avisos_valores'])} objetos con mecánicas:")
+        for x in res["avisos_valores"]:
+            igual = " [descripción oficial igual]" if x["descripcion_igual"] else ""
+            primeros = dict(list(x["cambios"].items())[:4])
+            resto = f" y {len(x['cambios']) - 4} más" if len(x["cambios"]) > 4 else ""
+            print(f"  {x['id']} {x['nombre']} (verificada en {x['parche_verificado']}){igual}: "
+                  f"{objetos.detalle_cambios(primeros)}{resto}")
+        print("Revísalos y después: python -m kindred_lab objetos verificar <id>")
+    atrasadas = sum(1 for o in objs if o["mecanicas"] and not o["revisar"] and not o["valores_cambiados"]
+                    and o["parche_verificado"] != res["version"])
     if atrasadas:
         print(f"\n{atrasadas} mecánicas más siguen verificadas en un parche anterior. Sin aviso no significa vigentes: "
-              "la descripción no siempre muestra los números.")
+              "la lógica de cada pasiva no está en los archivos del juego.")
+    return 0
+
+
+def cmd_objetos_base_valores(a) -> int:
+    from . import objetos
+    n = objetos.fijar_base_valores(a.version)
+    print(f"{n} objetos con mecánicas verificadas en {a.version} tienen ahora sus valores del juego como base.")
     return 0
 
 
@@ -532,6 +552,10 @@ def main(argv=None) -> int:
     s.add_argument("--version", help="Por defecto, la última publicada")
     s.add_argument("--idioma", default=config.IDIOMA)
     s.set_defaults(fn=cmd_objetos_actualizar)
+
+    s = o.add_parser("base-valores", help="Una sola vez: valores del juego del parche como base de lo ya verificado")
+    s.add_argument("--version", default=config.OBJETOS_VERSION_REFERENCIA)
+    s.set_defaults(fn=cmd_objetos_base_valores)
 
     s = o.add_parser("verificar", help="Marca las mecánicas de un objeto como revisadas en el parche")
     s.add_argument("id", help="Id del objeto, p. ej. 6333")

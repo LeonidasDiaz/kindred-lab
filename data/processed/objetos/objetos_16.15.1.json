@@ -14,7 +14,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1004": {
       "metadata": {
@@ -28,7 +30,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1006": {
       "metadata": {
@@ -42,7 +46,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1011": {
       "metadata": {
@@ -56,7 +62,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1018": {
       "metadata": {
@@ -70,7 +78,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1026": {
       "metadata": {
@@ -84,7 +94,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1027": {
       "metadata": {
@@ -98,7 +110,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1028": {
       "metadata": {
@@ -112,7 +126,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1029": {
       "metadata": {
@@ -126,7 +142,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1031": {
       "metadata": {
@@ -140,7 +158,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1033": {
       "metadata": {
@@ -154,7 +174,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1036": {
       "metadata": {
@@ -168,7 +190,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1037": {
       "metadata": {
@@ -182,7 +206,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1038": {
       "metadata": {
@@ -196,7 +222,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1042": {
       "metadata": {
@@ -210,7 +238,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1043": {
       "metadata": {
@@ -234,7 +264,11 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.OnHitDamage": 15
+      },
+      "valores_cambiados": {}
     },
     "1052": {
       "metadata": {
@@ -248,7 +282,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1053": {
       "metadata": {
@@ -263,7 +299,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1054": {
       "metadata": {
@@ -307,7 +345,19 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.RegenDuration": 8,
+        "valor.BonusDamageToMinions": 5,
+        "valor.MaxRegenAmount": 40,
+        "valor.RangeRegenMult": 0.66,
+        "valor.MaxRangeRegenAmount": 30,
+        "efecto.0": 8,
+        "efecto.1": 5,
+        "efecto.2": 45,
+        "efecto.3": 0.66
+      },
+      "valores_cambiados": {}
     },
     "1055": {
       "metadata": {
@@ -323,7 +373,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1056": {
       "metadata": {
@@ -364,7 +416,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BonusDamage": 5,
+        "valor.ManaRestorePerSecond": 1,
+        "valor.ManaToHealthConversion": 0.45,
+        "valor.HealthRestorePerSecond": 0.55,
+        "valor.ManaRestorePerSecondUpgraded": 2,
+        "valor.UpgradeDuration": 5
+      },
+      "valores_cambiados": {}
     },
     "1057": {
       "metadata": {
@@ -378,7 +439,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1058": {
       "metadata": {
@@ -392,7 +455,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "1082": {
       "metadata": {
@@ -423,7 +488,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxGloryStacks": 10,
+        "valor.APPerGlory": 4,
+        "valor.GloryOnKill": 2,
+        "valor.GloryOnAssist": 1,
+        "valor.GloryLossOnDeath": 5
+      },
+      "valores_cambiados": {}
     },
     "1083": {
       "metadata": {
@@ -458,7 +531,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MinionKillGold": 1,
+        "valor.CompleteGold": 350,
+        "valor.MinionKillThreshold": 100,
+        "valor.OnHitHeal": 3
+      },
+      "valores_cambiados": {}
     },
     "1086": {
       "metadata": {
@@ -481,7 +561,11 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealthOnHit": 3
+      },
+      "valores_cambiados": {}
     },
     "1101": {
       "metadata": {
@@ -574,7 +658,29 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Omnivamp": 0.07,
+        "valor.AvatarMonsterDR": 0,
+        "valor.AvatarMaxHPBurnTotal": 0.05,
+        "valor.AvatarBurnDuration": 4,
+        "valor.AvatarSlowAmount": 0.3,
+        "valor.AvatarSlowDuration": 3,
+        "valor.AvatarDistPerStack": 60,
+        "valor.AvatarMaxStacks": 100,
+        "valor.AvatarTickRatePerXSeconds": 1,
+        "valor.AvatarPassiveHaste": 0,
+        "valor.AvatarAoERadius": 250,
+        "valor.TotalCounters": 35,
+        "valor.Breakpoint1": 20,
+        "valor.ChampKillAmount": 1,
+        "valor.MonsterKillAmount": 1,
+        "valor.EpicKillAmount": 1,
+        "valor.StacksPerHalfSec": 3,
+        "calc.ManaRestoreForTooltip.0.mLevel1Value": 8,
+        "calc.ManaRestoreForTooltip.0.mInitialBonusPerLevel": 0.6
+      },
+      "valores_cambiados": {}
     },
     "1102": {
       "metadata": {
@@ -661,7 +767,26 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Omnivamp": 0.07,
+        "valor.AvatarCampMoveSpeed": 0.3,
+        "valor.CampMSDuration": 1.5,
+        "valor.AvatarMonsterDR": 0,
+        "valor.TotalCounters": 35,
+        "valor.Breakpoint1": 20,
+        "valor.ChampKillAmount": 1,
+        "valor.MonsterKillAmount": 1,
+        "valor.EpicKillAmount": 1,
+        "valor.AvatarEnhancedCampMS": 0.45,
+        "calc.ManaRestoreForTooltip.0.mLevel1Value": 8,
+        "calc.ManaRestoreForTooltip.0.mInitialBonusPerLevel": 0.6,
+        "efecto.0": 60,
+        "efecto.1": 25,
+        "efecto.2": 5,
+        "efecto.3": 8
+      },
+      "valores_cambiados": {}
     },
     "1103": {
       "metadata": {
@@ -765,7 +890,24 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AvatarMonsterDR": 0,
+        "valor.AvatarDamageCD": 10,
+        "valor.TotalCounters": 35,
+        "valor.Breakpoint1": 20,
+        "valor.ChampKillAmount": 1,
+        "valor.MonsterKillAmount": 1,
+        "valor.EpicKillAmount": 1,
+        "valor.TenacityAmount": 0,
+        "valor.FallOffBuffDuration": 1.5,
+        "calc.ManaRestoreForTooltip.0.mLevel1Value": 8,
+        "calc.ManaRestoreForTooltip.0.mInitialBonusPerLevel": 0.6,
+        "calc.MaxShield.0.mLevel1Value": 200,
+        "calc.MaxShield.0.mBreakpoints.0.mLevel": 11,
+        "calc.MaxShield.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 20
+      },
+      "valores_cambiados": {}
     },
     "1105": {
       "metadata": {
@@ -777,7 +919,28 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AvatarMonsterDR": 0,
+        "valor.AvatarDamageCD": 10,
+        "valor.TotalCounters": 40,
+        "valor.Breakpoint1": 20,
+        "valor.ChampKillAmount": 1,
+        "valor.MonsterKillAmount": 1,
+        "valor.EpicKillAmount": 1,
+        "valor.TenacityAmount": 0,
+        "valor.FallOffBuffDuration": 1.5,
+        "calc.ManaRestoreForTooltip.0.mLevel1Value": 8,
+        "calc.ManaRestoreForTooltip.0.mInitialBonusPerLevel": 0.6,
+        "calc.MaxShield.0.mLevel1Value": 180,
+        "calc.MaxShield.0.mBreakpoints.0.mLevel": 11,
+        "calc.MaxShield.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 15,
+        "efecto.0": 60,
+        "efecto.1": 25,
+        "efecto.2": 5,
+        "efecto.3": 8
+      },
+      "valores_cambiados": {}
     },
     "1106": {
       "metadata": {
@@ -789,7 +952,26 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Omnivamp": 0.07,
+        "valor.AvatarCampMoveSpeed": 0.3,
+        "valor.CampMSDuration": 2,
+        "valor.AvatarMonsterDR": 0,
+        "valor.TotalCounters": 40,
+        "valor.Breakpoint1": 20,
+        "valor.ChampKillAmount": 1,
+        "valor.MonsterKillAmount": 1,
+        "valor.EpicKillAmount": 1,
+        "valor.AvatarEnhancedCampMS": 0.45,
+        "calc.ManaRestoreForTooltip.0.mLevel1Value": 8,
+        "calc.ManaRestoreForTooltip.0.mInitialBonusPerLevel": 0.6,
+        "efecto.0": 60,
+        "efecto.1": 25,
+        "efecto.2": 5,
+        "efecto.3": 8
+      },
+      "valores_cambiados": {}
     },
     "1107": {
       "metadata": {
@@ -801,7 +983,29 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Omnivamp": 0.07,
+        "valor.AvatarMonsterDR": 0,
+        "valor.AvatarMaxHPBurnTotal": 0.04,
+        "valor.AvatarBurnDuration": 4,
+        "valor.AvatarSlowAmount": 0.3,
+        "valor.AvatarSlowDuration": 2,
+        "valor.AvatarDistPerStack": 60,
+        "valor.AvatarMaxStacks": 100,
+        "valor.AvatarTickRatePerXSeconds": 1,
+        "valor.AvatarPassiveHaste": 0,
+        "valor.AvatarAoERadius": 250,
+        "valor.TotalCounters": 40,
+        "valor.Breakpoint1": 20,
+        "valor.ChampKillAmount": 1,
+        "valor.MonsterKillAmount": 1,
+        "valor.EpicKillAmount": 1,
+        "valor.StacksPerHalfSec": 3,
+        "calc.ManaRestoreForTooltip.0.mLevel1Value": 8,
+        "calc.ManaRestoreForTooltip.0.mInitialBonusPerLevel": 0.6
+      },
+      "valores_cambiados": {}
     },
     "1120": {
       "metadata": {
@@ -831,7 +1035,11 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BonusDamageToMinions": 5
+      },
+      "valores_cambiados": {}
     },
     "2003": {
       "metadata": {
@@ -861,7 +1069,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealAmount": 120,
+        "valor.PotionDuration": 15
+      },
+      "valores_cambiados": {}
     },
     "2019": {
       "metadata": {
@@ -876,7 +1089,11 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.FlatDR": 3
+      },
+      "valores_cambiados": {}
     },
     "2020": {
       "metadata": {
@@ -892,7 +1109,11 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 5
+      },
+      "valores_cambiados": {}
     },
     "2021": {
       "metadata": {
@@ -907,7 +1128,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "2022": {
       "metadata": {
@@ -921,7 +1144,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "2031": {
       "metadata": {
@@ -960,7 +1185,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealAmount": 100,
+        "valor.ManaAmount": 0,
+        "valor.PotionDuration": 12,
+        "valor.MaxCharges": 2
+      },
+      "valores_cambiados": {}
     },
     "2051": {
       "metadata": {
@@ -974,7 +1206,12 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "efecto.0": 15,
+        "efecto.1": 0.25
+      },
+      "valores_cambiados": {}
     },
     "2055": {
       "metadata": {
@@ -1020,7 +1257,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "efecto.0": 1,
+        "efecto.1": 2
+      },
+      "valores_cambiados": {}
     },
     "2065": {
       "metadata": {
@@ -1058,7 +1300,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ActiveMoveSpeed": 0.3,
+        "valor.BuffDuration": 4,
+        "valor.ActiveCooldown": 75,
+        "valor.ItemRange": 1000,
+        "valor.PerChampCD": 4,
+        "valor.Cooldown": 75
+      },
+      "valores_cambiados": {}
     },
     "2138": {
       "metadata": {
@@ -1070,7 +1321,21 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.RequiredLevel": 9,
+        "valor.TOOLTIPMinimumCost": 600,
+        "valor.TOOLTIPReductionPerPink": 75,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mLevel": 9,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mAdditionalBonusAtThisLevel": 1,
+        "efecto.0": 300,
+        "efecto.1": 0.25,
+        "efecto.2": 3,
+        "efecto.3": 0.15,
+        "efecto.4": 0.15,
+        "efecto.7": 9
+      },
+      "valores_cambiados": {}
     },
     "2139": {
       "metadata": {
@@ -1082,7 +1347,22 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.RequiredLevel": 9,
+        "valor.TOOLTIPMinimumCost": 600,
+        "valor.TOOLTIPReductionPerPink": 75,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mLevel": 9,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mAdditionalBonusAtThisLevel": 1,
+        "efecto.0": 50,
+        "efecto.1": 50,
+        "efecto.2": 25,
+        "efecto.3": 3,
+        "efecto.4": 5,
+        "efecto.5": 3,
+        "efecto.7": 9
+      },
+      "valores_cambiados": {}
     },
     "2140": {
       "metadata": {
@@ -1094,7 +1374,18 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.RequiredLevel": 9,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mLevel": 9,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mAdditionalBonusAtThisLevel": 1,
+        "efecto.0": 30,
+        "efecto.1": 30,
+        "efecto.2": 0.12,
+        "efecto.3": 3,
+        "efecto.7": 9
+      },
+      "valores_cambiados": {}
     },
     "2141": {
       "metadata": {
@@ -1106,7 +1397,17 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.APPerStack": 10,
+        "valor.ADPerStack": 6,
+        "valor.HPPerStack": 100,
+        "valor.PercentSizeIncrease": 10,
+        "valor.MaxStack": 40,
+        "valor.CalloutThreshold": 10,
+        "hechizo.2141Active.enfriamiento": 1
+      },
+      "valores_cambiados": {}
     },
     "2420": {
       "metadata": {
@@ -1145,7 +1446,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Duration": 2.5,
+        "efecto.1": 2.5
+      },
+      "valores_cambiados": {}
     },
     "2421": {
       "metadata": {
@@ -1167,7 +1473,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "2501": {
       "metadata": {
@@ -1200,7 +1508,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HPToADPercentage": 0.025,
+        "valor.MissingHealthAD": 0.12,
+        "valor.MissingHealthThreshold": 0.7,
+        "calc.RemainingHealthThreshold.mMultiplier.mNumber": -1,
+        "calc.RemainingHealthThreshold.0.mNumber": -1
+      },
+      "valores_cambiados": {}
     },
     "2502": {
       "metadata": {
@@ -1234,7 +1550,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DrainRange": 650,
+        "valor.Cooldown": 4,
+        "valor.BonusHealthDrainPercentage": 0.03,
+        "valor.HealMultiplier": 2.5,
+        "calc.DrainCalc.0.mStat": 12,
+        "calc.DrainCalc.0.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "2503": {
       "metadata": {
@@ -1285,7 +1610,20 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BurnFlatDamagePerSecond": 20,
+        "valor.APRatio": 0.02,
+        "valor.BurnDuration": 3,
+        "valor.MonsterDamageBonus": 20,
+        "valor.TickFrequency": 0.5,
+        "valor.APPerStack": 0.04,
+        "valor.MinionDPS": 20,
+        "valor.MinionAP": 0.02,
+        "valor.MonsterDPS": 40,
+        "valor.MonsterAP": 0.02
+      },
+      "valores_cambiados": {}
     },
     "2504": {
       "metadata": {
@@ -1320,7 +1658,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ShieldAmount": 0.15,
+        "valor.OutOfCombatDuration": 15,
+        "calc.ShieldCalc.0.mStat": 12
+      },
+      "valores_cambiados": {}
     },
     "2508": {
       "metadata": {
@@ -1354,7 +1698,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BurnFlatDamagePerSecond": 5,
+        "valor.BurnDuration": 3,
+        "valor.MonsterDamageBonus": 15,
+        "valor.TickFrequency": 0.5
+      },
+      "valores_cambiados": {}
     },
     "2510": {
       "metadata": {
@@ -1392,7 +1743,20 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SpellbladeCooldown": 1.5,
+        "valor.Cooldown": 1.5,
+        "calc.SpellbladeDamage.0.mStat": 2,
+        "calc.SpellbladeDamage.0.mStatFormula": 1,
+        "calc.SpellbladeDamage.0.mCoefficient": 0.75,
+        "calc.SpellbladeDamage.1.mCoefficient": 0.1,
+        "calc.SpellbladeHealing.0.mCoefficient": 0.1,
+        "calc.SpellbladeHealing.1.mStat": 12,
+        "calc.SpellbladeHealing.1.mStatFormula": 2,
+        "calc.SpellbladeHealing.1.mCoefficient": 0.03
+      },
+      "valores_cambiados": {}
     },
     "2512": {
       "metadata": {
@@ -1447,7 +1811,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.UltimateHaste": 30,
+        "valor.Cooldown": 45,
+        "valor.Duration": 8,
+        "valor.BonusTrueDamage": 0.15,
+        "valor.BonusAS": 0.5,
+        "valor.NumberOfAttacks": 3,
+        "valor.CritModifier": 0.8
+      },
+      "valores_cambiados": {}
     },
     "2517": {
       "metadata": {
@@ -1491,7 +1865,21 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.OmnivampOnTakedown": 0.15,
+        "valor.OmnivampDuration": 8,
+        "valor.TakedownWindow": 3,
+        "calc.{e4d9f16b}.0.mNumber": 5,
+        "calc.{e4d9f16b}.1.mStat": 2,
+        "calc.{e4d9f16b}.1.mStatFormula": 2,
+        "calc.{e4d9f16b}.1.mCoefficient": 0.13,
+        "calc.{87892572}.0.mNumber": 5,
+        "calc.{87892572}.1.mStat": 2,
+        "calc.{87892572}.1.mStatFormula": 2,
+        "calc.{87892572}.1.mCoefficient": 0.1
+      },
+      "valores_cambiados": {}
     },
     "2520": {
       "metadata": {
@@ -1561,7 +1949,23 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 22,
+        "valor.Cooldown": 20,
+        "valor.TakedownWindow": 3,
+        "valor.BuffDuration": 90,
+        "valor.RangeModifier": 0.8,
+        "valor.DoTDuration": 3,
+        "valor.AbilityDamageRangeMod": 0.5,
+        "calc.DamageCalc.0.mNumber": 300,
+        "calc.DamageCalc.1.mStat": 29,
+        "calc.DamageCalc.1.mCoefficient": 25,
+        "calc.AbilityDamageCalc.0.mNumber": 50,
+        "calc.AbilityDamageCalc.1.mStat": 29,
+        "calc.AbilityDamageCalc.1.mCoefficient": 1.5
+      },
+      "valores_cambiados": {}
     },
     "2522": {
       "metadata": {
@@ -1611,7 +2015,20 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 60,
+        "valor.Duration": 8,
+        "valor.ManaCostIncrease": 1,
+        "valor.CooldownTick": 0.3,
+        "valor.OverflowAddition": 3,
+        "valor.OverflowRevert": 1,
+        "calc.ManaCalc.mMultiplier.mNumber": 0.01,
+        "calc.ManaCalc.0.mNumber": 15,
+        "calc.ManaCalc.1.mCoefficient": 0.005,
+        "calc.ManaCalc.1.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "2523": {
       "metadata": {
@@ -1646,7 +2063,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ExtraRange": 100,
+        "valor.TakedownWindow": 3,
+        "valor.Duration": 8,
+        "valor.MaxRange": 500,
+        "valor.MaxDamageAmp": 0.1
+      },
+      "valores_cambiados": {}
     },
     "2524": {
       "metadata": {
@@ -1699,7 +2124,19 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 0,
+        "valor.EnemyDetectRange": 400,
+        "valor.Duration": 8,
+        "valor.MeleeAuraAttackSpeed": 0.3,
+        "valor.AuraRange": 900,
+        "valor.ASDuration": 1,
+        "valor.MoveSpeed": 20,
+        "valor.RangedAttackSpeedMultiplier": 0.667,
+        "calc.BuffDuration.mRangedMultiplier.mNumber": 0.5
+      },
+      "valores_cambiados": {}
     },
     "2525": {
       "metadata": {
@@ -1749,7 +2186,26 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LowHealthThreshold": 0.3,
+        "valor.Duration": 5,
+        "valor.MSAmount": 0.1,
+        "valor.TenacityAmount": 0.25,
+        "valor.Cooldown": 90,
+        "valor.SizeIncrease": 0.15,
+        "calc.TotalHealthRegen.0.mStartValue": 100,
+        "calc.TotalHealthRegen.0.mEndValue": 400,
+        "calc.TotalHealthRegen.1.mStat": 1,
+        "calc.TotalHealthRegen.1.mStatFormula": 2,
+        "calc.TotalHealthRegen.1.mCoefficient": 1.75,
+        "calc.TotalHealthRegen.2.mStat": 6,
+        "calc.TotalHealthRegen.2.mStatFormula": 2,
+        "calc.TotalHealthRegen.2.mCoefficient": 1.75,
+        "calc.MaxHealthGain.0.mStartValue": 100,
+        "calc.MaxHealthGain.0.mEndValue": 300
+      },
+      "valores_cambiados": {}
     },
     "2526": {
       "metadata": {
@@ -1797,7 +2253,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 5,
+        "valor.ManaPerCharge": 4,
+        "valor.MaxMana": 360,
+        "valor.InternalCDPerCastID": 6.5,
+        "calc.BonusHSPCalc.0.mCoefficient": 0.005,
+        "calc.BonusHSPCalc.0.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "2530": {
       "metadata": {
@@ -1835,7 +2301,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.PercentManaToHeal": 0.01,
+        "valor.AllyRangeCheck": 900,
+        "valor.AllyCombatDuration": 3,
+        "calc.BonusHSPCalc.0.mCoefficient": 0.005,
+        "calc.BonusHSPCalc.0.mStatFormula": 2,
+        "calc.ManaToHeal.0.mCoefficient": 0.008
+      },
+      "valores_cambiados": {}
     },
     "3002": {
       "metadata": {
@@ -1888,7 +2363,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxMovementSpeed": 20,
+        "valor.MaxStacks": 100,
+        "valor.DurationToMaxStack": 4,
+        "valor.MaxStackSlowAmount": 0.5,
+        "valor.MaxStackSlowDuration": 1,
+        "valor.MovespeedDonation": 0.15
+      },
+      "valores_cambiados": {}
     },
     "3003": {
       "metadata": {
@@ -1931,7 +2415,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 5,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 5,
+        "valor.MaxMana": 360,
+        "valor.InternalCDPerCastID": 6.5,
+        "valor.APFromMana": 0.01
+      },
+      "valores_cambiados": {}
     },
     "3004": {
       "metadata": {
@@ -1974,7 +2467,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 3,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 4,
+        "valor.MaxMana": 360,
+        "valor.TakedownMana": 0,
+        "valor.InternalCDPerCastID": 6.5,
+        "calc.BonusADFromMana.0.mCoefficient": 0.02
+      },
+      "valores_cambiados": {}
     },
     "3006": {
       "metadata": {
@@ -1989,7 +2492,11 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.FeatsAS": 0.05
+      },
+      "valores_cambiados": {}
     },
     "3008": {
       "metadata": {
@@ -2016,7 +2523,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.OmnivampOnTakedown": 0.006,
+        "valor.MaxStacks": 10
+      },
+      "valores_cambiados": {}
     },
     "3009": {
       "metadata": {
@@ -2041,7 +2553,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SlowResistTooltip": 25,
+        "valor.FeatsMS": 5
+      },
+      "valores_cambiados": {}
     },
     "3020": {
       "metadata": {
@@ -2056,7 +2573,11 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.FeatsMPen": 2
+      },
+      "valores_cambiados": {}
     },
     "3024": {
       "metadata": {
@@ -2072,7 +2593,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3026": {
       "metadata": {
@@ -2111,7 +2634,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 300,
+        "efecto.0": 0.5,
+        "efecto.1": 4,
+        "efecto.2": 300,
+        "efecto.3": 1
+      },
+      "valores_cambiados": {}
     },
     "3031": {
       "metadata": {
@@ -2134,7 +2665,9 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3032": {
       "metadata": {
@@ -2179,7 +2712,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ASDuration": 6,
+        "valor.CritMax": 25,
+        "valor.Cooldown": 30,
+        "valor.AACDR": 1,
+        "valor.CritCDR": 2,
+        "valor.ASMod": 0.3,
+        "valor.CritPerStackMelee": 0.4,
+        "valor.StackRangedMultiplier": 0.5
+      },
+      "valores_cambiados": {}
     },
     "3033": {
       "metadata": {
@@ -2207,7 +2751,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.GrievousDuration": 3,
+        "valor.GrievousAmount": 0.4
+      },
+      "valores_cambiados": {}
     },
     "3035": {
       "metadata": {
@@ -2222,7 +2771,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3036": {
       "metadata": {
@@ -2256,7 +2807,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxBonusDamagePercent": 0.15,
+        "valor.MaxBonusHealth": 1500
+      },
+      "valores_cambiados": {}
     },
     "3040": {
       "metadata": {
@@ -2291,7 +2847,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.APFromMana": 0.02,
+        "valor.HealthThreshold": 0.3,
+        "valor.ShieldDuration": 3,
+        "valor.LifelineCooldown": 90,
+        "valor.Cooldown": 90,
+        "calc.ShieldValue.0.mCoefficient": 0.18,
+        "calc.BonusAPCalc.0.mCoefficient": 0.02,
+        "calc.BonusAPCalc.0.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "3041": {
       "metadata": {
@@ -2337,7 +2904,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxGloryStacks": 25,
+        "valor.APPerGlory": 5,
+        "valor.GloryOnKill": 4,
+        "valor.GloryOnAssist": 2,
+        "valor.GloryLossOnDeath": 10,
+        "valor.GloryThreshold": 10,
+        "valor.MoveSpeedMod": 0.1
+      },
+      "valores_cambiados": {}
     },
     "3042": {
       "metadata": {
@@ -2384,7 +2961,22 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BonusADManaRatioTOOLTIPONLY": 0.02,
+        "valor.OnHitManaRatioTOOLTIPONLY": 0.012,
+        "valor.AbilityManaRatioRangedTOOLTIPONLY": 0.03,
+        "valor.AbilityTADRatio": 0,
+        "valor.PerCastIDLockout": 6.5,
+        "valor.AbilityManaRatioMeleeTOOLTIPONLY": 0.04,
+        "calc.BonusADFromMana.0.mCoefficient": 0.02,
+        "calc.OnHitDamage.0.mCoefficient": 0.012,
+        "calc.MeleeItemCalcValue.0.mCoefficient": 0.04,
+        "calc.RangedItemCalcValue.0.mCoefficient": 0.03,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2
+      },
+      "valores_cambiados": {}
     },
     "3044": {
       "metadata": {
@@ -2417,7 +3009,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MoveSpeedBonus": 20,
+        "valor.MoveSpeedDuration": 2,
+        "valor.RangedMod": 0.5,
+        "efecto.0": 20,
+        "efecto.1": 2,
+        "efecto.2": 60,
+        "efecto.7": 8
+      },
+      "valores_cambiados": {}
     },
     "3046": {
       "metadata": {
@@ -2444,7 +3046,9 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3047": {
       "metadata": {
@@ -2472,7 +3076,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.FeatsArmor": 5,
+        "efecto.0": 0.1
+      },
+      "valores_cambiados": {}
     },
     "3050": {
       "metadata": {
@@ -2528,7 +3137,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Duration": 5,
+        "valor.Cooldown": 45,
+        "valor.SlowAmount": 0.3,
+        "valor.DamagePerSecond": 30,
+        "valor.StormRadius": 350,
+        "valor.UltimateHaste": 15,
+        "valor.ReadyDuration": 5
+      },
+      "valores_cambiados": {}
     },
     "3051": {
       "metadata": {
@@ -2543,7 +3162,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3053": {
       "metadata": {
@@ -2587,7 +3208,37 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LowHealthThreshold": 0.3,
+        "valor.ShieldDuration": 4.5,
+        "valor.HealthPercent": 0.1,
+        "valor.HealPercent": 0.02,
+        "valor.RangedEffectiveness": 0.6,
+        "valor.ReductionAmount": 0.5,
+        "valor.BaseShieldRatio": 0.6,
+        "valor.HealDuration": 5,
+        "valor.ADtoAD": 0.45,
+        "valor.TimeBeforeDecay": 0.75,
+        "valor.TenacityDuration": 8,
+        "valor.SizeIncrease": 0.1,
+        "valor.TenacityAmount": 0,
+        "valor.Cooldown": 90,
+        "calc.MeleeItemCalcValue.0.mStat": 12,
+        "calc.BonusShield.mMultiplier.mCoefficient": 1,
+        "calc.MeleeItemCalcValueB.0.mStat": 12,
+        "calc.MeleeItemCalcValueB.0.mStatFormula": 2,
+        "calc.ChampRange.0.mCeiling": 3,
+        "calc.ChampRange.0.mFloor": 2,
+        "calc.ChampRange.0.mSubparts.0.mStat": 31,
+        "calc.ChampRange.0.mSubparts.0.mStatFormula": 1,
+        "calc.ChampRange.0.mSubparts.0.mSubpart.mNumber": 0.01,
+        "calc.ShieldSize.0.mStat": 12,
+        "calc.ShieldSize.0.mStatFormula": 2,
+        "calc.BonusAD.0.mStat": 2,
+        "calc.BonusAD.0.mStatFormula": 1
+      },
+      "valores_cambiados": {}
     },
     "3057": {
       "metadata": {
@@ -2617,7 +3268,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SpellbladeCooldown": 1.5,
+        "valor.Cooldown": 1.5,
+        "calc.SpellbladeDamage.0.mStat": 2,
+        "calc.SpellbladeDamage.0.mStatFormula": 1,
+        "calc.SpellbladeDamage.0.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "3065": {
       "metadata": {
@@ -2645,7 +3304,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealingIncrease": 0.25,
+        "valor.ShieldIncrease": 0.25
+      },
+      "valores_cambiados": {}
     },
     "3066": {
       "metadata": {
@@ -2660,7 +3324,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3067": {
       "metadata": {
@@ -2675,7 +3341,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3068": {
       "metadata": {
@@ -2717,7 +3385,25 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Range": 325,
+        "valor.MinionMod": 0.6,
+        "valor.MaxStacks": 1,
+        "valor.DamageAmpPerStack": 0,
+        "valor.StackDuration": 1,
+        "valor.MonsterMod": 1,
+        "valor.AuraDuration": 3,
+        "valor.TicksPerSecond": 1,
+        "valor.BaseDamagePerTickTOOLTIPONLY": 20,
+        "valor.HPRatioPerTickTOOLTIPONLY": 1,
+        "calc.DamagePerTick.0.mNumber": 20,
+        "calc.DamagePerTick.1.mStat": 12,
+        "calc.DamagePerTick.1.mStatFormula": 2,
+        "calc.DamagePerTick.1.mCoefficient": 0.01,
+        "calc.{049cea52}.mMultiplier.mNumber": 1
+      },
+      "valores_cambiados": {}
     },
     "3070": {
       "metadata": {
@@ -2761,7 +3447,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 3,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.BonusMinionDamage": 5,
+        "valor.MaxMana": 360,
+        "valor.TakedownMana": 0,
+        "valor.ManaChargeMaxAmmo": 4,
+        "valor.InternalCDPerCastID": 6.5
+      },
+      "valores_cambiados": {}
     },
     "3071": {
       "metadata": {
@@ -2824,7 +3520,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DebuffDuration": 6,
+        "valor.MoveSpeedBonus": 20,
+        "valor.MoveSpeedDuration": 2,
+        "valor.InternalCD": 0.01,
+        "valor.MaxStacks": 5,
+        "valor.ShredPerStack": 0.06
+      },
+      "valores_cambiados": {}
     },
     "3072": {
       "metadata": {
@@ -2856,7 +3561,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Threshold": 0.7,
+        "valor.DecayTime": 25,
+        "calc.OvershieldCalc.0.mLevel1Value": 165,
+        "calc.OvershieldCalc.0.mBreakpoints.0.mLevel": 9,
+        "calc.OvershieldCalc.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 15
+      },
+      "valores_cambiados": {}
     },
     "3073": {
       "metadata": {
@@ -2896,7 +3609,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.UltimateHaste": 30,
+        "valor.MovementSpeedBonus": 0.2,
+        "valor.HasteDuration": 8,
+        "valor.Cooldown": 30,
+        "valor.BonusASRanged": 35,
+        "valor.BonusASMelee": 50,
+        "valor.BonusMSRanged": 14,
+        "valor.BonusMSMelee": 20
+      },
+      "valores_cambiados": {}
     },
     "3074": {
       "metadata": {
@@ -2953,7 +3677,32 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.CleaveRadius": 350,
+        "valor.Cooldown": 10,
+        "valor.Radius": 450,
+        "valor.ActiveADRatio": 0.8,
+        "valor.VampAmp": 1,
+        "valor.MaxProcPerAuto": 10,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.MeleeItemCalcValue.0.mStat": 2,
+        "calc.MeleeItemCalcValue.0.mCoefficient": 0.4,
+        "calc.RangedItemCalcValue.0.mStat": 2,
+        "calc.RangedItemCalcValue.0.mCoefficient": 0.2,
+        "calc.PrimaryDamage.0.mStat": 2,
+        "hechizo.3074Active.efecto.0.value.0": 5,
+        "hechizo.3074Active.efecto.0.value.1": 30,
+        "hechizo.3074Active.efecto.0.value.2": 55,
+        "hechizo.3074Active.efecto.0.value.3": 80,
+        "hechizo.3074Active.efecto.0.value.4": 105,
+        "hechizo.3074Active.efecto.0.value.5": 130,
+        "hechizo.3074Active.efecto.0.value.6": 155,
+        "hechizo.3074Active.efecto.1.value": 30,
+        "hechizo.3074Active.efecto.2.value": 60
+      },
+      "valores_cambiados": {}
     },
     "3075": {
       "metadata": {
@@ -2995,7 +3744,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BaseDamage": 20,
+        "valor.BonusArmorDamageRatio": 0.1,
+        "valor.GrievousAmount": 0.4,
+        "valor.GrievousDuration": 3,
+        "valor.EnhancedGrievousAmount": 0.4,
+        "calc.TotalDamage.1.mStat": 1,
+        "calc.TotalDamage.1.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "3076": {
       "metadata": {
@@ -3034,7 +3793,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.GrievousAmount": 0.4,
+        "valor.GrievousDuration": 3,
+        "valor.BaseDamage": 10,
+        "valor.BonusArmorDamageRatio": 0
+      },
+      "valores_cambiados": {}
     },
     "3077": {
       "metadata": {
@@ -3094,7 +3860,31 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.CleaveRadius": 350,
+        "valor.Cooldown": 10,
+        "valor.Radius": 450,
+        "valor.ActiveADRatio": 0.75,
+        "valor.MaxProcPerAuto": 10,
+        "calc.MeleeItemCalcValue.0.mStat": 2,
+        "calc.MeleeItemCalcValue.0.mCoefficient": 0.4,
+        "calc.RangedItemCalcValue.0.mStat": 2,
+        "calc.RangedItemCalcValue.0.mCoefficient": 0.2,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.PrimaryDamage.0.mStat": 2,
+        "hechizo.3077Active.efecto.0.value.0": 5,
+        "hechizo.3077Active.efecto.0.value.1": 30,
+        "hechizo.3077Active.efecto.0.value.2": 55,
+        "hechizo.3077Active.efecto.0.value.3": 80,
+        "hechizo.3077Active.efecto.0.value.4": 105,
+        "hechizo.3077Active.efecto.0.value.5": 130,
+        "hechizo.3077Active.efecto.0.value.6": 155,
+        "hechizo.3077Active.efecto.1.value": 30,
+        "hechizo.3077Active.efecto.2.value": 60
+      },
+      "valores_cambiados": {}
     },
     "3078": {
       "metadata": {
@@ -3146,7 +3936,23 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SpellbladeMultiplier": 2,
+        "valor.MoveSpeedBonus": 20,
+        "valor.MSDuration": 2,
+        "valor.SpellbladeCooldown": 1.5,
+        "valor.Cooldown": 1.5,
+        "calc.SpellbladeDamage.0.mStat": 2,
+        "calc.SpellbladeDamage.0.mStatFormula": 1,
+        "calc.{6e4cefdc}.0.mNumber": 20,
+        "efecto.0": 25,
+        "efecto.1": 60,
+        "efecto.2": 2,
+        "efecto.3": 1.5,
+        "efecto.4": 1.5
+      },
+      "valores_cambiados": {}
     },
     "3082": {
       "metadata": {
@@ -3173,7 +3979,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxHPRatio": 0.005,
+        "valor.WardenDamageMax": 0.2,
+        "valor.BlockBase": 15
+      },
+      "valores_cambiados": {}
     },
     "3083": {
       "metadata": {
@@ -3217,7 +4029,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxHealthRatio": 0.015,
+        "valor.SecondsPerHeal": 0.5,
+        "valor.HealthThreshold": 2000,
+        "valor.OOCTimerChampion": 8,
+        "valor.OOCTimer": 3,
+        "valor.HPAmp": 0.12,
+        "calc.TotalHealing.0.mStat": 12,
+        "calc.TotalHealingTooltip.mMultiplier.mNumber": 2
+      },
+      "valores_cambiados": {}
     },
     "3084": {
       "metadata": {
@@ -3267,7 +4090,25 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.PerTargetCooldown": 30,
+        "valor.BaseDamage": 70,
+        "valor.HPRatio": 0.06,
+        "valor.DamageToMaxHealthRatio": 0.1,
+        "valor.DistanceToChampion": 700,
+        "valor.NumTicksToTrigger": 6,
+        "valor.RangeTrackingBuffDuration": 5,
+        "valor.TrackerTickRate": 0.5,
+        "valor.MaxHPRatio": 0.06,
+        "valor.HealthSizeThreshold": 1000,
+        "valor.SizeAmount": 0.03,
+        "valor.SizeCap": 0.3,
+        "valor.Cooldown": 30,
+        "calc.DamageProcCalc.1.mStat": 12,
+        "calc.DamageCalc.0.mStat": 12
+      },
+      "valores_cambiados": {}
     },
     "3085": {
       "metadata": {
@@ -3301,7 +4142,23 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BoltMinPercent": 40,
+        "valor.BoltMaxPercent": 40,
+        "valor.ExtraRangeOnBoltCheck": 65,
+        "valor.OnHitDamage": 0,
+        "calc.BoltDamage.0.mStat": 2,
+        "calc.BoltDamage.0.mSubpart.mNumber": 0.55,
+        "calc.{232dac8a}.0.mNumber": 0.55,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "efecto.1": 40,
+        "efecto.2": 2,
+        "efecto.4": 40,
+        "efecto.5": 1
+      },
+      "valores_cambiados": {}
     },
     "3086": {
       "metadata": {
@@ -3317,7 +4174,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3087": {
       "metadata": {
@@ -3369,7 +4228,24 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BounceDelay": 0,
+        "valor.BounceRange": 500,
+        "valor.BonusEnergizedStacks": 9,
+        "valor.ChainDamage": 60,
+        "valor.NonChampChainDamage": 90,
+        "calc.BounceCount.0.mLevel1Value": 4,
+        "calc.BounceCount.0.mBreakpoints.0.mLevel": 6,
+        "calc.BounceCount.0.mBreakpoints.0.mAdditionalBonusAtThisLevel": 1,
+        "calc.BounceCount.0.mBreakpoints.1.mLevel": 10,
+        "calc.BounceCount.0.mBreakpoints.1.mAdditionalBonusAtThisLevel": 1,
+        "calc.BounceCount.0.mBreakpoints.2.mLevel": 14,
+        "calc.BounceCount.0.mBreakpoints.2.mAdditionalBonusAtThisLevel": 1,
+        "calc.BounceCount.0.mBreakpoints.3.mLevel": 20,
+        "calc.BounceCount.0.mBreakpoints.3.mAdditionalBonusAtThisLevel": 1
+      },
+      "valores_cambiados": {}
     },
     "3089": {
       "metadata": {
@@ -3391,7 +4267,11 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.APAmp": 0.3
+      },
+      "valores_cambiados": {}
     },
     "3091": {
       "metadata": {
@@ -3421,7 +4301,11 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "calc.OnHitDamage.0.mNumber": 45
+      },
+      "valores_cambiados": {}
     },
     "3094": {
       "metadata": {
@@ -3467,7 +4351,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.RangePercentIncrease": 0.35,
+        "valor.MaxRangeIncrease": 150,
+        "valor.BonusDamage": 40
+      },
+      "valores_cambiados": {}
     },
     "3097": {
       "metadata": {
@@ -3511,7 +4401,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BuffStrength": 0.45,
+        "valor.BuffDuration": 1.5,
+        "calc.TotalProcDamage.0.mNumber": 100
+      },
+      "valores_cambiados": {}
     },
     "3100": {
       "metadata": {
@@ -3547,7 +4443,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SpellbladeCooldown": 1.5,
+        "valor.LichBaneAPValue": 0.45,
+        "valor.SpellbladeADRatio": 0.75,
+        "valor.SheenASBuff": 0.5,
+        "valor.Cooldown": 1.5,
+        "valor.SpellBladeDuration": 10,
+        "calc.SpellbladeDamage.0.mStat": 2,
+        "calc.SpellbladeDamage.0.mStatFormula": 1
+      },
+      "valores_cambiados": {}
     },
     "3102": {
       "metadata": {
@@ -3579,7 +4486,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 40,
+        "efecto.0": 40,
+        "efecto.1": 45,
+        "efecto.2": 10,
+        "efecto.3": -0.1,
+        "efecto.4": 8,
+        "efecto.5": 2
+      },
+      "valores_cambiados": {}
     },
     "3107": {
       "metadata": {
@@ -3637,7 +4554,22 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealMin": 150,
+        "valor.HealMax": 350,
+        "valor.DamageToChampions": 0.1,
+        "valor.Cooldown": 90,
+        "valor.AOESize": 550,
+        "valor.CastRange": 5500,
+        "valor.DiminishedEffect": 0.5,
+        "valor.DiminishedTimer": 8,
+        "valor.HPRegenIncrease": 0.25,
+        "valor.BaseManaRegen": 0.25,
+        "calc.HealAmount.0.mSubparts.1.mPart1.mEndValue": 1,
+        "calc.HealAmount.0.mSubparts.1.mPart2.mSubparts.0.mSubparts.0.mPart2.mNumber": -1
+      },
+      "valores_cambiados": {}
     },
     "3108": {
       "metadata": {
@@ -3652,7 +4584,11 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "efecto.0": -0.1
+      },
+      "valores_cambiados": {}
     },
     "3109": {
       "metadata": {
@@ -3695,7 +4631,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DamageRedirection": 0.14,
+        "valor.DamageRedirectionThreshold": 0.3,
+        "valor.TetherRange": 1250,
+        "valor.AllyHealingConversion": 0.12,
+        "valor.Cooldown": 60
+      },
+      "valores_cambiados": {}
     },
     "3110": {
       "metadata": {
@@ -3731,7 +4675,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ASPDSlow": -0.2,
+        "valor.AuraRadius": 700
+      },
+      "valores_cambiados": {}
     },
     "3111": {
       "metadata": {
@@ -3773,7 +4722,11 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.FeatsMR": 5
+      },
+      "valores_cambiados": {}
     },
     "3112": {
       "metadata": {
@@ -3788,7 +4741,11 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "efecto.0": 3
+      },
+      "valores_cambiados": {}
     },
     "3113": {
       "metadata": {
@@ -3803,7 +4760,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3114": {
       "metadata": {
@@ -3818,7 +4777,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3115": {
       "metadata": {
@@ -3845,7 +4806,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.NashorsBaseValue": 15,
+        "valor.NashorsAPValue": 0.15
+      },
+      "valores_cambiados": {}
     },
     "3116": {
       "metadata": {
@@ -3878,7 +4844,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SlowAmount": 0.3,
+        "valor.SlowDuration": 1,
+        "efecto.0": -0.3,
+        "efecto.1": -0.3,
+        "efecto.2": -0.3,
+        "efecto.3": 1,
+        "efecto.4": 1,
+        "efecto.5": 1
+      },
+      "valores_cambiados": {}
     },
     "3118": {
       "metadata": {
@@ -3931,7 +4908,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AOESize": 250,
+        "valor.UltimateHaste": 20,
+        "valor.GroundDuration": 3,
+        "valor.BaseDamage": 60,
+        "valor.APRatio": 0.05,
+        "valor.MaxRadius": 550,
+        "calc.{8e8f7a34}.mMultiplier.mNumber": 0.25,
+        "calc.MagicResistanceShred.0.mNumber": 10
+      },
+      "valores_cambiados": {}
     },
     "3119": {
       "metadata": {
@@ -3978,7 +4966,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 3,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 4,
+        "valor.MaxMana": 360,
+        "valor.InternalCDPerCastID": 6.5,
+        "calc.BonusHPFromMana.0.mCoefficient": 0.15,
+        "calc.BonusHPFromMana.0.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "3121": {
       "metadata": {
@@ -4039,7 +5037,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 8,
+        "valor.ShieldDuration": 3,
+        "valor.CurrentManaShieldRatio": 0.045,
+        "valor.Multiplier": 0.8,
+        "calc.BonusHPFromMana.0.mCoefficient": 0.15,
+        "calc.BonusHPFromMana.0.mStatFormula": 2,
+        "calc.ShieldBase.0.mNumber": 100
+      },
+      "valores_cambiados": {}
     },
     "3123": {
       "metadata": {
@@ -4069,7 +5077,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.GrievousDuration": 3,
+        "valor.GrievousAmount": 0.4,
+        "efecto.0": 3
+      },
+      "valores_cambiados": {}
     },
     "3124": {
       "metadata": {
@@ -4116,7 +5130,30 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.OnHitDamage": 30,
+        "valor.MythicArmorPen": 0,
+        "valor.MythicMagicPen": 0,
+        "valor.AttackSpeedPerStack": 0.08,
+        "valor.MaxStacks": 4,
+        "valor.BuffDuration": 3,
+        "valor.CritChancePerStep": 0,
+        "valor.DamageAmountPerCritStep": 0,
+        "valor.MaxDamageFromCrit": 0,
+        "efecto.0": 0.08,
+        "efecto.1": 2.5,
+        "efecto.2": 2.5,
+        "efecto.3": 3,
+        "efecto.4": 4,
+        "efecto.5": 0.1,
+        "efecto.6": 0.1,
+        "efecto.7": 15,
+        "efecto.8": 1,
+        "efecto.9": 3,
+        "efecto.12": 3
+      },
+      "valores_cambiados": {}
     },
     "3133": {
       "metadata": {
@@ -4131,7 +5168,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3134": {
       "metadata": {
@@ -4146,7 +5185,11 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 10
+      },
+      "valores_cambiados": {}
     },
     "3135": {
       "metadata": {
@@ -4161,7 +5204,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3137": {
       "metadata": {
@@ -4198,7 +5243,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BaseHeal": 100,
+        "valor.HealAPRatio": 0.2,
+        "valor.ItemCooldown": 60,
+        "valor.TakedownWindow": 3,
+        "valor.Cooldown": 60
+      },
+      "valores_cambiados": {}
     },
     "3139": {
       "metadata": {
@@ -4248,7 +5301,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 90,
+        "valor.MSDuration": 2,
+        "valor.MoveSpeed": 0.5,
+        "efecto.0": 0.5,
+        "efecto.1": 2,
+        "efecto.2": 90
+      },
+      "valores_cambiados": {}
     },
     "3140": {
       "metadata": {
@@ -4295,7 +5357,11 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 90
+      },
+      "valores_cambiados": {}
     },
     "3142": {
       "metadata": {
@@ -4341,7 +5407,23 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 18,
+        "valor.CombatTimer": 3,
+        "valor.Cooldown": 45,
+        "valor.MeleeItemCalcValueB": 20,
+        "valor.RangedItemCalcValueB": 15,
+        "valor.DurationNDV": 6,
+        "valor.OOCMSndv": 20,
+        "valor.BaseOOCMS": 20,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.Duration.0.mNumber": 6,
+        "calc.Duration.mRangedMultiplier.mNumber": 0.667,
+        "calc.OOCMS.mRangedMultiplier.mNumber": 0.5
+      },
+      "valores_cambiados": {}
     },
     "3143": {
       "metadata": {
@@ -4380,7 +5462,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.PercentCritDamageReduction": 0.3,
+        "valor.SlowAmount": 0.7,
+        "valor.SlowDuration": 2,
+        "valor.Radius": 500,
+        "valor.Cooldown": 90
+      },
+      "valores_cambiados": {}
     },
     "3144": {
       "metadata": {
@@ -4407,7 +5497,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 40,
+        "calc.DamageAmount.0.mNumber": 40
+      },
+      "valores_cambiados": {}
     },
     "3145": {
       "metadata": {
@@ -4432,7 +5527,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 40,
+        "calc.DamageAmount.0.mNumber": 65
+      },
+      "valores_cambiados": {}
     },
     "3146": {
       "metadata": {
@@ -4474,7 +5574,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SlowAmount": 0.25,
+        "valor.SlowDuration": 1.5,
+        "valor.Cooldown": 60,
+        "calc.ActiveDamage.0.mStartValue": 175,
+        "calc.ActiveDamage.0.mEndValue": 253,
+        "calc.ActiveDamage.1.mCoefficient": 0.3
+      },
+      "valores_cambiados": {}
     },
     "3147": {
       "metadata": {
@@ -4506,7 +5615,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BuffCounterDuration": 3,
+        "valor.SecondsInCombat": 3,
+        "valor.DamageIncreasePerSecond": 0.02,
+        "valor.DamageIncreaseMax": 0.06
+      },
+      "valores_cambiados": {}
     },
     "3152": {
       "metadata": {
@@ -4543,7 +5659,33 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 50,
+        "valor.BaseDamage": 100,
+        "valor.APRatio": 0.1,
+        "hechizo.3152Missile.enfriamiento": 60,
+        "hechizo.3152Missile.efecto.0.value.0": 35,
+        "hechizo.3152Missile.efecto.0.value.1": 80,
+        "hechizo.3152Missile.efecto.0.value.2": 125,
+        "hechizo.3152Missile.efecto.0.value.3": 170,
+        "hechizo.3152Missile.efecto.0.value.4": 215,
+        "hechizo.3152Missile.efecto.0.value.5": 260,
+        "hechizo.3152Missile.efecto.0.value.6": 305,
+        "hechizo.3152Active.enfriamiento": 40,
+        "hechizo.3152Active.efecto.0.value.0": 35,
+        "hechizo.3152Active.efecto.0.value.1": 80,
+        "hechizo.3152Active.efecto.0.value.2": 125,
+        "hechizo.3152Active.efecto.0.value.3": 170,
+        "hechizo.3152Active.efecto.0.value.4": 215,
+        "hechizo.3152Active.efecto.0.value.5": 260,
+        "hechizo.3152Active.efecto.0.value.6": 305,
+        "hechizo.3152Active.efecto.3.value": 75,
+        "hechizo.3152Active.efecto.4.value": 150,
+        "hechizo.3152Active.efecto.5.value": 0.1,
+        "hechizo.3152Active.efecto.6.value": 0.25
+      },
+      "valores_cambiados": {}
     },
     "3153": {
       "metadata": {
@@ -4595,7 +5737,28 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MoveSpeedMod": -0.3,
+        "valor.MoveSpeedDuration": 1,
+        "valor.Cooldown": 15,
+        "valor.RangedValue": 0.06,
+        "valor.MeleeValue": 0.09,
+        "valor.MonsterDamageCap": 100,
+        "valor.AttackCounterDuration": 6,
+        "valor.RangedMoveSpeedMod": -0.15,
+        "calc.SiphonDamage.0.mLevel1Value": 40,
+        "calc.SiphonDamage.0.mBreakpoints.0.mLevel": 10,
+        "calc.SiphonDamage.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 7,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.MeleeItemCalcValueB.mMultiplier.mNumber": -1,
+        "calc.RangedItemCalcValueB.mMultiplier.mNumber": -1,
+        "calc.{405deeb1}.0.mStat": 13,
+        "calc.{405deeb1}.0.mCoefficient": 1,
+        "hechizo.3153Slow.enfriamiento": 60
+      },
+      "valores_cambiados": {}
     },
     "3155": {
       "metadata": {
@@ -4639,7 +5802,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LowHealthThreshold": 0.3,
+        "valor.ShieldLifetime": 2.5,
+        "valor.Cooldown": 90,
+        "calc.MeleeItemCalcValue.0.mStartValue": 110,
+        "calc.MeleeItemCalcValue.0.mEndValue": 280,
+        "calc.RangedItemCalcValue.mMultiplier.mNumber": 0.75
+      },
+      "valores_cambiados": {}
     },
     "3156": {
       "metadata": {
@@ -4690,7 +5862,37 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ShieldSize": 200,
+        "valor.LowHealthThreshold": 0.3,
+        "valor.ShieldDuration": 3,
+        "valor.ShieldADScaling": 1.5,
+        "valor.BuffDuration": 5,
+        "valor.BuffExtension": 3,
+        "valor.BuffVamp": 0.1,
+        "valor.RangedShieldMod": 0.75,
+        "valor.Cooldown": 90,
+        "calc.MeleeItemCalcValue.1.mStat": 2,
+        "calc.MeleeItemCalcValue.1.mStatFormula": 2,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "hechizo.3156MawBuff.efecto.0.value.0": 15,
+        "hechizo.3156MawBuff.efecto.0.value.1": 30,
+        "hechizo.3156MawBuff.efecto.0.value.2": 45,
+        "hechizo.3156MawBuff.efecto.0.value.3": 60,
+        "hechizo.3156MawBuff.efecto.0.value.4": 75,
+        "hechizo.3156MawBuff.efecto.0.value.5": 90,
+        "hechizo.3156MawBuff.efecto.0.value.6": 105,
+        "hechizo.3156MawDamageBuff.efecto.0.value.0": 15,
+        "hechizo.3156MawDamageBuff.efecto.0.value.1": 30,
+        "hechizo.3156MawDamageBuff.efecto.0.value.2": 45,
+        "hechizo.3156MawDamageBuff.efecto.0.value.3": 60,
+        "hechizo.3156MawDamageBuff.efecto.0.value.4": 75,
+        "hechizo.3156MawDamageBuff.efecto.0.value.5": 90,
+        "hechizo.3156MawDamageBuff.efecto.0.value.6": 105
+      },
+      "valores_cambiados": {}
     },
     "3157": {
       "metadata": {
@@ -4717,7 +5919,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 120,
+        "valor.Duration": 2.5,
+        "efecto.1": 2.5,
+        "efecto.2": 120
+      },
+      "valores_cambiados": {}
     },
     "3158": {
       "metadata": {
@@ -4741,7 +5950,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SummonerHaste": 10,
+        "valor.FeatsHaste": 5
+      },
+      "valores_cambiados": {}
     },
     "3161": {
       "metadata": {
@@ -4786,7 +6000,19 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SpellDamageIncrease": 0.03,
+        "valor.AHBase": 25,
+        "valor.StackDuration": 6,
+        "valor.StackCount": 4,
+        "valor.RangedMod": 0.5,
+        "valor.TooltipValue": 3,
+        "valor.CastIDLockout": 1,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2
+      },
+      "valores_cambiados": {}
     },
     "3165": {
       "metadata": {
@@ -4819,7 +6045,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.GrievousAmount": 0.4,
+        "valor.GrievousDuration": 3
+      },
+      "valores_cambiados": {}
     },
     "3168": {
       "metadata": {
@@ -4834,7 +6065,14 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.OmnivampOnTakedown": 0.006,
+        "valor.MaxStacks": 10,
+        "valor.DamageMod": 0.04,
+        "valor.HealingMod": 0.12
+      },
+      "valores_cambiados": {}
     },
     "3170": {
       "metadata": {
@@ -4848,7 +6086,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MoveSpeedMultiplier": 0.04,
+        "valor.SlowResistTooltip": 0.4,
+        "valor.MSAdaptiveRatio": 0.05,
+        "calc.{5e4a31e2}.0.mCoefficient": 1,
+        "calc.MSToAdaptiveCalc.0.mStat": 7
+      },
+      "valores_cambiados": {}
     },
     "3171": {
       "metadata": {
@@ -4863,7 +6109,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SummonerHaste": 20,
+        "valor.MeleeMS": 0.1,
+        "valor.Duration": 4,
+        "valor.RangedMSMultiplier": 0.8,
+        "calc.{5e4a31e2}.0.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "3172": {
       "metadata": {
@@ -4879,7 +6133,14 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MeleeMS": 0.15,
+        "valor.RangedMSMultiplier": 0.667,
+        "valor.Duration": 2,
+        "calc.{5e4a31e2}.0.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "3173": {
       "metadata": {
@@ -4895,7 +6156,19 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 15,
+        "valor.ShieldAmount": 0.08,
+        "valor.ShieldDuration": 5,
+        "calc.ShieldAmountCalc.0.mLevel1Value": 90,
+        "calc.ShieldAmountCalc.0.mBreakpoints.0.mLevel": 9,
+        "calc.ShieldAmountCalc.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 10,
+        "calc.ShieldAmountCalc.1.mStat": 12,
+        "calc.ShieldAmountCalc.1.mStatFormula": 2,
+        "calc.{5e4a31e2}.0.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "3174": {
       "metadata": {
@@ -4910,7 +6183,20 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DamageReduction": 0.1,
+        "valor.Cooldown": 15,
+        "valor.ShieldAmount": 0.08,
+        "valor.ShieldDuration": 5,
+        "calc.ShieldAmountCalc.0.mLevel1Value": 90,
+        "calc.ShieldAmountCalc.0.mBreakpoints.0.mLevel": 9,
+        "calc.ShieldAmountCalc.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 10,
+        "calc.ShieldAmountCalc.1.mStat": 12,
+        "calc.ShieldAmountCalc.1.mStatFormula": 2,
+        "calc.{5e4a31e2}.0.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "3175": {
       "metadata": {
@@ -4926,7 +6212,11 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "calc.{5e4a31e2}.0.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "3177": {
       "metadata": {
@@ -4942,7 +6232,11 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "efecto.0": 10
+      },
+      "valores_cambiados": {}
     },
     "3179": {
       "metadata": {
@@ -5002,7 +6296,26 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 18,
+        "valor.MeleeDamage": 3,
+        "valor.RangedDamage": 2,
+        "valor.Cooldown": 90,
+        "valor.OutOfVisionDuration": 1,
+        "valor.AttackReadyDuration": 4,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.ProcDamage.0.mNumber": 50,
+        "calc.ProcDamage.1.mStat": 29,
+        "calc.ProcDamage.1.mCoefficient": 1.5,
+        "calc.TotalWardDamage.0.mNumber": 3,
+        "calc.TotalWardDamage.mRangedMultiplier.mNumber": 0.667,
+        "efecto.0": 10,
+        "efecto.1": 8,
+        "efecto.2": 90
+      },
+      "valores_cambiados": {}
     },
     "3181": {
       "metadata": {
@@ -5104,7 +6417,30 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SkipperADRatio": 1.2,
+        "valor.SkipperADRatioVSStructures": 3,
+        "valor.MaxStackDamageHPRatio": 0.05,
+        "valor.MaxStackDamageVSStructuresHPRatio": 0.1,
+        "valor.SkipperStackDuration": 10,
+        "valor.RangedSkipperADRatio": 0.7,
+        "valor.RangedSkipperADRatioVSStructures": 2,
+        "calc.MaxStackDamage.0.mStat": 2,
+        "calc.MaxStackDamage.0.mStatFormula": 1,
+        "calc.MaxStackDamage.1.mStat": 12,
+        "calc.MaxStackDamage.mRangedMultiplier.mNumber": 0.7,
+        "calc.MaxStackDamageVSStructures.0.mStat": 2,
+        "calc.MaxStackDamageVSStructures.0.mStatFormula": 1,
+        "calc.MaxStackDamageVSStructures.1.mStat": 12,
+        "calc.MaxStackDamageVSStructures.mRangedMultiplier.mNumber": 0.7,
+        "calc.BonusMinionResists.0.mLevel1Value": 70,
+        "calc.BonusMinionResists.0.mBreakpoints.0.mLevel": 9,
+        "calc.BonusMinionResists.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 6,
+        "calc.BonusMinionResists.mRangedMultiplier.mNumber": 0.5,
+        "hechizo.3181_MinionBuff_Line.enfriamiento": 60
+      },
+      "valores_cambiados": {}
     },
     "3184": {
       "metadata": {
@@ -5120,7 +6456,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3190": {
       "metadata": {
@@ -5165,7 +6503,20 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ShieldDuration": 2.5,
+        "valor.DiminishedEffectMulitplier": 0.25,
+        "valor.DiminishedTimer": 20,
+        "valor.Cooldown": 90,
+        "valor.ShieldRange": 850,
+        "valor.ShieldMinTOOLTIP": 290,
+        "valor.ShieldMaxTOOLTIP": 360,
+        "calc.ShieldAmount.0.mLevel1Value": 290,
+        "calc.ShieldAmount.0.mBreakpoints.0.mLevel": 9,
+        "calc.ShieldAmount.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 7
+      },
+      "valores_cambiados": {}
     },
     "3211": {
       "metadata": {
@@ -5181,7 +6532,13 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealthRegenPassive": 0,
+        "valor.HealthRegenDuration": 10,
+        "valor.DamageToRegenDurationRatio": 0.333
+      },
+      "valores_cambiados": {}
     },
     "3222": {
       "metadata": {
@@ -5235,7 +6592,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.CleanseCooldown": 120,
+        "valor.HealAmountMin": 100,
+        "valor.HealAmountMax": 250,
+        "valor.Cooldown": 120,
+        "calc.AmountToHeal.0.mSubparts.1.mPart1.mEndValue": 1,
+        "calc.AmountToHeal.0.mSubparts.1.mPart2.mSubparts.0.mSubparts.0.mPart2.mNumber": -1,
+        "hechizo.3222Active.enfriamiento": 120
+      },
+      "valores_cambiados": {}
     },
     "3302": {
       "metadata": {
@@ -5287,7 +6654,25 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BuffDuration": 5,
+        "valor.DebuffDuration": 5,
+        "valor.PenMax": 0.3,
+        "valor.PenPerHit": 0.1,
+        "calc.ARMRPerHitScaling.0.mLevel1Value": 6,
+        "calc.ARMRPerHitScaling.0.mBreakpoints.0.mLevel": 11,
+        "calc.ARMRPerHitScaling.0.mBreakpoints.0.mAdditionalBonusAtThisLevel": 1,
+        "calc.ARMRPerHitScaling.0.mBreakpoints.1.mLevel": 14,
+        "calc.ARMRPerHitScaling.0.mBreakpoints.1.mAdditionalBonusAtThisLevel": 1,
+        "calc.ARMRMaxScaling.mMultiplier.mNumber": 3,
+        "calc.OnHitDamage.0.mNumber": 30,
+        "calc.OnHitDamage.1.mStat": 2,
+        "calc.OnHitDamage.1.mStatFormula": 2,
+        "calc.OnHitDamage.1.mCoefficient": 0.1,
+        "calc.OnHitDamage.2.mCoefficient": 0.1
+      },
+      "valores_cambiados": {}
     },
     "3330": {
       "metadata": {
@@ -5299,7 +6684,22 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "calc.EffigyDuration.0.mStartValue": 130,
+        "calc.EffigyDuration.0.mEndValue": 300,
+        "calc.AMMORECHARGETIME.0.mStartValue": 115,
+        "calc.AMMORECHARGETIME.0.mEndValue": 30,
+        "efecto.0": 90,
+        "efecto.1": 240,
+        "efecto.2": 120,
+        "efecto.3": 120,
+        "efecto.4": 2,
+        "efecto.5": 9,
+        "efecto.6": 30,
+        "efecto.7": 120
+      },
+      "valores_cambiados": {}
     },
     "3340": {
       "metadata": {
@@ -5311,7 +6711,21 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxWardsPlaced": 3,
+        "valor.GameTimeThreshold": 14,
+        "valor.MaxAmmo": 2,
+        "valor.StartingSingleChargeTime": 210,
+        "valor.EndingSingleChargeTime": 90,
+        "efecto.0": 90,
+        "efecto.2": 120,
+        "efecto.4": 2,
+        "efecto.5": 9,
+        "efecto.6": 30,
+        "efecto.7": 120
+      },
+      "valores_cambiados": {}
     },
     "3363": {
       "metadata": {
@@ -5323,7 +6737,32 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.RequiredLevel": 9,
+        "valor.TOOLTIPMinimumCost": 600,
+        "valor.TOOLTIPReductionPerPink": 75,
+        "valor.PersistVisionRange": 500,
+        "valor.ScryerVisionRange": 800,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mLevel": 9,
+        "calc.ChampLevelReached.0.mBreakpoints.0.mAdditionalBonusAtThisLevel": 1,
+        "efecto.0": 4000,
+        "efecto.1": 2,
+        "efecto.2": 5,
+        "efecto.3": 198,
+        "efecto.4": 60,
+        "efecto.5": 9,
+        "efecto.6": 30,
+        "efecto.7": 120,
+        "efecto.8": 6.5,
+        "efecto.9": 198,
+        "efecto.10": 99,
+        "efecto.11": 60,
+        "efecto.12": 180,
+        "efecto.13": 10,
+        "efecto.14": 45
+      },
+      "valores_cambiados": {}
     },
     "3364": {
       "metadata": {
@@ -5335,7 +6774,26 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Duration": 8,
+        "valor.MaxAmmo": 2,
+        "valor.StartingSingleChargeTime": 160,
+        "valor.EndingSingleChargeTime": 100,
+        "valor.GameTimeThreshold": 14,
+        "valor.MaxAmmoPre": 1,
+        "valor.StartingRadius": 600,
+        "valor.EndingRadius": 750,
+        "efecto.0": 8,
+        "efecto.1": 10,
+        "efecto.2": 120,
+        "efecto.3": 60,
+        "efecto.5": 1,
+        "efecto.6": 30,
+        "efecto.7": 120,
+        "efecto.8": 60
+      },
+      "valores_cambiados": {}
     },
     "3504": {
       "metadata": {
@@ -5379,7 +6837,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AttackSpeedMin": 0.25,
+        "valor.Duration": 6,
+        "valor.OnHitMin": 20
+      },
+      "valores_cambiados": {}
     },
     "3508": {
       "metadata": {
@@ -5412,7 +6876,20 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.FlatManaRefund": 15,
+        "valor.ManaRefundRatio": 0.15,
+        "valor.BaseADRatio": 1.25,
+        "valor.CritChanceMultiplier": 50,
+        "valor.SpellbladeCooldown": 1.5,
+        "valor.Cooldown": 1.5,
+        "calc.TotalManaRefund.mMultiplier.mNumber": 0.5,
+        "calc.SpellbladeDamage.0.mStat": 2,
+        "calc.SpellbladeDamage.0.mStatFormula": 1,
+        "calc.SpellbladeDamage.1.mStat": 8
+      },
+      "valores_cambiados": {}
     },
     "3599": {
       "metadata": {
@@ -5424,7 +6901,9 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3600": {
       "metadata": {
@@ -5436,7 +6915,9 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3742": {
       "metadata": {
@@ -5480,7 +6961,21 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MaxMovementSpeed": 20,
+        "valor.MaxStacks": 100,
+        "valor.BonusDamagePerStack": 0.4,
+        "valor.MaxStackSlowAmount": 0,
+        "valor.MaxStackSlowDuration": 0,
+        "valor.MaxStacksADRatio": 1,
+        "valor.DurationToMaxStack": 4,
+        "valor.SlowResistTooltip": 0.15,
+        "calc.MaxDamageCalc.0.mStat": 2,
+        "calc.MaxDamageCalc.0.mStatFormula": 1,
+        "calc.MaxDamageCalc.1.mPart2.mNumber": 100
+      },
+      "valores_cambiados": {}
     },
     "3748": {
       "metadata": {
@@ -5544,7 +7039,36 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.PrimaryTargetHPRatio": 0.01,
+        "valor.SplashHPRatio": 0.03,
+        "valor.RangedEffectiveness": 0.5,
+        "valor.ActivePrimaryTargetHPRatio": 0.04,
+        "valor.ActiveSplashHPRatio": 0.09,
+        "valor.Cooldown": 10,
+        "valor.MaxProcPerAuto": 10,
+        "calc.CalcValueB.0.mStat": 12,
+        "calc.CalcValue.0.mStat": 12,
+        "calc.CalcValueC.0.mStat": 12,
+        "calc.CalcValueD.0.mStat": 12,
+        "calc.OnHitDamageCalc.0.mStat": 12,
+        "calc.OnHitDamageCalc.0.mCoefficient": 0.01,
+        "calc.OnHitDamageCalc.mRangedMultiplier.mNumber": 0.5,
+        "calc.ConeDamageCalc.0.mStat": 12,
+        "calc.ConeDamageCalc.0.mCoefficient": 0.03,
+        "calc.ConeDamageCalc.mRangedMultiplier.mNumber": 0.5,
+        "hechizo.3748Active.efecto.0.value.0": 5,
+        "hechizo.3748Active.efecto.0.value.1": 30,
+        "hechizo.3748Active.efecto.0.value.2": 55,
+        "hechizo.3748Active.efecto.0.value.3": 80,
+        "hechizo.3748Active.efecto.0.value.4": 105,
+        "hechizo.3748Active.efecto.0.value.5": 130,
+        "hechizo.3748Active.efecto.0.value.6": 155,
+        "hechizo.3748Active.efecto.1.value": 30,
+        "hechizo.3748Active.efecto.2.value": 60
+      },
+      "valores_cambiados": {}
     },
     "3801": {
       "metadata": {
@@ -5559,7 +7083,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "3802": {
       "metadata": {
@@ -5590,7 +7116,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaRestorePercent": 0.2,
+        "valor.RestorationDuration": 3
+      },
+      "valores_cambiados": {}
     },
     "3803": {
       "metadata": {
@@ -5634,7 +7165,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.EternityManaRestore": 0.1,
+        "valor.EternityHealthRestore": 0.25,
+        "valor.EternityMaxHealPerCast": 20,
+        "valor.EternityCDPerCast": 1
+      },
+      "valores_cambiados": {}
     },
     "3814": {
       "metadata": {
@@ -5667,7 +7205,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 15,
+        "valor.Cooldown": 40,
+        "efecto.3": 40
+      },
+      "valores_cambiados": {}
     },
     "3865": {
       "metadata": {
@@ -5717,7 +7261,34 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.GP10": 3,
+        "valor.QuestGoldRequirement": 400,
+        "valor.ChargeCooldown": 20,
+        "valor.MaxCharges": 3,
+        "valor.AllyChampNearbyRadius": 2000,
+        "valor.GoldOnHit": 20,
+        "valor.GoldOnHitMelee": 22,
+        "valor.ExecuteMinionGold": 15,
+        "valor.MeleeExecutePerc": 0.5,
+        "valor.RangedExecutePerc": 0.333,
+        "valor.ExecuteCannonGold": 20,
+        "valor.AllyChampNearbyRadiusMinion": 1300,
+        "valor.FirstChargeOffset": 20,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.ExecuteDamage.0.mStat": 12,
+        "calc.ExecuteDamage.0.mCoefficient": 1,
+        "calc.ExecuteDamage.1.mStat": 2,
+        "calc.ExecuteDamage.1.mCoefficient": 1,
+        "calc.{79b6144b}.mConditionalCalculationRequirements.mSubRequirements.1.mRange": 1300,
+        "calc.ExecuteHealthThreshold.0.mStat": 12,
+        "calc.ExecuteHealthThreshold.1.mStat": 2,
+        "calc.ExecuteHealthThreshold.1.mCoefficient": 1,
+        "efecto.0": 3
+      },
+      "valores_cambiados": {}
     },
     "3866": {
       "metadata": {
@@ -5767,7 +7338,34 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StealthWardCap": 3,
+        "valor.GP10": 5,
+        "valor.QuestGoldRequirement": 800,
+        "valor.ChargeCooldown": 20,
+        "valor.MaxCharges": 3,
+        "valor.AllyChampNearbyRadius": 2000,
+        "valor.GoldOnHit": 22,
+        "valor.GoldOnHitMelee": 24,
+        "valor.ExecuteMinionGold": 20,
+        "valor.MeleeExecutePerc": 0.5,
+        "valor.RangedExecutePerc": 0.333,
+        "valor.ExecuteCannonGold": 28,
+        "valor.AllyChampNearbyRadiusMinion": 1300,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.ExecuteDamage.0.mStat": 12,
+        "calc.ExecuteDamage.0.mCoefficient": 1,
+        "calc.ExecuteDamage.1.mStat": 2,
+        "calc.ExecuteDamage.1.mCoefficient": 1,
+        "calc.{79b6144b}.mConditionalCalculationRequirements.mSubRequirements.1.mRange": 1300,
+        "calc.ExecuteHealthThreshold.0.mStat": 12,
+        "calc.ExecuteHealthThreshold.1.mStat": 2,
+        "calc.ExecuteHealthThreshold.1.mCoefficient": 1,
+        "efecto.0": 5
+      },
+      "valores_cambiados": {}
     },
     "3867": {
       "metadata": {
@@ -5803,7 +7401,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StealthWardCap": 4,
+        "valor.IncreasedWardRange": 300,
+        "valor.GP10": 5,
+        "efecto.0": 5
+      },
+      "valores_cambiados": {}
     },
     "3869": {
       "metadata": {
@@ -5867,7 +7472,21 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StealthWardCap": 4,
+        "valor.IncreasedWardRange": 300,
+        "valor.GP10": 9,
+        "valor.Cooldown": 18,
+        "valor.MeleeShieldDRPercentage": 0.35,
+        "valor.RangedShieldDRPercentage": 0.25,
+        "valor.ShieldLingerAfterInitiallyPopped": 2,
+        "valor.Radius": 500,
+        "valor.SlowDuration": 1.5,
+        "valor.SlowAmount": 0.5,
+        "efecto.0": 9
+      },
+      "valores_cambiados": {}
     },
     "3870": {
       "metadata": {
@@ -5929,7 +7548,26 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StealthWardCap": 4,
+        "valor.IncreasedWardRange": 300,
+        "valor.GP10": 9,
+        "valor.RechargeTime": 8,
+        "valor.MaxBubbleStack": 2,
+        "valor.BubbleDuration": 3,
+        "valor.PurpleBubbleAoEMod": 0.333,
+        "valor.MinHealAmount": 20,
+        "valor.Cooldown": 8,
+        "calc.FlatDR.0.mLevel1Value": 50,
+        "calc.FlatDR.0.mBreakpoints.0.mLevel": 7,
+        "calc.FlatDR.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 12,
+        "calc.ProcDmg.0.mLevel1Value": 40,
+        "calc.ProcDmg.0.mBreakpoints.0.mLevel": 7,
+        "calc.ProcDmg.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 10,
+        "efecto.0": 9
+      },
+      "valores_cambiados": {}
     },
     "3871": {
       "metadata": {
@@ -5982,7 +7620,19 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StealthWardCap": 4,
+        "valor.IncreasedWardRange": 300,
+        "valor.GP10": 9,
+        "valor.APRatio": 0.15,
+        "valor.PercentHPDamage": 0.03,
+        "valor.MonsterDamageCap": 300,
+        "valor.BaseDamage": 10,
+        "calc.Cooldown.0.mNumber": 10,
+        "efecto.0": 9
+      },
+      "valores_cambiados": {}
     },
     "3876": {
       "metadata": {
@@ -6031,7 +7681,22 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StealthWardCap": 4,
+        "valor.IncreasedWardRange": 300,
+        "valor.GP10": 9,
+        "valor.Cooldown": 30,
+        "valor.BuffDuration": 2.5,
+        "valor.MoveSpeedBuff": 0.2,
+        "valor.MoveSpeedRange": 1500,
+        "valor.BonusHealthBuffRatio": 0.07,
+        "calc.BonusHealthBuff.0.mLevel1Value": 50,
+        "calc.BonusHealthBuff.0.mBreakpoints.0.mLevel": 7,
+        "calc.BonusHealthBuff.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 15,
+        "efecto.0": 9
+      },
+      "valores_cambiados": {}
     },
     "3877": {
       "metadata": {
@@ -6085,7 +7750,27 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StealthWardCap": 4,
+        "valor.IncreasedWardRange": 300,
+        "valor.GP10": 9,
+        "valor.BaseADRatio": 0.1,
+        "valor.SheenMult": 1,
+        "valor.SpellbladeCooldown": 1.5,
+        "valor.DebuffDuration": 4,
+        "valor.MeleeDamageAmp": 0.08,
+        "valor.RangedDamageAmp": 0.05,
+        "valor.Cooldown": 1.5,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.{ce8aadac}.0.mStat": 2,
+        "calc.{ce8aadac}.0.mStatFormula": 1,
+        "calc.SpellbladeDamage.0.mStat": 2,
+        "calc.SpellbladeDamage.0.mStatFormula": 1,
+        "efecto.0": 9
+      },
+      "valores_cambiados": {}
     },
     "3916": {
       "metadata": {
@@ -6115,7 +7800,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.GrievousAmount": 0.4,
+        "valor.GrievousDuration": 3
+      },
+      "valores_cambiados": {}
     },
     "4005": {
       "metadata": {
@@ -6153,7 +7843,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DamageAmp": 0.07,
+        "valor.DamageAmpDuration": 4,
+        "valor.ImmobilizingAbilityAH": 20
+      },
+      "valores_cambiados": {}
     },
     "4401": {
       "metadata": {
@@ -6189,7 +7885,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BuffDuration": 7,
+        "valor.MoveSpeed": 0.06,
+        "valor.MaxStacks": 8,
+        "valor.ImmobilizeStacks": 2,
+        "valor.DamageReduction": 0,
+        "valor.StackRefreshTimer": 1,
+        "valor.BonusMagicResist": 70
+      },
+      "valores_cambiados": {}
     },
     "4628": {
       "metadata": {
@@ -6231,7 +7937,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BuffDuration": 6,
+        "valor.SnipeRange": 600,
+        "valor.ItemCooldown": 30,
+        "valor.VisionRadius": 1400,
+        "valor.VisionDuration": 2,
+        "valor.SecondaryBuffDuration": 3,
+        "valor.Cooldown": 30,
+        "valor.DamageAmp": 0.1
+      },
+      "valores_cambiados": {}
     },
     "4629": {
       "metadata": {
@@ -6269,7 +7986,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.StackDuration": 4,
+        "valor.MaxStacks": 3,
+        "valor.MovespeedToGrant": 40,
+        "valor.MaxMovespeedTooltip": 0.15,
+        "valor.ItemCooldown": 10,
+        "calc.MoveSpeedAmount.0.mNumber": 20
+      },
+      "valores_cambiados": {}
     },
     "4630": {
       "metadata": {
@@ -6284,7 +8010,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "4632": {
       "metadata": {
@@ -6318,7 +8046,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MagicResistPerStack": 0.3,
+        "valor.Period": 60,
+        "valor.MaxMR": 9,
+        "valor.CooldownReductionAmount": 0.05,
+        "valor.SpellShieldCooldown": 60,
+        "valor.Cooldown": 60
+      },
+      "valores_cambiados": {}
     },
     "4633": {
       "metadata": {
@@ -6363,7 +8100,22 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SecondsInCombat": 4,
+        "valor.EternityDamageIncreasePerSecond": 0.02,
+        "valor.EternityDamageIncreaseMax": 0.08,
+        "valor.BuffCounterDuration": 4,
+        "valor.HealthToAPConversionPercent": 0.02,
+        "valor.MaxAPMultiplier": 0.05,
+        "valor.VampAmountMelee": 0.1,
+        "valor.VampAmountRanged": 0.06,
+        "calc.{1247259a}.0.mStat": 12,
+        "calc.{1247259a}.0.mStatFormula": 2,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2
+      },
+      "valores_cambiados": {}
     },
     "4642": {
       "metadata": {
@@ -6379,7 +8131,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "4645": {
       "metadata": {
@@ -6411,7 +8165,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealthThreshold": 0.4,
+        "valor.SpellItemDamageAmp": 0.2,
+        "valor.DamageOverTimeAmp": 0.2
+      },
+      "valores_cambiados": {}
     },
     "4646": {
       "metadata": {
@@ -6462,7 +8222,22 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.WindowDuration": 2.5,
+        "valor.Cooldown": 30,
+        "valor.DelayDuration": 2,
+        "valor.GoldReward": 0,
+        "valor.APRatio": 0.1,
+        "valor.DamageThreshold": 0.25,
+        "valor.ProcMoveSpeedDuration": 1.5,
+        "valor.ProcMoveSpeedAmount": 0,
+        "valor.RangedProcDamageMod": 1,
+        "valor.BaseDamage": 125,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2
+      },
+      "valores_cambiados": {}
     },
     "6333": {
       "metadata": {
@@ -6509,7 +8284,21 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BleedDurationWorst": 3,
+        "valor.HealDuration": 2,
+        "valor.MS": 0.4,
+        "valor.TakedownWindow": 3,
+        "valor.BonusADRatio": 0.75,
+        "calc.HealTotal.0.mStat": 2,
+        "calc.HealTotal.0.mStatFormula": 2,
+        "calc.MeleeItemCalcValue.0.mNumber": 0.3,
+        "calc.RangedItemCalcValue.0.mNumber": 0.1,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2
+      },
+      "valores_cambiados": {}
     },
     "6609": {
       "metadata": {
@@ -6543,7 +8332,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.GrievousAmount": 0.4,
+        "valor.GrievousDuration": 3
+      },
+      "valores_cambiados": {}
     },
     "6610": {
       "metadata": {
@@ -6586,7 +8380,22 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.CritModifier": 0.8,
+        "valor.HealAmount": 0.2,
+        "valor.Cooldown": 10,
+        "valor.HealRatio": 1,
+        "valor.MissingHealthHeal": 0.06,
+        "valor.RangedHealMod": 0.5,
+        "calc.HealProc.0.mStat": 2,
+        "calc.HealProc.0.mStatFormula": 1,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.MeleeItemCalcValue.0.mStat": 2,
+        "calc.MeleeItemCalcValue.0.mStatFormula": 1
+      },
+      "valores_cambiados": {}
     },
     "6616": {
       "metadata": {
@@ -6624,7 +8433,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BuffDuration": 6,
+        "valor.APMod": 40,
+        "valor.AHMod": 15
+      },
+      "valores_cambiados": {}
     },
     "6617": {
       "metadata": {
@@ -6671,7 +8486,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.EffectRange": 800,
+        "valor.ChainHeal": 0.3,
+        "valor.ChainShield": 0.35,
+        "valor.SingleHeal": 0.3,
+        "valor.SingleShield": 0.35
+      },
+      "valores_cambiados": {}
     },
     "6620": {
       "metadata": {
@@ -6720,7 +8543,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DamageStorageRate": 0.3,
+        "valor.ChargeToHealConversion": 1,
+        "valor.MinimumHealToTrigger": 10,
+        "calc.MaxCharges.0.mLevel1Value": 80,
+        "calc.MaxCharges.0.mInitialBonusPerLevel": 10
+      },
+      "valores_cambiados": {}
     },
     "6621": {
       "metadata": {
@@ -6752,7 +8583,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.APPerManaRegen": 10,
+        "valor.HSPowerPerManaRegen": 0.02
+      },
+      "valores_cambiados": {}
     },
     "6631": {
       "metadata": {
@@ -6813,7 +8649,39 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 15,
+        "valor.ADRatio": 0.8,
+        "valor.Haste": 0,
+        "valor.MSSlow": -0.35,
+        "valor.Duration": 3,
+        "valor.FlatMS": 0,
+        "valor.CleaveRadius": 450,
+        "valor.ActiveMS": 0.35,
+        "valor.PassiveRadius": 350,
+        "valor.MoveSpeedMod": 0,
+        "valor.MoveSpeedDuration": 2,
+        "valor.DecayRate": 0.8,
+        "valor.MaxProcPerAuto": 10,
+        "calc.SlashDamage.0.mStat": 2,
+        "calc.MeleeItemCalcValue.0.mStat": 2,
+        "calc.MeleeItemCalcValue.0.mCoefficient": 0.4,
+        "calc.RangedItemCalcValue.0.mStat": 2,
+        "calc.RangedItemCalcValue.0.mCoefficient": 0.2,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "hechizo.6631Active.efecto.0.value.0": 5,
+        "hechizo.6631Active.efecto.0.value.1": 30,
+        "hechizo.6631Active.efecto.0.value.2": 55,
+        "hechizo.6631Active.efecto.0.value.3": 80,
+        "hechizo.6631Active.efecto.0.value.4": 105,
+        "hechizo.6631Active.efecto.0.value.5": 130,
+        "hechizo.6631Active.efecto.0.value.6": 155,
+        "hechizo.6631Active.efecto.1.value": 30,
+        "hechizo.6631Active.efecto.2.value": 60
+      },
+      "valores_cambiados": {}
     },
     "6653": {
       "metadata": {
@@ -6851,7 +8719,19 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BurnDuration": 3,
+        "valor.BurnPercentHealthDamage": 0.02,
+        "valor.DamageIncreasePerSecond": 0.02,
+        "valor.DamageIncreaseMax": 0.06,
+        "valor.TickFrequency": 0.5,
+        "valor.MonsterDamageCap": 40,
+        "valor.MaxDamageHPThreshold": 1250,
+        "valor.BuffCounterDuration": 3,
+        "valor.MaxStackNumber": 3
+      },
+      "valores_cambiados": {}
     },
     "6655": {
       "metadata": {
@@ -6898,7 +8778,31 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Cooldown": 12,
+        "valor.BaseDamage": 75,
+        "valor.APRatio": 0.05,
+        "valor.MaxCharges": 6,
+        "valor.RepeatDamageReduction": 0.2,
+        "valor.MissileRange": 650,
+        "calc.SingleTargetMax.mMultiplier.mNumber": 2,
+        "hechizo.6655Cone.enfriamiento.0": 11,
+        "hechizo.6655Cone.enfriamiento.1": 10,
+        "hechizo.6655Cone.enfriamiento.2": 9,
+        "hechizo.6655Cone.enfriamiento.3": 8,
+        "hechizo.6655Cone.enfriamiento.4": 7,
+        "hechizo.6655Cone.enfriamiento.5": 6,
+        "hechizo.6655Cone.enfriamiento.6": 6,
+        "hechizo.6655Missile.enfriamiento.0": 11,
+        "hechizo.6655Missile.enfriamiento.1": 10,
+        "hechizo.6655Missile.enfriamiento.2": 9,
+        "hechizo.6655Missile.enfriamiento.3": 8,
+        "hechizo.6655Missile.enfriamiento.4": 7,
+        "hechizo.6655Missile.enfriamiento.5": 6,
+        "hechizo.6655Missile.enfriamiento.6": 6
+      },
+      "valores_cambiados": {}
     },
     "6657": {
       "metadata": {
@@ -6950,7 +8854,19 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealthPerStack": 10,
+        "valor.ManaPerStack": 30,
+        "valor.APPerStack": 3,
+        "valor.MaxStacks": 10,
+        "valor.EternityManaRestore": 0.1,
+        "valor.EternityHealthRestore": 0.25,
+        "valor.EternityMaxHealPerCast": 20,
+        "valor.EternityCDPerCast": 1,
+        "valor.SecondsPerStack": 60
+      },
+      "valores_cambiados": {}
     },
     "6660": {
       "metadata": {
@@ -6990,7 +8906,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Range": 325,
+        "valor.MinionMod": 0.5,
+        "valor.Cooldown": 12,
+        "valor.MonsterMod": 1,
+        "valor.AuraDuration": 3,
+        "valor.TicksPerSecond": 1,
+        "calc.DamagePerTick.0.mNumber": 15
+      },
+      "valores_cambiados": {}
     },
     "6662": {
       "metadata": {
@@ -7033,7 +8959,21 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SlowAmount": 0.25,
+        "valor.SlowFieldDuration": 2,
+        "valor.AoERadius": 300,
+        "valor.MonsterMod": 1.5,
+        "valor.AuraDuration": 3,
+        "valor.RangedSlowAmount": 0.125,
+        "valor.SpellbladeMultiplier": 1.5,
+        "valor.SpellbladeCooldown": 1.5,
+        "valor.Cooldown": 1.5,
+        "calc.SpellbladeDamage.0.mStat": 2,
+        "calc.SpellbladeDamage.0.mStatFormula": 1
+      },
+      "valores_cambiados": {}
     },
     "6664": {
       "metadata": {
@@ -7077,7 +9017,33 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MinionMod": 0.25,
+        "valor.MonsterMod": 0.25,
+        "valor.Range": 325,
+        "valor.AuraDuration": 3,
+        "valor.TicksPerSecond": 1,
+        "valor.BaseDamagePerTickTOOLTIPONLY": 10,
+        "valor.HPRatioPerTickTOOLTIPONLY": 1.75,
+        "valor.Cooldown": 12,
+        "valor.ProcAoE": 350,
+        "valor.ProcDPSMultiplier": 2,
+        "valor.ChampProcDPSMultiplier": 4,
+        "valor.TakedownWindow": 3,
+        "valor.ChampProcAoE": 500,
+        "calc.DamagePerTick.0.mNumber": 15,
+        "calc.DamagePerTick.1.mStat": 12,
+        "calc.DamagePerTick.1.mStatFormula": 2,
+        "calc.DamagePerTick.1.mCoefficient": 0.01,
+        "calc.{049cea52}.mMultiplier.mNumber": 1,
+        "hechizo.6664Active.enfriamiento": 0.5,
+        "hechizo.6664Active.efecto.0.value": 0.75,
+        "hechizo.6664Active.efecto.1.value": 4,
+        "hechizo.6664Active.efecto.2.value": -0.75,
+        "hechizo.6664Active.efecto.3.value": 2
+      },
+      "valores_cambiados": {}
     },
     "6665": {
       "metadata": {
@@ -7108,7 +9074,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BonusResistPercentage": 0.3,
+        "valor.MaxStacks": 5
+      },
+      "valores_cambiados": {}
     },
     "6670": {
       "metadata": {
@@ -7123,7 +9094,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "6672": {
       "metadata": {
@@ -7164,7 +9137,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AttackCount": 3,
+        "valor.BuffDuration": 4,
+        "valor.MaxAmpNumber": 1.75,
+        "valor.RangedDamageMultiplier": 0.8,
+        "calc.DamageAmount.0.mLevel1Value": 150,
+        "calc.DamageAmount.0.mBreakpoints.0.mLevel": 9,
+        "calc.DamageAmount.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 5
+      },
+      "valores_cambiados": {}
     },
     "6673": {
       "metadata": {
@@ -7209,7 +9192,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ShieldDuration": 3,
+        "valor.Cooldown": 90,
+        "valor.BuffDuration": 8,
+        "valor.HealthThreshold": 0.3,
+        "calc.ShieldAmount.0.mLevel1Value": 400,
+        "calc.ShieldAmount.0.mBreakpoints.0.mLevel": 9,
+        "calc.ShieldAmount.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 30,
+        "calc.ShieldAmount.mRangedMultiplier.mNumber": 0.8
+      },
+      "valores_cambiados": {}
     },
     "6675": {
       "metadata": {
@@ -7242,7 +9236,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.CDRAmount": 0.15,
+        "efecto.0": 0.5,
+        "efecto.1": 1,
+        "efecto.2": 90
+      },
+      "valores_cambiados": {}
     },
     "6676": {
       "metadata": {
@@ -7281,7 +9282,13 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 10,
+        "valor.ExecuteThreshold": 0.05,
+        "valor.GoldAmount": 25
+      },
+      "valores_cambiados": {}
     },
     "6690": {
       "metadata": {
@@ -7296,7 +9303,9 @@
       },
       "mecanicas": {},
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {},
+      "valores_cambiados": {}
     },
     "6692": {
       "metadata": {
@@ -7342,7 +9351,27 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.WindowDuration": 2,
+        "valor.MeleeItemCalcValueB": 6,
+        "valor.RangedItemCalcValueB": 4,
+        "valor.Cooldown": 6,
+        "valor.ShieldDuration": 2,
+        "valor.MeleeBaseShield": 160,
+        "valor.RangedBaseShield": 80,
+        "valor.MeleeShieldADRatio": 0.4,
+        "valor.RangedShieldADRatio": 0.2,
+        "calc.MeleeItemCalcValue.1.mStat": 2,
+        "calc.MeleeItemCalcValue.1.mStatFormula": 2,
+        "calc.RangedItemCalcValue.1.mStat": 2,
+        "calc.RangedItemCalcValue.1.mStatFormula": 2,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.MaxHealthDamageCalc.0.mNumber": 6,
+        "calc.MaxHealthDamageCalc.mRangedMultiplier.mNumber": 0.667
+      },
+      "valores_cambiados": {}
     },
     "6694": {
       "metadata": {
@@ -7401,7 +9430,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SlowAmount": 0.3,
+        "valor.SlowDuration": 1,
+        "valor.LethalityAmount": 15,
+        "valor.SlowThreshold": 0.5,
+        "calc.PenCalc.1.mStat": 29
+      },
+      "valores_cambiados": {}
     },
     "6695": {
       "metadata": {
@@ -7445,7 +9482,16 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 15,
+        "valor.ShieldShred": 50,
+        "valor.ShieldWounds": 50,
+        "valor.DebuffDuration": 3,
+        "valor.ShieldWoundsRange": 35,
+        "valor.ShieldShredRange": 35
+      },
+      "valores_cambiados": {}
     },
     "6696": {
       "metadata": {
@@ -7473,7 +9519,15 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.UltimateRefundBase": 10,
+        "valor.LethalityAmount": 18,
+        "valor.ResetWindow": 3,
+        "calc.UltimateRefund.1.mStat": 29,
+        "calc.UltimateRefund.1.mCoefficient": 0.25
+      },
+      "valores_cambiados": {}
     },
     "6697": {
       "metadata": {
@@ -7513,7 +9567,21 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 18,
+        "valor.MSDuration": 3,
+        "valor.MinHealthThreshold": 0.3,
+        "valor.SpellMaxAmp": 0,
+        "valor.TakedownWindow": 3,
+        "valor.SpeedAmount": 0.3,
+        "valor.BonusLethality": 15,
+        "valor.ADPerStatue": 3,
+        "valor.BuffDuration": 90,
+        "valor.BaseADBonus": 12,
+        "calc.{5974e68a}.0.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "6698": {
       "metadata": {
@@ -7554,7 +9622,38 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 18,
+        "valor.Cooldown": 10,
+        "valor.CleaveRadius": 350,
+        "valor.ActiveRadius": 450,
+        "valor.HealthThreshold": 0.5,
+        "valor.MaxProcPerAuto": 10,
+        "calc.SlashDamageBase.0.mStat": 2,
+        "calc.SlashDamageBase.0.mCoefficient": 0.8,
+        "calc.SlashDamageMax.0.mStat": 2,
+        "calc.SlashDamageMax.0.mCoefficient": 0.8,
+        "calc.{792cf56b}.0.mNumber": 1,
+        "calc.{06387172}.0.mNumber": 2,
+        "calc.MeleeItemCalcValue.0.mStat": 2,
+        "calc.MeleeItemCalcValue.0.mCoefficient": 0.4,
+        "calc.RangedItemCalcValue.0.mStat": 2,
+        "calc.RangedItemCalcValue.0.mCoefficient": 0.2,
+        "calc.CleaveDamage.0.mStat": 2,
+        "calc.CleaveDamage.0.mCoefficient": 0.4,
+        "calc.CleaveDamage.mRangedMultiplier.mNumber": 0.5,
+        "hechizo.6698Active.efecto.0.value.0": 5,
+        "hechizo.6698Active.efecto.0.value.1": 30,
+        "hechizo.6698Active.efecto.0.value.2": 55,
+        "hechizo.6698Active.efecto.0.value.3": 80,
+        "hechizo.6698Active.efecto.0.value.4": 105,
+        "hechizo.6698Active.efecto.0.value.5": 130,
+        "hechizo.6698Active.efecto.0.value.6": 155,
+        "hechizo.6698Active.efecto.1.value": 30,
+        "hechizo.6698Active.efecto.2.value": 60
+      },
+      "valores_cambiados": {}
     },
     "6699": {
       "metadata": {
@@ -7605,7 +9704,17 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.PercentCurrentHPMelee": 9,
+        "valor.PercentCurrentHPRanged": 7,
+        "valor.LethalityBonusModMelee": 15,
+        "valor.LethalityBonusModRanged": 12,
+        "valor.LethalityBonusDuration": 4,
+        "valor.LethalityAmount": 10,
+        "valor.NonChampCap": 200
+      },
+      "valores_cambiados": {}
     },
     "6701": {
       "metadata": {
@@ -7647,7 +9756,18 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 18,
+        "valor.SpeedBaseline": 50,
+        "valor.SpeedKill": 200,
+        "valor.MSDuration": 1.5,
+        "valor.CombatTimer": 8,
+        "valor.DamageWindowDuration": 3,
+        "valor.RangedLethalityMultiplier": 0.455,
+        "calc.BonusLethalityCalc.0.mNumber": 11
+      },
+      "valores_cambiados": {}
     },
     "8010": {
       "metadata": {
@@ -7676,7 +9796,14 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ShredPerStack": 0.075,
+        "valor.DebuffDuration": 6,
+        "valor.InternalCD": 0.3,
+        "valor.MaxStacks": 4
+      },
+      "valores_cambiados": {}
     },
     "8020": {
       "metadata": {
@@ -7708,7 +9835,12 @@
         }
       },
       "parche_verificado": "16.15.1",
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Radius": 700,
+        "valor.DamageAmp": 0.12
+      },
+      "valores_cambiados": {}
     },
     "322065": {
       "metadata": {
@@ -7725,7 +9857,16 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ActiveMoveSpeed": 0.3,
+        "valor.BuffDuration": 4,
+        "valor.ActiveCooldown": 75,
+        "valor.ItemRange": 1000,
+        "valor.PerChampCD": 4,
+        "valor.Cooldown": 75
+      },
+      "valores_cambiados": {}
     },
     "322526": {
       "metadata": {
@@ -7742,7 +9883,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 5,
+        "valor.ManaPerCharge": 4,
+        "valor.MaxMana": 360,
+        "valor.InternalCDPerCastID": 6.5,
+        "calc.BonusHSPCalc.0.mCoefficient": 0.005,
+        "calc.BonusHSPCalc.0.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "323003": {
       "metadata": {
@@ -7758,7 +9909,16 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 9.5,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 5,
+        "valor.MaxMana": 360,
+        "valor.InternalCDPerCastID": 6.5,
+        "valor.APFromMana": 0.01
+      },
+      "valores_cambiados": {}
     },
     "323004": {
       "metadata": {
@@ -7774,7 +9934,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 6.5,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 4,
+        "valor.MaxMana": 360,
+        "valor.TakedownMana": 0,
+        "valor.InternalCDPerCastID": 6.5,
+        "calc.BonusADFromMana.0.mCoefficient": 0.02
+      },
+      "valores_cambiados": {}
     },
     "323050": {
       "metadata": {
@@ -7791,7 +9961,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Duration": 5,
+        "valor.Cooldown": 45,
+        "valor.SlowAmount": 0.3,
+        "valor.DamagePerSecond": 30,
+        "valor.StormRadius": 350,
+        "valor.UltimateHaste": 15,
+        "valor.ReadyDuration": 5
+      },
+      "valores_cambiados": {}
     },
     "323070": {
       "metadata": {
@@ -7805,7 +9985,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 6.5,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.BonusMinionDamage": 5,
+        "valor.MaxMana": 360,
+        "valor.TakedownMana": 0,
+        "valor.ManaChargeMaxAmmo": 4,
+        "valor.InternalCDPerCastID": 6.5
+      },
+      "valores_cambiados": {}
     },
     "323075": {
       "metadata": {
@@ -7820,7 +10010,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BaseDamage": 20,
+        "valor.BonusArmorDamageRatio": 0.1,
+        "valor.GrievousAmount": 0.4,
+        "valor.GrievousDuration": 3,
+        "valor.EnhancedGrievousAmount": 0.4,
+        "calc.TotalDamage.1.mStat": 1,
+        "calc.TotalDamage.1.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "323107": {
       "metadata": {
@@ -7837,7 +10037,22 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealMin": 150,
+        "valor.HealMax": 350,
+        "valor.DamageToChampions": 0.1,
+        "valor.Cooldown": 90,
+        "valor.AOESize": 550,
+        "valor.CastRange": 5500,
+        "valor.DiminishedEffect": 0.5,
+        "valor.DiminishedTimer": 8,
+        "valor.HPRegenIncrease": 0.25,
+        "valor.BaseManaRegen": 0.25,
+        "calc.HealAmount.0.mSubparts.1.mPart1.mEndValue": 1,
+        "calc.HealAmount.0.mSubparts.1.mPart2.mSubparts.0.mSubparts.0.mPart2.mNumber": -1
+      },
+      "valores_cambiados": {}
     },
     "323109": {
       "metadata": {
@@ -7854,7 +10069,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DamageRedirection": 0.14,
+        "valor.DamageRedirectionThreshold": 0.3,
+        "valor.TetherRange": 1250,
+        "valor.AllyHealingConversion": 0.12,
+        "valor.Cooldown": 60
+      },
+      "valores_cambiados": {}
     },
     "323110": {
       "metadata": {
@@ -7870,7 +10093,12 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ASPDSlow": -0.2,
+        "valor.AuraRadius": 700
+      },
+      "valores_cambiados": {}
     },
     "323119": {
       "metadata": {
@@ -7886,7 +10114,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ManaPerCharge": 6.5,
+        "valor.ManaChargeAmmoCD": 8,
+        "valor.ManaChargeMaxAmmo": 4,
+        "valor.MaxMana": 360,
+        "valor.InternalCDPerCastID": 6.5,
+        "calc.BonusHPFromMana.0.mCoefficient": 0.15,
+        "calc.BonusHPFromMana.0.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "323190": {
       "metadata": {
@@ -7903,7 +10141,20 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ShieldDuration": 2.5,
+        "valor.DiminishedEffectMulitplier": 0.25,
+        "valor.DiminishedTimer": 20,
+        "valor.Cooldown": 90,
+        "valor.ShieldRange": 850,
+        "valor.ShieldMinTOOLTIP": 290,
+        "valor.ShieldMaxTOOLTIP": 360,
+        "calc.ShieldAmount.0.mLevel1Value": 290,
+        "calc.ShieldAmount.0.mBreakpoints.0.mLevel": 9,
+        "calc.ShieldAmount.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 7
+      },
+      "valores_cambiados": {}
     },
     "323222": {
       "metadata": {
@@ -7920,7 +10171,16 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.CleanseCooldown": 120,
+        "valor.HealAmountMin": 100,
+        "valor.HealAmountMax": 250,
+        "valor.Cooldown": 120,
+        "calc.AmountToHeal.0.mSubparts.1.mPart1.mEndValue": 1,
+        "calc.AmountToHeal.0.mSubparts.1.mPart2.mSubparts.0.mSubparts.0.mPart2.mNumber": -1
+      },
+      "valores_cambiados": {}
     },
     "323504": {
       "metadata": {
@@ -7937,7 +10197,13 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AttackSpeedMin": 0.25,
+        "valor.Duration": 6,
+        "valor.OnHitMin": 20
+      },
+      "valores_cambiados": {}
     },
     "324005": {
       "metadata": {
@@ -7953,7 +10219,13 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DamageAmp": 0.07,
+        "valor.DamageAmpDuration": 4,
+        "valor.ImmobilizingAbilityAH": 20
+      },
+      "valores_cambiados": {}
     },
     "326616": {
       "metadata": {
@@ -7970,7 +10242,13 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BuffDuration": 6,
+        "valor.APMod": 40,
+        "valor.AHMod": 15
+      },
+      "valores_cambiados": {}
     },
     "326617": {
       "metadata": {
@@ -7987,7 +10265,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.EffectRange": 800,
+        "valor.ChainHeal": 0.3,
+        "valor.ChainShield": 0.35,
+        "valor.SingleHeal": 0.3,
+        "valor.SingleShield": 0.35
+      },
+      "valores_cambiados": {}
     },
     "326620": {
       "metadata": {
@@ -8004,7 +10290,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DamageStorageRate": 0.3,
+        "valor.ChargeToHealConversion": 1,
+        "valor.MinimumHealToTrigger": 10,
+        "calc.MaxCharges.0.mLevel1Value": 80,
+        "calc.MaxCharges.0.mInitialBonusPerLevel": 10
+      },
+      "valores_cambiados": {}
     },
     "326621": {
       "metadata": {
@@ -8020,7 +10314,12 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.APPerManaRegen": 10,
+        "valor.HSPowerPerManaRegen": 0.02
+      },
+      "valores_cambiados": {}
     },
     "326657": {
       "metadata": {
@@ -8036,7 +10335,19 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.HealthPerStack": 10,
+        "valor.ManaPerStack": 30,
+        "valor.APPerStack": 3,
+        "valor.MaxStacks": 10,
+        "valor.EternityManaRestore": 0.1,
+        "valor.EternityHealthRestore": 0.25,
+        "valor.EternityMaxHealPerCast": 20,
+        "valor.EternityCDPerCast": 1,
+        "valor.SecondsPerStack": 60
+      },
+      "valores_cambiados": {}
     },
     "328020": {
       "metadata": {
@@ -8052,7 +10363,12 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.Radius": 700,
+        "valor.DamageAmp": 0.12
+      },
+      "valores_cambiados": {}
     },
     "663039": {
       "metadata": {
@@ -8067,7 +10383,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BonusCritCap": 0.3,
+        "valor.BonusCritPerHundred": 0.01,
+        "calc.{a6bd9178}.mMultiplier.mStat": 12,
+        "calc.{a6bd9178}.mMultiplier.mStatFormula": 2,
+        "calc.{a6bd9178}.mMultiplier.mCoefficient": 1
+      },
+      "valores_cambiados": {}
     },
     "663056": {
       "metadata": {
@@ -8079,7 +10403,13 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AmpBase": 0.2,
+        "valor.AmpPenality": -0.03,
+        "valor.AmpGain": 0.01
+      },
+      "valores_cambiados": {}
     },
     "663058": {
       "metadata": {
@@ -8094,7 +10424,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ARMod": 0.2,
+        "valor.MaxBlock": 0.5,
+        "calc.{7d38e7d6}.0.mNumber": 0.05,
+        "calc.{7d38e7d6}.1.mStat": 1,
+        "calc.{7d38e7d6}.1.mCoefficient": 0.0002
+      },
+      "valores_cambiados": {}
     },
     "663059": {
       "metadata": {
@@ -8109,7 +10447,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.MRMod": 0.1,
+        "valor.DRMax": 0.25,
+        "calc.{d6e744d1}.0.mNumber": 0.05,
+        "calc.{d6e744d1}.1.mStat": 6,
+        "calc.{d6e744d1}.1.mCoefficient": 0.0001
+      },
+      "valores_cambiados": {}
     },
     "663060": {
       "metadata": {
@@ -8124,7 +10470,12 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AdaptiveForce": 90,
+        "valor.CritChanceToDamage": 0.5
+      },
+      "valores_cambiados": {}
     },
     "663064": {
       "metadata": {
@@ -8136,7 +10487,11 @@
       "stats_base": {},
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.EXPBonus": 1
+      },
+      "valores_cambiados": {}
     },
     "663146": {
       "metadata": {
@@ -8152,7 +10507,19 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.SlowAmount": 0.4,
+        "valor.SlowDuration": 2,
+        "valor.Cooldown": 20,
+        "calc.ActiveDamage.0.mStartValue": 175,
+        "calc.ActiveDamage.0.mEndValue": 253,
+        "calc.ActiveDamage.1.mCoefficient": 0.3,
+        "calc.ActiveDamage.2.mStat": 2,
+        "calc.ActiveDamage.2.mStatFormula": 2,
+        "calc.ActiveDamage.2.mCoefficient": 0.3
+      },
+      "valores_cambiados": {}
     },
     "663172": {
       "metadata": {
@@ -8169,7 +10536,13 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BonusMS": 0.05,
+        "valor.MaxMS": 0.25,
+        "valor.Duration": 6
+      },
+      "valores_cambiados": {}
     },
     "663193": {
       "metadata": {
@@ -8186,7 +10559,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.ShieldDuration": 5,
+        "valor.SizeIncrease": 0.25,
+        "valor.BonusHealthShieldRatio": 0.8,
+        "valor.BaseShieldAmount": 300,
+        "valor.Cooldown": 45,
+        "calc.TotalShield.1.mStat": 12,
+        "calc.TotalShield.1.mStatFormula": 2
+      },
+      "valores_cambiados": {}
     },
     "664011": {
       "metadata": {
@@ -8203,7 +10586,20 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.BaseHealAmountTOOLTIPMIN": 10,
+        "valor.BaseHealAmountTOOLTIPMAX": 25,
+        "valor.ASPerHS": 1,
+        "valor.HealbADRatio": 0.05,
+        "valor.HealAPRatio": 0.035,
+        "calc.TotalHealing.0.mStartValue": 10,
+        "calc.TotalHealing.0.mEndValue": 25,
+        "calc.TotalHealing.1.mStat": 2,
+        "calc.TotalHealing.1.mStatFormula": 2,
+        "calc.TotalAS.0.mStat": 34
+      },
+      "valores_cambiados": {}
     },
     "664644": {
       "metadata": {
@@ -8220,7 +10616,20 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.OutOfCombatDuration": 30,
+        "valor.MythicMovespeed": 0.025,
+        "valor.ShieldDRPercentage": 0.4,
+        "valor.ShieldLingerAfterInitiallyPopped": 3,
+        "valor.MythicAbilityPower": 8,
+        "valor.Cooldown": 30,
+        "valor.GraceDuration": 3,
+        "calc.BonusStatWhenShieldActive.0.mLevel1Value": 10,
+        "calc.BonusStatWhenShieldActive.0.mBreakpoints.0.mLevel": 9,
+        "calc.BonusStatWhenShieldActive.0.mBreakpoints.0.mBonusPerLevelAtAndAfter": 3
+      },
+      "valores_cambiados": {}
     },
     "667101": {
       "metadata": {
@@ -8238,7 +10647,15 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 15,
+        "valor.AdaptiveForce": 55,
+        "valor.Shred": 0.2,
+        "valor.ShredStackTime": 1,
+        "valor.MaxStacks": 3
+      },
+      "valores_cambiados": {}
     },
     "667109": {
       "metadata": {
@@ -8254,7 +10671,18 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.DelayTime": 1,
+        "valor.PerSpellLockout": 6,
+        "valor.Radius": 300,
+        "calc.TotalDamage.0.mStartValue": 40,
+        "calc.TotalDamage.0.mEndValue": 150,
+        "calc.TotalDamage.1.mCoefficient": 0.4,
+        "calc.TotalDamage.2.mStat": 12,
+        "calc.TotalDamage.2.mCoefficient": 0.04
+      },
+      "valores_cambiados": {}
     },
     "667112": {
       "metadata": {
@@ -8269,7 +10697,17 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.AdaptiveForce": 55,
+        "valor.Shred": 3,
+        "valor.ShredInternalCD": 1,
+        "valor.ShredStackTime": 5,
+        "valor.LethalityAmount": 15,
+        "valor.TargetMaxHealthRatio": 0.18,
+        "valor.MaxStacks": 10
+      },
+      "valores_cambiados": {}
     },
     "667666": {
       "metadata": {
@@ -8285,7 +10723,13 @@
       },
       "mecanicas": {},
       "parche_verificado": null,
-      "revisar": false
+      "revisar": false,
+      "valores_juego": {
+        "valor.LethalityAmount": 10,
+        "valor.ExecuteThreshold": 0.05,
+        "valor.GoldAmount": 25
+      },
+      "valores_cambiados": {}
     }
   }
 }

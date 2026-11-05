@@ -18,6 +18,74 @@ OFICIAL_DANZA = ("60 de Daño de Ataque 50 de Armadura 15 de Aceleración de Hab
                  "Un porcentaje del daño recibido se distribuye.")
 
 
+CLAVE_MELEE = "calc.MeleeItemCalcValue.0.mNumber"
+
+
+def juego_danza(melee=0.3):
+    """Entrada SINTÉTICA con la forma de items.cdtb.bin.json."""
+    return {"itemID": 6333, "price": 275, "mFlatArmorMod": 50.0,
+            "mDataValues": [{"mName": "Duracion", "mValue": 3.0, "__type": "ItemDataValue"},
+                            {"mName": "SinValor", "__type": "ItemDataValue"}],
+            "DataValuesModeOverride": {"ARAM": {"DataValues": [{"mName": "Duracion", "mValue": 9.0}]}},
+            "mEffectAmount": [0.0, 8.0],
+            "mItemCalculations": {"MeleeItemCalcValue": {
+                "mFormulaParts": [{"mNumber": melee + 1e-8, "__type": "NumberCalculationPart"}],
+                "mDisplayAsPercent": True, "DamageType": 1, "{72c5c2a8}": 1,
+                "mExpandedTooltipCalculationDisplay": 5, "__type": "GameCalculation"}},
+            "__type": "ItemData"}
+
+
+class TestValoresJuego(unittest.TestCase):
+    def setUp(self):
+        self.juego = {
+            "Items/6333": juego_danza(),
+            "Items/226333": juego_danza(melee=0.35),                      # variante de Arena: otro id
+            "Items/6333/Spells/6333Active": {"__type": "SpellObject", "mSpell": {
+                "cooldownTime": [20.0, 20.0], "mEffectAmount": [{"value": [0.0, 5.0]}], "castRange": [900.0]}},
+            "Items/6333/Spells/226333Active": {"__type": "SpellObject", "mSpell": {"cooldownTime": [99.0]}},
+            "Items/6333/Particles/6333_Vfx": {"__type": "VfxSystemDefinitionData", "lifetime": 0.5},
+        }
+        self.v = objetos.valores_juego(self.juego, "6333", objetos.indice_hechizos(self.juego))
+
+    def test_valores_con_nombre_y_sin_ruido_de_coma_flotante(self):
+        self.assertEqual(self.v["valor.Duracion"], 3)                     # configuración normal, no la de ARAM
+        self.assertEqual(self.v["valor.SinValor"], 0)
+        self.assertEqual(self.v[CLAVE_MELEE], 0.3)
+
+    def test_efectos_y_hechizos_sin_ceros(self):
+        self.assertEqual(self.v["efecto.1"], 8)
+        self.assertNotIn("efecto.0", self.v)
+        self.assertEqual(self.v["hechizo.6333Active.enfriamiento"], 20)     # los niveles iguales se juntan
+        self.assertEqual(self.v["hechizo.6333Active.efecto.0.value.1"], 5)
+
+    def test_deja_fuera_lo_que_no_sirve(self):
+        claves = " ".join(self.v)
+        for fuera in ("ARAM", "castRange", "Vfx", "lifetime", "price", "mFlatArmorMod",
+                      "DamageType", "Display", "72c5c2a8", "226333Active"):
+            self.assertNotIn(fuera, claves)
+
+    def test_campo_con_hash_no_avisa_al_recibir_nombre(self):
+        def juego(calc):
+            return {"Items/1": {"mItemCalculations": {"Dano": {**calc, "mFormulaParts": [{"mNumber": 45.0}]}}}}
+        antes = objetos.valores_juego(juego({"{72c5c2a8}": 1}), "1", {})
+        ahora = objetos.valores_juego(juego({"DamageType": 1}), "1", {})
+        self.assertEqual(objetos.diferencias_valores(antes, ahora), {})
+        self.assertEqual(ahora, {"calc.Dano.0.mNumber": 45})
+
+    def test_campo_numerico_nuevo_si_avisa(self):
+        juego = {"Items/1": {"mItemCalculations": {"Dano": {"mFormulaParts": [{"mCampoNuevo": 7.0}]}}}}
+        self.assertEqual(objetos.valores_juego(juego, "1", {}), {"calc.Dano.0.mCampoNuevo": 7})
+
+    def test_otros_ids_y_objeto_ausente(self):
+        indice = objetos.indice_hechizos(self.juego)
+        self.assertEqual(objetos.valores_juego(self.juego, "226333", indice)[CLAVE_MELEE], 0.35)
+        self.assertIsNone(objetos.valores_juego(self.juego, "999", indice))
+
+    def test_diferencias(self):
+        self.assertEqual(objetos.diferencias_valores({"a": 1, "b": 2}, {"a": 1, "b": 3, "c": 4}),
+                         {"b": {"antes": 2, "ahora": 3}, "c": {"antes": None, "ahora": 4}})
+
+
 class TestDataDragon(unittest.TestCase):
     def test_texto_oficial(self):
         self.assertEqual(objetos.texto_oficial(DESC_DANZA), OFICIAL_DANZA)
@@ -200,9 +268,56 @@ class TestActualizarYVerificar(unittest.TestCase):
         ruta.parent.mkdir(parents=True)
         ruta.write_text(json.dumps({"data": {"1": {**item(desc, precio=precio), "name": "Danza"}}}), encoding="utf-8")
 
-    def _actualizar(self, version):
+    def _actualizar(self, version, melee=0.3):
         return objetos.actualizar(version=version, raw_dir=self.raw, out_dir=self.out, capa_ruta=self.capa,
-                                  referencia_ruta=self.out / "no_existe.json")
+                                  referencia_ruta=self.out / "no_existe.json",
+                                  cargar_juego=lambda v: {"Items/1": juego_danza(melee)})
+
+    def test_valor_oculto_avisa_aunque_la_descripcion_siga_igual(self):
+        self._dd("16.23.1", DESC_DANZA, 3300)
+        objetos.actualizar(version="16.15.1", raw_dir=self.raw, out_dir=self.out, capa_ruta=self.capa,
+                           referencia_ruta=self.out / "no_existe.json",
+                           cargar_juego=lambda v: {"Items/1": juego_danza(0.3)})
+        self.assertEqual(objetos.fijar_base_valores("16.15.1", self.out, self.capa), 1)
+        res = self._actualizar("16.23.1", melee=0.25)
+        self.assertEqual(res["avisos"], [])                       # la descripción oficial no cambió
+        self.assertEqual(res["avisos_valores"], [{
+            "id": "1", "nombre": "Danza", "parche_verificado": "16.15.1", "descripcion_igual": True,
+            "cambios": {CLAVE_MELEE: {"antes": 0.3, "ahora": 0.25}}}])
+        self.assertEqual(res["comparacion"]["valores"], {"1": {CLAVE_MELEE: {"antes": 0.3, "ahora": 0.25}}})
+        reporte = res["reporte"].read_text(encoding="utf-8")
+        self.assertIn("Valores del juego por revisar (1)", reporte)
+        self.assertIn(f"{CLAVE_MELEE}: 0.3 -> 0.25", reporte)
+
+    def test_el_aviso_de_valores_se_repite_hasta_verificar(self):
+        self._dd("16.23.1", DESC_DANZA, 3300)
+        self._actualizar("16.15.1")
+        objetos.fijar_base_valores("16.15.1", self.out, self.capa)
+        self.assertEqual(len(self._actualizar("16.23.1", melee=0.25)["avisos_valores"]), 1)
+        self.assertEqual(len(self._actualizar("16.23.1", melee=0.25)["avisos_valores"]), 1)
+        objetos.verificar("1", out_dir=self.out, capa_ruta=self.capa)
+        self.assertEqual(objetos.cargar_capa(self.capa)["objetos"]["1"]["valores_verificados"][CLAVE_MELEE], 0.25)
+        self.assertFalse(objetos.cargar("latest", self.out)["objetos"]["1"]["valores_cambiados"])
+        self.assertEqual(self._actualizar("16.23.1", melee=0.25)["avisos_valores"], [])
+
+    def test_base_valores_no_sobrescribe(self):
+        self._actualizar("16.15.1", melee=0.3)
+        self.assertEqual(objetos.fijar_base_valores("16.15.1", self.out, self.capa), 1)
+        self._actualizar("16.15.1", melee=0.5)
+        self.assertEqual(objetos.fijar_base_valores("16.15.1", self.out, self.capa), 0)
+        self.assertEqual(objetos.cargar_capa(self.capa)["objetos"]["1"]["valores_verificados"][CLAVE_MELEE], 0.3)
+
+    def test_sin_archivos_del_juego_sigue_y_lo_dice(self):
+        def falla(_):
+            raise OSError("sin red")
+        self._actualizar("16.15.1")
+        objetos.fijar_base_valores("16.15.1", self.out, self.capa)
+        res = objetos.actualizar(version="16.22.1", raw_dir=self.raw, out_dir=self.out, capa_ruta=self.capa,
+                                 referencia_ruta=self.out / "no_existe.json", cargar_juego=falla)
+        self.assertEqual(res["error_juego"], "sin red")
+        self.assertEqual(res["avisos_valores"], [])               # sin datos no es "desaparecieron los valores"
+        self.assertEqual(res["comparacion"]["valores"], {})
+        self.assertIsNone(res["datos"]["objetos"]["1"]["valores_juego"])
 
     def test_compara_avisa_y_no_toca_la_capa(self):
         antes = self.capa.read_text(encoding="utf-8")

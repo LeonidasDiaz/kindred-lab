@@ -140,12 +140,12 @@ Lista completa y editable en [`reglas/kindred_objetos.json`](../reglas/kindred_o
 | Contra | Objeto | Estado |
 |---|---|---|
 | Sobre todo críticos (Caitlyn, Jhin); su pasiva no hace nada contra habilidades | Presagio de Randuin | probado |
-| Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) | Danza de la Muerte o Randuin | Danza: hipótesis |
+| Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) | Randuin; segunda opción, Danza de la Muerte (por AD, armadura y curación con derribos) | Danza: hipótesis |
 | Daño mágico repartido o un combo AP | Fauces de Malmortius | probado |
 | Una habilidad que abre el combo: asesinos AD (Zed, Talon, Pantheon, Kha'Zix, Qiyana), atadura, marca | Filo de la Noche | probado |
 | Supresión (Malzahar, Warwick, Urgot) o ceguera (Teemo) | Cimitarra Mercurial | probado |
 | Mago AP muy fedeado | Rukerno Kaénico | hipótesis |
-| AP con control, solo si vas atrás y sin otra RM | Al Filo de la Cordura | dudoso (3 partidas: quita daño frente al Rey Arruinado; el 02/11 sobró RM y faltó armadura) |
+| AP con control, solo si vas atrás y sin otra RM | Al Filo de la Cordura | dudoso (3 partidas: quita daño frente al Rey Arruinado; el 02/11 sobró RM y faltó armadura). Las 3 son anteriores al arreglo del parche 26.22 ("Wit's End: Fixed failing to maintain 4 stacks", notas oficiales): no miden el objeto arreglado |
 | Daño mezclado o mucho control | Guantelete de Sterak | hipótesis |
 | Equipo casi todo AD, o asesinos AD que te matan de golpe | Danza de la Muerte | hipótesis: hay que probarla |
 | 2+ asesinos AD con poco control | Placa Hexperimental | hipótesis (neutral en 1 partida) |
@@ -158,7 +158,8 @@ Lista completa y editable en [`reglas/kindred_objetos.json`](../reglas/kindred_o
   recibiste 74% de daño AD.
 - **Defensivo contra AD:**
   - Críticos → **Randuin**. Su pasiva no hace nada contra habilidades.
-  - Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) → **Danza de la Muerte** o **Randuin**.
+  - Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) → **Randuin**; segunda opción, **Danza de la Muerte**
+    (por AD, armadura y curación con derribos).
   - Asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana) → **Filo de la Noche** si una habilidad
     abre el combo; **Danza de la Muerte** si te matan de golpe.
   - Danza sigue en hipótesis: hay que probarla.

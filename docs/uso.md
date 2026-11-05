@@ -93,6 +93,13 @@ python -m kindred_lab objetos verificar 6333          # ya revisé las mecánica
   `cambios_X_a_Y.md`, y se repite hasta que lo revises y corras `objetos verificar <id>`. **Sin aviso no significa
   vigente:** la descripción de Danza de la Muerte dice "un porcentaje", sin el número. Por eso cada mecánica conserva
   su `parche_verificado`.
+- **Valores del juego:** `objetos actualizar` también guarda en `valores_juego` los números de los archivos del juego
+  (`items.cdtb.bin.json` de Community Dragon, unos 15 MB por parche, en `data/raw/cdragon/`): solo el id de la Grieta y
+  su configuración normal, sin variantes de Arena ni de otros modos. Si un número de un objeto con mecánicas ya no es
+  el verificado (`valores_verificados` en la capa manual), **avisa aunque la descripción oficial siga igual**, y se
+  repite hasta `objetos verificar <id>`. Si esos archivos no se pueden bajar, sigue sin ellos y lo dice. Los nombres
+  no siguen un formato común: esto solo detecta cambios, no llena las mecánicas. `objetos base-valores` fijó una sola
+  vez la base de 16.15.1 y no sobrescribe. No cubre la lógica de las pasivas, que no está en esos archivos.
 - **`disponible`** se calcula en cada parche (se compra en la Grieta). Los objetos con capa manual que ya no se
   compran se conservan con `disponible: false`.
 - Si Data Dragon no trae el objeto o su descripción está vacía (Filo de la Tormenta 3097, Mapamundi 3865), se usan

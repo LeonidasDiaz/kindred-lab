@@ -5,7 +5,7 @@
   },
   "situaciones": [
     {
-      "contra": "Sobre todo críticos (Caitlyn, Jhin, Tristana, Samira). También luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox, Briar), igual que Danza de la Muerte.",
+      "contra": "Sobre todo críticos (Caitlyn, Jhin, Tristana, Samira). También luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox, Briar): primera opción, antes que Danza de la Muerte.",
       "objeto": "Presagio de Randuin",
       "por_que": "75 de armadura, 350 de vida, 30% menos daño de críticos y activa que ralentiza 70% durante 2 s. Su pasiva solo reduce críticos: no hace nada contra habilidades.",
       "estado": "probado",
@@ -45,15 +45,16 @@
       "objeto": "Guantelete de Sterak",
       "por_que": "400 de vida, 20% de tenacidad y escudo del 60% de tu vida adicional al bajar del 30% (más grande con Crecimiento Excesivo). Es Salvavidas.",
       "estado": "hipotesis",
+      "pendiente": "Revisar en el juego: en los archivos del juego ADtoAD pasó de 0.45 a 0.50 desde el parche 16.16 (sigue igual en 16.22), con la descripción oficial igual. Falta ver qué mide.",
       "evidencia": [
         "vs Naafiri, Sylas, Lux, Miss Fortune, Mundo: habría servido más que la Placa por la tenacidad",
         "vs Katarina, Seraphine, Viego, Ezreal, Mundo: Sterak 1º estaba bien (daño mezclado), pero Katarina juntó 25 cargas de Mejai y me borraba: faltó resistencia mágica (derrota)"
       ]
     },
     {
-      "contra": "Equipo casi todo de daño físico; luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox), igual que Randuin; asesinos AD que te matan de golpe (Zed, Talon, Pantheon, Kha'Zix, Qiyana)",
+      "contra": "Equipo casi todo de daño físico; luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox), como segunda opción después de Randuin; asesinos AD que te matan de golpe (Zed, Talon, Pantheon, Kha'Zix, Qiyana)",
       "objeto": "Danza de la Muerte",
-      "por_que": "60 AD, 50 de armadura, 15 AH. Su valor es la armadura y el daño. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura. Para campeones a distancia solo guarda el 10% del daño (30% cuerpo a cuerpo), según referencia 16.15.1; confirmar en el parche actual. Frente a luchadores, Randuin puede proteger más.",
+      "por_que": "60 AD, 50 de armadura, 15 AH. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura. Guarda el 10% del daño a distancia y el 30% cuerpo a cuerpo: confirmado en los archivos del juego del 16.22 (MeleeItemCalcValue y RangedItemCalcValue). Contra luchadores, Randuin protege más; Danza vale por AD, armadura y la curación con derribos.",
       "estado": "hipotesis: hay que probarla",
       "evidencia": [
         "02/11, vs Lissandra, Fiddlesticks, Mundo, Jinx, Lux: con 74% de daño AD recibido y Mundo matándome 2 veces, habría servido más que Cordura (no probada)",
@@ -65,6 +66,7 @@
       "objeto": "Placa Hexperimental",
       "por_que": "40 AD, 20% de VA, 450 de vida y definitiva cerca de un 25% más seguido; al usarla, +50% de VA y +20% de velocidad 8 s. No da tenacidad.",
       "estado": "hipotesis",
+      "nota_parche": "Desde el parche 16.20 (sigue igual en 16.22) le bajaron los valores a distancia: velocidad de ataque 35 -> 25 y movimiento 14 -> 10, según los archivos del juego. Para Kindred rinde menos: los +50% y +20% de arriba son los valores cuerpo a cuerpo.",
       "evidencia": [
         "vs Naafiri, Sylas, Lux, Miss Fortune, Mundo (3er objeto): neutral; se notó la movilidad con la definitiva"
       ]
@@ -90,7 +92,8 @@
       "contra": "Equipos AP con control",
       "objeto": "Al Filo de la Cordura",
       "por_que": "50% de velocidad de ataque, 45 RM, 20% de tenacidad y 45 de daño mágico por golpe. Es objeto de daño para Kindred y defensa a la vez. No es Salvavidas: se combina con Fauces o Sterak. No reemplaza al Rey Arruinado: misma VA con Berserker, pero sin AD ni daño por % de vida. Solo como respuesta tardía si vas atrás contra mucho AP y control sin otra fuente de RM.",
-      "estado": "dudoso (2 partidas sin convencer)",
+      "estado": "dudoso (3 partidas sin convencer, todas con el fallo de acumulaciones)",
+      "nota_parche": "En el parche 26.22 Riot arregló un fallo de Al Filo de la Cordura que no mantenía sus 4 acumulaciones. Las 3 partidas de la evidencia son del parche 16.21 (26.21), con el fallo: no miden el objeto ya arreglado.",
       "evidencia": [
         "vs Alistar, Zed, Ekko, Singed, Teemo (junto con Cimitarra): no convenció, vendida por Filo del Infinito (victoria). Posible causa: ya tenía RM de la Cimitarra y faltaba el daño crítico.",
         "vs Kai'Sa, Xerath, Orianna, Jax, Cho'Gath (2º objeto, con Botas de Mercurio, yendo adelante): quitó daño; misma VA que Berserker + Rey Arruinado pero sin 40 AD ni el 6% de vida actual por golpe, clave contra Cho'Gath (victoria)",
@@ -106,7 +109,7 @@
     "Apariencia Espiritual: +25% de curaciones recibidas combina con tu definitiva y Triunfo, pero no da daño; contra AP, Rukerno Kaénico protege más."
   ],
   "reglas_generales": [
-    "Defensivo contra AD: críticos -> Randuin (su pasiva no hace nada contra habilidades). Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) -> Danza de la Muerte o Randuin. Asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana) -> Filo de la Noche si una habilidad abre el combo; Danza de la Muerte si te matan de golpe.",
+    "Defensivo contra AD: críticos -> Randuin (su pasiva no hace nada contra habilidades). Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) -> Randuin; segunda opción, Danza de la Muerte (por AD, armadura y curación con derribos). Asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana) -> Filo de la Noche si una habilidad abre el combo; Danza de la Muerte si te matan de golpe.",
     "La lectura del equipo en la selección decide runas y primer defensivo; los siguientes se deciden por quién te está pegando (marcador), porque el campeón engaña: el 02/11 el equipo parecía 'de AP' y recibí 74% de daño AD.",
     "Si un mismo enemigo te mata 2 o 3 veces, el siguiente objeto es contra él y en las peleas te colocas lejos de él.",
     "Volver a preguntar '¿quién me mata?' en cada vuelta a base: si un enemigo se dispara (p. ej. Katarina con Mejai, Viego con sus bajas), el siguiente objeto defensivo responde a esa persona aunque el plan inicial fuera otro."

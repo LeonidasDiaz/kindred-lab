@@ -26,6 +26,20 @@ def descargar(idioma: str = "es_mx", raw_dir: Path | None = None, forzar: bool =
     return datos
 
 
+def descargar_items(version: str, raw_dir: Path | None = None, forzar: bool = False) -> dict:
+    """items.cdtb.bin.json de los archivos del juego ('16.22.1' -> carpeta '16.22'). Pesa unos 15 MB por parche."""
+    parche = ".".join(version.split(".")[:2])
+    ruta = (raw_dir or config.CDRAGON_RAW) / f"items_{parche}.json"
+    if ruta.exists() and not forzar:
+        return json.loads(ruta.read_text(encoding="utf-8"))
+    req = urllib.request.Request(config.CDRAGON_ITEMS.format(parche=parche), headers={"User-Agent": "kindred-lab"})
+    with urllib.request.urlopen(req, timeout=config.TIMEOUT_S) as r:
+        datos = json.load(r)
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    ruta.write_text(json.dumps(datos, ensure_ascii=False), encoding="utf-8")
+    return datos
+
+
 def _linea(desc: str) -> str:
     """Primera línea del texto, sin HTML."""
     desc = re.split(r"<br\s*/?>", desc)[0]

@@ -31,4 +31,5 @@ SECRETOS = RAIZ / "secretos.json"            # clave de Riot y Riot ID; está en
 
 # --- Community Dragon: textos de estadísticas de fin de partida de cada runa ---
 CDRAGON_RAW = DATA / "raw" / "cdragon"
-CDRAGON_PERKS = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/{idioma}/v1/perks.json"
+CDRAGON_ITEMS = "https://raw.communitydragon.org/{parche}/game/items.cdtb.bin.json"     # archivos del juego
+CDRAGON_PERKS ="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/{idioma}/v1/perks.json"

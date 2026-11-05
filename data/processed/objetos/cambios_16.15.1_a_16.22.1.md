@@ -64,6 +64,30 @@ La descripción oficial ya no es la que se verificó. Después de revisar: `obje
 - Verificada: 55 de Daño de Ataque 18 de Letalidad 10 de Aceleración de Habilidad Eminencia Cuando un campeón al que le infligiste daño muere en 3 seg, obtienes 12 de Daño de Ataque más 3 por cada campeón asesinado durante 90 seg.
 - Actual: 55 de Daño de Ataque 18 de Letalidad 10 de Aceleración de Habilidad Eminencia Cuando un campeón al que le infligiste daño muere en 3 seg, obtienes 0 de Daño de Ataque más 0 por cada campeón asesinado durante 90 seg.
 
+## Valores del juego por revisar (19)
+
+Objetos con mecánicas con algún valor distinto del verificado. Después de revisar: `objetos verificar <id>`.
+
+- Cachorro de Rasgafuegos (1101), verificada en 16.15.1; descripción oficial igual: calc.{d6e1c2e4}.1.mPart2.mNumber: None -> -1
+- Cría de Trotabrisas (1102), verificada en 16.15.1; descripción oficial igual: calc.{d6e1c2e4}.1.mPart2.mNumber: None -> -1
+- Retoño de Pisamusgo (1103), verificada en 16.15.1; descripción oficial igual: calc.{d6e1c2e4}.1.mPart2.mNumber: None -> -1
+- Cota Sangrienta del Soberano (2501), verificada en 16.15.1: valor.MissingHealthAD: 0.12 -> 0.1
+- Rompebastiones (2520), verificada en 16.15.1: calc.AbilityDamageCalc.0.mNumber: 50 -> 40, valor.BuffDuration: 90 -> 25000, valor.LethalityAmount: 22 -> 18
+- Guantelete de Sterak (3053), verificada en 16.15.1; descripción oficial igual: valor.ADtoAD: 0.45 -> 0.5
+- Égida de Fuego Solar (3068), verificada en 16.15.1; descripción oficial igual: calc.DamagePerTick.1.mCoefficient: 0.01 -> 0.015, valor.HPRatioPerTickTOOLTIPONLY: 1 -> 1.5, valor.MinionMod: 0.6 -> 0.5, valor.MonsterMod: 1 -> 0.8, valor.Range: 325 -> 300, valor.StackDuration: 1 -> 0
+- Cuchilla Oscura (3071), verificada en 16.15.1: valor.RangedMod: None -> 0.5
+- Huracán de Runaan (3085), verificada en 16.15.1: calc.BoltDamage.0.mSubpart.mNumber: 0.55 -> 0.6, calc.{232dac8a}.0.mNumber: 0.55 -> 0.6
+- Espadafuria de Guinsoo (3124), verificada en 16.15.1: efecto.3: 3 -> 4, valor.BuffDuration: 3 -> 4
+- Cinturón Cohete Hextech (3152), verificada en 16.15.1: valor.APRatio: 0.1 -> 0.15, valor.BaseDamage: 100 -> 135
+- Mapamundi (3865), verificada en 16.15.1; descripción oficial igual: valor.ExecuteMinionGold: 15 -> 18, valor.GoldOnHit: 20 -> 18, valor.GoldOnHitMelee: 22 -> 18
+- Brújula Rúnica (3866), verificada en 16.15.1: valor.ExecuteMinionGold: 20 -> 21, valor.GoldOnHit: 22 -> 21, valor.GoldOnHitMelee: 24 -> 21
+- Cielo Desgarrado (6610), verificada en 16.15.1: calc.HealProc.0.mStat: 2 -> None, calc.HealProc.0.mStatFormula: 1 -> None, calc.MeleeItemCalcValue.0.mStat: 2 -> None, calc.MeleeItemCalcValue.0.mStatFormula: 1 -> None, calc.{01099b16}.0.mStat: None -> 2, calc.{01099b16}.0.mStatFormula: None -> 1, calc.{06387172}.0.mNumber: 2 -> None, calc.{792cf56b}.0.mNumber: 1 -> None, valor.HealAmount: 0.2 -> None, valor.HealBaseADRatio: None -> 0.9, valor.HealRatio: 1 -> None, valor.MissingHealthHeal: 0.06 -> 0.04
+- Esfera del Amanecer (6621), verificada en 16.15.1: valor.APPerManaRegen: 10 -> 15
+- Ceniza de Bami (6660), verificada en 16.15.1; descripción oficial igual: valor.Range: 325 -> 300
+- Resplandor Vacío (6664), verificada en 16.15.1; descripción oficial igual: valor.Range: 325 -> 300
+- Eclipse (6692), verificada en 16.15.1; descripción oficial igual: calc.MaxHealthDamageCalc.0.mNumber: 6 -> None, calc.MaxHealthDamageCalc.mRangedMultiplier.mNumber: 0.667 -> None, calc.MeleeItemCalcValue.1.mStat: 2 -> None, calc.MeleeItemCalcValue.1.mStatFormula: 2 -> None, calc.RangedItemCalcValue.1.mStat: 2 -> None, calc.RangedItemCalcValue.1.mStatFormula: 2 -> None, calc.{06387172}.0.mNumber: 2 -> None, calc.{792cf56b}.0.mNumber: 1 -> None, calc.{d02ea590}.1.mStat: None -> 2, calc.{d02ea590}.1.mStatFormula: None -> 2, valor.MeleeBaseShield: 160 -> 150, valor.MeleeBonusADShieldRatio: None -> 0.4, valor.MeleeItemCalcValueB: 6 -> None, valor.MeleePercMaxHP: None -> 0.08, valor.MeleeShieldADRatio: 0.4 -> None, valor.RangedBaseShield: 80 -> None, valor.RangedItemCalcValueB: 4 -> None, valor.RangedPercMaxHPMult: None -> 0.625, valor.RangedShieldADRatio: 0.2 -> None, valor.RangedShieldMult: None -> 0.5
+- Arrogancia (6697), verificada en 16.15.1: valor.ADPerStatue: 3 -> None, valor.ADPerStatueMelee: None -> 3, valor.ADPerStatueRangedMult: None -> 0.667, valor.BaseADBonus: 12 -> None, valor.BaseADBonusMelee: None -> 15, valor.BaseADRangedMult: None -> 0.667
+
 ## Estadísticas (13)
 
 - Arco de Doran (1086): AD_plano: 8 -> 7
@@ -79,6 +103,31 @@ La descripción oficial ya no es la que se verificó. Después de revisar: `obje
 - Zapatos de Lanzahechizos (3175): Penetracion_Magica_Plana: 18 -> 20
 - Brújula Rúnica (3866): Regen_Vida_Básica_Porcentual: 0.5 -> 0.75, Vida_maxima_plana: 100 -> 60
 - Cielo Desgarrado (6610): AD_plano: 45 -> 40
+
+## Valores del juego de 16.15.1 a 16.22.1 (22)
+
+- Cachorro de Rasgafuegos (1101): calc.{d6e1c2e4}.1.mPart2.mNumber: None -> -1
+- Cría de Trotabrisas (1102): calc.{d6e1c2e4}.1.mPart2.mNumber: None -> -1
+- Retoño de Pisamusgo (1103): calc.{d6e1c2e4}.1.mPart2.mNumber: None -> -1
+- Cota Sangrienta del Soberano (2501): valor.MissingHealthAD: 0.12 -> 0.1
+- Rompebastiones (2520): calc.AbilityDamageCalc.0.mNumber: 50 -> 40, valor.BuffDuration: 90 -> 25000, valor.LethalityAmount: 22 -> 18
+- Guantelete de Sterak (3053): valor.ADtoAD: 0.45 -> 0.5
+- Égida de Fuego Solar (3068): calc.DamagePerTick.1.mCoefficient: 0.01 -> 0.015, valor.HPRatioPerTickTOOLTIPONLY: 1 -> 1.5, valor.MinionMod: 0.6 -> 0.5, valor.MonsterMod: 1 -> 0.8, valor.Range: 325 -> 300, valor.StackDuration: 1 -> 0
+- Cuchilla Oscura (3071): valor.RangedMod: None -> 0.5
+- Placa Hexperimental (3073): valor.BonusASRanged: 35 -> 25, valor.BonusMSRanged: 14 -> 10
+- Huracán de Runaan (3085): calc.BoltDamage.0.mSubpart.mNumber: 0.55 -> 0.6, calc.{232dac8a}.0.mNumber: 0.55 -> 0.6
+- Espadafuria de Guinsoo (3124): efecto.3: 3 -> 4, valor.BuffDuration: 3 -> 4
+- Cinturón Cohete Hextech (3152): valor.APRatio: 0.1 -> 0.15, valor.BaseDamage: 100 -> 135
+- Botas de Marcha Rápida (3170): valor.SlowResistTooltip: 0.4 -> 0.25
+- Mapamundi (3865): valor.ExecuteMinionGold: 15 -> 18, valor.GoldOnHit: 20 -> 18, valor.GoldOnHitMelee: 22 -> 18
+- Brújula Rúnica (3866): valor.ExecuteMinionGold: 20 -> 21, valor.GoldOnHit: 22 -> 21, valor.GoldOnHitMelee: 24 -> 21
+- Cielo Desgarrado (6610): calc.HealProc.0.mStat: 2 -> None, calc.HealProc.0.mStatFormula: 1 -> None, calc.MeleeItemCalcValue.0.mStat: 2 -> None, calc.MeleeItemCalcValue.0.mStatFormula: 1 -> None, calc.{01099b16}.0.mStat: None -> 2, calc.{01099b16}.0.mStatFormula: None -> 1, calc.{06387172}.0.mNumber: 2 -> None, calc.{792cf56b}.0.mNumber: 1 -> None, valor.HealAmount: 0.2 -> None, valor.HealBaseADRatio: None -> 0.9, valor.HealRatio: 1 -> None, valor.MissingHealthHeal: 0.06 -> 0.04
+- Esfera del Amanecer (6621): valor.APPerManaRegen: 10 -> 15
+- Ceniza de Bami (6660): valor.Range: 325 -> 300
+- Resplandor Vacío (6664): valor.Range: 325 -> 300
+- Eclipse (6692): calc.MaxHealthDamageCalc.0.mNumber: 6 -> None, calc.MaxHealthDamageCalc.mRangedMultiplier.mNumber: 0.667 -> None, calc.MeleeItemCalcValue.1.mStat: 2 -> None, calc.MeleeItemCalcValue.1.mStatFormula: 2 -> None, calc.RangedItemCalcValue.1.mStat: 2 -> None, calc.RangedItemCalcValue.1.mStatFormula: 2 -> None, calc.{06387172}.0.mNumber: 2 -> None, calc.{792cf56b}.0.mNumber: 1 -> None, calc.{d02ea590}.1.mStat: None -> 2, calc.{d02ea590}.1.mStatFormula: None -> 2, valor.MeleeBaseShield: 160 -> 150, valor.MeleeBonusADShieldRatio: None -> 0.4, valor.MeleeItemCalcValueB: 6 -> None, valor.MeleePercMaxHP: None -> 0.08, valor.MeleeShieldADRatio: 0.4 -> None, valor.RangedBaseShield: 80 -> None, valor.RangedItemCalcValueB: 4 -> None, valor.RangedPercMaxHPMult: None -> 0.625, valor.RangedShieldADRatio: 0.2 -> None, valor.RangedShieldMult: None -> 0.5
+- Arrogancia (6697): valor.ADPerStatue: 3 -> None, valor.ADPerStatueMelee: None -> 3, valor.ADPerStatueRangedMult: None -> 0.667, valor.BaseADBonus: 12 -> None, valor.BaseADBonusMelee: None -> 15, valor.BaseADRangedMult: None -> 0.667
+- Esfera del Amanecer (326621): valor.APPerManaRegen: 10 -> 15
 
 ## Precio (3)
 
