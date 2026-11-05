@@ -121,6 +121,8 @@ came out of them are in [docs/hallazgos.md](docs/hallazgos.md) (Spanish).
 That turned into concrete rules: one question in champion select to pick the secondary tree, no solo farming in my
 own jungle if we're behind at minute 10, and fighting all-in for the 4th dragon and Baron.
 
+What's next: [roadmap](docs/hoja_de_ruta.md) (in Spanish).
+
 ## Tests
 
 ```powershell

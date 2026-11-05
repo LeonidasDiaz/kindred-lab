@@ -32,6 +32,7 @@ kindred-lab/
 ├── README.md / README.en.md  presentación del proyecto (español / inglés)
 ├── docs/uso.md              este manual: todos los comandos
 ├── docs/hallazgos.md        reglas y hallazgos de juego (runas, objetos, primeros minutos)
+├── docs/hoja_de_ruta.md     funciones futuras y su estado
 ├── docs/migracion_objetos.md  qué cambió al migrar el archivo manual de objetos
 ├── reglas/
 │   ├── kindred_runas.json   las 3 preguntas para elegir runas (editable a mano)

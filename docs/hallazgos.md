@@ -354,6 +354,8 @@ Reglas para llevar tú la partida, con las cifras de las secciones 4 a 6.
 
 ## 8. Pendiente
 
+Solo pruebas de juego. Las funciones por programar están en la [hoja de ruta](hoja_de_ruta.md).
+
 - **Pausado mientras dura la prueba de Brujería:** probar Dominación con Impacto Súbito + Cazador de Tesoros y Corte
   en partidas donde nadie te alcanza (~5 partidas). Se retoma al terminar la de Brujería, para comparar las dos en el
   mismo tipo de partida.
@@ -361,7 +363,6 @@ Reglas para llevar tú la partida, con las cifras de las secciones 4 a 6.
   minuto 10 al 30 en las derrotas.
 - Probar las hipótesis de objetos: Sterak, Danza de la Muerte, Rukerno, Cordura (contra Sylas).
 - En ~5 partidas, revisar `temprano --minuto 5`: ¿subió tu participación en las derrotas?
-- Si sube y sigues perdiendo: agregar oro por carril al minuto 10 y tu jungla contra la suya (campamentos, nivel).
 - Probar Brujería (Concentración Absoluta + Caminata Sobre Agua) en 8 a 10 partidas seguidas donde nadie te alcanza
   sin fallar, en lugar de Dominación. Resto de runas: Estrategia Ofensiva, Triunfo, Leyenda: Celeridad, Corte, y vida
   escalable de fragmento. Contra equipos que te pegan de lejos (poke), Dominación, porque Concentración Absoluta se

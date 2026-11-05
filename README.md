@@ -117,6 +117,8 @@ salieron de aquí están en [docs/hallazgos.md](docs/hallazgos.md).
 De ahí salieron reglas concretas: una pregunta en la selección de campeones para elegir la secundaria, no farmear
 solo en mi jungla si al minuto 10 vamos atrás, y pelear el 4º dragón y el Barón con todo.
 
+Qué sigue: [hoja de ruta](docs/hoja_de_ruta.md).
+
 ## Pruebas
 
 ```powershell
