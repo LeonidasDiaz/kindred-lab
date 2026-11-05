@@ -1,0 +1,1173 @@
+{
+  "version": "16.22.1",
+  "campeones": {
+    "Aatrox": {
+      "nombre": "Aatrox",
+      "tipos": [
+        "Fighter"
+      ]
+    },
+    "Ahri": {
+      "nombre": "Ahri",
+      "tipos": [
+        "Mage",
+        "Assassin"
+      ]
+    },
+    "Akali": {
+      "nombre": "Akali",
+      "tipos": [
+        "Assassin"
+      ]
+    },
+    "Akshan": {
+      "nombre": "Akshan",
+      "tipos": [
+        "Marksman",
+        "Assassin"
+      ]
+    },
+    "Alistar": {
+      "nombre": "Alistar",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Ambessa": {
+      "nombre": "Ambessa",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Amumu": {
+      "nombre": "Amumu",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Anivia": {
+      "nombre": "Anivia",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Annie": {
+      "nombre": "Annie",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Aphelios": {
+      "nombre": "Aphelios",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Ashe": {
+      "nombre": "Ashe",
+      "tipos": [
+        "Marksman",
+        "Support"
+      ]
+    },
+    "AurelionSol": {
+      "nombre": "Aurelion Sol",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Aurora": {
+      "nombre": "Aurora",
+      "tipos": [
+        "Mage",
+        "Assassin"
+      ]
+    },
+    "Azir": {
+      "nombre": "Azir",
+      "tipos": [
+        "Mage",
+        "Marksman"
+      ]
+    },
+    "Bard": {
+      "nombre": "Bardo",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Belveth": {
+      "nombre": "Bel'Veth",
+      "tipos": [
+        "Fighter"
+      ]
+    },
+    "Blitzcrank": {
+      "nombre": "Blitzcrank",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Brand": {
+      "nombre": "Brand",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Braum": {
+      "nombre": "Braum",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Briar": {
+      "nombre": "Briar",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Caitlyn": {
+      "nombre": "Caitlyn",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Camille": {
+      "nombre": "Camille",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Cassiopeia": {
+      "nombre": "Cassiopeia",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Chogath": {
+      "nombre": "Cho'Gath",
+      "tipos": [
+        "Tank",
+        "Mage"
+      ]
+    },
+    "Corki": {
+      "nombre": "Corki",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Darius": {
+      "nombre": "Darius",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Diana": {
+      "nombre": "Diana",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "DrMundo": {
+      "nombre": "Dr. Mundo",
+      "tipos": [
+        "Tank",
+        "Fighter"
+      ]
+    },
+    "Draven": {
+      "nombre": "Draven",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Ekko": {
+      "nombre": "Ekko",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "Elise": {
+      "nombre": "Elise",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "Evelynn": {
+      "nombre": "Evelynn",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "Ezreal": {
+      "nombre": "Ezreal",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Fiddlesticks": {
+      "nombre": "Fiddlesticks",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Fiora": {
+      "nombre": "Fiora",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Fizz": {
+      "nombre": "Fizz",
+      "tipos": [
+        "Assassin",
+        "Fighter"
+      ]
+    },
+    "Galio": {
+      "nombre": "Galio",
+      "tipos": [
+        "Tank",
+        "Mage"
+      ]
+    },
+    "Gangplank": {
+      "nombre": "Gangplank",
+      "tipos": [
+        "Fighter"
+      ]
+    },
+    "Garen": {
+      "nombre": "Garen",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Gnar": {
+      "nombre": "Gnar",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Gragas": {
+      "nombre": "Gragas",
+      "tipos": [
+        "Fighter",
+        "Mage"
+      ]
+    },
+    "Graves": {
+      "nombre": "Graves",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Gwen": {
+      "nombre": "Gwen",
+      "tipos": [
+        "Fighter"
+      ]
+    },
+    "Hecarim": {
+      "nombre": "Hecarim",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Heimerdinger": {
+      "nombre": "Heimerdinger",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Hwei": {
+      "nombre": "Hwei",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Illaoi": {
+      "nombre": "Illaoi",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Irelia": {
+      "nombre": "Irelia",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Ivern": {
+      "nombre": "Ivern",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Janna": {
+      "nombre": "Janna",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "JarvanIV": {
+      "nombre": "Jarvan IV",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Jax": {
+      "nombre": "Jax",
+      "tipos": [
+        "Fighter"
+      ]
+    },
+    "Jayce": {
+      "nombre": "Jayce",
+      "tipos": [
+        "Fighter",
+        "Marksman"
+      ]
+    },
+    "Jhin": {
+      "nombre": "Jhin",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Jinx": {
+      "nombre": "Jinx",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "KSante": {
+      "nombre": "K'Sante",
+      "tipos": [
+        "Tank",
+        "Fighter"
+      ]
+    },
+    "Kaisa": {
+      "nombre": "Kai'Sa",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Kalista": {
+      "nombre": "Kalista",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Karma": {
+      "nombre": "Karma",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Karthus": {
+      "nombre": "Karthus",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Kassadin": {
+      "nombre": "Kassadin",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "Katarina": {
+      "nombre": "Katarina",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "Kayle": {
+      "nombre": "Kayle",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Kayn": {
+      "nombre": "Kayn",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Kennen": {
+      "nombre": "Kennen",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Khazix": {
+      "nombre": "Kha'Zix",
+      "tipos": [
+        "Assassin"
+      ]
+    },
+    "Kindred": {
+      "nombre": "Kindred",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Kled": {
+      "nombre": "Kled",
+      "tipos": [
+        "Fighter"
+      ]
+    },
+    "KogMaw": {
+      "nombre": "Kog'Maw",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Leblanc": {
+      "nombre": "LeBlanc",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "LeeSin": {
+      "nombre": "Lee Sin",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Leona": {
+      "nombre": "Leona",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Lillia": {
+      "nombre": "Lillia",
+      "tipos": [
+        "Fighter",
+        "Mage"
+      ]
+    },
+    "Lissandra": {
+      "nombre": "Lissandra",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Locke": {
+      "nombre": "Locke",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "Lucian": {
+      "nombre": "Lucian",
+      "tipos": [
+        "Marksman",
+        "Assassin"
+      ]
+    },
+    "Lulu": {
+      "nombre": "Lulu",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Lux": {
+      "nombre": "Lux",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Malphite": {
+      "nombre": "Malphite",
+      "tipos": [
+        "Tank",
+        "Mage"
+      ]
+    },
+    "Malzahar": {
+      "nombre": "Malzahar",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Maokai": {
+      "nombre": "Maokai",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "MasterYi": {
+      "nombre": "Maestro Yi",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Mel": {
+      "nombre": "Mel",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Milio": {
+      "nombre": "Milio",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "MissFortune": {
+      "nombre": "Miss Fortune",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "MonkeyKing": {
+      "nombre": "Wukong",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Mordekaiser": {
+      "nombre": "Mordekaiser",
+      "tipos": [
+        "Fighter",
+        "Mage"
+      ]
+    },
+    "Morgana": {
+      "nombre": "Morgana",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Naafiri": {
+      "nombre": "Naafiri",
+      "tipos": [
+        "Assassin",
+        "Fighter"
+      ]
+    },
+    "Nami": {
+      "nombre": "Nami",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Nasus": {
+      "nombre": "Nasus",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Nautilus": {
+      "nombre": "Nautilus",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Neeko": {
+      "nombre": "Neeko",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Nidalee": {
+      "nombre": "Nidalee",
+      "tipos": [
+        "Assassin",
+        "Mage"
+      ]
+    },
+    "Nilah": {
+      "nombre": "Nilah",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Nocturne": {
+      "nombre": "Nocturne",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Nunu": {
+      "nombre": "Nunu y Willump",
+      "tipos": [
+        "Tank",
+        "Mage"
+      ]
+    },
+    "Olaf": {
+      "nombre": "Olaf",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Orianna": {
+      "nombre": "Orianna",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Ornn": {
+      "nombre": "Ornn",
+      "tipos": [
+        "Tank"
+      ]
+    },
+    "Pantheon": {
+      "nombre": "Pantheon",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Poppy": {
+      "nombre": "Poppy",
+      "tipos": [
+        "Tank",
+        "Fighter"
+      ]
+    },
+    "Pyke": {
+      "nombre": "Pyke",
+      "tipos": [
+        "Support",
+        "Assassin"
+      ]
+    },
+    "Qiyana": {
+      "nombre": "Qiyana",
+      "tipos": [
+        "Assassin"
+      ]
+    },
+    "Quinn": {
+      "nombre": "Quinn",
+      "tipos": [
+        "Marksman",
+        "Assassin"
+      ]
+    },
+    "Rakan": {
+      "nombre": "Rakan",
+      "tipos": [
+        "Support"
+      ]
+    },
+    "Rammus": {
+      "nombre": "Rammus",
+      "tipos": [
+        "Tank"
+      ]
+    },
+    "RekSai": {
+      "nombre": "Rek'Sai",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Rell": {
+      "nombre": "Rell",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Renata": {
+      "nombre": "Renata Glasc",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Renekton": {
+      "nombre": "Renekton",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Rengar": {
+      "nombre": "Rengar",
+      "tipos": [
+        "Assassin",
+        "Fighter"
+      ]
+    },
+    "Riven": {
+      "nombre": "Riven",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Rumble": {
+      "nombre": "Rumble",
+      "tipos": [
+        "Fighter",
+        "Mage"
+      ]
+    },
+    "Ryze": {
+      "nombre": "Ryze",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Samira": {
+      "nombre": "Samira",
+      "tipos": [
+        "Marksman",
+        "Assassin"
+      ]
+    },
+    "Sejuani": {
+      "nombre": "Sejuani",
+      "tipos": [
+        "Tank"
+      ]
+    },
+    "Senna": {
+      "nombre": "Senna",
+      "tipos": [
+        "Support",
+        "Marksman"
+      ]
+    },
+    "Seraphine": {
+      "nombre": "Seraphine",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Sett": {
+      "nombre": "Sett",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Shaco": {
+      "nombre": "Shaco",
+      "tipos": [
+        "Assassin"
+      ]
+    },
+    "Shen": {
+      "nombre": "Shen",
+      "tipos": [
+        "Tank"
+      ]
+    },
+    "Shyvana": {
+      "nombre": "Shyvana",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Singed": {
+      "nombre": "Singed",
+      "tipos": [
+        "Tank",
+        "Mage"
+      ]
+    },
+    "Sion": {
+      "nombre": "Sion",
+      "tipos": [
+        "Tank",
+        "Fighter"
+      ]
+    },
+    "Sivir": {
+      "nombre": "Sivir",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Skarner": {
+      "nombre": "Skarner",
+      "tipos": [
+        "Tank",
+        "Fighter"
+      ]
+    },
+    "Smolder": {
+      "nombre": "Smolder",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Sona": {
+      "nombre": "Sona",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Soraka": {
+      "nombre": "Soraka",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Swain": {
+      "nombre": "Swain",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Sylas": {
+      "nombre": "Sylas",
+      "tipos": [
+        "Mage",
+        "Assassin"
+      ]
+    },
+    "Syndra": {
+      "nombre": "Syndra",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "TahmKench": {
+      "nombre": "Tahm Kench",
+      "tipos": [
+        "Tank",
+        "Support"
+      ]
+    },
+    "Taliyah": {
+      "nombre": "Taliyah",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Talon": {
+      "nombre": "Talon",
+      "tipos": [
+        "Assassin"
+      ]
+    },
+    "Taric": {
+      "nombre": "Taric",
+      "tipos": [
+        "Support",
+        "Tank"
+      ]
+    },
+    "Teemo": {
+      "nombre": "Teemo",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Thresh": {
+      "nombre": "Thresh",
+      "tipos": [
+        "Support",
+        "Tank"
+      ]
+    },
+    "Tristana": {
+      "nombre": "Tristana",
+      "tipos": [
+        "Marksman",
+        "Assassin"
+      ]
+    },
+    "Trundle": {
+      "nombre": "Trundle",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Tryndamere": {
+      "nombre": "Tryndamere",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "TwistedFate": {
+      "nombre": "Twisted Fate",
+      "tipos": [
+        "Mage",
+        "Marksman"
+      ]
+    },
+    "Twitch": {
+      "nombre": "Twitch",
+      "tipos": [
+        "Marksman",
+        "Assassin"
+      ]
+    },
+    "Udyr": {
+      "nombre": "Udyr",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Urgot": {
+      "nombre": "Urgot",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Varus": {
+      "nombre": "Varus",
+      "tipos": [
+        "Marksman",
+        "Mage"
+      ]
+    },
+    "Vayne": {
+      "nombre": "Vayne",
+      "tipos": [
+        "Marksman",
+        "Assassin"
+      ]
+    },
+    "Veigar": {
+      "nombre": "Veigar",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Velkoz": {
+      "nombre": "Vel'Koz",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "Vex": {
+      "nombre": "Vex",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Vi": {
+      "nombre": "Vi",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Viego": {
+      "nombre": "Viego",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Viktor": {
+      "nombre": "Viktor",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Vladimir": {
+      "nombre": "Vladimir",
+      "tipos": [
+        "Mage",
+        "Fighter"
+      ]
+    },
+    "Volibear": {
+      "nombre": "Volibear",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Warwick": {
+      "nombre": "Warwick",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Xayah": {
+      "nombre": "Xayah",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Xerath": {
+      "nombre": "Xerath",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    },
+    "XinZhao": {
+      "nombre": "Xin Zhao",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Yasuo": {
+      "nombre": "Yasuo",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Yone": {
+      "nombre": "Yone",
+      "tipos": [
+        "Fighter",
+        "Assassin"
+      ]
+    },
+    "Yorick": {
+      "nombre": "Yorick",
+      "tipos": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    "Yunara": {
+      "nombre": "Yunara",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Yuumi": {
+      "nombre": "Yuumi",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Zaahen": {
+      "nombre": "Zaahen",
+      "tipos": [
+        "Fighter"
+      ]
+    },
+    "Zac": {
+      "nombre": "Zac",
+      "tipos": [
+        "Tank",
+        "Fighter"
+      ]
+    },
+    "Zed": {
+      "nombre": "Zed",
+      "tipos": [
+        "Assassin"
+      ]
+    },
+    "Zeri": {
+      "nombre": "Zeri",
+      "tipos": [
+        "Marksman"
+      ]
+    },
+    "Ziggs": {
+      "nombre": "Ziggs",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Zilean": {
+      "nombre": "Zilean",
+      "tipos": [
+        "Support",
+        "Mage"
+      ]
+    },
+    "Zoe": {
+      "nombre": "Zoe",
+      "tipos": [
+        "Mage"
+      ]
+    },
+    "Zyra": {
+      "nombre": "Zyra",
+      "tipos": [
+        "Mage",
+        "Support"
+      ]
+    }
+  }
+}

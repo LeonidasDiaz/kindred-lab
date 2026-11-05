@@ -12,6 +12,7 @@
   python -m kindred_lab objetos actualizar [--version 16.22.1]
   python -m kindred_lab objetos verificar 6333
   python -m kindred_lab objetos migrar              (una sola vez: de referencia/ a la capa manual)
+  python -m kindred_lab objetos defensivo [--ultima | --partida LA1_...]   (extra: auditoría de tus defensivos)
   python -m kindred_lab temprano [--minuto 10]      (extra: primeros minutos, no afecta las runas)
   python -m kindred_lab objetivos [--minuto 20]     (extra: dragones, Barón, torres... por partida)
   python -m kindred_lab jungla [--ultima]           (extra: visión, muertes caras y dónde mueres)
@@ -83,9 +84,10 @@ def cmd_versiones(_a) -> int:
 
 
 def cmd_validar_reglas(a) -> int:
-    from . import reglas
+    from . import campeones, objetos, reglas
     datos = runas.cargar(a.version)
     problemas = reglas.validar(reglas.cargar(), datos)
+    problemas += reglas.validar_objetos(reglas.cargar_objetos(), objetos.cargar(), campeones.cargar())
     if not problemas:
         print(f"Reglas válidas para el parche {datos['version']}.")
         return 0
@@ -241,17 +243,19 @@ def cmd_temprano(a) -> int:
     return 0
 
 
-def _partidas_en_cache(a, solo_ultima: bool = False):
+def _partidas_en_cache(a, solo_ultima: bool = False, match_id: str | None = None):
     """(fila del registro, partida, timeline, yo) de cada partida válida con caché.
-    Con solo_ultima, solo la más reciente del registro, aunque esté marcada con 'excluir'."""
+    Con solo_ultima o match_id, solo esa partida, aunque esté marcada con 'excluir'."""
     from . import temprano
     rid = _riot_id(a)
     pu = None
     filas = [f for f in partidas.leer_registro() if f["match_id"] and f["resultado"] in ("victoria", "derrota")]
     if solo_ultima:
         filas = [max(filas, key=lambda f: partidas._numero_partida(f["match_id"]))] if filas else []
+    if match_id:
+        filas = [f for f in filas if f["match_id"] == match_id]
     for f in filas:
-        if partidas.es_excluida(f) and not (a.todas or solo_ultima):
+        if partidas.es_excluida(f) and not (a.todas or solo_ultima or match_id):
             continue
         cache = temprano.cargar_cache(f["match_id"])
         if not cache:
@@ -427,12 +431,16 @@ def cmd_objetos_migrar(a) -> int:
 
 
 def cmd_objetos_actualizar(a) -> int:
-    from . import objetos
+    from . import campeones, objetos
     res = objetos.actualizar(version=a.version, idioma=a.idioma)
     objs = list(res["datos"]["objetos"].values())
     disponibles = sum(1 for o in objs if o["metadata"]["disponible"])
     print(f"Parche {res['version']}: {len(objs)} objetos en {res['ruta']}")
     print(f"  {disponibles} comprables en la Grieta; {len(objs) - disponibles} con disponible: false.")
+    try:
+        print(f"Tipos de campeón en {campeones.actualizar(res['version'], a.idioma)}")
+    except OSError as e:
+        print(f"Aviso: no se pudieron bajar los campeones ({e}); se conservan los últimos guardados.")
     c = res["comparacion"]
     if c is None:
         print("Primer parche guardado: no hay nada con qué comparar todavía.")
@@ -476,6 +484,33 @@ def cmd_objetos_verificar(a) -> int:
     from . import objetos
     r = objetos.verificar(a.id, a.version)
     print(f"{r['nombre']}: mecánicas verificadas en el parche {r['version']}.")
+    return 0
+
+
+def cmd_objetos_defensivo(a) -> int:
+    from . import campeones, defensivo, objetos, reglas
+    objs = objetos.cargar()["objetos"]
+    situaciones = reglas.cargar_objetos()["situaciones"]
+    camps = campeones.cargar()
+
+    def analizar(partida_, timeline_, yo):
+        return defensivo.analizar(partida_, timeline_, yo, objs, situaciones, camps)
+
+    todas = [analizar(p_, t_, yo) for _, p_, t_, yo in _partidas_en_cache(a)]
+    tabla = defensivo.tabla_base(todas)
+    if a.ultima or a.partida:
+        una = next(_partidas_en_cache(a, solo_ultima=a.ultima, match_id=a.partida), None)
+        if una is None:
+            print("Esa partida no está en el registro con timeline en data/raw/riot/.")
+            return 1
+        f, partida_, timeline_, yo = una
+        print(f"Partida {f['match_id']} ({f['fecha']}, {f['resultado']}, {f['kda']}, {f['duracion_min']} min)\n")
+        print("\n".join(defensivo.texto_partida(analizar(partida_, timeline_, yo), tabla)))
+        return 0
+    if not todas:
+        print("No hay partidas importadas con timeline en data/raw/riot/.")
+        return 1
+    print("\n".join(defensivo.texto_resumen(defensivo.resumen(todas, tabla))))
     return 0
 
 
@@ -561,6 +596,14 @@ def main(argv=None) -> int:
     s.add_argument("id", help="Id del objeto, p. ej. 6333")
     s.add_argument("--version", default="latest")
     s.set_defaults(fn=cmd_objetos_verificar)
+
+    s = o.add_parser("defensivo", help="Extra: auditoría de tus defensivos (qué te mató, qué compraste, cuándo y qué cambió)")
+    x = s.add_mutually_exclusive_group()
+    x.add_argument("--ultima", action="store_true", help="Solo la última partida, muerte por muerte")
+    x.add_argument("--partida", help="Solo esta partida (LA1_...)")
+    s.add_argument("--todas", action="store_true", help="Incluye las partidas marcadas con 'excluir'")
+    s.add_argument("--riot-id"); s.add_argument("--region", default=config.RIOT_REGION)
+    s.set_defaults(fn=cmd_objetos_defensivo)
 
     s = sub.add_parser("jungla", help="Extra: visión, centinelas antes de objetivos, muertes caras y dónde mueres")
     s.add_argument("--ultima", action="store_true",

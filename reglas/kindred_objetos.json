@@ -9,6 +9,20 @@
       "objeto": "Presagio de Randuin",
       "por_que": "75 de armadura, 350 de vida, 30% menos daño de críticos y activa que ralentiza 70% durante 2 s. Su pasiva solo reduce críticos: no hace nada contra habilidades.",
       "estado": "probado",
+      "aplica": {
+        "campeones_1": [
+          "Caitlyn",
+          "Jhin",
+          "Tristana",
+          "Samira",
+          "Darius",
+          "DrMundo",
+          "Garen",
+          "Sett",
+          "Aatrox",
+          "Briar"
+        ]
+      },
       "evidencia": [
         "vs Briar, Caitlyn, Brand, Lulu, Kayn: la activa frenó a Briar en su frenesí"
       ]
@@ -18,6 +32,9 @@
       "objeto": "Fauces de Malmortius",
       "por_que": "60 AD, 40 RM, escudo mágico al bajar del 30% y 10% de omnivampirismo. Es Salvavidas: no se combina con Sterak ni Arcoescudo.",
       "estado": "probado",
+      "aplica": {
+        "perfil": "magico"
+      },
       "evidencia": [
         "vs Fizz, Hwei, Nami, Jhin, Tryndamere: Fauces + Filo de la Noche para no morir de un combo (victoria)"
       ]
@@ -27,6 +44,9 @@
       "objeto": "Rukerno Kaénico",
       "por_que": "80 RM, 400 de vida y un escudo mágico del 15% de tu vida máxima antes de la pelea. No da daño; contra magos de poke (Lux, Vel'Koz, Xerath) llegas sin el escudo. No es Salvavidas: se combina con Sterak (Fauces no).",
       "estado": "hipotesis",
+      "aplica": {
+        "perfil": "magico"
+      },
       "evidencia": [
         "vs Katarina con 25 cargas de Mejai: habría sido el siguiente objeto tras Sterak (no probado)"
       ]
@@ -36,6 +56,19 @@
       "objeto": "Filo de la Noche",
       "por_que": "50 AD, 250 de vida, 15 de letalidad y un escudo antihechizos cada 40 s. Contra 2 asesinos solo frena al primero.",
       "estado": "probado",
+      "aplica": {
+        "campeones_1": [
+          "Zed",
+          "Talon",
+          "Pantheon",
+          "Khazix",
+          "Qiyana",
+          "Morgana",
+          "Lux",
+          "Veigar",
+          "Chogath"
+        ]
+      },
       "evidencia": [
         "junto con Fauces vs Fizz y Hwei (victoria)"
       ]
@@ -45,6 +78,9 @@
       "objeto": "Guantelete de Sterak",
       "por_que": "400 de vida, 20% de tenacidad y escudo del 60% de tu vida adicional al bajar del 30% (más grande con Crecimiento Excesivo). Es Salvavidas.",
       "estado": "hipotesis",
+      "aplica": {
+        "perfil": "mezclado"
+      },
       "pendiente": "Revisar en el juego: en los archivos del juego ADtoAD pasó de 0.45 a 0.50 desde el parche 16.16 (sigue igual en 16.22), con la descripción oficial igual. Falta ver qué mide.",
       "evidencia": [
         "vs Naafiri, Sylas, Lux, Miss Fortune, Mundo: habría servido más que la Placa por la tenacidad",
@@ -56,9 +92,26 @@
       "objeto": "Danza de la Muerte",
       "por_que": "60 AD, 50 de armadura, 15 AH. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura. Guarda el 10% del daño a distancia y el 30% cuerpo a cuerpo: confirmado en los archivos del juego del 16.22 (MeleeItemCalcValue y RangedItemCalcValue). Contra luchadores, Randuin protege más; Danza vale por AD, armadura y la curación con derribos.",
       "estado": "hipotesis: hay que probarla",
+      "aplica": {
+        "campeones_1": [
+          "Zed",
+          "Talon",
+          "Pantheon",
+          "Khazix",
+          "Qiyana"
+        ],
+        "campeones_2": [
+          "Darius",
+          "DrMundo",
+          "Garen",
+          "Sett",
+          "Aatrox"
+        ],
+        "perfil": "fisico"
+      },
       "evidencia": [
         "02/11, vs Lissandra, Fiddlesticks, Mundo, Jinx, Lux: con 74% de daño AD recibido y Mundo matándome 2 veces, habría servido más que Cordura (no probada)",
-        "03/11, vs Camille, Syndra, Jhin, Xin Zhao, Sett (derrota 10/8/12): recibí 76% AD; Sett me mató 6 de 8 veces, 4 de esas 6 en el río. Build: Matakrakens, Berserker, Rey Arruinado, Danza; iba por Fauces (error: debía ser Randuin). Impresión de 1 partida: sentí que sí aguanta un poco más."
+        "03/11, vs Camille, Syndra, Jhin, Xin Zhao, Sett (derrota 10/8/12): recibí 64% físico, 20% mágico y 16% verdadero; Sett me mató 6 de 8 veces, 4 de esas 6 en el río. Sett hizo 57% de daño verdadero en mis muertes (settw): contra eso, la armadura no sirve; solo vida y colocación. Build: Matakrakens, Berserker, Rey Arruinado, Danza; iba por Fauces, y no fue error: Syndra fue quien más daño hizo en mis 2 muertes anteriores, con más de 1000 mágico cada una. Impresión de 1 partida: sentí que sí aguanta un poco más."
       ]
     },
     {
@@ -66,6 +119,7 @@
       "objeto": "Placa Hexperimental",
       "por_que": "40 AD, 20% de VA, 450 de vida y definitiva cerca de un 25% más seguido; al usarla, +50% de VA y +20% de velocidad 8 s. No da tenacidad.",
       "estado": "hipotesis",
+      "aplica": {},
       "nota_parche": "Desde el parche 16.20 (sigue igual en 16.22) le bajaron los valores a distancia: velocidad de ataque 35 -> 25 y movimiento 14 -> 10, según los archivos del juego. Para Kindred rinde menos: los +50% y +20% de arriba son los valores cuerpo a cuerpo.",
       "evidencia": [
         "vs Naafiri, Sylas, Lux, Miss Fortune, Mundo (3er objeto): neutral; se notó la movilidad con la definitiva"
@@ -75,13 +129,23 @@
       "contra": "Peleas en grupo donde tu equipo puede aprovechar tu reaparición",
       "objeto": "Ángel Guardián",
       "por_que": "55 AD, 45 de armadura, revive. Si te atrapan solo, solo alarga tu muerte.",
-      "estado": "hipotesis"
+      "estado": "hipotesis",
+      "aplica": {}
     },
     {
       "contra": "Supresión (definitiva de Malzahar, Warwick, Skarner, Urgot) o ceguera (Q de Teemo)",
       "objeto": "Cimitarra Mercurial",
       "por_que": "50 AD, 35 RM, 10% de robo de vida. Su activa quita supresión, ceguera, aturdimientos y raíces (no levantamientos por el aire) y te da 50% de velocidad 2 s. La ceguera de Teemo anula tus ataques básicos.",
       "estado": "probado",
+      "aplica": {
+        "campeones_1": [
+          "Malzahar",
+          "Warwick",
+          "Skarner",
+          "Urgot",
+          "Teemo"
+        ]
+      },
       "evidencia": [
         "regla del jugador: siempre contra Malzahar y Teemo",
         "vs Alistar, Zed, Ekko, Singed, Teemo: sirvió (victoria)",
@@ -93,6 +157,9 @@
       "objeto": "Al Filo de la Cordura",
       "por_que": "50% de velocidad de ataque, 45 RM, 20% de tenacidad y 45 de daño mágico por golpe. Es objeto de daño para Kindred y defensa a la vez. No es Salvavidas: se combina con Fauces o Sterak. No reemplaza al Rey Arruinado: misma VA con Berserker, pero sin AD ni daño por % de vida. Solo como respuesta tardía si vas atrás contra mucho AP y control sin otra fuente de RM.",
       "estado": "dudoso (3 partidas sin convencer, todas con el fallo de acumulaciones)",
+      "aplica": {
+        "perfil": "magico"
+      },
       "nota_parche": "En el parche 26.22 Riot arregló un fallo de Al Filo de la Cordura que no mantenía sus 4 acumulaciones. Las 3 partidas de la evidencia son del parche 16.21 (26.21), con el fallo: no miden el objeto ya arreglado.",
       "evidencia": [
         "vs Alistar, Zed, Ekko, Singed, Teemo (junto con Cimitarra): no convenció, vendida por Filo del Infinito (victoria). Posible causa: ya tenía RM de la Cimitarra y faltaba el daño crítico.",
@@ -112,6 +179,7 @@
     "Defensivo contra AD: críticos -> Randuin (su pasiva no hace nada contra habilidades). Luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox) -> Randuin; segunda opción, Danza de la Muerte (por AD, armadura y curación con derribos). Asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana) -> Filo de la Noche si una habilidad abre el combo; Danza de la Muerte si te matan de golpe.",
     "La lectura del equipo en la selección decide runas y primer defensivo; los siguientes se deciden por quién te está pegando (marcador), porque el campeón engaña: el 02/11 el equipo parecía 'de AP' y recibí 74% de daño AD.",
     "Si un mismo enemigo te mata 2 o 3 veces, el siguiente objeto es contra él y en las peleas te colocas lejos de él.",
+    "Hipótesis: tras la 2ª muerte contra el mismo enemigo, en la siguiente vuelta a base compro un componente defensivo contra él, aunque no me alcance para el objeto completo.",
     "Volver a preguntar '¿quién me mata?' en cada vuelta a base: si un enemigo se dispara (p. ej. Katarina con Mejai, Viego con sus bajas), el siguiente objeto defensivo responde a esa persona aunque el plan inicial fuera otro."
   ]
 }

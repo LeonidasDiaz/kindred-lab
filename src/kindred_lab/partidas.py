@@ -116,12 +116,15 @@ def fila_desde_partida(partida: dict, puuid: str, datos_runas: dict, valores: di
     ss = [_clave_runa(datos_runas, s["perk"]) for s in sec_sel]
 
     fisico, magico = p.get("physicalDamageTaken", 0), p.get("magicDamageTaken", 0)
-    total = fisico + magico
+    verdadero = p.get("trueDamageTaken", 0)
+    total = fisico + magico + verdadero
     nota_dano = ""
     dano = ""
-    if total:
+    if fisico or magico:
         dano = "AD" if fisico >= magico else "AP"
-        nota_dano = f"recibido: {round(100 * fisico / total)}% AD / {round(100 * magico / total)}% AP"
+    if total:
+        nota_dano = (f"recibido: {round(100 * fisico / total)}% físico / {round(100 * magico / total)}% mágico / "
+                     f"{round(100 * verdadero / total)}% verdadero")
 
     # hora local de tu PC (no UTC), para que una partida de las 8 pm no salga con fecha de mañana
     fecha = datetime.fromtimestamp(info["gameStartTimestamp"] / 1000).strftime("%Y-%m-%d")

@@ -9,6 +9,7 @@ from . import config
 
 RUTA_REGLAS = config.RAIZ / "reglas" / "kindred_runas.json"
 CAMPOS_RUNA = ("incluye", "piedra_angular", "fila_1", "fila_2", "fila_3")
+PERFILES = ("fisico", "magico", "mezclado")    # valores de "perfil" en el campo "aplica" de kindred_objetos.json
 
 
 def cargar(ruta: Path | None = None) -> dict:
@@ -67,4 +68,31 @@ def validar(reglas: dict, datos_runas: dict) -> list[str]:
     for a in sorted(claves_arbol_usadas(reglas)):
         if a not in datos_runas["arboles"]:
             problemas.append(f"El árbol '{a}' no existe en el parche {datos_runas['version']}.")
+    return problemas
+
+
+def cargar_objetos(ruta: Path | None = None) -> dict:
+    return json.loads((ruta or config.REGLAS_OBJETOS).read_text(encoding="utf-8"))
+
+
+def validar_objetos(reglas_objetos: dict, datos_objetos: dict, datos_campeones: dict) -> list[str]:
+    """Comprueba cada situación: que el objeto exista y que su campo 'aplica' se pueda evaluar."""
+    nombres = {o["metadata"]["nombre"] for o in datos_objetos["objetos"].values()}
+    campeones = {c.lower() for c in datos_campeones["campeones"]}
+    problemas = []
+    for s in reglas_objetos.get("situaciones", []):
+        objeto = s["objeto"]
+        if objeto not in nombres:
+            problemas.append(f"El objeto '{objeto}' no existe en el parche {datos_objetos['version']}.")
+        if "aplica" not in s:
+            problemas.append(f"'{objeto}' no tiene el campo 'aplica' (usa {{}} si no se puede evaluar).")
+            continue
+        aplica = s["aplica"]
+        if aplica.get("perfil", "fisico") not in PERFILES:
+            problemas.append(f"'{objeto}': el perfil '{aplica['perfil']}' no es uno de {', '.join(PERFILES)}.")
+        for clave in ("campeones_1", "campeones_2"):
+            for c in aplica.get(clave, []):
+                if c.lower() not in campeones:
+                    problemas.append(f"'{objeto}': el campeón '{c}' no existe en Data Dragon "
+                                     f"(usa su id, p. ej. DrMundo o Khazix).")
     return problemas

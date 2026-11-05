@@ -19,6 +19,8 @@ OBJETOS_MECANICAS = RAIZ / "reglas" / "objetos_mecanicas.json"                 #
 OBJETOS_REFERENCIA = RAIZ / "referencia" / "objetos_16.15.1_manual.json"       # original sin cambios
 OBJETOS_VERSION_REFERENCIA = "16.15.1"
 OBJETOS_INFORME = RAIZ / "docs" / "migracion_objetos.md"
+REGLAS_OBJETOS = RAIZ / "reglas" / "kindred_objetos.json"                      # objetos defensivos por situación
+CAMPEONES_DIR = PROCESADO / "campeones"                                        # tipos de campeón de Data Dragon
 
 # --- Riot API (partidas) ---
 RIOT_RAW = DATA / "raw" / "riot"               # partidas y timelines tal cual, una vez por partida

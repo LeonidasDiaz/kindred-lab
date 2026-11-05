@@ -15,6 +15,7 @@ kindred-lab/
 │   ├── runas.py       normalizar, guardar por parche, comparar, buscar
 │   ├── reglas.py      cargar y validar las reglas de runas de Kindred
 │   ├── objetos.py     objetos por parche: Data Dragon más la capa manual de mecánicas
+│   ├── campeones.py   tipos de campeón de Data Dragon, guardados para no descargar en los análisis
 │   ├── riot.py        cliente de la API de Riot (match-v5) con caché en disco
 │   ├── cdragon.py     qué var1/var2/var3 es cada número de runa (Community Dragon)
 │   ├── partidas.py    partida de Riot -> fila del registro, calibración, resumen
@@ -22,13 +23,15 @@ kindred-lab/
 │   ├── objetivos.py   extra: dragones, Barón, torres y placas por partida
 │   ├── jungla.py      extra: visión, muertes caras y dónde mueres
 │   ├── momentos.py    extra: en qué tramo de 5 minutos se tuerce la partida
+│   ├── defensivo.py   extra: auditoría de tus defensivos
 │   └── __main__.py    línea de comandos
 ├── data/
 │   ├── raw/ddragon/<version>/<idioma>/   runesReforged.json tal cual (se regenera)
 │   ├── raw/riot/                         partidas y timelines tal cual, una vez por partida
 │   ├── raw/cdragon/                      perks.json de Community Dragon
 │   ├── processed/runas/                  runas_<version>.json, runas_latest.json, cambios_X_a_Y.md
-│   └── processed/objetos/                objetos_<version>.json, objetos_latest.json, cambios_X_a_Y.md
+│   ├── processed/objetos/                objetos_<version>.json, objetos_latest.json, cambios_X_a_Y.md
+│   └── processed/campeones/              campeones_latest.json (tipos de Data Dragon)
 ├── README.md / README.en.md  presentación del proyecto (español / inglés)
 ├── docs/uso.md              este manual: todos los comandos
 ├── docs/hallazgos.md        reglas y hallazgos de juego (runas, objetos, primeros minutos)
@@ -37,13 +40,14 @@ kindred-lab/
 ├── reglas/
 │   ├── kindred_runas.json   las 3 preguntas para elegir runas (editable a mano)
 │   ├── valores_runas.json   valores de runa calibrados a mano (manda sobre Community Dragon)
-│   ├── kindred_objetos.json objetos defensivos por situación (solo consulta, editable a mano)
+│   ├── kindred_objetos.json objetos defensivos por situación (editable a mano; `objetos defensivo` usa su campo `aplica`)
 │   └── objetos_mecanicas.json  capa manual de mecánicas de objetos, con su parche verificado
 ├── referencia/objetos_16.15.1_manual.json  archivo manual original de objetos, sin cambios
+├── referencia/kindred_2026_manual.json     datos de Kindred hechos a mano, sin cambios
 ├── registro/partidas.csv    tu registro de partidas (lo llena `partidas importar`)
 ├── registro/partidas_respaldo.csv  respaldo viejo (oct. 2026); sus anotaciones ya están en partidas.csv
 ├── ejemplos/partidas_ejemplo.csv   14 partidas inventadas para probar `partidas resumen --registro` sin clave
-├── rutina.ps1               después de cada partida: importar, anotar la última, resumen y tus muertes
+├── rutina.ps1               después de cada partida: importar, anotar la última, resumen, tus muertes y tus defensivos
 ├── publicar.ps1             copia la parte pública a ..\kindred-lab-publico (no se publica él mismo)
 ├── secretos.json            tu clave de Riot y tu Riot ID (lo creas tú; en .gitignore)
 ├── secretos.ejemplo.json    plantilla de lo anterior
@@ -129,7 +133,7 @@ python -m kindred_lab partidas importar --cantidad 10
   LAN se consulta por la región `americas`. `--cantidad` cuenta partidas de la cola antes de filtrar por campeón.
 - No duplica partidas (usa `match_id`) y migra un CSV viejo sin esa columna.
 - Se llenan solos: fecha (tu hora local), parche (`16.21`), resultado, duración, KDA, enemigos, runas,
-  hechizos de invocador (p. ej. `Fantasma+Castigo`; las partidas viejas se completan solas desde la caché), muertes antes del minuto 10, daño que más recibiste (AD/AP, en `dano_que_me_mata` y `notas`) y los valores
+  hechizos de invocador (p. ej. `Fantasma+Castigo`; las partidas viejas se completan solas desde la caché), muertes antes del minuto 10, daño que más recibiste (AD/AP en `dano_que_me_mata`; físico, mágico y verdadero en `notas`) y los valores
   de cada runa (`valor_*`, más `estadisticas_runas` con todos sus números).
 - Siguen siendo manuales `alcance_temprano` y tus notas.
 - La API da las runas secundarias en el orden en que las elegiste; se guardan ordenadas por fila.
@@ -223,6 +227,45 @@ Con `--ultima`, en vez de la tabla, la partida más reciente del registro (aunqu
 cada una de tus muertes en orden, con minuto, zona, campeón que te mató (`(sin campeón)` si fue torre, súbditos o
 monstruo) y si fue cara (y con qué objetivo enemigo).
 
+## Extra: auditoría de tus defensivos
+
+```powershell
+python -m kindred_lab objetos defensivo                        # resumen, separado por periodo
+python -m kindred_lab objetos defensivo --ultima               # tu última partida, muerte por muerte
+python -m kindred_lab objetos defensivo --partida LA1_...      # una partida concreta
+```
+
+Lee las mismas timelines guardadas; no descarga nada. No calcula % de victorias por objeto.
+
+- **Perfil de tus muertes:** % físico, mágico y verdadero, solo del daño en tus muertes (`victimDamageReceived`).
+  Torres, súbditos, monstruos y aliados cuentan aquí, pero no como enemigos. Una muerte cuyo desglose suma menos de
+  la mitad de tu vida máxima se marca como "desglose parcial".
+- **Amenaza principal:** quién metió más daño en tus muertes, su tipo de Data Dragon (informativo: Jhin sale como
+  `Marksman, Mage`) y su oro menos el tuyo en la 1ª muerte, en la compra y al final.
+- **Defensivo:** objeto completo con armadura, resistencia mágica, vida o escudo en su descripción, más las botas con
+  armadura o resistencia mágica. Se clasifica con los datos del último parche, también en partidas viejas.
+- **Coincidencia por tipo:** con las muertes **anteriores** a la compra. 50% o más del daño correspondiente es "sí",
+  de 35 a 49% "parcial" y menos "no". Los objetos de solo vida o escudo salen como "general". Con una sola muerte
+  previa sale "pocos datos": no dice qué daño te mata.
+- **Según reglas actuales:** con el campo `aplica` de `reglas/kindred_objetos.json`. Son las reglas de hoy, no las
+  que existían cuando jugaste. Estados: `1ª opción` y `2ª opción` (la amenaza está en la regla del objeto),
+  `por rival presente` (otro enemigo de la partida está en ella), `otro objeto` (la amenaza está en la regla de otro), `ya tenía el indicado` (ese otro ya estaba en tu inventario),
+  `por perfil`, `pocos datos`, `sin coincidencia`, `sin regla` y `no evaluable` (`aplica` vacío). El perfil es
+  `mezclado` si físico y mágico llegan cada uno al 35%. Con una sola muerte previa, la amenaza y el perfil no cuentan;
+  el rival presente sí, porque no depende de tus muertes.
+- **Retraso:** del primer enemigo que fue quien más daño hizo en 2 de tus muertes, minutos entre esa 2ª muerte y el
+  primer defensivo cuyo tipo sirva contra él, según su daño hasta ese momento. Contra daño sobre todo verdadero solo
+  sirve el tipo "general". "Ya lo tenía" y "nunca" se cuentan aparte. Además mide la **primera compra útil** tras esa
+  muerte, aunque sea un componente barato con armadura, resistencia mágica o vida: sirve para probar la regla de
+  comprar un componente en la siguiente vuelta a base.
+- **Efecto:** muertes cada 10 min antes y después, junto a la **base**: la tasa de ese periodo en los mismos minutos.
+  Hace falta porque tus muertes suben con los minutos en cualquier partida. Compara, no prueba causa. También cuenta
+  las muertes posteriores contra quien era la amenaza al comprar, por más daño y por último golpe.
+
+El resumen separa las partidas antes y desde el parche 16.20, y marca con `*` los objetos con menos de 5 compras.
+El daño viene ya reducido por tu armadura y resistencia: comprar armadura baja por sí solo el % físico posterior, y
+por eso la coincidencia nunca mira lo que pasó después de comprar.
+
 ## Extra: en qué momento se tuerce la partida
 
 ```powershell
@@ -267,8 +310,8 @@ propio historial, y se actualiza con:
    ```
 
    Importa (`--cantidad 10`), te pregunta si en la selección decidiste que alguien te alcanzaba (si/no) y una nota
-   opcional, los guarda con `partidas anotar ultima`, muestra `partidas resumen` y luego `jungla --ultima` (tus
-   muertes de la partida que acabas de jugar). Si la importación falla
+   opcional, los guarda con `partidas anotar ultima`, muestra `partidas resumen`, luego `jungla --ultima` (tus
+   muertes de la partida que acabas de jugar) y `objetos defensivo --ultima` (tus defensivos en ella). Si la importación falla
    (p. ej. clave caducada) se detiene; si no entró ninguna partida nueva, no anota nada (`ultima` sería la anterior);
    si entraron varias, anota solo la más reciente y te avisa. Al final, si `registro/partidas.csv` cambió, hace
    commit solo de ese archivo con el mensaje `Partida <match_id>: <resultado>` (una por cada partida nueva; si solo

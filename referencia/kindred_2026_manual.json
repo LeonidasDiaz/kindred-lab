@@ -1,0 +1,158 @@
+{
+  "campeon": "Kindred",
+  "titulo": "Los Cazadores Eternos",
+  "roles": [
+    "Tirador",
+    "Jungla"
+  ],
+  "recurso": "Maná",
+  "stats_base": {
+    "Vida": 595.0,
+    "Vida_por_nivel": 104.0,
+    "Regen_Vida": 1.4,
+    "Regen_Vida_por_nivel": 0.11,
+    "Daño_Ataque": 65.0,
+    "Daño_Ataque_por_nivel": 3.25,
+    "Armadura": 29.0,
+    "Armadura_por_nivel": 4.7,
+    "Resistencia_Magica_base": 30.0,
+    "Resistencia_Magica_por_nivel": 1.3,
+    "Vel_Movimiento": 325.0,
+    "Rango_Ataque": 500.0,
+    "Vel_Ataque_base": 0.625,
+    "Vel_Ataque_ratio": 0.625,
+    "Vel_Ataque_por_nivel": 3.5,
+    "Mana": 300.0,
+    "Mana_por_nivel": 35.0,
+    "Regen_Mana": 1.4,
+    "Regen_Mana_por_nivel": 0.08
+  },
+  "pasiva": {
+    "nombre": "Marca de los Kindred",
+    "nombre_interno": "KindredPassiveManagerAbility",
+    "descripcion_completa": "Lamb y Wolf cazan juntos. Lamb puede marcar campeones enemigos, mientras que Wolf marca monstruos de la jungla enemiga. Derribar a estos objetivos otorga una 'Marca' permanente que potencia sus habilidades y rango.",
+    "mecanica_basica": {
+      "caza_campeones": {
+        "tiempo_retraso_activacion": 8.0,
+        "duracion_marca_campeon": 75.0,
+        "enfriamiento_entre_marcas": 90.0
+        
+      },
+      "caza_monstruos": {
+        "intervalo_entre_marcas_segundos": 40.0,
+        "tiempo_primera_marca": "La primera marca de Lobo siempre aparece en el minuto 3:15 del juego.",
+        "mecanica_niebla_de_guerra": "Si un enemigo elimina un campamento marcado y Kindred no tiene visión, la marca permanecerá en el minimapa de Kindred durante 10 segundos adicionales antes de desaparecer.",
+        "rangos_de_marcas_jungla": {
+          "0_marcas": ["Cangrejo Escurridizo"],
+          "1_a_3_marcas": ["Cangrejo Escurridizo", "Pajarracos", "Gromp"],
+          "4_a_7_marcas": ["Krugs Ancestrales", "Guardián Azul", "Dagarracos", "Lobos"],
+          "8_o_mas_marcas": ["Heraldo de la Grieta", "Barón Nashor", "Dragones elementales", "Dragón Anciano"]
+        }
+      }
+    },
+    "escalado_general_marcas": {
+      "rango_de_ataque": {
+        "formula": "Si marcas >= 4: rango_extra = 75 + 25 * floor((marcas - 4) / 3)"
+      }
+    }
+  },
+  "habilidades": {
+    "Q": {
+      "nombre": "Danza de Flechas",
+      "descripcion": "Cordera salta en una dirección y dispara flechas a los 3 enemigos más cercanos. Obtiene velocidad de ataque adicional.",
+      "cooldown": [9.0, 9.0, 9.0, 9.0, 9.0],
+      "costo_mana": [35.0, 35.0, 35.0, 35.0, 35.0],
+      "rango_salto": 340.0,
+      "mecanicas_ocultas": {
+        "salto_de_muros": "Cordera puede saltar sobre la mayoría de los muros delgados y medianos. NO requiere visión del otro lado del muro para realizar el salto.",
+        "reseteo_ataque": "Lanzar esta habilidad reinicia instantáneamente el temporizador de ataque básico de Cordera.",
+        "tipo_de_daño": "Las flechas disparadas se consideran daño de hechizo. NO aplican efectos de impacto (On-hit) ni robo de vida, pero sí omnivampirismo/succión de hechizo."
+      },
+      "daño_base_fisico": [40.0, 65.0, 90.0, 115.0, 140.0],
+      "escalado_ad": 0.75,
+      "mejora_por_pasiva": {
+        "formula": "Velocidad_Ataque_Extra_Q = 35 + (marcas * 5)"
+      },
+      "parametros_extra": {
+        "CDNewValue_Dentro_De_W": [4.5, 4.0, 3.5, 3.0, 2.5]
+      }
+    },
+    "W": {
+      "nombre": "Frenesí de Lobo",
+      "descripcion": "Lobo reclama un territorio por 8 segundos. Ataca automáticamente a los enemigos dentro de él.",
+      "cooldown": [18.0, 17.0, 16.0, 15.0, 14.0],
+      "costo_mana": [40.0, 40.0, 40.0, 40.0, 40.0],
+      "rango_zona": 800.0,
+      "condicion_finalizacion": "Se cancela de golpe si Cordera sale del área de la habilidad.",
+      "mecanicas_ocultas": {
+        "vision": "Crear el área de la W otorga visión de toda esa zona, incluyendo por encima de los muros y dentro de la maleza.",
+        "prioridad_objetivo": "Lobo siempre atacará al último objetivo que Cordera haya dañado. Si Cordera no ataca, Lobo priorizará al campeón enemigo más cercano."
+      },
+      "pasiva_vigor_del_cazador": {
+        "generacion_por_movimiento": "1 carga por cada 27 unidades recorridas",
+        "generacion_por_ataque": "5 cargas por ataque básico",
+        "cargas_maximas": 100,
+        "curacion_base_por_nivel": [47.0, 81.0],
+        "modificador_curacion_vida_faltante": "0% - 100% de la curación base dependiendo de la vida faltante",
+        "condicion_activacion": "No se activa (y no consume las cargas) si Kindred tiene el 100% de su vida."
+      },
+      "daño_base_magico_por_mordisco": [25.0, 30.0, 35.0, 40.0, 45.0],
+      "escalado_ad_adicional": 0.20,
+      "mejora_por_pasiva": {
+        "formula": "Porcentaje_Vida_Actual_Daño_W = 1.5 + (marcas * 1.0)"
+      }
+    },
+    "E": {
+      "nombre": "Terror Creciente",
+      "descripcion": "Cordera ralentiza a un enemigo. Al tercer ataque básico, Lobo se abalanza infligiendo daño físico basado en la vida faltante.",
+      "cooldown": [14.0, 12.5, 11.0, 9.5, 8.0],
+      "costo_mana": [50.0, 50.0, 50.0, 50.0, 50.0],
+      "rango_base": 500.0,
+      "restriccion_rango": "El alcance solo aumenta mediante las Marcas de la pasiva. Objetos como Cañón de Fuego Rápido NO incrementan el rango de la E.",
+      "ralentizacion": {
+        "porcentaje_base": 30.0,
+        "escalado_ap": "+0.05 por AP",
+        "duracion_segundos": 1.0
+      },
+      "mecanica_marca": {
+        "duracion_inicial_segundos": 4.0,
+        "cargas_maximas": 3.0,
+        "aplicacion_cargas": "Los ataques básicos aplican 1 carga y reinician la duración de la marca."
+      },
+      "daño_base_fisico": [80.0, 110.0, 140.0, 170.0, 200.0],
+      "escalado_ad_adicional": 0.80,
+      "daño_vida_faltante_base_porcentaje": 5.0,
+      "escalado_vida_faltante_por_marca": 0.5,
+      "mecanicas_ocultas": {
+        "multiplicador_critico_global": "La Probabilidad de Crítico aumenta los valores de la habilidad con un 50% de efectividad. Si se posee Daño Crítico adicional (ej: Filo del Infinito), este porcentaje amplifica la efectividad de la probabilidad de crítico presente."
+      },
+      "fomulas_de_daño_exactas": {
+        "multiplicador_critico": "Multiplicador = 1 + (Probabilidad_Critico * 0.5) + (Probabilidad_Critico * Bono_Dmg_Critico * 0.5)",
+        "daño_plano_total": "(Daño_Base_E + (AD_Adicional * 0.80)) * Multiplicador",
+        "daño_porcentaje_vida_total": "(5.0 + (Marcas * 0.5)) * Multiplicador",
+        "nota_calculo": "El Daño Crítico adicional (Bono_Dmg_Critico) se ingresa como decimal (ej: 30% = 0.30). Si es 0, esa parte de la ecuación se anula y solo escala por probabilidad pura."
+      },
+      "parametros_extra": {
+        "MonsterCap_Daño_Porcentaje_Vida": [200.0, 200.0, 200.0, 200.0, 200.0]
+      }
+    },
+    "R": {
+      "nombre": "Respiro de la Cordera",
+      "descripcion": "Ninguna unidad en el área puede morir (la vida se detiene al 10%). Al terminar, cura a todos.",
+      "cooldown": [160.0, 140.0, 120.0],
+      "costo_mana": [100.0, 100.0, 100.0],
+      "mecanicas_ocultas": {
+        "afecta_monstruos_epicos": true,
+        "nota_monstruos": "Evita que el Barón Nashor, Dragones y el Heraldo bajen del 10% de vida, lo que afecta el uso del hechizo Castigo (Smite).",
+        "afecta_estructuras": false,
+        "inmunidad_al_daño_y_curacion": "Una vez que una unidad alcanza el 10% de vida, no puede recibir daño PERO SÍ puede recibir curaciones externas antes de que la definitiva termine."
+      },
+      "curacion_base": [225.0, 300.0, 375.0],
+      "parametros_extra": {
+        "BuffDuration": 4.0,
+        "AoERadius": 530.0,
+        "Umbral_Vida_Inmunidad_Porcentaje": 10.0
+      }
+    }
+  }
+}

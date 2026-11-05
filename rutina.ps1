@@ -1,4 +1,4 @@
-﻿# Rutina después de cada partida: importar, anotar la última partida, ver el resumen y tus muertes.
+﻿# Rutina después de cada partida: importar, anotar la última partida, ver el resumen, tus muertes y tus defensivos.
 # Uso (desde cualquier carpeta):  .\rutina.ps1
 Set-Location $PSScriptRoot
 $env:PYTHONPATH = "src"
@@ -45,7 +45,11 @@ python -m kindred_lab partidas resumen
 Write-Host ""
 python -m kindred_lab jungla --ultima
 
-# 6. Commit del registro (solo ese archivo). Si git falla, se avisa y ya.
+# 6. Auditoría de tus defensivos en esa partida
+Write-Host ""
+python -m kindred_lab objetos defensivo --ultima
+
+# 7. Commit del registro (solo ese archivo). Si git falla, se avisa y ya.
 try {
     $cambios = git status --porcelain -- $registro
     if ($LASTEXITCODE -ne 0) { throw "git status falló" }

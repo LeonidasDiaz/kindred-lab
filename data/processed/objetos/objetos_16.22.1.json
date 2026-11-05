@@ -7,7 +7,9 @@
         "nombre": "Botas",
         "precio": 300,
         "descripcion_legible": "25 de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": true
       },
       "stats_base": {
         "Vel_Movimiento_plana": 25
@@ -23,7 +25,9 @@
         "nombre": "Amuleto de las Hadas",
         "precio": 200,
         "descripcion_legible": "50% de Regen. de Maná Básica",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Regen_Mana_Básica_Porcentual": 0.5
@@ -39,7 +43,9 @@
         "nombre": "Perla de Rejuvenecimiento",
         "precio": 300,
         "descripcion_legible": "100% de Regen. de Vida Básica",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Regen_Vida_Básica_Porcentual": 1
@@ -55,7 +61,9 @@
         "nombre": "Cinturón de Gigante",
         "precio": 900,
         "descripcion_legible": "350 de Vida",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350
@@ -71,7 +79,9 @@
         "nombre": "Capa de Agilidad",
         "precio": 600,
         "descripcion_legible": "15% de Probabilidad de Golpe Crítico",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Prob_Critico": 0.15
@@ -87,7 +97,9 @@
         "nombre": "Varita Explosiva",
         "precio": 850,
         "descripcion_legible": "45 de Poder de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 45
@@ -103,7 +115,9 @@
         "nombre": "Cristal de Zafiro",
         "precio": 300,
         "descripcion_legible": "300 de Maná",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Mana_maximo_plano": 300
@@ -119,7 +133,9 @@
         "nombre": "Cristal de Rubí",
         "precio": 400,
         "descripcion_legible": "150 de Vida",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 150
@@ -135,7 +151,9 @@
         "nombre": "Armadura de Tela",
         "precio": 300,
         "descripcion_legible": "15 de Armadura",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Armadura_plana": 15
@@ -151,7 +169,9 @@
         "nombre": "Cota de Malla",
         "precio": 800,
         "descripcion_legible": "40 de Armadura",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Armadura_plana": 40
@@ -167,7 +187,9 @@
         "nombre": "Manto Anulamagia",
         "precio": 400,
         "descripcion_legible": "20 de Resistencia Mágica",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Resist_Magica_plana": 20
@@ -183,7 +205,9 @@
         "nombre": "Espada Larga",
         "precio": 350,
         "descripcion_legible": "10 de Daño de Ataque",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 10
@@ -199,7 +223,9 @@
         "nombre": "Picacha",
         "precio": 875,
         "descripcion_legible": "25 de Daño de Ataque",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 25
@@ -215,7 +241,9 @@
         "nombre": "Espadón",
         "precio": 1300,
         "descripcion_legible": "40 de Daño de Ataque",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 40
@@ -231,7 +259,9 @@
         "nombre": "Daga",
         "precio": 250,
         "descripcion_legible": "10% de Velocidad de Ataque",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.1
@@ -247,7 +277,9 @@
         "nombre": "Arco Recurvado",
         "precio": 700,
         "descripcion_legible": "15% de Velocidad de Ataque Aguijón Los ataques infligen 15 de daño físico adicional al impacto .",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.15
@@ -275,7 +307,9 @@
         "nombre": "Libro Amplificador",
         "precio": 400,
         "descripcion_legible": "20 de Poder de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 20
@@ -291,7 +325,9 @@
         "nombre": "Cetro Vampírico",
         "precio": 900,
         "descripcion_legible": "15 de Daño de Ataque 7% de Robo de Vida",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 15,
@@ -308,7 +344,9 @@
         "nombre": "Escudo de Doran",
         "precio": 450,
         "descripcion_legible": "110 de Vida Concentración Tenaz Recuperas 4 de Vida cada 5 seg. Tras recibir daño de un campeón, restauras vida a lo largo de 8 seg. Una Ayudita Los ataques infligen 5 de daño físico adicional a súbditos.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 110
@@ -364,7 +402,9 @@
         "nombre": "Espada de Doran",
         "precio": 450,
         "descripcion_legible": "10 de Daño de Ataque 80 de Vida 2.5% de Omnivampirismo",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 10,
@@ -382,7 +422,9 @@
         "nombre": "Sortija de Doran",
         "precio": 400,
         "descripcion_legible": "18 de Poder de Habilidad 90 de Vida Drenar: Restaura 1 de Maná por segundo y aumenta a 2 de Maná por segundo durante 5 seg después de infligir daño a un campeón enemigo. Si no puedes obtener maná, cura un 45% de este valor. Una Ayudita Los ataques infligen 5 de daño físico adicional a súbditos.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 18,
@@ -432,7 +474,9 @@
         "nombre": "Capa de Negatrones",
         "precio": 850,
         "descripcion_legible": "45 de Resistencia Mágica",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Resist_Magica_plana": 45
@@ -448,7 +492,9 @@
         "nombre": "Vara Innecesariamente Grande",
         "precio": 1200,
         "descripcion_legible": "65 de Poder de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 65
@@ -464,7 +510,9 @@
         "nombre": "El Sello de la Oscuridad",
         "precio": 350,
         "descripcion_legible": "15 de Poder de Habilidad 50 de Vida Gloria Los derribos otorgan Gloria (hasta 10). Pierdes 5 de Gloria al morir. Obtienes 4 de Poder de Habilidad por cada acumulación de Gloria .",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 15,
@@ -503,7 +551,9 @@
         "nombre": "Sacrificar",
         "precio": 450,
         "descripcion_legible": "7 de Daño de Ataque Cosechar Restaura 3 de Vida al impacto . Matar súbditos otorga 1 de oro , hasta 100 . Alcanzar el límite otorga 350 de oro adicional .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 7
@@ -546,6 +596,8 @@
         "precio": 400,
         "descripcion_legible": "7 de Daño de Ataque 15% de Velocidad de Ataque 1.5% de Omnivampirismo",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "6 de Daño de Ataque. 15% de Velocidad de Ataque. 1.5% de Omnivampirismo."
       },
       "stats_base": {
@@ -573,6 +625,8 @@
         "precio": 450,
         "descripcion_legible": "Compañeros de la Jungla Invocas un Rasgafuegos que te ayuda a pelear contra los monstruos. El compañero crece conforme cazas monstruos, lo que potencia tu Castigo . Cuando el compañero alcanza la madurez, completas tu misión de jungla. Además, cada cierto tiempo, tu próximo ataque o habilidad quema a los enemigos y los ralentiza . Al derribar monstruos grandes, obtienes el efecto al instante.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "Compañeros de la Jungla: Invocas un Rasgafuegos que te ayuda a pelear contra monstruos. Corte de Rasgafuegos: El compañero crece conforme caces monstruos, lo que potencia tu Castigo. Al crecer y alcanzar su tamaño máximo, infunde periódicamente tu próximo ataque o habilidad para quemar a los enemigos y ralentizarlos. Matar monstruos grandes lo prepara al instante.",
         "restricciones_tienda": {
           "hechizo_invocador_requerido": "Castigo",
@@ -694,6 +748,8 @@
         "precio": 450,
         "descripcion_legible": "Compañeros de la Jungla Invocas un Trotabrisas que te ayuda a pelear contra los monstruos. El compañero crece conforme cazas monstruos, lo que potencia tu Castigo . Cuando el compañero alcanza la madurez, completas tu misión de jungla. Además, obtienes velocidad de movimiento al entrar a la maleza, que aumenta al derribar monstruos grandes.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "Compañeros de la Jungla: Invocas un Brincamontes que te ayuda a pelear contra monstruos. Marcha del Trotabrisas: El compañero crece conforme caces monstruos, potenciando tu Castigo. Al alcanzar su tamaño máximo, te otorga un 30% de Velocidad de Movimiento al entrar a la maleza (decae en 1.5s). Este bono sube a 45% al asesinar monstruos grandes.",
         "restricciones_tienda": {
           "hechizo_invocador_requerido": "Castigo",
@@ -806,6 +862,8 @@
         "precio": 450,
         "descripcion_legible": "Compañeros de la Jungla Invocas un Pisamusgo que te ayuda a pelear contra los monstruos. El compañero crece conforme cazas monstruos, lo que potencia tu Castigo . Cuando el compañero alcanza la madurez, completas tu misión de jungla. Además, obtienes un escudo mientras estás fuera de combate y después de derribar monstruos grandes.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "Compañeros de la Jungla: Invocas un Pisamusgo. Valor de Pisamusgo: El compañero crece conforme caces monstruos, potenciando tu Castigo. Al alcanzar su tamaño máximo, te otorga un escudo de 200-360 (según el nivel). El escudo se regenera tras matar monstruos grandes o estar 10 segundos fuera de combate.",
         "restricciones_tienda": {
           "hechizo_invocador_requerido": "Castigo",
@@ -932,7 +990,9 @@
         "nombre": "Retoño de Pisamusgo",
         "precio": 450,
         "descripcion_legible": "Compañeros de la Jungla Invocas un Pisamusgo que te ayuda a pelear contra los monstruos. El compañero crece conforme cazas monstruos, lo que potencia tu Castigo . Cuando el compañero alcanza la madurez, completas tu misión de jungla. Además, obtienes un escudo mientras estás fuera de combate y después de derribar monstruos grandes.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -965,7 +1025,9 @@
         "nombre": "Cría de Trotabrisas",
         "precio": 450,
         "descripcion_legible": "Compañeros de la Jungla Invocas un Trotabrisas que te ayuda a pelear contra los monstruos. El compañero crece conforme cazas monstruos, lo que potencia tu Castigo . Cuando el compañero alcanza la madurez, completas tu misión de jungla. Además, obtienes velocidad de movimiento al entrar a la maleza, que aumenta al derribar monstruos grandes.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -996,7 +1058,9 @@
         "nombre": "Cachorro de Rasgafuegos",
         "precio": 450,
         "descripcion_legible": "Compañeros de la Jungla Invocas un Rasgafuegos que te ayuda a pelear contra los monstruos. El compañero crece conforme cazas monstruos, lo que potencia tu Castigo . Cuando el compañero alcanza la madurez, completas tu misión de jungla. Además, cada cierto tiempo, tu próximo ataque o habilidad quema a los enemigos y los ralentiza . Al derribar monstruos grandes, obtienes el efecto al instante.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -1031,6 +1095,8 @@
         "precio": 450,
         "descripcion_legible": "150 de Vida 8 de Armadura 8 de Resistencia Mágica Una Ayudita Los ataques infligen 5 de daño físico adicional contra súbditos.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "110 de Vida. 10 de Armadura. 10 de Resistencia Mágica. Una Ayudita: Los ataques básicos infligen 5 de daño físico adicional contra súbditos."
       },
       "stats_base": {
@@ -1065,6 +1131,8 @@
         "precio": 50,
         "descripcion_legible": "Voracidad Restaura 120 de Vida a lo largo de 15 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "Voracidad: Restaura 120 de Vida a lo largo de 15 seg.",
         "restricciones_tienda": {
           "limite_inventario": 5
@@ -1099,7 +1167,9 @@
         "nombre": "Sello de Acero",
         "precio": 1100,
         "descripcion_legible": "15 de Daño de Ataque 30 de Armadura",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 15,
@@ -1118,7 +1188,9 @@
         "nombre": "El Brutalizador",
         "precio": 1337,
         "descripcion_legible": "25 de Daño de Ataque 10 de Aceleración de Habilidad 5 de Letalidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 25,
@@ -1138,7 +1210,9 @@
         "nombre": "Excavador de Túneles",
         "precio": 1150,
         "descripcion_legible": "15 de Daño de Ataque 250 de Vida",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 15,
@@ -1155,7 +1229,9 @@
         "nombre": "Mena Brillante",
         "precio": 250,
         "descripcion_legible": "5 de Aceleración de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Aceleracion_de_habilidad_plana": 5
@@ -1172,6 +1248,8 @@
         "precio": 150,
         "descripcion_legible": "Activa (2 cargas) Restaura 100 de Vida a lo largo de 12 seg. Se rellena al visitar la tienda.",
         "disponible": true,
+        "final": false,
+        "botas": false,
         "descripcion_manual": "Activa (2 cargas): Restaura 100 de Vida a lo largo de 12 seg. Se rellena al visitar la tienda.",
         "restricciones_tienda": {
           "limite_inventario": 1,
@@ -1217,7 +1295,9 @@
         "nombre": "Cuerno del Guardián",
         "precio": 950,
         "descripcion_legible": "150 de Vida Restauración: Restaura 20 de Vida cada 5 seg. Osadía: Bloquea 15 de daño de los ataques y hechizos de campeones (25% de efectividad contra habilidades de daño prolongado).",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 150
@@ -1237,6 +1317,8 @@
         "precio": 75,
         "descripcion_legible": "Consumible Coloca un Centinela de Control que otorga visión y revela los Centinelas Invisibles, las trampas y los enemigos camuflados .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "Consumible: Coloca un Centinela de Control que otorga visión y revela Centinelas Invisibles, trampas y enemigos camuflados. Límite de 1 en el mapa.",
         "precio_base": 75,
         "restricciones_tienda": {
@@ -1287,7 +1369,9 @@
         "nombre": "Canto de Guerra de Shurelya",
         "precio": 2200,
         "descripcion_legible": "50 de Poder de Habilidad 15 de Aceleración de Habilidad 4% de Velocidad de Movimiento 125% de Regen. de Maná Básica Discurso Inspirador Otorga a los aliados cercanos un 30% de Velocidad de Movimiento durante 4 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 50,
@@ -1334,7 +1418,9 @@
         "nombre": "Elixir de Hierro",
         "precio": 500,
         "descripcion_legible": "Consumible Otorga 300 de Vida , un 25% de Tenacidad y tamaño aumentado durante 3 min. Mientras dure el efecto, dejas una estela tras de tí que aumenta la Velocidad de Movimiento de los campeones aliados en un 15% .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -1360,7 +1446,9 @@
         "nombre": "Elixir de Brujería",
         "precio": 500,
         "descripcion_legible": "Consumible Otorga 50 de Poder de Habilidad y un 15% de Regen. de Maná durante 3 min. Mientras está activa, infligir daño a un campeón o una torreta inflige 25 de daño verdadero adicional (5 seg contra campeones).",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -1387,7 +1475,9 @@
         "nombre": "Elixir de Furia",
         "precio": 500,
         "descripcion_legible": "Consumible Otorga 30 de Daño de Ataque y un 12% de Vampirismo Físico contra campeones durante 3 min.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -1410,7 +1500,9 @@
         "nombre": "Juguito de Gorrito",
         "precio": 300,
         "descripcion_legible": "Te ayuda a ir con la cabeza en alto. Activa, Consumir: Este jugo no hace nada.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -1432,7 +1524,9 @@
         "nombre": "Guardabrazo del Buscador",
         "precio": 1600,
         "descripcion_legible": "40 de Poder de Habilidad 25 de Armadura Detener el Tiempo (Un solo uso): Entra en Estasis durante 2.5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 40,
@@ -1477,6 +1571,8 @@
         "precio": 1600,
         "descripcion_legible": "40 de Poder de Habilidad 25 de Armadura Tiempo Fragmentado El Guardabrazo se destruye, pero aún puede mejorarse. Tras destruir un Guardabrazo, el vendedor solo te venderá Guardabrazo Fragmentado.",
         "disponible": false,
+        "final": false,
+        "botas": false,
         "restricciones_tienda": {
           "historial_requerido": "haber_consumido_id_2420",
           "bloquea_compra_de": [
@@ -1501,6 +1597,8 @@
         "precio": 3300,
         "descripcion_legible": "40 de Daño de Ataque 550 de Vida Tiranía Obtienes un 2.5% de tu Vida adicional como Daño de Ataque . Reprensión Obtienes hasta un 10% de Daño de Ataque aumentado según el porcentaje de tu vida faltante.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "30 de Daño de Ataque 550 de Vida Tiranía Obtienes un 2.5% de tu Vida adicional como Daño de Ataque . Reprensión Obtienes hasta un 12% de Daño de Ataque aumentado según el porcentaje de tu vida faltante.Info adicional:Obtienes el maximo de Represion adicional al tener menos del 30% de vida"
       },
       "stats_base": {
@@ -1546,7 +1644,9 @@
         "nombre": "Desesperación Eterna",
         "precio": 2800,
         "descripcion_legible": "400 de Vida 50 de Armadura 15 de Aceleración de Habilidad Angustia Cada 4 seg en combate contra campeones, infliges daño mágico a campeones enemigos cercanos y te curas por un 250% del daño infligido.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 400,
@@ -1589,7 +1689,9 @@
         "nombre": "Antorcha de Fuegoscuro",
         "precio": 2800,
         "descripcion_legible": "80 de Poder de Habilidad 600 de Maná 20 de Aceleración de Habilidad Llamarada Maligna Las habilidades de daño infligen daño mágico adicional durante 3 seg. Fuegoscuro Por cada campeón enemigo, monstruo grande o épico afectado por tu Llamarada Maligna , obtienes un 4% de Poder de Habilidad .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 80,
@@ -1653,7 +1755,9 @@
         "nombre": "Rukerno Kaénico",
         "precio": 2900,
         "descripcion_legible": "400 de Vida 80 de Resistencia Mágica 100% de Regen. de Vida Básica Ruina del Mago Si no recibes daño mágico durante 15 seg, obtienes un escudo mágico .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 400,
@@ -1694,7 +1798,9 @@
         "nombre": "Cenizas Predestinadas",
         "precio": 900,
         "descripcion_legible": "30 de Poder de Habilidad Enardecer Las habilidades de daño infligen 15 de daño mágico adicional a lo largo de 3 seg. Inflige 45 de daño mágico adicional a monstruos.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 30
@@ -1736,6 +1842,8 @@
         "precio": 3100,
         "descripcion_legible": "300 de Vida 60 de Poder de Habilidad 20 de Aceleración de Habilidad 20% de Velocidad de Ataque Espada Encantada (0 seg) Tras usar una habilidad, tu siguiente ataque inflige 0 de daño mágico adicional , te cura un 0 al impacto y aplica efectos al impacto una vez más.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "300 de Vida 60 de Poder de Habilidad 20 de Aceleración de Habilidad 20% de Velocidad de Ataque Espada Encantada (1.5 seg) Tras usar una habilidad, tu siguiente ataque inflige (75% de ad base + 10% de ap) de daño mágico adicional , te cura un (10% de ap + 3% de vida adicional) al impacto y aplica efectos al impacto una vez más."
       },
       "stats_base": {
@@ -1786,7 +1894,9 @@
         "nombre": "Proyectiles Cazademonios",
         "precio": 2650,
         "descripcion_legible": "45% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico 4% de Velocidad de Movimiento Vigilancia Nocturna Obtienes 30 de Aceleración de Habilidad para la definitiva. Ráfaga Inicial Tras lanzar la definitiva, tus siguientes 3 ataques básicos obtienen un 50% de Velocidad de Ataque e infligen golpes críticos equivalente a un 80% de tu daño de golpe crítico durante 8 seg. Un ataque que sería un golpe crítico, inflige un 15% de daño verdadero adicional en lugar de un golpe crítico.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.45,
@@ -1852,6 +1962,8 @@
         "precio": 3100,
         "descripcion_legible": "65 de Daño de Ataque 5% de Omnivampirismo 20% de Tenacidad Sed Obtienes aceleración de habilidad según la cantidad de daño de ataque adicional que tengas. Festín Cuando un campeón muere al poco tiempo de haberle infligido daño, obtienes omnivampirismo durante cierto tiempo.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "65 de Daño de Ataque 5% de Omnivampirismo 20% de Tenacidad Sed Obtienes (5 + 13% de ad adicional para melee/ 5 + 10% de ad adiconal para rango) de Aceleración de Habilidad. Festín Cuando un campeón al que le infligiste daño muere en un lapso de 3 seg, obtienes un 15% de Omnivampirismo durante 8 seg."
       },
       "stats_base": {
@@ -1910,6 +2022,8 @@
         "precio": 3000,
         "descripcion_legible": "55 de Daño de Ataque 18 de Letalidad 15 de Aceleración de Habilidad Carga Hueca (0 seg) Causarle daño de habilidad a un campeón o monstruo épico inflige 0 de daño verdadero . Sabotaje Derribar a un campeón en un lapso de 3 seg después de dañarlo te otorga Sabotaje por 25000 seg. Mientras tengas Sabotaje, tu próximo ataque contra un monstruo épico o torreta infligirá 0 de daño verdadero adicional durante 3 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "55 de Daño de Ataque 22 de Letalidad 15 de Aceleración de Habilidad Carga Hueca (20 seg) Causarle daño de habilidad a un campeón o monstruo épico inflige (30+150% de letalidad para melee/ 15 + 75% de letalidad para rango) de daño verdadero . Sabotaje Derribar a un campeón en un lapso de 3 seg después de dañarlo te otorga Sabotaje por 90 seg. Mientras tengas Sabotaje, tu próximo ataque contra un monstruo épico o torreta infligirá (300 + 2500% de letalidad para melee/ 240 + 2000% de letalidad para rango) de daño verdadero adicional durante 3 seg."
       },
       "stats_base": {
@@ -2008,7 +2122,9 @@
         "nombre": "Actualizador",
         "precio": 2800,
         "descripcion_legible": "90 de Poder de Habilidad 300 de Maná 10 de Aceleración de Habilidad Maná de Verdad (0 seg) Durante 8 seg, tu maná se potencia. Mientras esté potenciado, tus hechizos cuestan un 100% más de Maná, obtienes un aumento de 0 de daño de habilidad, de Escudo y de Curación, y el enfriamiento de tus habilidades básicas se completa un 30% más rápido.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 90,
@@ -2071,7 +2187,9 @@
         "nombre": "Hexóptica C44",
         "precio": 2800,
         "descripcion_legible": "55 de Daño de Ataque 25% de Probabilidad de Golpe Crítico Magnificación Inflige hasta un 10% de daño aumentado con ataques, según cuán lejos esté el enemigo (el máximo de daño se inflige a un alcance de 500). Precisión Arcana Cuando un campeón al que le infligiste daño muere en un lapso de 3 seg, obtienes 100 de alcance de ataque adicional durante 8 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 55,
@@ -2114,7 +2232,9 @@
         "nombre": "Flautas de Bandle",
         "precio": 2300,
         "descripcion_legible": "200 de Vida 15 de Aceleración de Habilidad 20 de Armadura 20 de Resistencia Mágica Fanfarria Al ralentizar o inmovilizar a un campeón enemigo, obtienes la mejora Fanfarria durante 0 seg. Fanfarria te otorga 20 de Velocidad de Movimiento . Además, mientras esté activa, tanto tú como tus aliados cercanos obtienen 0 de Velocidad de Ataque .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -2179,7 +2299,9 @@
         "nombre": "Arnés de Protoplasma",
         "precio": 2600,
         "descripcion_legible": "600 de Vida 20 de Aceleración de Habilidad Salvavidas (0 seg) Al recibir daño que reduciría tu Vida por debajo de un 30%, obtienes 0 de Vida Máxima durante 5 seg y te curas 0 de Vida a lo largo del efecto. Mientras recuperas vida, aumentas de tamaño en un 15%, y obtienes un 10% de Velocidad de Movimiento y un 25% de Tenacidad.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 600,
@@ -2248,7 +2370,9 @@
         "nombre": "Tiara Susurrante",
         "precio": 2250,
         "descripcion_legible": "200 de Vida 8% de poder de curaciones y escudos 75% de Regen. de Maná Básica 300 de Maná Armonía Obtienes un 0% de poder de curaciones y escudos. Flujo de Maná (8 seg; máx.: 5 cargas) Al impactar a un enemigo con una habilidad, obtienes 4 de Maná Máximo (la bonificación se duplica contra campeones). Se transforma en Diadema Musical al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -2307,6 +2431,8 @@
         "precio": 2250,
         "descripcion_legible": "200 de Vida 8% de poder de curaciones y escudos 1000 de Maná 100% de Regen. de Maná Básica Armonía Obtienes un 0% de poder de curaciones y escudos. Consonancia Mientras tú o cualquier aliado al que le hayas otorgado una curación o un escudo en los últimos 3 seg están en combate contra campeones, curas al campeón aliado cercano con menor cantidad de vida.",
         "disponible": false,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "200 de Vida. 8% de poder de curaciones y escudos. 1000 de Maná. 100% de Regen. de Maná Básica. Armonía: Obtienes poder de curaciones y escudos equivalente al 0.5% de tu maná adicional. Consonancia: Mientras tú o un aliado que hayas protegido en los últimos 3 seg están en combate, curas al aliado cercano con menos vida (0.8% de tu maná máximo)."
       },
       "stats_base": {
@@ -2354,6 +2480,8 @@
         "precio": 2400,
         "descripcion_legible": "250 de Vida 40 de Armadura 4% de Velocidad de Movimiento Lidera el Camino Al desplazarte, acumulas hasta 20 de Velocidad de Movimiento adicional . Al tener la velocidad máxima: Creas un rastro que otorga a los campeones aliados Velocidad de Movimiento igual a un 15% de la tuya. Si eres un campeón cuerpo a cuerpo, tu próximo ataque ralentiza al objetivo en un 50% durante 1 seg.",
         "disponible": false,
+        "final": true,
+        "botas": false,
         "disponible_en_parche_actual": false,
         "nota_desarrollador": "Eliminado en el parche 26.9"
       },
@@ -2415,7 +2543,9 @@
         "nombre": "Báculo del Arcángel",
         "precio": 2900,
         "descripcion_legible": "70 de Poder de Habilidad 600 de Maná 25 de Aceleración de Habilidad Asombro . Obtienes Poder de Habilidad igual a un 1% del Maná adicional . Flujo de Maná (8 seg. Hasta 5 cargas) Asestar impactos con habilidades otorga 5 de Maná Máximo (se duplica contra campeones). Se transforma en Abrazo del Serafín al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 70,
@@ -2467,7 +2597,9 @@
         "nombre": "Manamune",
         "precio": 2900,
         "descripcion_legible": "35 de Daño de Ataque 500 de Maná 15 de Aceleración de Habilidad Asombro . Obtienes 0 de Daño de ataque adicional . Flujo de Maná (8 seg. Hasta 4 cargas) Asestar impactos con habilidades y ataques otorga 3 de Maná Máximo (se duplica contra campeones). Se transforma en Muramaná al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 35,
@@ -2520,7 +2652,9 @@
         "nombre": "Grebas del Berserker",
         "precio": 1100,
         "descripcion_legible": "30% de Velocidad de Ataque 45 de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": true
       },
       "stats_base": {
         "Vel_Ataque": 0.3,
@@ -2540,6 +2674,8 @@
         "precio": 1100,
         "descripcion_legible": "45 de Velocidad de Movimiento 4% de Omnivampirismo Exterminar Al derribar campeones, obtienes un 0.6% de Omnivampirismo. El efecto se acumula hasta 10 veces.",
         "disponible": true,
+        "final": false,
+        "botas": true,
         "descripcion_manual": "45 de Velocidad de Movimiento. 4% de Omnivampirismo. Exterminar: Al derribar campeones, obtienes un 1% de Omnivampirismo adicional (se acumula hasta 6 veces para un total de 10%)."
       },
       "stats_base": {
@@ -2571,7 +2707,9 @@
         "nombre": "Botas de Rapidez",
         "precio": 1000,
         "descripcion_legible": "55 de Velocidad de Movimiento Pies ligeros Reduce la eficacia de los efectos de ralentización en un 25%.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": true
       },
       "stats_base": {
         "Vel_Movimiento_plana": 55
@@ -2601,7 +2739,9 @@
         "nombre": "Botas del Hechicero",
         "precio": 1100,
         "descripcion_legible": "12 de Penetración de Magia 45 de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": true
       },
       "stats_base": {
         "Penetracion_Magica_Plana": 12,
@@ -2620,7 +2760,9 @@
         "nombre": "Escudo Glacial",
         "precio": 900,
         "descripcion_legible": "25 de Armadura 300 de Maná 10 de Aceleración de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Armadura_plana": 25,
@@ -2639,6 +2781,8 @@
         "precio": 3200,
         "descripcion_legible": "55 de Daño de Ataque 45 de Armadura Renacimiento Tras recibir daño letal, restaura un 50% de Vida básica y un 100% del Maná Máximo luego de 4 seg de Estasis .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "55 de Daño de Ataque 45 de Armadura Renacimiento  cd (300seg) Tras recibir daño letal, restaura un 50% de Vida básica y un 100% del Maná Máximo luego de 4 seg de Estasis ."
       },
       "stats_base": {
@@ -2685,7 +2829,9 @@
         "nombre": "Filo del Infinito",
         "precio": 3500,
         "descripcion_legible": "75 de Daño de Ataque 25% de Probabilidad de Golpe Crítico 30% de Daño de Golpe Crítico",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 75,
@@ -2711,6 +2857,8 @@
         "precio": 3000,
         "descripcion_legible": "50 de Daño de Ataque 45% de Velocidad de Ataque 0% de Probabilidad de Golpe Crítico A Más Práctica, Más Letalidad Al atacar, obtienes probabilidad de golpe crítico de forma permanente, hasta un máximo de un 25%. Ráfaga Al atacar un campeón enemigo, obtienes un 30% de Velocidad de Ataque durante 6 seg (30 seg de enfriamiento). Los ataques reducen este enfriamiento en 1 seg, que aumenta a 2 seg si asestas un golpe crítico.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "50 de Daño de Ataque 40% de Velocidad de Ataque 0% de Probabilidad de Golpe Crítico A Más Práctica, Más Letalidad Al atacar, obtienes +(0.2% para rango/ 0.4% para melee) probabilidad de golpe crítico de forma permanente, hasta un máximo de un 25%. Ráfaga Al atacar un campeón enemigo, obtienes un 30% de Velocidad de Ataque durante 6 seg (30 seg de enfriamiento). Los ataques reducen este enfriamiento en 1 seg, que aumenta a 2 seg si asestas un golpe crítico."
       },
       "stats_base": {
@@ -2766,7 +2914,9 @@
         "nombre": "Recordatorio Mortal",
         "precio": 3000,
         "descripcion_legible": "35 de Daño de Ataque 30% de Penetración de Armadura 25% de Probabilidad de Golpe Crítico Heridas Graves Infligir daño físico aplica un 40% de Heridas a los campeones enemigos durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 35,
@@ -2799,7 +2949,9 @@
         "nombre": "Último Suspiro",
         "precio": 1450,
         "descripcion_legible": "20 de Daño de Ataque 18% de Penetración de Armadura",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 20,
@@ -2816,7 +2968,9 @@
         "nombre": "Recuerdos de Lord Dominik",
         "precio": 3300,
         "descripcion_legible": "35 de Daño de Ataque 35% de Penetración de Armadura 25% de Probabilidad de Golpe Crítico Verdugo de Gigantes Infliges hasta un 15% de daño adicional contra campeones según su vida adicional. Infliges el máximo de daño adicional cuando el enemigo tiene 1500 de Vida adicional.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 35,
@@ -2856,6 +3010,8 @@
         "precio": 2900,
         "descripcion_legible": "70 de Poder de Habilidad 1000 de Maná 25 de Aceleración de Habilidad Asombro Obtienes 0 de Poder de Habilidad . Salvavidas (0 seg) Recibir daño que reduciría tu Vida por debajo de un 30% te otorgará 0 de escudo durante 3 seg.",
         "disponible": false,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "70 de Poder de Habilidad. 1000 de Maná. 25 de Aceleración de Habilidad. Asombro: Obtienes Poder de Habilidad equivalente a un 2% de tu Maná adicional. Salvavidas: Si recibes daño que te deje por debajo del 30% de vida, obtienes un escudo equivalente al 18% de tu maná actual durante 3 seg (90 seg enfriamiento).",
         "comprable_en_tienda": false
       },
@@ -2901,7 +3057,9 @@
         "nombre": "Robaalmas de Mejai",
         "precio": 1500,
         "descripcion_legible": "20 de Poder de Habilidad 100 de Vida Gloria Los derribos otorgan Gloria (hasta 25). Pierdes 10 de Gloria al morir. Obtienes 5 de Poder de Habilidad por cada acumulación de Gloria y un 10% de Velocidad de Movimiento al tener 10 o más acumulaciones de Gloria .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 20,
@@ -2958,6 +3116,8 @@
         "precio": 2900,
         "descripcion_legible": "35 de Daño de Ataque 1000 de Maná 15 de Aceleración de Habilidad Asombro Obtienes un 2% de Maná Máximo como daño de ataque adicional . Impacto Los ataques contra campeones infligen un 1.2% de Maná Máximo como daño físico adicional al impacto . Las habilidades de daño contra campeones infligen de un 3% a un 4% de Maná Máximo como daño físico adicional .",
         "disponible": false,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "35 de Daño de Ataque. 1000 de Maná. 15 de Aceleración de Habilidad. Asombro: Obtienes Daño de Ataque adicional equivalente a un 2% de tu Maná Máximo. Impacto: Los ataques básicos contra campeones infligen un 1.2% de tu Maná Máximo como daño físico adicional al impacto. Las habilidades de daño contra campeones infligen un 4% (cuerpo a cuerpo) o 3% (a distancia) de tu Maná Máximo como daño físico adicional.",
         "comprable_en_tienda": false
       },
@@ -3020,6 +3180,8 @@
         "precio": 1100,
         "descripcion_legible": "15 de Daño de Ataque 200 de Vida Rabia Los ataques te otorgan velocidad de movimiento durante 2 seg.",
         "disponible": true,
+        "final": false,
+        "botas": false,
         "descripcion_manual": "15 de Daño de Ataque 200 de Vida Rabia Los ataques te otorgan  velocidad de movimiento durante 2 seg."
       },
       "stats_base": {
@@ -3062,7 +3224,9 @@
         "nombre": "Bailarín Espectral",
         "precio": 2650,
         "descripcion_legible": "65% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico 10% de Velocidad de Movimiento Vals Espectral Te vuelves Fantasma .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.65,
@@ -3091,7 +3255,9 @@
         "nombre": "Punteras de Acero Revestidas",
         "precio": 1200,
         "descripcion_legible": "25 de Armadura 45 de Velocidad de Movimiento Revestimiento Reduce el daño recibido de los ataques en un 10%.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": true
       },
       "stats_base": {
         "Armadura_plana": 25,
@@ -3124,7 +3290,9 @@
         "nombre": "Convergencia de Zeke",
         "precio": 2200,
         "descripcion_legible": "300 de Vida 25 de Armadura 25 de Resistencia Mágica 10 de Aceleración de Habilidad Tempestad de Fuego Escarchado Al lanzar tu definitiva, invocas una tormenta a tu alrededor durante 5 seg. La tormenta inflige 30 de daño mágico por seg a los campeones enemigos y los ralentiza en un 30%.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 300,
@@ -3190,7 +3358,9 @@
         "nombre": "Hacha Hogareña",
         "precio": 1200,
         "descripcion_legible": "20 de Daño de Ataque 20% de Velocidad de Ataque",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 20,
@@ -3208,6 +3378,8 @@
         "precio": 3200,
         "descripcion_legible": "400 de Vida 20% de Tenacidad Garras que Atrapan Obtienes daño de ataque adicional . Salvavidas Al recibir daño que reduciría tu Vida por debajo de un 30%, obtienes un escudo que decae durante 4.5 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "400 de Vida 20% de Tenacidad Garras que Atrapan Obtienes (45% de ad base) daño de ataque adicional . Salvavidas cd (90seg) Al recibir daño que reduciría tu Vida por debajo de un 30%, obtienes un escudo de (60% de vida adicional) que decae durante 4.5 seg."
       },
       "stats_base": {
@@ -3286,7 +3458,9 @@
         "nombre": "Brillo",
         "precio": 900,
         "descripcion_legible": "10 de Aceleración de Habilidad Espada Encantada Después de usar una habilidad, tu siguiente ataque inflige daño físico adicional al impacto .",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Aceleracion_de_habilidad_plana": 10
@@ -3324,7 +3498,9 @@
         "nombre": "Apariencia Espiritual",
         "precio": 2700,
         "descripcion_legible": "400 de Vida 50 de Resistencia Mágica 10 de Aceleración de Habilidad 100% de Regen. de Vida Básica Vitalidad Ilimitada Las curaciones y los escudos que tengas aumentarán en un 25%.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 400,
@@ -3357,7 +3533,9 @@
         "nombre": "Placa Lunar Alada",
         "precio": 800,
         "descripcion_legible": "200 de Vida 4% de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -3374,7 +3552,9 @@
         "nombre": "Gemaluz",
         "precio": 800,
         "descripcion_legible": "200 de Vida 10 de Aceleración de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -3391,7 +3571,9 @@
         "nombre": "Égida de Fuego Solar",
         "precio": 2800,
         "descripcion_legible": "350 de Vida 50 de Armadura 10 de Aceleración de Habilidad Inmolar Tras recibir o infligir daño, inflige daño mágico por seg a los enemigos cercanos durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350,
@@ -3476,7 +3658,9 @@
         "nombre": "Lágrima de la Diosa",
         "precio": 400,
         "descripcion_legible": "240 de Maná Flujo de Maná (8 seg. Hasta 4 cargas) Asestar impactos con habilidades otorga 3 de Maná Máximo (se duplica contra campeones), hasta un 360 . Una Ayudita Los ataques infligen 5 de Daño físico adicional a los súbditos.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Mana_maximo_plano": 240
@@ -3531,6 +3715,8 @@
         "precio": 3000,
         "descripcion_legible": "45 de Daño de Ataque 400 de Vida 20 de Aceleración de Habilidad Cortar Al infligir daño físico a campeones, reduces la Armadura del objetivo en un 6% durante 6 seg. El efecto puede acumularse hasta 5 veces. Fervor Al infligir daño físico , obtienes 0 de Velocidad de Movimiento durante 2 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "40 de Daño de Ataque 400 de Vida 20 de Aceleración de Habilidad Cortar Infligir daño físico a campeones reduce su Armadura en un 6% durante 6 seg. (Se acumula 5 veces). Fervor Infligir daño físico otorga 20 de Velocidad de Movimiento durante 2 seg.",
         "restricciones_tienda": {
           "grupo_exclusivo_penetracion_y_reduccion_porcentual": "fisica",
@@ -3609,6 +3795,8 @@
         "precio": 3400,
         "descripcion_legible": "80 de Daño de Ataque 15% de Robo de Vida Escudo de Icor Convierte el exceso de curación recibida del robo de vida en un escudo .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "80 de Daño de Ataque 15% de Robo de Vida Escudo de Icor Convierte el exceso de curación recibida del robo de vida en un escudo (hasta (165-315) de escudo) ."
       },
       "stats_base": {
@@ -3649,6 +3837,8 @@
         "precio": 3000,
         "descripcion_legible": "40 de Daño de Ataque 20% de Velocidad de Ataque 450 de Vida Carga Hex Obtienes 30 de Aceleración de Habilidad para la definitiva. Sobremarcha Tras lanzar tu definitiva, obtienes un 0% de Velocidad de Ataque y un 0% de Velocidad de Movimiento durante 8 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "40 de Daño de Ataque 20% de Velocidad de Ataque 450 de Vida Carga Hex Obtienes 30 de Aceleración de Habilidad de la definitiva. Sobremarcha Tras lanzar tu definitiva, obtienes un 50% de Velocidad de Ataque y un 20% de Velocidad de Movimiento (cuerpo a cuerpo) o un 25% y un 10% (a distancia) durante 8 seg."
       },
       "stats_base": {
@@ -3704,6 +3894,8 @@
         "precio": 3300,
         "descripcion_legible": "65 de Daño de Ataque 15 de Aceleración de Habilidad 12% de Robo de Vida Hender Los ataques infligen daño físico a los enemigos cercanos. Creciente Voraz Inflige daño físico a los enemigos a tu alrededor. Tu robo de vida se aplica a este daño.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "65 de Daño de Ataque 15 de Aceleración de Habilidad 12% de Robo de Vida Hender Los ataques infligen (40% de ad para melee/ 20% de ad para rango) daño físico a los enemigos cercanos. Creciente Voraz cd (10seg) Inflige (80% de ad) daño físico a los enemigos a tu alrededor. Tu robo de vida se aplica a este daño.info adiciona:Hender se beneficia del robo de vida.Hender no se activa contra estructuras"
       },
       "stats_base": {
@@ -3785,7 +3977,9 @@
         "nombre": "Cota de Espinas",
         "precio": 2450,
         "descripcion_legible": "150 de Vida 75 de Armadura Espinas Al recibir un ataque, inflige daño mágico al atacante. Si el atacante es un campeón, le aplica un 40% de Heridas durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 150,
@@ -3838,6 +4032,8 @@
         "precio": 800,
         "descripcion_legible": "30 de Armadura Espinas Al recibir un ataque, inflige 0 de daño mágico al atacante y, si es un campeón, le aplica un 40% de Heridas Graves durante 3 seg.",
         "disponible": true,
+        "final": false,
+        "botas": false,
         "descripcion_manual": "30 de Armadura Espinas Al recibir un ataque, inflige 10 de daño mágico al atacante y, si es un campeón, le aplica un 40% de Heridas Graves durante 3 seg."
       },
       "stats_base": {
@@ -3883,7 +4079,9 @@
         "nombre": "Tiamat",
         "precio": 1200,
         "descripcion_legible": "25 de Daño de Ataque Hender Los ataques infligen daño físico a los enemigos cercanos. Creciente Inflige daño físico a los enemigos a tu alrededor.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 25
@@ -3968,6 +4166,8 @@
         "precio": 3333,
         "descripcion_legible": "36 de Daño de Ataque 30% de Velocidad de Ataque 333 de Vida 15 de Aceleración de Habilidad Espada Encantada Después de usar una habilidad, tu siguiente ataque inflige daño físico adicional al impacto . Apresurar Atacar te otorga 20 de Velocidad de Movimiento durante 2 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "36 de Daño de Ataque 30% de Velocidad de Ataque 333 de Vida 15 de Aceleración de Habilidad Espada Encantada cd (1.5seg) Después de usar una habilidad, tu siguiente ataque inflige (200% de ad base) daño físico adicional al impacto . Apresurar Atacar te otorga 20 de Velocidad de Movimiento durante 2 seg."
       },
       "stats_base": {
@@ -4035,7 +4235,9 @@
         "nombre": "Cota del Guardabosques",
         "precio": 1000,
         "descripcion_legible": "40 de Armadura Duro como piedra Reduce el daño proveniente de ataques.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Armadura_plana": 40
@@ -4069,6 +4271,8 @@
         "precio": 3100,
         "descripcion_legible": "1000 de Vida 100% de Regen. de Vida Básica Corazón de Warmog Si tienes 2000 de Vida adicional y no has recibido daño en un lapso de 8 seg, restaura 0 de Vida por seg. Vitalidad de Warmog Obtienes Vida adicional equivalente a un 12% de la Vida que te otorgan tus objetos ( 0 ).",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "1000 de Vida 100% de Regen. de Vida Básica Corazón de Warmog Si tienes 2000 de Vida adicional y no has recibido daño en un lapso de 8 seg, restaura (3% de vida) de Vida por seg. Vitalidad de Warmog Obtienes Vida adicional equivalente a un 12% de la Vida que te otorgan tus objetos ( 0 ).info adicional: El daño contra unidades que no sean campeones desactiva corazon de warmog durante 3 seg"
       },
       "stats_base": {
@@ -4124,6 +4328,8 @@
         "precio": 3000,
         "descripcion_legible": "900 de Vida 100% de Regen. de Vida Básica Consumo Colosal (0 seg) por objetivo Si un campeón enemigo está cerca de ti durante unos seg, tu siguiente ataque contra él le inflige 70 más un 6% de tu Vida Máxima como daño físico adicional y te otorga un 10% del daño como Vida Máxima. Goliat Por cada 1000 de Vida Máxima , obtienes un 3% de tamaño adicional, hasta un máximo de un 30%.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "900 de Vida 100% de Regen. de Vida Básica Consumo Colosal (30 seg) por objetivo Si un campeón enemigo está cerca de ti durante 3 seg, tu siguiente ataque contra él le inflige 70 más un 6% de tu Vida Máxima como daño físico adicional y te otorga un 8% del daño como Vida Máxima. Goliat Por cada 1000 de Vida Máxima , obtienes un 3% de tamaño adicional, hasta un máximo de un 30%."
       },
       "stats_base": {
@@ -4191,7 +4397,9 @@
         "nombre": "Huracán de Runaan",
         "precio": 2650,
         "descripcion_legible": "40% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico 5% de Velocidad de Movimiento Furia del Viento Los ataques disparan proyectiles a 2 enemigos adicionales cerca del objetivo. Cada proyectil inflige daño físico y aplica efectos al impacto .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.4,
@@ -4250,7 +4458,9 @@
         "nombre": "Fervor",
         "precio": 1200,
         "descripcion_legible": "15% de Velocidad de Ataque 15% de Probabilidad de Golpe Crítico 4% de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.15,
@@ -4269,6 +4479,8 @@
         "precio": 3000,
         "descripcion_legible": "45 de Daño de Ataque 45 de Poder de Habilidad 30% de Velocidad de Ataque 4% de Velocidad de Movimiento Electrochispa Tus ataques energizados lanzan una cadena de rayos que aplica efectos al impacto () e inflige daño mágico a los objetivos cercanos. Electrochoque Los ataques básicos otorgan acumulaciones de Energizado adicionales.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "40 de Daño de Ataque. 45 de Poder de Habilidad. 30% de Velocidad de Ataque. 4% de Velocidad de Movimiento. Electrochoque: Los ataques básicos otorgan 9 acumulaciones de Energizado adicionales. Electrochispa: Tus ataques energizados lanzan una cadena de rayos a un máximo de 4 a 7 objetivos (según el nivel). Inflige 60 de daño mágico (90 contra súbditos y monstruos). Los rebotes aplican efectos al impacto."
       },
       "stats_base": {
@@ -4337,7 +4549,9 @@
         "nombre": "Sombrero Mortífero de Rabadon",
         "precio": 3500,
         "descripcion_legible": "130 de Poder de Habilidad Obra Mágica Aumenta tu Poder de Habilidad total en un 30% .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 130
@@ -4363,7 +4577,9 @@
         "nombre": "Al Filo de la Cordura",
         "precio": 2800,
         "descripcion_legible": "50% de Velocidad de Ataque 45 de Resistencia Mágica 20% de Tenacidad Fragor Los ataques infligen daño mágico adicional al impacto .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.5,
@@ -4397,7 +4613,9 @@
         "nombre": "Cañón de Fuego Rápido",
         "precio": 2650,
         "descripcion_legible": "35% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico 4% de Velocidad de Movimiento Francotirador Tu ataque energizado inflige 40 daño mágico adicional y obtiene un 35% de alcance de Ataque adicional.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.35,
@@ -4449,7 +4667,9 @@
         "nombre": "Filo de la Tormenta",
         "precio": 3200,
         "descripcion_legible": "50 de Daño de Ataque 25% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico Energizado Moverse y atacar generará un ataque energizado . Proyectil Tus ataques energizados infligen 0 de daño mágico adicional y otorgan un 45% de Velocidad de Movimiento durante 1.5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 50,
@@ -4472,6 +4692,8 @@
         "precio": 3200,
         "descripcion_legible": "50 de Daño de Ataque 20% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico Energizado Moverse y atacar generará un ataque energizado . Proyectil Tus ataques energizados infligen 100 de daño mágico adicional y otorgan un 45% de Velocidad de Movimiento durante 1.5 seg.",
         "disponible": false,
+        "final": false,
+        "botas": false,
         "descripcion_manual": "50 de Daño de Ataque 20% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico Energizado Moverse y atacar generará un ataque energizado . Proyectil Tus ataques energizados infligen 100 de daño mágico adicional y otorgan un 45% de Velocidad de Movimiento durante 1.5 seg."
       },
       "stats_base": {
@@ -4518,6 +4740,8 @@
         "precio": 2900,
         "descripcion_legible": "100 de Poder de Habilidad 6% de Velocidad de Movimiento 10 de Aceleración de Habilidad Espada Encantada Después de usar una habilidad, tu próximo ataque inflige daño mágico adicional al impacto .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "100 de Poder de Habilidad 4% de Velocidad de Movimiento 10 de Aceleración de Habilidad Espada Encantada Después de usar una habilidad, tu próximo ataque inflige daño mágico adicional al impacto ."
       },
       "stats_base": {
@@ -4564,7 +4788,9 @@
         "nombre": "Velo de la Banshee",
         "precio": 3000,
         "descripcion_legible": "105 de Poder de Habilidad 40 de Resistencia Mágica Anulación Otorga un escudo antihechizos que bloquea la siguiente habilidad de un enemigo.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 105,
@@ -4606,7 +4832,9 @@
         "nombre": "Redención",
         "precio": 2300,
         "descripcion_legible": "30 de Poder de Habilidad 15 de Aceleración de Habilidad 100% de Regen. de Maná Básica 10% de poder de curaciones y escudos Intervención Restaura de 150 a 350 de Vida a unidades aliadas e inflige un 10% de la Vida Máxima como daño verdadero a campeones enemigos tras 2.5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 30,
@@ -4679,7 +4907,9 @@
         "nombre": "Códice Diabólico",
         "precio": 850,
         "descripcion_legible": "25 de Poder de Habilidad 10 de Aceleración de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 25,
@@ -4699,6 +4929,8 @@
         "precio": 2300,
         "descripcion_legible": "200 de Vida 40 de Armadura 10 de Aceleración de Habilidad 100% de Regen. de Vida Básica Sacrificio Al estar cerca de tu aliado digno , recibes un 14% del daño que reciba y te curas un 12% del daño que inflija a los campeones. Juramento (0 seg) Designa a un aliado como digno .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "200 de Vida 40 de Armadura 10 de Aceleración de Habilidad 100% de Regen. de Vida Básica Sacrificio Al estar cerca de tu aliado digno , recibes un 12% del daño que reciba y te curas un 10% del daño que inflija a los campeones. Juramento (0 seg) Designa a un aliado como digno ."
       },
       "stats_base": {
@@ -4749,7 +4981,9 @@
         "nombre": "Corazón de Hielo",
         "precio": 2500,
         "descripcion_legible": "75 de Armadura 400 de Maná 20 de Aceleración de Habilidad Caricia Invernal Reduce la Velocidad de Ataque de los campeones cercanos en un 20% .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Armadura_plana": 75,
@@ -4790,7 +5024,9 @@
         "nombre": "Botas de Mercurio",
         "precio": 1250,
         "descripcion_legible": "20 de Resistencia Mágica 45 de Velocidad de Movimiento 30% de Tenacidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": true
       },
       "stats_base": {
         "Resist_Magica_plana": 20,
@@ -4836,7 +5072,9 @@
         "nombre": "Orbe del Guardián",
         "precio": 950,
         "descripcion_legible": "50 de Poder de Habilidad 150 de Vida Restauración: Restaura 10 de Maná cada 5 seg. Si no puedes obtener maná, restaura 15 de Vida .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 50,
@@ -4855,7 +5093,9 @@
         "nombre": "Brisa de Éter",
         "precio": 900,
         "descripcion_legible": "30 de Poder de Habilidad 4% de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 30,
@@ -4872,7 +5112,9 @@
         "nombre": "Ídolo Prohibido",
         "precio": 600,
         "descripcion_legible": "50% de Regen. de Maná Básica 8% de poder de curaciones y escudos",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Regen_Mana_Básica_Porcentual": 0.5,
@@ -4889,7 +5131,9 @@
         "nombre": "Diente de Nashor",
         "precio": 2900,
         "descripcion_legible": "80 de Poder de Habilidad 50% de Velocidad de Ataque 15 de Aceleración de Habilidad Mordida de Icathia Los ataques infligen daño mágico adicional al impacto .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 80,
@@ -4921,7 +5165,9 @@
         "nombre": "Cetro de Cristal de Rylai",
         "precio": 2600,
         "descripcion_legible": "65 de Poder de Habilidad 400 de Vida Hielo Escarchado Las habilidades de daño ralentizan a los enemigos un 30% durante 1 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 65,
@@ -4965,7 +5211,9 @@
         "nombre": "Maldad",
         "precio": 2700,
         "descripcion_legible": "90 de Poder de Habilidad 600 de Maná 15 de Aceleración de Habilidad Desdén Obtienes 20 de Aceleración de Habilidad de la definitiva. Campo Tóxico Infligir daño a un campeón con tu definitiva quema el suelo donde esté parado durante 3 seg, lo que le inflige daño mágico por seg y reduce su resistencia mágica .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 90,
@@ -5029,7 +5277,9 @@
         "nombre": "Umbral del Invierno",
         "precio": 2400,
         "descripcion_legible": "550 de Vida 500 de Maná 15 de Aceleración de Habilidad Asombro Otorga 0 de Vida . Flujo de Maná (8 seg. Hasta 4 cargas) Asestar ataques y habilidades otorga 3 de Maná Máximo (se duplica contra campeones). Se transforma en Invierno Nórdico al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 550,
@@ -5087,6 +5337,8 @@
         "precio": 2400,
         "descripcion_legible": "550 de Vida 1000 de Maná 15 de Aceleración de Habilidad Asombro Obtienes 0 de Vida . Imperecedero (0 seg) Inmovilizar o ralentizar (solo cuerpo a cuerpo) a un campeón enemigo otorga un escudo durante 3 seg. El escudo aumenta en un 80% si hay más de un enemigo cerca.",
         "disponible": false,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "550 de Vida. 1000 de Maná. 15 de Aceleración de Habilidad. Asombro: Otorga Vida adicional equivalente al 15% de tu Maná adicional. Imperecedero: Inmovilizar o ralentizar (solo cuerpo a cuerpo) a un campeón enemigo otorga un escudo de 100 (+4.5% del maná actual) durante 3 seg. El escudo aumenta en un 80% si hay más de un enemigo cerca. Enfriamiento: 8 seg.",
         "restricciones_tienda": {
           "comprable_con_oro": false,
@@ -5157,7 +5409,9 @@
         "nombre": "El Llamado del Verdugo",
         "precio": 800,
         "descripcion_legible": "15 de Daño de Ataque Heridas Graves Infligir daño físico a campeones les aplica un 40% de Heridas Graves durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 15
@@ -5193,7 +5447,9 @@
         "nombre": "Espadafuria de Guinsoo",
         "precio": 3000,
         "descripcion_legible": "30 de Daño de Ataque 30 de Poder de Habilidad 25% de Velocidad de Ataque Ira Los ataques infligen 30 de daño mágico adicional al impacto . Ataque Furioso Los ataques otorgan un 8% de Velocidad de Ataque durante 4 seg. (Se acumula 4 veces). Al tener el máximo de acumulaciones, cada tercer ataque aplica efectos al impacto dos veces.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 30,
@@ -5272,7 +5528,9 @@
         "nombre": "Martillo de Guerra de Caulfield",
         "precio": 1050,
         "descripcion_legible": "20 de Daño de Ataque 10 de Aceleración de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 20,
@@ -5289,7 +5547,9 @@
         "nombre": "Puñal Serrado",
         "precio": 1000,
         "descripcion_legible": "20 de Daño de Ataque 10 de Letalidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 20,
@@ -5308,7 +5568,9 @@
         "nombre": "Báculo del Vacío",
         "precio": 3000,
         "descripcion_legible": "95 de Poder de Habilidad 40% Penetración de Magia",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 95,
@@ -5325,7 +5587,9 @@
         "nombre": "Criptorretoño",
         "precio": 3000,
         "descripcion_legible": "75 de Poder de Habilidad 30% Penetración de Magia 20 de Aceleración de Habilidad Vida en la Muerte Cuando un campeón muere en un lapso de 3 seg tras haberle infligido daño, una nova que cura se expande desde su cuerpo.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 75,
@@ -5371,6 +5635,8 @@
         "precio": 3200,
         "descripcion_legible": "50 de Daño de Ataque 35 de Resistencia Mágica 10% de Robo de Vida ACTIVA Capa Mercurial Elimina todas las debilitaciones de control de masas (excluyendo levantamientos por el aire ) y otorga velocidad de movimiento.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "50 de Daño de Ataque 35 de Resistencia Mágica 10% de Robo de Vida ACTIVA Capa Mercurial cd (90seg) Elimina todas las debilitaciones de control de masas (excluyendo levantamientos por el aire ) y obtienes un 50% de velocidad de movimiento durante 2seg."
       },
       "stats_base": {
@@ -5429,7 +5695,9 @@
         "nombre": "Fajín de Mercurio",
         "precio": 1300,
         "descripcion_legible": "30 de Resistencia Mágica Capa Mercurial Elimina todas las debilitaciones de control de masas (excepto lanzamientos por el aire ).",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Resist_Magica_plana": 30
@@ -5480,7 +5748,9 @@
         "nombre": "Espada Fantasma de Youmuu",
         "precio": 2800,
         "descripcion_legible": "55 de Daño de Ataque 18 de Letalidad 4% de Velocidad de Movimiento Persecución Obtienes 0 de Velocidad de Movimiento al estar fuera de combate. Paso Espectral Obtienes velocidad de movimiento y te vuelves Fantasma durante 0 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 55,
@@ -5542,7 +5812,9 @@
         "nombre": "Presagio de Randuin",
         "precio": 2700,
         "descripcion_legible": "350 de Vida 75 de Armadura Resiliencia Recibes un 30% menos de daño de los golpes críticos. Humildad Ralentiza a los enemigos cercanos en un 70% durante 2 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350,
@@ -5589,7 +5861,9 @@
         "nombre": "Honda del Explorador",
         "precio": 600,
         "descripcion_legible": "20% de Velocidad de Ataque Tiro Certero Infligir daño a un campeón le inflige daño mágico adicional . Los ataques reducen este enfriamiento en 1 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.2
@@ -5621,7 +5895,9 @@
         "nombre": "Alternador Hextech",
         "precio": 1100,
         "descripcion_legible": "45 de Poder de Habilidad Acelerado Infligir daño a un campeón le inflige daño mágico adicional .",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 45
@@ -5651,7 +5927,9 @@
         "nombre": "Sablepistola Hextech",
         "precio": 3000,
         "descripcion_legible": "80 de Poder de Habilidad 40 de Daño de Ataque 10% de Omnivampirismo ACTIVA (0 seg) Relámpago Lanza una descarga al campeón enemigo objetivo, inflige 0 de daño mágico y lo ralentiza en un 25% durante 1.5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 80,
@@ -5702,7 +5980,9 @@
         "nombre": "Antifaz Embrujado",
         "precio": 1300,
         "descripcion_legible": "30 de Poder de Habilidad 200 de Vida Locura Por cada seg en combate contra campeones enemigos, inflige un 2% de daño adicional, hasta un máximo del 6%.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 30,
@@ -5742,6 +6022,8 @@
         "precio": 2650,
         "descripcion_legible": "60 de Poder de Habilidad 350 de Vida 10 de Aceleración de Habilidad Supersónico Te desplazas en la dirección objetivo y liberas misiles que infligen daño mágico .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "70 de Poder de Habilidad 300 de Vida 20 de Aceleración de Habilidad Supersónico Te desplazas en la dirección objetivo y liberas misiles que infligen daño mágico ."
       },
       "stats_base": {
@@ -5814,6 +6096,8 @@
         "precio": 3200,
         "descripcion_legible": "40 de Daño de Ataque 25% de Velocidad de Ataque 10% de Robo de Vida Filo Neblina Los ataques infligen un porcentaje de la vida actual del enemigo como daño físico adicional al impacto . Sombras Desgarradoras Atacar a un campeón tres veces lo ralentiza en un 30% durante 1 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "40 de Daño de Ataque 25% de Velocidad de Ataque 10% de Robo de Vida Filo Neblina Los ataques infligen (6% para rango/ 9% para melee)  de la vida actual del enemigo como daño físico adicional al impacto . Sombras Desgarradoras cd (15 seg) Atacar a un campeón tres veces lo ralentiza en un 30% durante 1 seg.indo adicional: El daño maximo infligido de filo neblina  a subditos y monstruos de la jungla es de 100."
       },
       "stats_base": {
@@ -5886,7 +6170,9 @@
         "nombre": "Sorbechizos",
         "precio": 1300,
         "descripcion_legible": "25 de Daño de Ataque 25 de Resistencia Mágica Salvavidas Tras recibir daño mágico que reduciría tu Vida por debajo de un 30%, obtienes un escudo contra daño mágico durante 2.5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 25,
@@ -5940,6 +6226,8 @@
         "precio": 3100,
         "descripcion_legible": "60 de Daño de Ataque 15 de Aceleración de Habilidad 40 de Resistencia Mágica Salvavidas Tras recibir daño mágico que reduciría tu Vida por debajo de un 30%, obtienes un escudo contra daño mágico durante 3 seg y un 10% de Omnivampirismo hasta el final del combate.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "60 de Daño de Ataque 15 de Aceleración de Habilidad 40 de Resistencia Mágica Salvavidas cd (90 seg) Tras recibir daño mágico que reduciría tu Vida por debajo de un 30%, obtienes (150 + 112.5% de ad adiconal para rango/ 200 + 150% de ad adiconal para melee) de escudo contra daño mágico durante 3 seg y un 10% de Omnivampirismo hasta el final del combate."
       },
       "stats_base": {
@@ -6021,6 +6309,8 @@
         "precio": 3250,
         "descripcion_legible": "105 de Poder de Habilidad 50 de Armadura Detener el Tiempo Entras en Estasis durante 2.5 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "105 de Poder de Habilidad 50 de Armadura Detener el Tiempo cd (120seg) Entras en Estasis durante 2.5 seg."
       },
       "stats_base": {
@@ -6054,7 +6344,9 @@
         "nombre": "Botas Jonias de la Lucidez",
         "precio": 900,
         "descripcion_legible": "10 de Aceleración de Habilidad 45 de Velocidad de Movimiento Percepción Jonia Obtienes 10 de Aceleración de Hechizos de invocador.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": true
       },
       "stats_base": {
         "Aceleracion_de_habilidad_plana": 10,
@@ -6084,6 +6376,8 @@
         "precio": 3100,
         "descripcion_legible": "45 de Daño de Ataque 450 de Vida Fuerza del Dragón Obtienes 25 de Aceleración de Habilidad para habilidades básicas. Voluntad Enfocada Al infligir daño con habilidades, el daño de las habilidades y de la pasiva de tu campeón aumenta en un 3% durante 6 seg. (Se acumula 4 veces).",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "45 de Daño de Ataque 450 de Vida Fuerza del Dragón Obtienes 25 de Aceleración de Habilidad para habilidades básicas. Voluntad Enfocada Al infligir daño con habilidades, el daño de las habilidades y de la pasiva de tu campeón aumenta en un 3% durante 6 seg. (Se acumula 4 veces). info adicional: La acomulacion de de voluntad enfocada tiene 1 seg de bloqueo por cada lanzamiento de hechizo"
       },
       "stats_base": {
@@ -6140,7 +6434,9 @@
         "nombre": "Morellonomicón",
         "precio": 2850,
         "descripcion_legible": "75 de Poder de Habilidad 350 de Vida 15 de Aceleración de Habilidad Heridas Graves Infligir daño mágico a campeones les aplica un 40% de Heridas Graves durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 75,
@@ -6178,7 +6474,9 @@
         "nombre": "Camino Inmortal",
         "precio": 1100,
         "descripcion_legible": "45 de Velocidad de Movimiento 4% de Omnivampirismo Exterminar Al derribar campeones, obtienes un 0.6% de Omnivampirismo. El efecto se acumula hasta 10 veces. Ahora y Siempre Cuando tienes más de la mitad de vida, infliges un 4% más de daño. Cuando tienes menos de la mitad de vida, obtienes un 12% más de curaciones, escudos y regeneración.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": true
       },
       "stats_base": {
         "Vel_Movimiento_plana": 45,
@@ -6200,7 +6498,9 @@
         "nombre": "Botas de Marcha Rápida",
         "precio": 1000,
         "descripcion_legible": "65 de Velocidad de Movimiento Pies ligeros Reduce la eficacia de los efectos de ralentización en un 25%. Fervor Noxiano Obtienes un 5% de tu Velocidad de Movimiento como fuerza adaptable.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": true
       },
       "stats_base": {
         "Vel_Movimiento_plana": 65
@@ -6222,7 +6522,9 @@
         "nombre": "Botas de Lucidez Carmesí",
         "precio": 900,
         "descripcion_legible": "20 de Aceleración de Habilidad 45 de Velocidad de Movimiento Percepción Jonia Obtienes 20 de Aceleración de Hechizos de invocador. Aceleración Noxiana Potenciar o proteger aliados con habilidades, infligir daño a campeones enemigos con habilidades, o lanzar un hechizo de invocador otorga 0 de Velocidad de Movimiento durante 4 seg. Aceleración Noxiana solo puede activarse una vez por cada lanzamiento de habilidad.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": true
       },
       "stats_base": {
         "Aceleracion_de_habilidad_plana": 20,
@@ -6245,7 +6547,9 @@
         "nombre": "Grebas de Armacero",
         "precio": 1100,
         "descripcion_legible": "45% de Velocidad de Ataque 45 de Velocidad de Movimiento 5% de Robo de Vida",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.45,
@@ -6268,7 +6572,9 @@
         "nombre": "Trituradoras Aceradas",
         "precio": 1250,
         "descripcion_legible": "25 de Resistencia Mágica 45 de Velocidad de Movimiento 30% de Tenacidad Persistencia Noxiana (0 seg) Tras recibir daño mágico de un campeón, obtienes un escudo que protege contra 0 de daño mágico durante 5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": true
       },
       "stats_base": {
         "Resist_Magica_plana": 25,
@@ -6296,7 +6602,9 @@
         "nombre": "Blindadas de Avance",
         "precio": 1200,
         "descripcion_legible": "35 de Armadura 45 de Velocidad de Movimiento Revestimiento Reduce el daño recibido de los ataques en un 10%. Resistencia Noxiana (0 seg) Tras recibir daño físico de un campeón, obtienes un escudo que protege contra 0 de daño físico durante 5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": true
       },
       "stats_base": {
         "Armadura_plana": 35,
@@ -6324,7 +6632,9 @@
         "nombre": "Zapatos de Lanzahechizos",
         "precio": 1100,
         "descripcion_legible": "20 de Penetración de Magia 8% Penetración de Magia 45 de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": true
       },
       "stats_base": {
         "Penetracion_Magica_Plana": 20,
@@ -6344,7 +6654,9 @@
         "nombre": "Espada del Guardián",
         "precio": 950,
         "descripcion_legible": "30 de Daño de Ataque 150 de Vida 15 de Aceleración de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 30,
@@ -6364,7 +6676,9 @@
         "nombre": "Espada de la Penumbra",
         "precio": 2800,
         "descripcion_legible": "60 de Daño de Ataque 18 de Letalidad 15 de Aceleración de Habilidad Acechador Nocturno Si tus enemigos no te ven durante unos segundos, tu siguiente ataque contra un campeón inflige daño verdadero adicional. Apagón Cuando estás cerca de trampas y centinelas invisibles enemigos, los revelas durante unos segundos. Al revelar centinelas, tus ataques les infligen daño adicional.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 60,
@@ -6444,6 +6758,8 @@
         "precio": 3000,
         "descripcion_legible": "40 de Daño de Ataque 500 de Vida 4% de Velocidad de Movimiento Capitán Cada quinto ataque contra campeones y monstruos épicos inflige daño físico adicional (aumenta contra estructuras). Tripulación de Abordaje Los supersúbditos y los súbditos de asedio aliados cercanos obtienen armadura y resistencia mágica .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "40 de Daño de Ataque. 500 de Vida. 4% de Velocidad de Movimiento. Capitán: Cada quinto ataque contra campeones y monstruos épicos inflige daño físico adicional (aumenta contra estructuras). Tripulación de Abordaje: Los supersúbditos y los súbditos de asedio aliados cercanos obtienen armadura y resistencia mágica."
       },
       "stats_base": {
@@ -6568,7 +6884,9 @@
         "nombre": "Martillo del Guardián",
         "precio": 950,
         "descripcion_legible": "25 de Daño de Ataque 150 de Vida 5% de Robo de Vida",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 25,
@@ -6587,6 +6905,8 @@
         "precio": 2200,
         "descripcion_legible": "200 de Vida 30 de Armadura 30 de Resistencia Mágica 10 de Aceleración de Habilidad Devoción Otorga a los aliados cercanos de 290 a 360 de escudo que decae a lo largo de 2.5 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "200 de Vida 25 de Armadura 25 de Resistencia Mágica 10 de Aceleración de Habilidad Devoción Otorga a los aliados cercanos de 290 a 360 de escudo que decae a lo largo de 2.5 seg."
       },
       "stats_base": {
@@ -6644,7 +6964,9 @@
         "nombre": "Hábito del Espectro",
         "precio": 1250,
         "descripcion_legible": "200 de Vida 35 de Resistencia Mágica 100% de Regen. de Vida Básica",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -6666,7 +6988,9 @@
         "nombre": "Bendición de Mikael",
         "precio": 2300,
         "descripcion_legible": "250 de Vida 100% de Regen. de Maná Básica 12% de poder de curaciones y escudos 15 de Aceleración de Habilidad Purificar Elimina todas las debilitaciones de control de masas (excepto lanzamientos por el aire y supresiones ) de un campeón aliado y restaura de 100 a 250 de Vida .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 250,
@@ -6731,6 +7055,8 @@
         "precio": 3000,
         "descripcion_legible": "30 de Daño de Ataque 35% de Velocidad de Ataque Sombra Los ataques infligen 0 de daño mágico adicional al impacto . Yuxtaposición Alterna entre ataques de Luz y Oscuridad contra campeones: Los ataques de Luz otorgan armadura y resistencia mágica durante 5 seg. Los ataques de Oscuridad otorgan un 10% de Penetración de Armadura y de Penetración de Magia durante 5 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "30 de Daño de Ataque 35% de Velocidad de Ataque Sombra Los ataques infligen 30 de daño mágico adicional al impacto . Yuxtaposición Alterna entre ataques de Luz y Oscuridad contra campeones: Los ataques de Luz otorgan armadura y resistencia mágica durante 5 seg. Los ataques de Oscuridad otorgan un 10% de Penetración de Armadura y de Penetración de Magia durante 5 seg."
       },
       "stats_base": {
@@ -6800,7 +7126,9 @@
         "nombre": "Efigie de Espantapájaros",
         "precio": 0,
         "descripcion_legible": "No se puede vender Activa, Baratija: Coloca una Efigie que dura 0 seg y tiene la misma apariencia que Fiddlesticks para tus enemigos. Acumula una carga cada 0 seg, hasta un máximo de 2 cargas. Los campeones enemigos que se acerquen la activarán, lo que hará que la efigie finja una acción aleatoria. Después, se destruye.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -6827,7 +7155,9 @@
         "nombre": "Centinela Invisible",
         "precio": 0,
         "descripcion_legible": "Activa ( 210 a 90 seg, máx. 2 cargas) Colocas un centinela invisible que otorga visión durante 90 a 120 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -6853,7 +7183,9 @@
         "nombre": "Alteración de Visión Lejana",
         "precio": 0,
         "descripcion_legible": "Activa ( 198 a 99 seg) Revela un área distante durante 2 seg y deja un Centinela que expira al detectar a un campeón enemigo.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -6890,7 +7222,9 @@
         "nombre": "Lente del Oráculo",
         "precio": 0,
         "descripcion_legible": "Activa ( 160 a 100 seg, máx. 2 cargas) Revela los Centinelas Invisibles y las trampas enemigas a tu alrededor durante 8 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -6921,7 +7255,9 @@
         "nombre": "Pebetero Ardiente",
         "precio": 2200,
         "descripcion_legible": "45 de Poder de Habilidad 10% de poder de curaciones y escudos 125% de Regen. de Maná Básica 4% de Velocidad de Movimiento Santificación Curar o escudar a un aliado los mejora a ambos durante 6 seg, lo que les otorga un 25% de Velocidad de Ataque y 20 de daño mágico al impacto .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 45,
@@ -6972,6 +7308,8 @@
         "precio": 3050,
         "descripcion_legible": "50 de Daño de Ataque 20 de Aceleración de Habilidad 25% de Probabilidad de Golpe Crítico Espada Encantada Después de usar una habilidad, tu siguiente ataque inflige daño físico adicional y otorga maná al impacto .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "50 de Daño de Ataque 20 de Aceleración de Habilidad 25% de Probabilidad de Golpe Crítico Espada Encantada cd (1.5seg) Después de usar una habilidad, tu siguiente ataque inflige 125 de ad base (+50% de tu probabilidad critica como daño ejemplo:50% de crit de da +25) daño físico adicional y otorga (aqui el mana que otorga es un 50% del ad base + 50% de la prob critica de lo anterior me imagino que daria como 25% de la prob total) maná al impacto . no se encontraron los datos exactos de este item e hice los calculos a mano"
       },
       "stats_base": {
@@ -7017,7 +7355,9 @@
         "nombre": "Lanza Negra de Kalista",
         "precio": 0,
         "descripcion_legible": "Activa, Consumir: Crea un vínculo con un aliado durante el resto de la partida, lo que los convierte a ambos en Juramentados. Los Juramentados obtienen más poder al estar cerca el uno del otro.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -7031,7 +7371,9 @@
         "nombre": "Lanza Negra de Kalista",
         "precio": 0,
         "descripcion_legible": "Activa, Consumir: Crea un vínculo con un aliado durante el resto de la partida, lo que los convierte a ambos en Juramentados. Los Juramentados obtienen más poder al estar cerca el uno del otro. Se requiere para usar la habilidad definitiva de Kalista .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -7045,7 +7387,9 @@
         "nombre": "Placa del Hombre Muerto",
         "precio": 2900,
         "descripcion_legible": "350 de Vida 55 de Armadura 4% de Velocidad de Movimiento Hundebarcos Al desplazarte, acumulas hasta 20 de Velocidad de Movimiento adicional . Tu próximo ataque descarga la velocidad de movimiento acumulada e inflige daño físico adicional . Inhundible Reduce la eficacia de las ralentizaciones en un 15%.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350,
@@ -7104,6 +7448,8 @@
         "precio": 3300,
         "descripcion_legible": "40 de Daño de Ataque 600 de Vida Hender Los ataques infligen daño físico al impacto y a los enemigos detrás del objetivo. Creciente Titánica Potencia tu próximo Hender para que inflija daño físico adicional al impacto y daño físico adicional a los enemigos detrás del objetivo.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "40 de Daño de Ataque 600 de Vida Hender Los ataques infligen (1% de vida para melee/ 0.5% de vida para rango) daño físico al impacto y (3% de vida para melee/1.5% de vida para rango) a los enemigos detrás del objetivo. Creciente Titánica cd (10seg) Potencia tu próximo Hender, lo que inflige (4% de vida para melee/ 2% de vida para rango) daño físico adicional al impacto y (9% de vida para melee/ 4.5% de vida para rango) de daño físico adicional a los enemigos detrás del objetivo.info adicional:La onda expansiva de hender no se activa contra estructuras."
       },
       "stats_base": {
@@ -7196,7 +7542,9 @@
         "nombre": "Brazal Cristalino",
         "precio": 800,
         "descripcion_legible": "200 de Vida 100% de Regen. de Vida Básica",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -7213,7 +7561,9 @@
         "nombre": "Capítulo Perdido",
         "precio": 1200,
         "descripcion_legible": "40 de Poder de Habilidad 300 de Maná 10 de Aceleración de Habilidad Iluminación Al subir de nivel, restaura un 20% del Maná Máximo a lo largo de 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 40,
@@ -7249,7 +7599,9 @@
         "nombre": "Catalizador de Eones",
         "precio": 1300,
         "descripcion_legible": "300 de Vida 375 de Maná Eternidad Restaura un 10% del daño recibido de campeones como Maná . Lanzar una habilidad cura por un 25% del Maná gastado.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 300,
@@ -7300,7 +7652,9 @@
         "nombre": "Filo de la Noche",
         "precio": 3000,
         "descripcion_legible": "50 de Daño de Ataque 15 de Letalidad 250 de Vida Anulación Otorga un escudo antihechizos que bloquea la siguiente habilidad de un enemigo.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 50,
@@ -7339,7 +7693,9 @@
         "nombre": "Mapamundi",
         "precio": 400,
         "descripcion_legible": "30 de Vida. 25% de Regen. de Vida. 25% de Regen. de Maná. 3 de Oro cada 10 seg. Misión: Gana 400 de oro con este objeto para transformarlo en Brújula Rúnica. Se obtienen cargas periódicamente. Consume cargas para ganar oro golpeando campeones o ejecutando súbditos.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 30,
@@ -7430,6 +7786,8 @@
         "precio": 400,
         "descripcion_legible": "60 de Vida 75% de Regen. de Vida Básica 50% de Regen. de Maná Básica 5 de oro cada 10 seg Misión de Soporte Obtienes 0 de oro de este objeto para transformarlo en Recompensa Mundial . Riquezas Compartidas (0 seg, máx. 0 cargas) Al estar cerca de un campeón aliado, infligir daño a campeones enemigos o matar súbditos te otorga oro. Activa (3 cargas) Coloca un Centinela Invisible que otorga visión.",
         "disponible": false,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "100 de Vida. 50% de Regen. de Vida. 50% de Regen. de Maná. 5 de Oro cada 10 seg. Misión: Gana 800 de oro con este objeto para transformarlo en Piedra de los Mundos."
       },
       "stats_base": {
@@ -7520,6 +7878,8 @@
         "precio": 400,
         "descripcion_legible": "5 de oro cada 10 seg 75% de Regen. de Vida Básica 75% de Regen. de Maná Básica 200 de Vida Mejora Este objeto puede convertirse en Canción de Sangre , Oposición Celestial , Tejesueños , Espina Dimensional de Zaz'Zak o Trineo del Solsticio sin costo. Activa (4 cargas) Coloca un Centinela Invisible que otorga visión.",
         "disponible": false,
+        "final": false,
+        "botas": false,
         "descripcion_manual": "200 de Vida. 75% de Regen. de Vida. 75% de Regen. de Maná. 5 de Oro cada 10 seg. Activa - Centinela: Coloca un Centinela invisible que otorga visión (4 cargas)."
       },
       "stats_base": {
@@ -7563,6 +7923,8 @@
         "precio": 400,
         "descripcion_legible": "200 de Vida 75% de Regen. de Vida Básica 75% de Regen. de Maná Básica 9 de oro cada 10 seg Bendición de la Montaña Reduce el daño recibido de campeones durante 2 seg tras recibir daño de un campeón. Al finalizar el efecto, ralentiza a los enemigos cercanos en un 50% durante 1.5 seg. Activa (4 cargas) Coloca un Centinela Invisible que otorga visión.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "restricciones_tienda": {
           "comprable_con_oro": false,
           "metodo_de_obtencion": "evolucion_por_mision_de_soporte",
@@ -7641,6 +8003,8 @@
         "precio": 400,
         "descripcion_legible": "200 de Vida 75% de Regen. de Vida Básica 75% de Regen. de Maná Básica 9 de oro cada 10 seg Tejesueños Curar o escudar a otro aliado le lanza Burbujas de Sueño durante 3 seg. Su siguiente ataque inflige daño mágico adicional al impacto y reduce el próximo daño que reciba. Activa (4 cargas) Coloca un Centinela Invisible que otorga visión.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "restricciones_tienda": {
           "comprable_con_oro": false,
           "metodo_de_obtencion": "evolucion_por_mision_de_soporte",
@@ -7722,6 +8086,8 @@
         "precio": 400,
         "descripcion_legible": "200 de Vida 75% de Regen. de Vida Básica 75% de Regen. de Maná Básica 9 de oro cada 10 seg Explosión del Vacío Infligir daño a un campeón con una habilidad provoca una explosión que inflige daño mágico . Activa (4 cargas) Coloca un Centinela Invisible que otorga visión.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "restricciones_tienda": {
           "comprable_con_oro": false,
           "metodo_de_obtencion": "evolucion_por_mision_de_soporte",
@@ -7787,6 +8153,8 @@
         "precio": 400,
         "descripcion_legible": "200 de Vida 75% de Regen. de Vida Básica 75% de Regen. de Maná Básica 9 de oro cada 10 seg Paseo en Trineo Ralentizar o inmovilizar a un campeón enemigo cerca de tus aliados restaura vida . Además, te otorga a ti y a un aliado cercano un 20% de Velocidad de Movimiento que decae a lo largo de 2.5 seg. Activa (4 cargas) Coloca un Centinela Invisible que otorga visión.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "restricciones_tienda": {
           "comprable_con_oro": false,
           "metodo_de_obtencion": "evolucion_por_mision_de_soporte",
@@ -7851,6 +8219,8 @@
         "precio": 400,
         "descripcion_legible": "200 de Vida 75% de Regen. de Vida Básica 75% de Regen. de Maná Básica 9 de oro cada 10 seg Espada Encantada Después de usar una habilidad, tu siguiente ataque inflige daño físico adicional al impacto . Si el objetivo es un campeón, recibe daño aumentado durante 4 seg. Activa (4 cargas) Coloca un Centinela Invisible que otorga visión.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "restricciones_tienda": {
           "comprable_con_oro": false,
           "metodo_de_obtencion": "evolucion_por_mision_de_soporte",
@@ -7924,7 +8294,9 @@
         "nombre": "Orbe del Olvido",
         "precio": 800,
         "descripcion_legible": "25 de Poder de Habilidad Heridas Graves Infligir daño mágico a campeones les aplica un 40% de Heridas Graves durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 25
@@ -7960,6 +8332,8 @@
         "precio": 2400,
         "descripcion_legible": "60 de Poder de Habilidad 15 de Aceleración de Habilidad 150% de Regen. de Maná Básica Control Obtienes 20 de Aceleración de Habilidad para tus habilidades con efectos inmovilizadores . Orden Al inmovilizar a un campeón enemigo, lo marcas y lo vuelves un 7% Vulnerable durante 4 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "60 de Poder de Habilidad 20 de Aceleración de Habilidad 125% de Regen. de Maná Básica Fuego Coordinado (0 seg) por objetivo Ralentizar o inmovilizar a un campeón enemigo lo marca durante 5 seg. El daño de campeones aliados detona la marca, lo que inflige daño mágico igual a un 10% de la vida actual ."
       },
       "stats_base": {
@@ -8003,7 +8377,9 @@
         "nombre": "Fuerza de la Naturaleza",
         "precio": 2800,
         "descripcion_legible": "400 de Vida 55 de Resistencia Mágica 4% de Velocidad de Movimiento Firmeza Obtienes 70 de Resistencia Mágica y un 6% de Velocidad de Movimiento adicional tras recibir daño mágico de campeones 8 veces.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 400,
@@ -8049,7 +8425,9 @@
         "nombre": "Enfoque al Horizonte",
         "precio": 2700,
         "descripcion_legible": "75 de Poder de Habilidad 25 de Aceleración de Habilidad Hiperdisparo Al infligir daño con habilidades a campeones que se encuentren a 600 o más de distancia, los revela durante 6 seg. Enfoque Cuando se activa Hiperdisparo , se revelan los demás campeones enemigos en un radio de 1400 de alcance durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 75,
@@ -8102,7 +8480,9 @@
         "nombre": "Impulso Cósmico",
         "precio": 3000,
         "descripcion_legible": "70 de Poder de Habilidad 350 de Vida 25 de Aceleración de Habilidad 4% de Velocidad de Movimiento Danza de Hechizos Infligir daño mágico o daño verdadero a campeones otorga Velocidad de Movimiento durante 4 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 70,
@@ -8149,7 +8529,9 @@
         "nombre": "Joya Maldita",
         "precio": 1100,
         "descripcion_legible": "25 de Poder de Habilidad 13% Penetración de Magia",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 25,
@@ -8166,7 +8548,9 @@
         "nombre": "Barrera Esmeralda",
         "precio": 1600,
         "descripcion_legible": "40 de Poder de Habilidad 25 de Resistencia Mágica Anulación Otorga un escudo antihechizos que bloquea la siguiente habilidad de un enemigo.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 40,
@@ -8210,6 +8594,8 @@
         "precio": 3100,
         "descripcion_legible": "70 de Poder de Habilidad 350 de Vida 15 de Aceleración de Habilidad Corrupción del Vacío Por cada seg en combate contra campeones enemigos, infliges un 2% de daño adicional (hasta un 8%). Al tener el máximo de fuerza, obtienes Omnivampirismo . Infusión del Vacío Obtienes un 2% de tu Vida adicional como Poder de Habilidad .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "70 de Poder de Habilidad 350 de Vida 15 de Aceleración de Habilidad Corrupción del Vacío Por cada seg en combate contra campeones enemigos, infliges un 2% de daño adicional (hasta un 8%). Al tener el máximo de fuerza, obtienes (10% para melee/6% para rango) Omnivampirismo . Infusión del Vacío Obtienes un 2% de tu Vida adicional como Poder de Habilidad ."
       },
       "stats_base": {
@@ -8269,7 +8655,9 @@
         "nombre": "Espejo de Vitrobandle",
         "precio": 900,
         "descripcion_legible": "20 de Poder de Habilidad 100% de Regen. de Maná Básica 10 de Aceleración de Habilidad",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 20,
@@ -8288,6 +8676,8 @@
         "precio": 3200,
         "descripcion_legible": "110 de Poder de Habilidad 15 de Penetración de Magia Flor de Ceniza El daño mágico y el daño verdadero asestan golpes críticos a los enemigos con menos de un 40% de Vida y les infligen un 20% más de daño.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "110 de Poder de Habilidad 15 de Penetración de Magia Flor de Ceniza El daño mágico y el daño verdadero infligen golpes críticos a los enemigos que tengan menos de un 40% de Vida, lo que inflige un 20% de daño aumentado.info adicional:Los modificadores de daño critico solo afectan el daño adicional de flores de ceniza"
       },
       "stats_base": {
@@ -8325,7 +8715,9 @@
         "nombre": "Descarga Tormentosa",
         "precio": 2800,
         "descripcion_legible": "90 de Poder de Habilidad 15 de Penetración de Magia 6% de Velocidad de Movimiento Jinete de la Tormenta Infligir daño equivalente a un 25% de la Vida Máxima de un campeón en un lapso de 2.5 seg le aplica Aguacero . Aguacero Después de 2 seg, inflige daño mágico . Si el objetivo muere antes de que se active Aguacero , inflige daño a los enemigos cercanos.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 90,
@@ -8392,6 +8784,8 @@
         "precio": 3300,
         "descripcion_legible": "60 de Daño de Ataque 50 de Armadura 15 de Aceleración de Habilidad Ignorar Dolor Un porcentaje del daño recibido se distribuye a lo largo de 3 seg. Desafiar Cuando un campeón muere en un lapso de 3 seg después de que le hayas infligido daño, se disipa el daño restante de Ignorar Dolor y recuperas vida a lo largo de 2 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "60 de Daño de Ataque 50 de Armadura 15 de Aceleración de Habilidad Ignorar Dolor (10% para rango/30% para melee) del daño recibido se distribuye a lo largo de 3 seg. Desafiar Cuando un campeón muere en un lapso de 3 seg después de que le hayas infligido daño, se disipa el daño restante de Ignorar Dolor y recuperas (75% de ad adiconal)  vida a lo largo de 2 seg."
       },
       "stats_base": {
@@ -8452,7 +8846,9 @@
         "nombre": "Sierraespada Quimpunk",
         "precio": 3000,
         "descripcion_legible": "45 de Daño de Ataque 450 de Vida 15 de Aceleración de Habilidad Corte Mutilador Infligir daño físico aplica un 40% de Heridas a los campeones enemigos durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 45,
@@ -8492,6 +8888,8 @@
         "precio": 3100,
         "descripcion_legible": "40 de Daño de Ataque 400 de Vida 10 de Aceleración de Habilidad Golpe de Escudo de Luz Tu primer ataque contra un campeón asesta un golpe crítico y restaura vida .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "45 de Daño de Ataque 400 de Vida 10 de Aceleración de Habilidad Golpe de Escudo de Luz cd (10seg) por objetivo Tu primer ataque contra un campeón asesta un golpe crítico que inflige un 80% de tu daño de golpe critico normal y restaura (100% de ad base) mas un 6% de la vida faltante . info adicional:El exceso de curacion se convierte en vida adicional temporal"
       },
       "stats_base": {
@@ -8594,6 +8992,8 @@
         "precio": 2250,
         "descripcion_legible": "35 de Poder de Habilidad 10% de poder de curaciones y escudos 125% de Regen. de Maná Básica 10 de Aceleración de Habilidad Rápidos Al curar u otorgar escudo a un aliado, ambos obtienen 40 de Poder de Habilidad y 15 de Aceleración de Habilidad durante 6 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "35 de Poder de Habilidad 10% de poder de curaciones y escudos 125% de Regen. de Maná Básica 15 de Aceleración de Habilidad Rápidos Curar o escudar a un aliado les otorga a ambos 45 de Poder de Habilidad durante 6 seg."
       },
       "stats_base": {
@@ -8637,7 +9037,9 @@
         "nombre": "Renovador de Piedra Lunar",
         "precio": 2200,
         "descripcion_legible": "25 de Poder de Habilidad 200 de Vida 20 de Aceleración de Habilidad 125% de Regen. de Maná Básica Gracia Estrellada Curar o escudar a un aliado extiende el efecto a otro aliado (que no seas tú), lo que cura un 30% o escuda un 35% de la cantidad original.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 25,
@@ -8693,6 +9095,8 @@
         "precio": 2200,
         "descripcion_legible": "35 de Poder de Habilidad 200 de Vida 20 de Aceleración de Habilidad 125% de Regen. de Maná Básica Sifón del Alma Obtienes un 30% del daño infligido contra campeones antes de la mitigación como Cargas Álmicas. Al curar u otorgar escudo a un aliado, consumes todas las Cargas Álmicas para restaurarle vida .",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "35 de Poder de Habilidad 200 de Vida 20 de Aceleración de Habilidad 125% de Regen. de Maná Básica Sifón del Alma Obtienes un 35% del daño infligido contra campeones antes de la mitigación como Cargas Álmicas. Al curar u otorgar escudo a un aliado, consumes todas las Cargas Álmicas para restaurarle vida ."
       },
       "stats_base": {
@@ -8749,7 +9153,9 @@
         "nombre": "Esfera del Amanecer",
         "precio": 2500,
         "descripcion_legible": "45 de Poder de Habilidad 16% de poder de curaciones y escudos 100% de Regen. de Maná Básica Primera Luz Obtienes un 2% de Curación y Poder de Escudo y 15 de Poder de Habilidad por cada 100% de Regeneración de Maná Básica.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 45,
@@ -8792,6 +9198,8 @@
         "precio": 3300,
         "descripcion_legible": "40 de Daño de Ataque 25% de Velocidad de Ataque 450 de Vida Hender Los ataques infligen daño físico a los enemigos cercanos. Onda Rompiente Inflige daño físico y ralentiza a los enemigos cercanos en un 35%. Por cada campeón impactado, obtienes un 35% de Velocidad de Movimiento que decae durante 3 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "40 de Daño de Ataque 25% de Velocidad de Ataque 450 de Vida Hender Los ataques infligen (20% de ad para rango/40% de ad para melee) daño físico a los enemigos cercanos. Onda Rompiente cd (15seg) Inflige (80% de ad) daño físico y ralentiza a los enemigos cercanos en un 35%. Por cada campeón impactado, obtienes un 35% de Velocidad de Movimiento que decae durante 3 seg.Info adicional:Hender no se activa contra estructuras.Puedes desplazarte mientras usas onda rompiente"
       },
       "stats_base": {
@@ -8884,7 +9292,9 @@
         "nombre": "El Tormento de Liandry",
         "precio": 3000,
         "descripcion_legible": "60 de Poder de Habilidad 300 de Vida Tormento Infligir daño con habilidades quema a los enemigos por un 2% de su Vida Máxima como daño mágico por seg durante 3 seg. Sufrimiento Por cada seg en combate contra campeones enemigos, inflige un 2% de daño adicional, hasta un 6%.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 60,
@@ -8934,7 +9344,9 @@
         "nombre": "Eco de Luden",
         "precio": 2750,
         "descripcion_legible": "100 de Poder de Habilidad 600 de Maná 10 de Aceleración de Habilidad Eco Las habilidades que infligen daño producen 6 ecos, que infligen de daño mágico adicional al objetivo y a los enemigos cercanos. Los ecos restantes se dirigen al objetivo principal e infligen un 20% del daño.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 100,
@@ -9005,7 +9417,9 @@
         "nombre": "Vara de las Edades",
         "precio": 2600,
         "descripcion_legible": "45 de Poder de Habilidad 350 de Vida 500 de Maná Atemporal Este objeto obtiene 10 de Vida , 30 de Maná y 3 de Poder de Habilidad cada 60 seg hasta 10 veces. Al alcanzar el máximo de acumulaciones, subes un nivel. Eternidad Recibir daño de campeones restaura un 10% del daño como Maná . Lanzar una habilidad cura por un 25% del Maná gastado.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 45,
@@ -9070,6 +9484,8 @@
         "precio": 900,
         "descripcion_legible": "150 de Vida 5 de Aceleración de Habilidad Inmolar Tras recibir o infligir daño, infliges daño mágico a los enemigos cercanos durante 3 seg.",
         "disponible": true,
+        "final": false,
+        "botas": false,
         "descripcion_manual": "150 de Vida 5 de Aceleración de Habilidad, Inmolar Tras recibir o infligir daño, infliges daño mágico a los enemigos cercanos durante 3 seg."
       },
       "stats_base": {
@@ -9124,7 +9540,9 @@
         "nombre": "Guantelete del Hijo del Hielo",
         "precio": 2900,
         "descripcion_legible": "300 de Vida 50 de Armadura 15 de Aceleración de Habilidad Espada Encantada Después de usar una habilidad, tu siguiente ataque inflige daño físico adicional al impacto y crea un campo congelado que ralentiza durante 2 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 300,
@@ -9181,7 +9599,9 @@
         "nombre": "Resplandor Vacío",
         "precio": 2800,
         "descripcion_legible": "400 de Vida 40 de Resistencia Mágica 10 de Aceleración de Habilidad 100% de Regen. de Vida Básica Inmolar Tras recibir o infligir daño, infliges daño mágico por seg a los enemigos cercanos durante 3 seg. Desolar Matar a un enemigo inflige daño mágico a su alrededor.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 400,
@@ -9256,7 +9676,9 @@
         "nombre": "Jak'Sho, el Proteico",
         "precio": 3200,
         "descripcion_legible": "350 de Vida 45 de Armadura 45 de Resistencia Mágica Resiliencia del Vacuonato Después de 5 seg de combate contra campeones, aumenta tu Armadura y Resistencia Mágica adicionales en un 30% hasta el final del combate.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350,
@@ -9292,7 +9714,9 @@
         "nombre": "Carcaj de Mediodía",
         "precio": 1300,
         "descripcion_legible": "15 de Daño de Ataque 20% de Probabilidad de Golpe Crítico",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 15,
@@ -9309,7 +9733,9 @@
         "nombre": "Matakrakens",
         "precio": 3000,
         "descripcion_legible": "45 de Daño de Ataque 40% de Velocidad de Ataque 4% de Velocidad de Movimiento Derríbalo Cada tercer ataque inflige daño físico adicional al impacto . Este daño aumenta según la vida faltante del objetivo.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 45,
@@ -9360,7 +9786,9 @@
         "nombre": "Arcoescudo Inmortal",
         "precio": 3000,
         "descripcion_legible": "55 de Daño de Ataque 25% de Probabilidad de Golpe Crítico Salvavidas Al recibir daño que reduciría tu Vida por debajo de un 30%, te otorga un escudo durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 55,
@@ -9416,7 +9844,9 @@
         "nombre": "Cuchilla Rauda de Navori",
         "precio": 2650,
         "descripcion_legible": "40% de Velocidad de Ataque 25% de Probabilidad de Golpe Crítico 4% de Velocidad de Movimiento Trascendencia Tus ataques reducen los enfriamientos de tus habilidades básicas en un 15% de su enfriamiento restante.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.4,
@@ -9456,7 +9886,9 @@
         "nombre": "El Coleccionista",
         "precio": 3000,
         "descripcion_legible": "50 de Daño de Ataque 10 de Letalidad 25% de Probabilidad de Golpe Crítico Muerte Tu daño ejecuta a los campeones que están por debajo de un 5% de Vida. Impuestos Los asesinatos de campeones otorgan 25 de oro adicional .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 50,
@@ -9501,7 +9933,9 @@
         "nombre": "Rectriz",
         "precio": 775,
         "descripcion_legible": "15 de Daño de Ataque 4% de Velocidad de Movimiento",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 15,
@@ -9518,7 +9952,9 @@
         "nombre": "Eclipse",
         "precio": 2900,
         "descripcion_legible": "60 de Daño de Ataque 15 de Aceleración de Habilidad Luna Eterna Al impactar a un campeón con dos ataques o habilidades diferentes en un lapso de 2 seg, obtienes un escudo durante 2 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 60,
@@ -9659,6 +10095,8 @@
         "precio": 3000,
         "descripcion_legible": "45 de Daño de Ataque 35% de Penetración de Armadura 15 de Aceleración de Habilidad Frío Implacable Las habilidades de daño ralentizan a los enemigos con menos del 50% de Vida en un 30% durante 1 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "restricciones_tienda": {
           "grupo_exclusivo_penetracion_y_reduccion_porcentual": "fisica",
           "bloquea_compra_de": [
@@ -9725,7 +10163,9 @@
         "nombre": "Colmillo de Serpiente",
         "precio": 2500,
         "descripcion_legible": "55 de Daño de Ataque 15 de Letalidad Rompeescudos Infligir daño a un campeón enemigo reduce el escudo que obtenga en un 0% durante 3 seg. Si no está bajo los efectos de Rompeescudos , reduce los escudos que tenga en un 0%.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 55,
@@ -9778,7 +10218,9 @@
         "nombre": "Arco Axiomático",
         "precio": 2750,
         "descripcion_legible": "55 de Daño de Ataque 18 de Letalidad 20 de Aceleración de Habilidad Flujo Cuando un campeón muere en un lapso de 3 seg después de haberle infligido daño, se restaura un porcentaje del enfriamiento total de tu habilidad definitiva.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 55,
@@ -9815,6 +10257,8 @@
         "precio": 2800,
         "descripcion_legible": "55 de Daño de Ataque 18 de Letalidad 10 de Aceleración de Habilidad Eminencia Cuando un campeón al que le infligiste daño muere en 3 seg, obtienes 0 de Daño de Ataque más 0 por cada campeón asesinado durante 90 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "60 de Daño de Ataque 18 de Letalidad 10 de Aceleración de Habilidad Eminencia Cuando un campeón al que le infligiste daño muere en 3 seg, obtienes 15 de Daño de Ataque más 2 por cada campeón asesinado durante 90 seg."
       },
       "stats_base": {
@@ -9895,7 +10339,9 @@
         "nombre": "Hidra Profana",
         "precio": 2850,
         "descripcion_legible": "55 de Daño de Ataque 18 de Letalidad 10 de Aceleración de Habilidad Hender Los ataques infligen daño físico a los enemigos cercanos. Corte Herético Inflige daño físico a tu alrededor.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 55,
@@ -9968,6 +10414,8 @@
         "precio": 3000,
         "descripcion_legible": "55 de Daño de Ataque 10 de Letalidad 10 de Aceleración de Habilidad Galvanizar Infligir daño a campeones enemigos con una habilidad activa el efecto Energizado si está listo. Firmamento Los ataques energizados infligen un porcentaje de la vida actual del objetivo como daño físico adicional y te otorgan letalidad adicional durante 4 seg.",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "55 de Daño de Ataque. 10 de Letalidad. 10 de Aceleración de Habilidad. Galvanizar: Infligir daño a campeones con una habilidad activa el efecto Energizado. Firmamento: Los ataques energizados infligen un 9% (melé) / 7% (rango) de la Vida Actual del objetivo como daño físico y otorgan 15 (melé) / 12 (rango) de Letalidad durante 4 seg."
       },
       "stats_base": {
@@ -10029,6 +10477,8 @@
         "precio": 2700,
         "descripcion_legible": "55 de Daño de Ataque 18 de Letalidad Preparación Tras estar fuera de combate contra campeones durante 8 seg, obtienes Letalidad . Esta Letalidad dura 3 seg tras infligir daño a campeones. Extracción Si un campeón muere dentro de 3 seg después de haberle infligido daño, obtienes 200 de Velocidad de Movimiento que decae durante 1.5 seg.",
         "disponible": false,
+        "final": true,
+        "botas": false,
         "disponible_en_parche_actual": false,
         "nota_desarrollador": "Eliminado en el parche 26.9"
       },
@@ -10082,6 +10532,8 @@
         "precio": 2900,
         "descripcion_legible": "65 de Poder de Habilidad 400 de Vida 15 de Aceleración de Habilidad Deterioro Vil Al infligir daño mágico a campeones con pasivas y habilidades, reduces la Resistencia Mágica del objetivo en un 7.5% durante 6 seg. (El efecto se puede acumular hasta 4 veces).",
         "disponible": true,
+        "final": true,
+        "botas": false,
         "descripcion_manual": "65 de Poder de Habilidad 400 de Vida 15 de Aceleración de Habilidad Desgaste Vil Infligir daño mágico a un campeón con habilidades o pasivas reduce su Resistencia Mágica en un 7.5% durante 6 seg, hasta un máximo de un 30%."
       },
       "stats_base": {
@@ -10117,7 +10569,9 @@
         "nombre": "Máscara Abisal",
         "precio": 2650,
         "descripcion_legible": "350 de Vida 45 de Resistencia Mágica 15 de Aceleración de Habilidad Deshacer Los campeones enemigos cercanos reciben un 12% más de daño mágico .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350,
@@ -10154,7 +10608,9 @@
         "nombre": "Canto de Guerra de Shurelya",
         "precio": 2600,
         "descripcion_legible": "65 de Poder de Habilidad 15 de Aceleración de Habilidad 6% de Velocidad de Movimiento 150% de Regen. de Maná Básica Discurso Inspirador Otorga a los aliados cercanos un 30% de Velocidad de Movimiento durante 4 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 65,
@@ -10180,7 +10636,9 @@
         "nombre": "Tiara Susurrante",
         "precio": 2250,
         "descripcion_legible": "200 de Vida 8% de poder de curaciones y escudos 75% de Regen. de Maná Básica 300 de Maná Armonía Obtienes un 0% de poder de curaciones y escudos. Flujo de Maná (8 seg; máx.: 5 cargas) Al impactar a un enemigo con una habilidad, obtienes 4 de Maná Máximo (la bonificación se duplica contra campeones). Se transforma en Diadema Musical al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -10207,7 +10665,9 @@
         "nombre": "Báculo del Arcángel",
         "precio": 2900,
         "descripcion_legible": "70 de Poder de Habilidad 600 de Maná 25 de Aceleración de Habilidad Asombro . Obtienes Poder de Habilidad igual a un 1% del Maná adicional . Flujo de Maná (8 seg. Hasta 5 cargas) Asestar impactos con habilidades otorga 9.5 de Maná Máximo (se duplica contra campeones). Se transforma en Abrazo del Serafín al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 70,
@@ -10232,7 +10692,9 @@
         "nombre": "Manamune",
         "precio": 2900,
         "descripcion_legible": "35 de Daño de Ataque 500 de Maná 15 de Aceleración de Habilidad Asombro . Obtienes 0 de Daño de ataque adicional . Flujo de Maná (8 seg. Hasta 4 cargas) Asestar impactos con habilidades y ataques otorga 6.5 de Maná Máximo (se duplica contra campeones). Se transforma en Muramaná al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 35,
@@ -10258,7 +10720,9 @@
         "nombre": "Convergencia de Zeke",
         "precio": 2300,
         "descripcion_legible": "350 de Vida 30 de Armadura 30 de Resistencia Mágica 10 de Aceleración de Habilidad Tempestad de Fuego Escarchado Al lanzar tu definitiva, invocas una tormenta a tu alrededor durante 5 seg. La tormenta inflige 30 de daño mágico por seg a los campeones enemigos y los ralentiza en un 30%.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350,
@@ -10285,7 +10749,9 @@
         "nombre": "Lágrima de la Diosa",
         "precio": 400,
         "descripcion_legible": "240 de Maná Flujo de Maná (8 seg. Hasta 4 cargas) Asestar impactos con habilidades otorga 6.5 de Maná Máximo (se duplica contra campeones), hasta un 360 . Una Ayudita Los ataques infligen 5 de Daño físico adicional a los súbditos.",
-        "disponible": true
+        "disponible": true,
+        "final": false,
+        "botas": false
       },
       "stats_base": {
         "Mana_maximo_plano": 240
@@ -10309,7 +10775,9 @@
         "nombre": "Cota de Espinas",
         "precio": 2650,
         "descripcion_legible": "200 de Vida 85 de Armadura Espinas Al recibir un ataque, inflige daño mágico al atacante. Si el atacante es un campeón, le aplica un 40% de Heridas durante 3 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 200,
@@ -10334,7 +10802,9 @@
         "nombre": "Redención",
         "precio": 2800,
         "descripcion_legible": "30 de Poder de Habilidad 15 de Aceleración de Habilidad 100% de Regen. de Maná Básica 10% de poder de curaciones y escudos Intervención Restaura de 150 a 350 de Vida a unidades aliadas e inflige un 10% de la Vida Máxima como daño verdadero a campeones enemigos tras 2.5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 30,
@@ -10366,7 +10836,9 @@
         "nombre": "Promesa del Caballero",
         "precio": 2900,
         "descripcion_legible": "300 de Vida 50 de Armadura 10 de Aceleración de Habilidad 150% de Regen. de Vida Básica Sacrificio Al estar cerca de tu aliado digno , recibes un 14% del daño que reciba y te curas un 12% del daño que inflija a los campeones. Juramento (0 seg) Designa a un aliado como digno .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 300,
@@ -10391,7 +10863,9 @@
         "nombre": "Corazón de Hielo",
         "precio": 2700,
         "descripcion_legible": "75 de Armadura 500 de Maná 25 de Aceleración de Habilidad Caricia Invernal Reduce la Velocidad de Ataque de los campeones cercanos en un 20% .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Armadura_plana": 75,
@@ -10412,7 +10886,9 @@
         "nombre": "Umbral del Invierno",
         "precio": 2400,
         "descripcion_legible": "550 de Vida 500 de Maná 15 de Aceleración de Habilidad Asombro Otorga 0 de Vida . Flujo de Maná (8 seg. Hasta 4 cargas) Asestar ataques y habilidades otorga 6.5 de Maná Máximo (se duplica contra campeones). Se transforma en Invierno Nórdico al tener 360 de Maná Máximo .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 550,
@@ -10438,7 +10914,9 @@
         "nombre": "Relicario de los Solari de Hierro",
         "precio": 2600,
         "descripcion_legible": "250 de Vida 30 de Armadura 30 de Resistencia Mágica 10 de Aceleración de Habilidad Devoción Otorga a los aliados cercanos de 290 a 360 de escudo que decae a lo largo de 2.5 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 250,
@@ -10468,7 +10946,9 @@
         "nombre": "Bendición de Mikael",
         "precio": 2800,
         "descripcion_legible": "400 de Vida 100% de Regen. de Maná Básica 15% de poder de curaciones y escudos 15 de Aceleración de Habilidad Purificar Elimina todas las debilitaciones de control de masas (excepto lanzamientos por el aire y supresiones ) de un campeón aliado y restaura de 100 a 250 de Vida .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 400,
@@ -10494,7 +10974,9 @@
         "nombre": "Pebetero Ardiente",
         "precio": 2600,
         "descripcion_legible": "55 de Poder de Habilidad 10% de poder de curaciones y escudos 150% de Regen. de Maná Básica 6% de Velocidad de Movimiento Santificación Curar o escudar a un aliado los mejora a ambos durante 6 seg, lo que les otorga un 25% de Velocidad de Ataque y 20 de daño mágico al impacto .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 55,
@@ -10517,7 +10999,9 @@
         "nombre": "Mandato Imperial",
         "precio": 2400,
         "descripcion_legible": "65 de Poder de Habilidad 15 de Aceleración de Habilidad 150% de Regen. de Maná Básica Control Obtienes 20 de Aceleración de Habilidad para tus habilidades con efectos inmovilizadores . Orden Al inmovilizar a un campeón enemigo, lo marcas y lo vuelves un 7% Vulnerable durante 4 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 65,
@@ -10539,7 +11023,9 @@
         "nombre": "Báculo de Agua Fluyente",
         "precio": 2600,
         "descripcion_legible": "45 de Poder de Habilidad 10% de poder de curaciones y escudos 150% de Regen. de Maná Básica 10 de Aceleración de Habilidad Rápidos Al curar u otorgar escudo a un aliado, ambos obtienen 40 de Poder de Habilidad y 15 de Aceleración de Habilidad durante 6 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 45,
@@ -10562,7 +11048,9 @@
         "nombre": "Renovador de Piedra Lunar",
         "precio": 2900,
         "descripcion_legible": "35 de Poder de Habilidad 400 de Vida 20 de Aceleración de Habilidad 150% de Regen. de Maná Básica Gracia Estrellada Curar o escudar a un aliado extiende el efecto a otro aliado (que no seas tú), lo que cura un 30% o escuda un 35% de la cantidad original.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 35,
@@ -10587,7 +11075,9 @@
         "nombre": "Ecos de Helia",
         "precio": 2600,
         "descripcion_legible": "35 de Poder de Habilidad 250 de Vida 20 de Aceleración de Habilidad 150% de Regen. de Maná Básica Sifón del Alma Obtienes un 30% del daño infligido contra campeones antes de la mitigación como Cargas Álmicas. Al curar u otorgar escudo a un aliado, consumes todas las Cargas Álmicas para restaurarle vida .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 35,
@@ -10612,7 +11102,9 @@
         "nombre": "Esfera del Amanecer",
         "precio": 2900,
         "descripcion_legible": "50 de Poder de Habilidad 20% de poder de curaciones y escudos 150% de Regen. de Maná Básica Primera Luz Obtienes un 2% de Curación y Poder de Escudo y 15 de Poder de Habilidad por cada 100% de Regeneración de Maná Básica.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 50,
@@ -10633,7 +11125,9 @@
         "nombre": "Vara de las Edades",
         "precio": 2600,
         "descripcion_legible": "45 de Poder de Habilidad 350 de Vida 500 de Maná Atemporal Este objeto obtiene 10 de Vida , 30 de Maná y 3 de Poder de Habilidad cada 60 seg hasta 10 veces. Al alcanzar el máximo de acumulaciones, subes un nivel. Eternidad Recibir daño de campeones restaura un 10% del daño como Maná . Lanzar una habilidad cura por un 25% del Maná gastado.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 45,
@@ -10661,7 +11155,9 @@
         "nombre": "Máscara Abisal",
         "precio": 2850,
         "descripcion_legible": "350 de Vida 50 de Resistencia Mágica 15 de Aceleración de Habilidad Deshacer Los campeones enemigos cercanos reciben un 12% más de daño mágico .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 350,
@@ -10682,7 +11178,9 @@
         "nombre": "Juicio de Atma",
         "precio": 2500,
         "descripcion_legible": "500 de Vida 20% de Probabilidad de Golpe Crítico Manos Grandes Obtienes de 0 a 30% de Probabilidad de Golpe Crítico que aumenta con tu vida adicional .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 500,
@@ -10705,7 +11203,9 @@
         "nombre": "La Corona del Rey Demonio",
         "precio": 2500,
         "descripcion_legible": "Supremacía Aumenta tu Vida, Armadura, Resistencia Mágica, Daño de Ataque, Poder de Habilidad, Velocidad de Ataque y Aceleración de Habilidad en un 20%, que aumenta en un 0% por derribo y un -3% por muerte después de obtener este objeto.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -10723,7 +11223,9 @@
         "nombre": "Escudo de Roca Fundida",
         "precio": 2500,
         "descripcion_legible": "250 de Vida 80 de Armadura Inamovible como la Tierra Aumenta tu Armadura en un 20% y obtienes probabilidad de bloqueo según tu armadura.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 250,
@@ -10746,7 +11248,9 @@
         "nombre": "Manto de la Noche Estrellada",
         "precio": 2500,
         "descripcion_legible": "250 de Vida 60 de Resistencia Mágica Ilimitado como las Estrellas Tu Resistencia Mágica aumenta en un 10%. Todo el daño que recibes de fuentes de ataques no básicos se reduce en un porcentaje que aumenta con tu resistencia mágica , hasta un límite de un 25%.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vida_maxima_plana": 250,
@@ -10769,7 +11273,9 @@
         "nombre": "Espada de los Dioses",
         "precio": 2500,
         "descripcion_legible": "90 de fuerza adaptable 50% de Probabilidad de Golpe Crítico Excoriar Cada golpe crítico inflige un daño de golpe crítico adicional aleatorio, que aumenta hasta un 50% tu Probabilidad de Golpe Crítico.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Fuerza_Adaptable_plana": 90,
@@ -10789,7 +11295,9 @@
         "nombre": "Talismán de Ascensión de Veigar",
         "precio": 900,
         "descripcion_legible": "Obtiene 100% de experiencia adicional No ofrece estadísticas y no se puede vender... ... Pero valdrá la pena si llegas a nivel 30.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {},
       "mecanicas": {},
@@ -10805,7 +11313,9 @@
         "nombre": "Sablepistola Hextech",
         "precio": 2500,
         "descripcion_legible": "90 de Poder de Habilidad 45 de Daño de Ataque 15% de Omnivampirismo ACTIVA (0 seg) Relámpago Lanza una descarga al campeón enemigo objetivo, inflige 0 de daño mágico y lo ralentiza en un 40% durante 2 seg.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 90,
@@ -10833,7 +11343,9 @@
         "nombre": "Céfiro",
         "precio": 2500,
         "descripcion_legible": "40% de Velocidad de Ataque 8% de Velocidad de Movimiento 25 de Aceleración de Habilidad 20% de Tenacidad Como el Viento Obtienes un 5% de Velocidad de Movimiento al impacto durante 6 seg, que se acumula hasta un 25% de Velocidad de Movimiento.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Vel_Ataque": 0.4,
@@ -10856,7 +11368,9 @@
         "nombre": "Armadura Pétrea",
         "precio": 2500,
         "descripcion_legible": "55 de Armadura 55 de Resistencia Mágica 10 de Aceleración de Habilidad 8% de Velocidad de Movimiento Activa: Inquebrantable: Obtienes un escudo que decae y crece en tamaño.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Armadura_plana": 55,
@@ -10883,7 +11397,9 @@
         "nombre": "Espada del Amanecer Floreciente",
         "precio": 2500,
         "descripcion_legible": "35 de Poder de Habilidad 150 de Vida 10% de poder de curaciones y escudos 10 de Aceleración de Habilidad Efervescencia Obtienes + 1% de Velocidad de Ataque por cada 1% de poder de curaciones y escudos que tengas. Hierbabuena al impacto , cura al campeón aliado cercano con menos vida por 0, priorizando a los aliados con menos vida.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 35,
@@ -10913,7 +11429,9 @@
         "nombre": "Corona de la Reina Fragmentada",
         "precio": 2500,
         "descripcion_legible": "65 de Poder de Habilidad 250 de Vida 600 de Maná 15 de Aceleración de Habilidad Salvaguarda Obtienes Salvaguarda , lo que reduce un 40% del daño recibido de campeones. El efecto de Salvaguarda perdura durante 3 seg tras recibir daño de campeones. (0 seg). El enfriamiento del objeto se reinicia cuando recibes daño de campeones.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 65,
@@ -10943,7 +11461,9 @@
         "nombre": "Espada del Apostador",
         "precio": 2500,
         "descripcion_legible": "55 de fuerza adaptable 10 de Aceleración de Habilidad 15 de Letalidad 15 de Penetración de Magia 15% de Velocidad de Movimiento Ganar tiempo Los derribos de campeones al usar la Espada del Apostador retrasan la llegada de Veigar Jefe de la Perdición en 10 seg más. Las muertes mientras se porta la Espada aceleran el efecto en 10 seg. (No se retrasará a partir de los 14:30 minutos) Dobla la apuesta Los derribos de campeones otorgan una acumulación y cada una de ellas otorga 10 de oro adicional por asesinato. Además, recibes un 5% más de daño por cada acumulación. Pierdes todas las acumulaciones al morir.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Fuerza_Adaptable_plana": 55,
@@ -10969,7 +11489,9 @@
         "nombre": "Crueldad",
         "precio": 2500,
         "descripcion_legible": "60 de Poder de Habilidad 25 de Armadura 25 de Resistencia Mágica Míralos Caer Cuando inmovilizas o anclas a un campeón enemigo, invocas un cometa sobre él. El cometa aterriza después de 1 seg, lo que inflige 0 de daño mágico adicional en el área. Este efecto tiene 6 seg de enfriamiento por objetivo por lanzamiento de hechizo.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AP_plano": 60,
@@ -10996,7 +11518,9 @@
         "nombre": "Caníbal",
         "precio": 2500,
         "descripcion_legible": "55 de fuerza adaptable 500 de Vida Trocear la Carne Al infligir daño a un objetivo, le reduces 3 de Armadura y de Resistencia Mágica durante 5 seg. El efecto se puede acumular hasta 10 veces. Cada habilidad tiene un enfriamiento de 1 seg para aplicar acumulaciones. Canibalizar Al derribar a un campeón, le robas un 10% de sus estadísticas y de su tamaño durante el resto de la ronda.",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "Fuerza_Adaptable_plana": 55,
@@ -11021,7 +11545,9 @@
         "nombre": "El Coleccionista",
         "precio": 3000,
         "descripcion_legible": "50 de Daño de Ataque 10 de Letalidad 25% de Probabilidad de Golpe Crítico Muerte Tu daño ejecuta a los campeones que están por debajo de un 5% de Vida. Impuestos Los asesinatos de campeones otorgan 25 de oro adicional .",
-        "disponible": true
+        "disponible": true,
+        "final": true,
+        "botas": false
       },
       "stats_base": {
         "AD_plano": 50,

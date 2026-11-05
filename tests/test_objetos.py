@@ -219,6 +219,14 @@ class TestGenerar(unittest.TestCase):
         self.assertEqual(o["metadata"]["descripcion_legible"], OFICIAL_DANZA)
         self.assertEqual(o["stats_base"]["AD_plano"], 60)
 
+    def test_final_y_botas(self):
+        self.dd["1"]["into"] = ["5"]
+        self.dd["5"]["tags"] = ["Boots"]
+        d = objetos.generar(self.dd, self.capa, self.ref, "16.22.1")["objetos"]
+        self.assertEqual((d["1"]["metadata"]["final"], d["1"]["metadata"]["botas"]), (False, False))
+        self.assertEqual((d["5"]["metadata"]["final"], d["5"]["metadata"]["botas"]), (True, True))
+        self.assertFalse(d["3"]["metadata"]["final"])              # sin Data Dragon no se sabe
+
     def test_conserva_capa_manual(self):
         o = self.d["1"]
         self.assertEqual(o["mecanicas"], {"pasiva": {"x": 1}})

@@ -50,6 +50,12 @@ class TestPartidas(unittest.TestCase):
         self.assertEqual(f["dano_que_me_mata"], "AD")
         self.assertEqual((f["valor_fila_3"], f["valor_secundaria_2"], f["valor_piedra_angular"]), ("1891", "102s", ""))
 
+    def test_nota_de_dano_cuenta_el_verdadero(self):
+        self.partida["info"]["participants"][0]["trueDamageTaken"] = 10000
+        f = partidas.fila_desde_partida(self.partida, "yo", self.datos, self.valores, self.timeline)
+        self.assertIn("recibido: 60% físico / 20% mágico / 20% verdadero", f["notas"])
+        self.assertEqual(f["dano_que_me_mata"], "AD")        # esta columna sigue comparando físico contra mágico
+
     def test_secundaria_se_ordena_por_fila(self):
         sec = self.partida["info"]["participants"][0]["perks"]["styles"][1]
         sec["selections"].reverse()                  # elegida al revés: Inquebrantable primero

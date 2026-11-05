@@ -27,6 +27,20 @@ class TestReglas(unittest.TestCase):
         self.assertIn("LethalTempo", problemas[0])    # sugiere la parecida
         self.assertIn("Domination", problemas[1])
 
+    def test_reglas_de_objetos(self):
+        objs = {"version": "16.22.1", "objetos": {"1": {"metadata": {"nombre": "Danza"}}}}
+        camps = {"campeones": {"DrMundo": {}, "Sett": {}}}
+        bien = {"situaciones": [{"objeto": "Danza", "aplica": {"campeones_2": ["Sett", "drmundo"], "perfil": "fisico"}}]}
+        self.assertEqual(reglas.validar_objetos(bien, objs, camps), [])
+        mal = {"situaciones": [{"objeto": "Danza", "aplica": {"campeones_1": ["Mundo"], "perfil": "AD"}},
+                               {"objeto": "Otro"}]}
+        problemas = reglas.validar_objetos(mal, objs, camps)
+        self.assertEqual(len(problemas), 4)
+        self.assertIn("AD", problemas[0])
+        self.assertIn("Mundo", problemas[1])
+        self.assertIn("Otro", problemas[2])
+        self.assertIn("aplica", problemas[3])
+
     def test_archivo_de_reglas_del_proyecto_se_puede_leer(self):
         r = reglas.cargar()
         self.assertIn("PressTheAttack", reglas.claves_usadas(r))

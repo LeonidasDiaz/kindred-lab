@@ -27,7 +27,7 @@ flowchart LR
     CD["Community Dragon<br/>rune texts"] --> REG
     DD["Data Dragon<br/>runes per patch"] --> REGLAS["reglas/*.json<br/>validated against the patch"]
     REG --> RES["partidas resumen"]
-    RAW --> EXTRA["temprano · objetivos<br/>jungla · momentos"]
+    RAW --> EXTRA["temprano · objetivos<br/>jungla · momentos<br/>objetos defensivo"]
 ```
 
 - **Python 3.10+, standard library only.** Nothing to install.
@@ -43,9 +43,10 @@ flowchart LR
   verified on. If an item's official description or a number in the game files (Community Dragon) changes, it warns until I review it.
 - **A CSV log that imports never overwrite:** they only append new matches and keep the manual notes (what I
   decided in champion select, free-text notes, matches to exclude).
-- **A post-game routine** (`rutina.ps1`): imports, asks what I decided in champion select, shows the summary and
-  my deaths in that match, and commits the log to git.
-- **Each analysis is its own module and command** (`temprano`, `objetivos`, `jungla`, `momentos`), with its own tests.
+- **A post-game routine** (`rutina.ps1`): imports, asks what I decided in champion select, shows the summary,
+  my deaths and my defensive items in that match, and commits the log to git.
+- **Each analysis is its own module and command** (`temprano`, `objetivos`, `jungla`, `momentos`,
+  `objetos defensivo`), with its own tests.
 
 ## Try it without a Riot key
 
@@ -129,7 +130,7 @@ What's next: [roadmap](docs/hoja_de_ruta.md) (in Spanish).
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-84 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
+123 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
 real responses. GitHub Actions runs them on every push.
 
 ## License and notice

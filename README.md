@@ -27,7 +27,7 @@ flowchart LR
     CD["Community Dragon<br/>textos de runas"] --> REG
     DD["Data Dragon<br/>runas por parche"] --> REGLAS["reglas/*.json<br/>validadas contra el parche"]
     REG --> RES["partidas resumen"]
-    RAW --> EXTRA["temprano · objetivos<br/>jungla · momentos"]
+    RAW --> EXTRA["temprano · objetivos<br/>jungla · momentos<br/>objetos defensivo"]
 ```
 
 - **Python 3.10+ y solo la librería estándar.** Sin dependencias que instalar.
@@ -44,8 +44,9 @@ flowchart LR
 - **Registro en CSV** que la importación nunca sobrescribe: solo agrega partidas nuevas y respeta las anotaciones
   manuales (qué decidí en la selección, notas, partidas a excluir).
 - **Una rutina después de cada partida** (`rutina.ps1`): importa, pregunta lo que decidí en la selección, muestra
-  el resumen y mis muertes de esa partida, y guarda el registro en git.
-- **Cada análisis es un módulo y un comando propio** (`temprano`, `objetivos`, `jungla`, `momentos`), con sus pruebas.
+  el resumen, mis muertes y mis defensivos de esa partida, y guarda el registro en git.
+- **Cada análisis es un módulo y un comando propio** (`temprano`, `objetivos`, `jungla`, `momentos`,
+  `objetos defensivo`), con sus pruebas.
 
 ## Pruébalo sin clave de Riot
 
@@ -125,7 +126,7 @@ Qué sigue: [hoja de ruta](docs/hoja_de_ruta.md).
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-84 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
+123 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
 de las respuestas reales. GitHub Actions las corre en cada push.
 
 ## Licencia y aviso
