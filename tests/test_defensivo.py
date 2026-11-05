@@ -87,6 +87,30 @@ class TestClases(unittest.TestCase):
         self.assertIsNone(c("14"))                          # las botas ya cuentan como defensivo
         self.assertIsNone(defensivo.clase_componente(None))
 
+    def test_escudos_de_un_solo_tipo(self):
+        for texto in ("obtienes un escudo mágico .", "obtienes un escudo contra daño mágico durante 3 seg",
+                      "obtienes un escudo que protege contra 0 de daño mágico durante 5 seg."):
+            self.assertEqual(defensivo._defensas(obj("X", desc=texto)), ["escudo mágico"], texto)
+            self.assertEqual(defensivo.clase_objeto(obj("X", desc=texto)), "magico", texto)
+        texto = "obtienes un escudo que protege contra 0 de daño físico durante 5 seg."
+        self.assertEqual(defensivo._defensas(obj("X", desc=texto)), ["escudo físico"])
+        self.assertEqual(defensivo.clase_objeto(obj("X", desc=texto)), "fisico")
+        # Daño mágico en otra frase: el escudo no es solo mágico
+        texto = "Tras recibir daño mágico obtienes un escudo durante 3 seg."
+        self.assertEqual(defensivo._defensas(obj("X", desc=texto)), ["escudo"])
+
+    def test_solo_es_escudo_si_te_lo_otorga(self):
+        for texto in ("obtienes un escudo que decae", "te otorga un escudo durante 3 seg.",
+                      "Otorga un escudo antihechizos que bloquea", "te otorgará 0 de escudo durante 3 seg.",
+                      "de 290 a 360 de escudo que decae", "Convierte el exceso de curación en un escudo ."):
+            self.assertEqual(defensivo._defensas(obj("X", desc=texto.lower())), ["escudo"], texto)
+        for texto in ("8% de poder de curaciones y escudos", "Rompeescudos reduce el escudo que obtenga en un 0%",
+                      "Golpe de Escudo de Luz", "Al curar u otorgar escudo a un aliado",
+                      "Las curaciones y los escudos que tengas aumentarán", "Curación y Poder de Escudo",
+                      "hayas otorgado una curación o un escudo"):
+            self.assertEqual(defensivo._defensas(obj("X", desc=texto)), [], texto)
+            self.assertIsNone(defensivo.clase_objeto(obj("X", desc=texto)), texto)
+
     def test_compras_con_deshacer_y_vender(self):
         ev = [compra(1, 10), {"type": "ITEM_UNDO", "timestamp": 61_000, "participantId": 1, "beforeId": 10, "afterId": 0},
               compra(2, 11), {"type": "ITEM_SOLD", "timestamp": 180_000, "participantId": 1, "itemId": 11},
@@ -182,8 +206,9 @@ class TestRetraso(unittest.TestCase):
     def m(self, minuto, nombre, dano):
         return {"t": minuto * 60_000, "mas_dano": nombre, "por_enemigo": {nombre: dano}, "dano": dano}
 
-    def d(self, minuto, clase, nombre="X", vendido=None):
-        return {"t": minuto * 60_000, "clase": clase, "nombre": nombre, "vendido": vendido}
+    def d(self, minuto, clase, nombre="X", vendido=None, defensas=None):
+        defensas = defensas or {"fisico": ["armadura"], "magico": ["resistencia mágica"], "general": ["vida"]}[clase]
+        return {"t": minuto * 60_000, "clase": clase, "nombre": nombre, "vendido": vendido, "defensas": defensas}
 
     def test_sin_dos_muertes_contra_el_mismo(self):
         self.assertIsNone(defensivo.retraso([self.m(5, "A", [1, 0, 0]), self.m(6, "B", [1, 0, 0])], [], 1_800_000))
@@ -222,10 +247,29 @@ class TestRetraso(unittest.TestCase):
         r = defensivo.retraso(lista, [self.d(3, "fisico")], 1_800_000, (self.d(13, "fisico", "Tela"),))
         self.assertIsNone(r["componente"])
 
-    def test_contra_verdadero_solo_sirve_general(self):
+    def test_contra_verdadero_cuenta_vida_o_escudo(self):
         lista = [self.m(5, "A", [1, 0, 9]), self.m(10, "A", [1, 0, 9])]
-        r = defensivo.retraso(lista, [self.d(12, "fisico"), self.d(14, "general", "Vida")], 1_800_000)
-        self.assertEqual((r["tipo"], r["objeto"], r["minutos"]), ("verdadero", "Vida", 4.0))
+
+        def primero(*compras_):
+            return defensivo.retraso(lista, list(compras_), 1_800_000)["objeto"]
+
+        armadura, rm = self.d(12, "fisico", "Armadura"), self.d(12, "magico", "RM")
+        self.assertIsNone(primero(armadura, rm))
+        self.assertEqual(primero(armadura, self.d(14, "general", "Vida")), "Vida")
+        self.assertEqual(primero(armadura, self.d(14, "general", "Arcoescudo", defensas=["escudo"])), "Arcoescudo")
+        self.assertEqual(primero(armadura, self.d(14, "fisico", "Randuin", defensas=["armadura", "vida"])), "Randuin")
+        fauces = self.d(14, "magico", "Fauces", defensas=["resistencia mágica", "escudo mágico"])
+        self.assertIsNone(primero(armadura, fauces))
+        blindadas = self.d(14, "fisico", "Blindadas", defensas=["armadura", "escudo físico"])
+        self.assertIsNone(primero(armadura, blindadas))
+        rukerno = self.d(14, "magico", "Rukerno", defensas=["resistencia mágica", "vida", "escudo mágico"])
+        self.assertEqual(primero(armadura, rukerno), "Rukerno")      # cuenta por su vida
+
+    def test_contra_fisico_sigue_mirando_la_clase(self):
+        lista = [self.m(5, "A", [9, 0, 0]), self.m(10, "A", [9, 0, 0])]
+        r = defensivo.retraso(lista, [self.d(12, "magico", "RM", defensas=["resistencia mágica", "escudo"]),
+                                      self.d(14, "general", "Vida")], 1_800_000)
+        self.assertEqual(r["objeto"], "Vida")
 
     def test_el_tipo_no_mira_lo_que_pasa_despues(self):
         lista = [self.m(5, "A", [9, 0, 0]), self.m(10, "A", [9, 0, 0]), self.m(20, "A", [0, 0, 999])]

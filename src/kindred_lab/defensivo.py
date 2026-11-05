@@ -12,6 +12,7 @@ El atacante sale de participantId: el campo name a veces no coincide, y spellNam
 El daño viene ya reducido por tu armadura y resistencia, así que comprar armadura baja por sí solo el % físico
 posterior: por eso la coincidencia nunca mira lo que pasó después de comprar. No calcula % de victorias por objeto.
 """
+import re
 from collections import Counter, defaultdict
 from statistics import median
 
@@ -29,6 +30,11 @@ PERIODOS = ("antes del 16.20 (feb-jun)", "desde el 16.20")
 POCOS_CASOS = 5
 POCOS_DATOS = "pocos datos"      # una sola muerte previa no dice qué daño te mata
 TIPOS = ("fisico", "magico", "verdadero")
+# Un objeto da escudo si el texto de Data Dragon dice que lo otorga. Quedan fuera "poder de curaciones y escudos",
+# "Rompeescudos" (Colmillo de Serpiente) o "Golpe de Escudo de Luz" (Cielo Desgarrado).
+ESCUDO_PROPIO = re.compile(r"(obtienes|otorga) un escudo|en un escudo|\d+ de escudo")
+# Escudos de un solo tipo: "escudo mágico", "escudo contra daño mágico", "escudo que protege contra 0 de daño físico"
+ESCUDO_DE_TIPO = re.compile(r"escudo (?:que protege )?(?:contra )?(?:\S+ de )?(?:daño )?(mágico|físico)")
 ETIQUETA = {"fisico": "físico", "magico": "mágico", "verdadero": "verdadero", "ambos": "físico y mágico",
             "general": "general", "mezclado": "mezclado"}
 
@@ -54,13 +60,16 @@ def _defensas(obj: dict) -> list[str]:
         salida.append("resistencia mágica")
     if s.get("Vida_maxima_plana"):
         salida.append("vida")
-    if "escudo" in (obj["metadata"].get("descripcion_legible") or "").lower():
-        salida.append("escudo")
+    texto = (obj["metadata"].get("descripcion_legible") or "").lower()
+    if ESCUDO_PROPIO.search(texto):
+        de_tipo = ESCUDO_DE_TIPO.search(texto)
+        salida.append(f"escudo {de_tipo.group(1)}" if de_tipo else "escudo")
     return salida
 
 
 def _clase_por_defensas(defensas: list[str]) -> str | None:
-    armadura, rm = "armadura" in defensas, "resistencia mágica" in defensas
+    armadura = "armadura" in defensas or "escudo físico" in defensas
+    rm = "resistencia mágica" in defensas or "escudo mágico" in defensas
     if armadura and rm:
         return "ambos"
     if armadura:
@@ -87,7 +96,7 @@ def clase_componente(obj: dict | None) -> str | None:
     """Como clase_objeto, para lo que todavía se mejora en otro objeto. Solo mira estadísticas: da igual el precio."""
     if not obj or obj["metadata"].get("final") or obj["metadata"].get("botas"):
         return None
-    return _clase_por_defensas([d for d in _defensas(obj) if d != "escudo"])
+    return _clase_por_defensas([d for d in _defensas(obj) if not d.startswith("escudo")])
 
 
 def compras(eventos: list[dict], pid: int) -> list[dict]:
@@ -238,12 +247,12 @@ def coincide_reglas(objeto: str, amenaza: str | None, enemigos: list[str], p: di
     return {"estado": "sin coincidencia", "detalle": "ni el rival ni el perfil están en su regla"}
 
 
-def _sirve(clase: str, tipo: str) -> bool:
-    if clase == "general":
-        return True
-    if tipo == "verdadero":             # ni armadura ni resistencia mágica lo reducen
-        return False
-    return clase == "ambos" or clase == tipo
+def _sirve(compra_: dict, tipo: str) -> bool:
+    """Contra daño verdadero, ni armadura ni resistencia mágica lo reducen: cuenta lo que dé vida o escudo, aunque
+    también dé alguna de ellas (Randuin). Un escudo de un solo tipo no cuenta (Fauces, Blindadas de Avance)."""
+    if tipo == "verdadero":
+        return bool({"vida", "escudo"} & set(compra_["defensas"]))
+    return compra_["clase"] in ("general", "ambos", tipo)
 
 
 def retraso(lista: list[dict], defensivos: list[dict], fin_ms: int, componentes: tuple = ()) -> dict | None:
@@ -262,12 +271,12 @@ def retraso(lista: list[dict], defensivos: list[dict], fin_ms: int, componentes:
         return None
     dano = amenazas([x for x in lista if x["t"] <= t2])[enemigo]
     tipo = TIPOS[dano.index(max(dano))]
-    utiles = [d for d in defensivos if _sirve(d["clase"], tipo)]
+    utiles = [d for d in defensivos if _sirve(d, tipo)]
     base = {"enemigo": enemigo, "t2": t2, "tipo": tipo, "objeto": None, "minutos": None, "componente": None}
     ya = [d for d in utiles if d["t"] <= t2 and (d["vendido"] is None or d["vendido"] > t2)]
     if ya:
         return {**base, "estado": "ya lo tenía", "objeto": ya[0]["nombre"]}
-    respuestas = sorted((x for x in [*componentes, *utiles] if x["t"] > t2 and _sirve(x["clase"], tipo)),
+    respuestas = sorted((x for x in [*componentes, *utiles] if x["t"] > t2 and _sirve(x, tipo)),
                         key=lambda x: x["t"])
     if respuestas:
         base["componente"] = {"objeto": respuestas[0]["nombre"], "minutos": (respuestas[0]["t"] - t2) / 60_000}
@@ -343,7 +352,8 @@ def analizar(partida: dict, timeline: dict, yo: dict, objetos: dict, situaciones
                               if amenaza_antes else None})
 
     componentes = [{"t": h["t"], "nombre": objetos[str(h["id"])]["metadata"]["nombre"],
-                    "clase": clase_componente(objetos[str(h["id"])])}
+                    "clase": clase_componente(objetos[str(h["id"])]),
+                    "defensas": [x for x in _defensas(objetos[str(h["id"])]) if not x.startswith("escudo")]}
                    for h in historial if clase_componente(objetos.get(str(h["id"])))]
     todas = amenazas(lista)
     amenaza = None

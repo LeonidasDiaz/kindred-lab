@@ -242,7 +242,7 @@ Lee las mismas timelines guardadas; no descarga nada. No calcula % de victorias 
   la mitad de tu vida máxima se marca como "desglose parcial".
 - **Amenaza principal:** quién metió más daño en tus muertes, su tipo de Data Dragon (informativo: Jhin sale como
   `Marksman, Mage`) y su oro menos el tuyo en la 1ª muerte, en la compra y al final.
-- **Defensivo:** objeto completo con armadura, resistencia mágica, vida o escudo en su descripción, más las botas con
+- **Defensivo:** objeto completo con armadura, resistencia mágica, vida o un escudo que te otorga según su descripción, más las botas con
   armadura o resistencia mágica. Se clasifica con los datos del último parche, también en partidas viejas.
 - **Coincidencia por tipo:** con las muertes **anteriores** a la compra. 50% o más del daño correspondiente es "sí",
   de 35 a 49% "parcial" y menos "no". Los objetos de solo vida o escudo salen como "general". Con una sola muerte
@@ -254,8 +254,8 @@ Lee las mismas timelines guardadas; no descarga nada. No calcula % de victorias 
   `mezclado` si físico y mágico llegan cada uno al 35%. Con una sola muerte previa, la amenaza y el perfil no cuentan;
   el rival presente sí, porque no depende de tus muertes.
 - **Retraso:** del primer enemigo que fue quien más daño hizo en 2 de tus muertes, minutos entre esa 2ª muerte y el
-  primer defensivo cuyo tipo sirva contra él, según su daño hasta ese momento. Contra daño sobre todo verdadero solo
-  sirve el tipo "general". "Ya lo tenía" y "nunca" se cuentan aparte. Además mide la **primera compra útil** tras esa
+  primer defensivo cuyo tipo sirva contra él, según su daño hasta ese momento. Contra daño sobre todo verdadero cuenta lo
+  que dé vida o escudo, aunque también dé armadura o resistencia mágica; los escudos de un solo tipo (Fauces, Blindadas de Avance) no cuentan. "Ya lo tenía" y "nunca" se cuentan aparte. Además mide la **primera compra útil** tras esa
   muerte, aunque sea un componente barato con armadura, resistencia mágica o vida: sirve para probar la regla de
   comprar un componente en la siguiente vuelta a base.
 - **Efecto:** muertes cada 10 min antes y después, junto a la **base**: la tasa de ese periodo en los mismos minutos.

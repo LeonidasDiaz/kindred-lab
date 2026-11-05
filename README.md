@@ -126,7 +126,7 @@ Qué sigue: [hoja de ruta](docs/hoja_de_ruta.md).
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-123 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
+126 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
 de las respuestas reales. GitHub Actions las corre en cada push.
 
 ## Licencia y aviso

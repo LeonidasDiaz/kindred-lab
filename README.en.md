@@ -130,7 +130,7 @@ What's next: [roadmap](docs/hoja_de_ruta.md) (in Spanish).
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-123 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
+126 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
 real responses. GitHub Actions runs them on every push.
 
 ## License and notice
