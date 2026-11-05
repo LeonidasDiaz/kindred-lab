@@ -13,6 +13,13 @@ DDRAGON_BASE = "https://ddragon.leagueoflegends.com"
 IDIOMA = "es_MX"
 TIMEOUT_S = 30
 
+# --- Objetos ---
+OBJETOS_DIR = PROCESADO / "objetos"                                            # generados, uno por parche
+OBJETOS_MECANICAS = RAIZ / "reglas" / "objetos_mecanicas.json"                 # capa manual; no se regenera
+OBJETOS_REFERENCIA = RAIZ / "referencia" / "objetos_16.15.1_manual.json"       # original sin cambios
+OBJETOS_VERSION_REFERENCIA = "16.15.1"
+OBJETOS_INFORME = RAIZ / "docs" / "migracion_objetos.md"
+
 # --- Riot API (partidas) ---
 RIOT_RAW = DATA / "raw" / "riot"               # partidas y timelines tal cual, una vez por partida
 REGISTRO_CSV = RAIZ / "registro" / "partidas.csv"

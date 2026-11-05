@@ -38,6 +38,9 @@ flowchart LR
 - **Reglas editables** (`reglas/kindred_runas.json`, `reglas/kindred_objetos.json`): con cada parche, `runas
   actualizar` compara las runas con el parche anterior y `reglas validar` avisa si una regla apunta a una runa que
   ya no existe (y sugiere la parecida).
+- **Objetos con dos capas:** `objetos actualizar` llena precios y estadísticas desde Data Dragon en cada parche;
+  las mecánicas (`reglas/objetos_mecanicas.json`) las escribí y verifiqué a mano y guardan en qué parche se
+  verificaron. Si cambia la descripción oficial de un objeto, avisa hasta que lo revise.
 - **Registro en CSV** que la importación nunca sobrescribe: solo agrega partidas nuevas y respeta las anotaciones
   manuales (qué decidí en la selección, notas, partidas a excluir).
 - **Una rutina después de cada partida** (`rutina.ps1`): importa, pregunta lo que decidí en la selección, muestra
@@ -120,7 +123,7 @@ solo en mi jungla si al minuto 10 vamos atrás, y pelear el 4º dragón y el Bar
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-45 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
+73 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
 de las respuestas reales. GitHub Actions las corre en cada push.
 
 ## Licencia y aviso

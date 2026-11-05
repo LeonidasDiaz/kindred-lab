@@ -53,7 +53,7 @@
     {
       "contra": "Equipo casi todo de daño físico; luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox), igual que Randuin; asesinos AD que te matan de golpe (Zed, Talon, Pantheon, Kha'Zix, Qiyana)",
       "objeto": "Danza de la Muerte",
-      "por_que": "60 AD, 50 de armadura, 15 AH. Como campeón de rango solo retrasa el 10% del daño; su valor es la armadura y el daño. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura.",
+      "por_que": "60 AD, 50 de armadura, 15 AH. Su valor es la armadura y el daño. Combina con tu definitiva: si consigues la baja, borra el daño retrasado y te cura. Para campeones a distancia solo guarda el 10% del daño (30% cuerpo a cuerpo), según referencia 16.15.1; confirmar en el parche actual. Frente a luchadores, Randuin puede proteger más.",
       "estado": "hipotesis: hay que probarla",
       "evidencia": [
         "02/11, vs Lissandra, Fiddlesticks, Mundo, Jinx, Lux: con 74% de daño AD recibido y Mundo matándome 2 veces, habría servido más que Cordura (no probada)",

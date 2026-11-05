@@ -14,6 +14,7 @@ kindred-lab/
 │   ├── ddragon.py     cliente de Data Dragon (runas por parche) con caché en disco
 │   ├── runas.py       normalizar, guardar por parche, comparar, buscar
 │   ├── reglas.py      cargar y validar las reglas de runas de Kindred
+│   ├── objetos.py     objetos por parche: Data Dragon más la capa manual de mecánicas
 │   ├── riot.py        cliente de la API de Riot (match-v5) con caché en disco
 │   ├── cdragon.py     qué var1/var2/var3 es cada número de runa (Community Dragon)
 │   ├── partidas.py    partida de Riot -> fila del registro, calibración, resumen
@@ -26,14 +27,18 @@ kindred-lab/
 │   ├── raw/ddragon/<version>/<idioma>/   runesReforged.json tal cual (se regenera)
 │   ├── raw/riot/                         partidas y timelines tal cual, una vez por partida
 │   ├── raw/cdragon/                      perks.json de Community Dragon
-│   └── processed/runas/                  runas_<version>.json, runas_latest.json, cambios_X_a_Y.md
+│   ├── processed/runas/                  runas_<version>.json, runas_latest.json, cambios_X_a_Y.md
+│   └── processed/objetos/                objetos_<version>.json, objetos_latest.json, cambios_X_a_Y.md
 ├── README.md / README.en.md  presentación del proyecto (español / inglés)
 ├── docs/uso.md              este manual: todos los comandos
 ├── docs/hallazgos.md        reglas y hallazgos de juego (runas, objetos, primeros minutos)
+├── docs/migracion_objetos.md  qué cambió al migrar el archivo manual de objetos
 ├── reglas/
 │   ├── kindred_runas.json   las 3 preguntas para elegir runas (editable a mano)
 │   ├── valores_runas.json   valores de runa calibrados a mano (manda sobre Community Dragon)
-│   └── kindred_objetos.json objetos defensivos por situación (solo consulta, editable a mano)
+│   ├── kindred_objetos.json objetos defensivos por situación (solo consulta, editable a mano)
+│   └── objetos_mecanicas.json  capa manual de mecánicas de objetos, con su parche verificado
+├── referencia/objetos_16.15.1_manual.json  archivo manual original de objetos, sin cambios
 ├── registro/partidas.csv    tu registro de partidas (lo llena `partidas importar`)
 ├── registro/partidas_respaldo.csv  respaldo viejo (oct. 2026); sus anotaciones ya están en partidas.csv
 ├── ejemplos/partidas_ejemplo.csv   14 partidas inventadas para probar `partidas resumen --registro` sin clave
@@ -69,6 +74,30 @@ python -m kindred_lab runas buscar "ultima batalla" # sin importar acentos
 python -m kindred_lab runas arbol Precision         # o "precisión", "valor", "dominación"...
 python -m kindred_lab reglas validar                # ¿las reglas apuntan a runas que existen?
 ```
+
+## Objetos (Data Dragon más capa manual)
+
+```powershell
+python -m kindred_lab objetos actualizar              # genera el último parche y lo compara con el anterior
+python -m kindred_lab objetos actualizar --version 16.22.1
+python -m kindred_lab objetos verificar 6333          # ya revisé las mecánicas de ese objeto en el último parche
+```
+
+- **Data Dragon** llena `metadata` y `stats_base` en cada parche. Las estadísticas se leen del bloque `<stats>` de
+  la descripción, porque su campo `stats` no trae aceleración, letalidad, tenacidad y otras; una etiqueta
+  desconocida es un error para que no se pierda en silencio.
+- **`reglas/objetos_mecanicas.json`** es la capa manual: mecánicas, `parche_verificado`, la descripción oficial con
+  la que se verificó y tus descripciones con datos agregados. `objetos actualizar` nunca la modifica. Las mecánicas
+  se escriben ahí con los nombres únicos de `ALIAS_STATS` (en `objetos.py`).
+- **Aviso:** si cambia la descripción oficial de un objeto con mecánicas, sale en pantalla y en
+  `cambios_X_a_Y.md`, y se repite hasta que lo revises y corras `objetos verificar <id>`. **Sin aviso no significa
+  vigente:** la descripción de Danza de la Muerte dice "un porcentaje", sin el número. Por eso cada mecánica conserva
+  su `parche_verificado`.
+- **`disponible`** se calcula en cada parche (se compra en la Grieta). Los objetos con capa manual que ya no se
+  compran se conservan con `disponible: false`.
+- Si Data Dragon no trae el objeto o su descripción está vacía (Filo de la Tormenta 3097, Mapamundi 3865), se usan
+  los datos de `referencia/objetos_16.15.1_manual.json`, el original sin cambios.
+- `objetos migrar` creó la capa una sola vez y se niega a sobrescribirla. Qué cambió: [migracion_objetos.md](migracion_objetos.md).
 
 ## Tus partidas (API de Riot)
 
@@ -207,7 +236,7 @@ propio historial, y se actualiza con:
 .\publicar.ps1 -Mensaje "Publicación: jungla --ultima"
 ```
 
-- Copia solo una lista blanca (código, pruebas, ejemplos, reglas, `data/processed/runas/`, documentación, README,
+- Copia solo una lista blanca (código, pruebas, ejemplos, reglas, `referencia/`, `data/processed/runas/` y `objetos/`, documentación, README,
   licencia y workflow). Nunca copia `registro/`, `secretos.json`, `data/raw/`, `CLAUDE.md` ni `publicar.ps1`.
 - Es un espejo: lo que sale de la lista blanca desaparece del público en la siguiente publicación.
 - Quita los match_id reales entre paréntesis (p. ej. en `hallazgos.md`).
@@ -220,7 +249,7 @@ propio historial, y se actualiza con:
 
 ## Flujo recomendado
 
-1. Después de cada parche: `runas actualizar` → si hay cambios, revisa `data/processed/runas/cambios_X_a_Y.md`;
+1. Después de cada parche: `runas actualizar` y `objetos actualizar` → si hay cambios, revisa los `cambios_X_a_Y.md`;
    luego `reglas validar` (si una regla apunta a una runa que ya no existe, sugiere la parecida).
 2. Después de jugar: `partidas importar`, completa `alcance_temprano` si usas tus 3 preguntas, y `partidas resumen`.
    Todo eso lo hace `.\rutina.ps1`:

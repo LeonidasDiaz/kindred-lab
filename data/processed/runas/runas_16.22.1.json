@@ -1,0 +1,586 @@
+{
+  "version": "16.22.1",
+  "idioma": "es_MX",
+  "arboles": {
+    "Domination": {
+      "id": 8100,
+      "nombre": "Dominación"
+    },
+    "Inspiration": {
+      "id": 8300,
+      "nombre": "Inspiración"
+    },
+    "Precision": {
+      "id": 8000,
+      "nombre": "Precisión"
+    },
+    "Resolve": {
+      "id": 8400,
+      "nombre": "Valor"
+    },
+    "Sorcery": {
+      "id": 8200,
+      "nombre": "Brujería"
+    }
+  },
+  "runas": {
+    "8112": {
+      "id": 8112,
+      "clave": "Electrocute",
+      "nombre": "Electrocutar",
+      "arbol": "Domination",
+      "fila": 0,
+      "corta": "Alcanzar a un campeón con 3 ataques o habilidades únicos dentro de 3 seg inflige una bonificación de daño adaptable.",
+      "larga": "Impactar a un campeón con 3 ataques o habilidades diferentes en un lapso de 3 seg le inflige daño adaptable adicional. Daño: 70 - 240 (+0.1 de Daño de Ataque adicional, +0.05 de Poder de Habilidad) de daño. Enfriamiento: 20 seg ''Los llamamos los Señores del Trueno, pues hablar de su rayo es invocar el desastre''."
+    },
+    "8128": {
+      "id": 8128,
+      "clave": "DarkHarvest",
+      "nombre": "Cosecha Oscura",
+      "arbol": "Domination",
+      "fila": 0,
+      "corta": "Dañar a un campeón con poca vida inflige daño adaptable y cosecha un alma de la víctima.",
+      "larga": "Dañar a un campeón que tenga menos de un 50% de Vida le inflige daño adaptable y cosecha su alma, lo que aumenta de forma permanente el daño de Cosecha Oscura en 11. Daño de Cosecha Oscura: 30 (+11 de daño por alma) (+0.1 de Daño de Ataque adicional) (+0.05 de Poder de Habilidad) Enfriamiento: 35 seg (se restablece a 1.0 seg tras un derribo)"
+    },
+    "9923": {
+      "id": 9923,
+      "clave": "HailOfBlades",
+      "nombre": "Lluvia de Espadas",
+      "arbol": "Domination",
+      "fila": 0,
+      "corta": "Obtienes una gran cantidad de velocidad de ataque e infliges daño verdadero adicional con tus primeros 3 ataques contra campeones enemigos.",
+      "larga": "Obtienes un 90% (un 60% para campeones a distancia) de Velocidad de Ataque e infliges daño verdadero adicional cuando atacas a un campeón enemigo durante un máximo de 3 ataques. Si transcurren más de 3 seg entre los ataques, el efecto terminará. Enfriamiento: 10 seg Daño al impacto: De 2 a 20 (+ 0.12 de Daño de Ataque adicional + 0.1 de Poder de Habilidad) de daño Al reiniciar los ataques, el límite de ataques aumenta en 1. Puedes superar temporalmente el límite de velocidad de ataque."
+    },
+    "8126": {
+      "id": 8126,
+      "clave": "CheapShot",
+      "nombre": "Golpe Bajo",
+      "arbol": "Domination",
+      "fila": 1,
+      "corta": "Infliges daño verdadero adicional a los campeones enemigos que estén bajo efectos de control o inmovilizaciones.",
+      "larga": "Al dañar campeones con efectos de control, les infliges 10 - 45 de daño verdadero adicional (según el nivel). Enfriamiento: 4 seg Se activa con el daño que ocurra después de la alteración."
+    },
+    "8139": {
+      "id": 8139,
+      "clave": "TasteOfBlood",
+      "nombre": "Sabor a Sangre",
+      "arbol": "Domination",
+      "fila": 1,
+      "corta": "Recupera vida cuando dañas a un campeón enemigo.",
+      "larga": "Te curas cuando infliges daño a un campeón enemigo. Curación: 16-40 (+0.1 de DA adicional, +0.05 de PH) de vida (según el nivel) Enfriamiento: 20 seg."
+    },
+    "8143": {
+      "id": 8143,
+      "clave": "SuddenImpact",
+      "nombre": "Impacto Súbito",
+      "arbol": "Domination",
+      "fila": 1,
+      "corta": "Las habilidades y los ataques básicos infligen daño verdadero adicional a los campeones enemigos tras usar un desplazamiento, salto, destello, teletransportación o al salir del sigilo.",
+      "larga": "Las habilidades y los ataques básicos infligen entre 20 y 80 de daño verdadero adicional (según el nivel) a los campeones enemigos tras usar un desplazamiento, salto, destello, teletransportación o al salir del sigilo durante 4 seg. Enfriamiento: 10 seg."
+    },
+    "8137": {
+      "id": 8137,
+      "clave": "SixthSense",
+      "nombre": "Sexto Sentido",
+      "arbol": "Domination",
+      "fila": 2,
+      "corta": "Al estar en un enfriamiento prolongado, detectas automáticamente a un centinela cercano no rastreado e invisible que tu equipo puede rastrear. Nivel 11: Además, revela al centinela durante 10 seg.",
+      "larga": "Detectas automáticamente a un centinela cercano no rastreado e invisible que tu equipo puede rastrear. Nivel 11: Además, revela al centinela durante 10 seg. Este efecto tiene 250 seg de enfriamiento."
+    },
+    "8140": {
+      "id": 8140,
+      "clave": "GrislyMementos",
+      "nombre": "Recuerdos Macabros",
+      "arbol": "Domination",
+      "fila": 2,
+      "corta": "Obtienes 1 recuerdo por cada derribo de campeones, hasta un máximo de 18. Obtienes 6 de Aceleración de Habilidad de baratija por cada recuerdo obtenido.",
+      "larga": "Obtienes 1 recuerdo por cada derribo de campeones, hasta un máximo de 18. Obtienes 6 de Aceleración de Habilidad de baratija por cada recuerdo obtenido. En los modos de juego donde no existen las baratijas de visión, obtienes 3 de aceleración de hechizos de invocador por cada recuerdo."
+    },
+    "8141": {
+      "id": 8141,
+      "clave": "DeepWard",
+      "nombre": "Centinela profundo",
+      "arbol": "Domination",
+      "fila": 2,
+      "corta": "Tus centinelas en la jungla enemiga son profundos, por lo que obtienen Vida y Duración. Nivel 9: Los centinelas en el río también son profundos.",
+      "larga": "Tus centinelas en la jungla enemiga son profundos. Los centinelas profundos obtienen +1 de vida adicional y una duración aumentada +[30 a 45] seg (+[45 - 150] seg para los centinelas invisibles de baratija). Nivel 9: Los centinelas en el río también son profundos."
+    },
+    "8135": {
+      "id": 8135,
+      "clave": "TreasureHunter",
+      "nombre": "Cazador de Tesoros",
+      "arbol": "Domination",
+      "fila": 3,
+      "corta": "Los derribos únicos otorgan oro adicional la primera vez que se obtiene.",
+      "larga": "Obtienes 50 de oro adicional la próxima vez que obtengas una acumulación de Cazarrecompensas. Aumenta el oro obtenido en 20 de oro por cada acumulación de Cazarrecompensas, hasta 130 de oro. Obtienes acumulaciones de Cazarrecompensas la primera vez que logras derribar a cada uno de los campeones enemigos."
+    },
+    "8105": {
+      "id": 8105,
+      "clave": "RelentlessHunter",
+      "nombre": "Cazador Implacable",
+      "arbol": "Domination",
+      "fila": 3,
+      "corta": "Los derribos únicos otorgan VM permanente fuera de combate.",
+      "larga": "Otorga 8 de Velocidad de Movimiento fuera del combate por cada acumulación de Cazarrecompensas. Obtienes acumulaciones de Cazarrecompensas la primera vez que derribes a cada uno de los campeones enemigos."
+    },
+    "8106": {
+      "id": 8106,
+      "clave": "UltimateHunter",
+      "nombre": "Cazador Definitivo",
+      "arbol": "Domination",
+      "fila": 3,
+      "corta": "Los derribos únicos otorgan reducción de enfriamiento permanente a tu definitiva.",
+      "larga": "Tu definitiva obtiene 6 de Aceleración de Habilidad más 5 de Aceleración de Habilidad adicional por cada acumulación de Cazarrecompensas. Obtienes acumulaciones de Cazarrecompensas la primera vez que derribes a cada uno de los campeones enemigos."
+    },
+    "8351": {
+      "id": 8351,
+      "clave": "GlacialAugment",
+      "nombre": "Aumento Glacial",
+      "arbol": "Inspiration",
+      "fila": 0,
+      "corta": "Al inmovilizar a un campeón enemigo, saldrán 3 rayos glaciales que ralentizarán a los enemigos cercanos y reducirán el daño a tus aliados.",
+      "larga": "Al inmovilizar a un campeón enemigo, saldrán 3 rayos glaciales de él hacia ti y otros campeones cercanos. Estos rayos crearán áreas congeladas durante 3 (+ la duración del efecto inmovilizador) seg, las cuales ralentizarán a los enemigos en un 20% (+90% por cada 100% de Curación y Poder de Escudo) (+6% por cada 100 de Poder de Habilidad) (+7% por cada 100 de Daño de Ataque adicional) y reducirán en un 15% su daño contra tus aliados (no contra ti). Enfriamiento: 25 seg"
+    },
+    "8360": {
+      "id": 8360,
+      "clave": "UnsealedSpellbook",
+      "nombre": "Libro de Hechizos Abierto",
+      "arbol": "Inspiration",
+      "fila": 0,
+      "corta": "Intercambia hechizos de invocador fuera de combate. Cambiar entre hechizos de invocador únicos aumenta la velocidad con la que podrás hacer los siguientes cambios.",
+      "larga": "Cambia uno de tus Hechizos de Invocador equipados por uno nuevo de un solo uso. Cada Hechizo de Invocador único al que cambies reduce de forma permanente el enfriamiento de cambios en 25 seg (el enfriamiento inicial de cambios es de @f3@ seg). Tu primer cambio estará disponible a los 6 minutos. Los Hechizos de Invocador solo se pueden cambiar al estar fuera de combate. Después de usar un Hechizo de Invocador cambiado debes cambiar 3 veces más antes de poder seleccionar el primero de nuevo. El daño de Castigo aumenta después de cambiar Hechizos de Invocador dos veces."
+    },
+    "8369": {
+      "id": 8369,
+      "clave": "FirstStrike",
+      "nombre": "Primer Golpe",
+      "arbol": "Inspiration",
+      "fila": 0,
+      "corta": "Al iniciar un combate contra campeones, infliges un 7% de daño adicional durante 3 seg y obtienes oro según el daño infligido.",
+      "larga": "Los ataques o las habilidades lanzadas contra un campeón enemigo en un lapso de 0.25 seg tras haber entrado en combate contra campeones otorgan 10 de oro y Primer Golpe durante 3 seg, lo que causa que inflijas un 7% de daño verdadero adicional contra campeones y otorga un 50% (35% para campeones a distancia) del daño adicional infligido como oro. Enfriamiento: 25-15 seg"
+    },
+    "8306": {
+      "id": 8306,
+      "clave": "HextechFlashtraption",
+      "nombre": "Destello Hextech",
+      "arbol": "Inspiration",
+      "fila": 1,
+      "corta": "Mientras Destello se encuentra en enfriamiento, queda reemplazado por Hexdestello. Hexdestello: Canaliza para teletransportarte a otra ubicación.",
+      "larga": "Mientras Destello se encuentra en enfriamiento, se reemplaza por Hexdestello. Hexdestello: Canaliza durante 2 seg para ir a otra ubicación. Enfriamiento: 20 seg. Entra en un enfriamiento de 10 seg cuando entras en combate contra un campeón."
+    },
+    "8304": {
+      "id": 8304,
+      "clave": "MagicalFootwear",
+      "nombre": "Calzado Mágico",
+      "arbol": "Inspiration",
+      "fila": 1,
+      "corta": "Obtendrás botas gratuitas a los 12 min, pero no podrás comprarlas antes de eso. Cada derribo que logres hará que tus botas aparezcan 45 seg antes.",
+      "larga": "Obtendrás Calzado Ligeramente Mágico gratis a los 12 minutos, pero no puedes comprar botas antes de eso. Por cada derribo, adquieres las botas 45 seg antes. Calzado Ligeramente Mágico otorga 10 de Velocidad de Movimiento adicional."
+    },
+    "8321": {
+      "id": 8321,
+      "clave": "CashBack",
+      "nombre": "Reembolso",
+      "arbol": "Inspiration",
+      "fila": 1,
+      "corta": "Obtén un reembolso de un porcentaje de oro al comprar objetos Legendarios.",
+      "larga": "Obtén un reembolso del 7.5% de oro al comprar objetos Legendarios."
+    },
+    "8313": {
+      "id": 8313,
+      "clave": "PerfectTiming",
+      "nombre": "Tónico Triple",
+      "arbol": "Inspiration",
+      "fila": 2,
+      "corta": "Tras alcanzar el nivel 3, obtienes un Elixir de Avaricia. Tras alcanzar el nivel 6, obtienes un Elixir de Fuerza. Tras alcanzar el nivel 9, obtienes un Elixir de Habilidad.",
+      "larga": "Tras alcanzar el nivel 3, obtienes un Elixir de Avaricia. Tras alcanzar el nivel 6, obtienes un Elixir de Fuerza. Tras alcanzar el nivel 9, obtienes un Elixir de Habilidad."
+    },
+    "8352": {
+      "id": 8352,
+      "clave": "TimeWarpTonic",
+      "nombre": "Tónico de Distorsión Temporal",
+      "arbol": "Inspiration",
+      "fila": 2,
+      "corta": "Las pociones otorgan un porcentaje de restauración al instante.",
+      "larga": "Consumir una poción otorga un 40% de restauración de Vida al instante."
+    },
+    "8345": {
+      "id": 8345,
+      "clave": "BiscuitDelivery",
+      "nombre": "Entrega de Galletas",
+      "arbol": "Inspiration",
+      "fila": 2,
+      "corta": "Recibes una galleta gratis cada 2 min, hasta los 6 min. Consumir o vender una galleta aumenta permanentemente tu Vida Máxima y restaura vida.",
+      "larga": "Entrega de Galletas: Obtienes 1 Galleta Definitiva de la Voluntad Eterna cada 2 min hasta que pasen 6 min desde el comienzo de la partida. Las galletas restauran un 20 + 2% de tu Vida Máxima, que aumenta hasta un 100% según tu vida faltante. Consumir o vender una galleta aumenta de forma permanente tu Vida Máxima en 30."
+    },
+    "8347": {
+      "id": 8347,
+      "clave": "CosmicInsight",
+      "nombre": "Perspicacia Cósmica",
+      "arbol": "Inspiration",
+      "fila": 3,
+      "corta": "+18 de Aceleración de Hechizos de Invocador +10 de Aceleración de Objetos",
+      "larga": "+18 de Aceleración de Hechizos de Invocador +10 de Aceleración de Objetos"
+    },
+    "8410": {
+      "id": 8410,
+      "clave": "ApproachVelocity",
+      "nombre": "Velocidad de Aproximación",
+      "arbol": "Inspiration",
+      "fila": 3,
+      "corta": "VM adicional al dirigirte hacia enemigos cercanos que tengan el movimiento alterado. El efecto es más fuerte contra campeones enemigos a los que tú alteres.",
+      "larga": "Otorga un 7.5% de Velocidad de Movimiento al moverte hacia campeones enemigos cercanos con movimiento alterado. Este efecto adicional aumenta a un 15% de Velocidad de Movimiento contra cualquier campeón enemigo al que hayas alterado. Alcance de activación de control de masas de aliados: 1000"
+    },
+    "8316": {
+      "id": 8316,
+      "clave": "JackOfAllTrades",
+      "nombre": "Comodín",
+      "arbol": "Inspiration",
+      "fila": 3,
+      "corta": "Obtienes una acumulación de Comodín por cada estadística diferente que obtengas de objetos. Cada acumulación te otorga 1 de Aceleración de Habilidad. Obtienes Fuerza Adaptable adicional al tener 5 y 10 acumulaciones.",
+      "larga": "Obtienes una acumulación de Comodín por cada estadística diferente que obtengas de objetos. Cada acumulación te otorga 1 de Aceleración de Habilidad. Obtén 8 o 20 de Fuerza Adaptable adicional al tener 5 y 10 acumulaciones, respectivamente."
+    },
+    "8005": {
+      "id": 8005,
+      "clave": "PressTheAttack",
+      "nombre": "Estrategia Ofensiva",
+      "arbol": "Precision",
+      "fila": 0,
+      "corta": "Atacar un campeón enemigo 3 veces consecutivas inflige daño adicional y amplifica tu daño hasta que abandones el combate con campeones.",
+      "larga": "Impactar a un campeón enemigo con 3 ataques básicos consecutivos inflige de 40 a 160 de daño adaptable adicional (según el nivel) y aumenta tu daño infligido en un 8% hasta que salgas del combate con campeones."
+    },
+    "8008": {
+      "id": 8008,
+      "clave": "LethalTempo",
+      "nombre": "Cadencia Letal",
+      "arbol": "Precision",
+      "fila": 0,
+      "corta": "Atacar a un campeón enemigo te otorga velocidad de ataque, hasta un máximo de 6 acumulaciones. Al tener el máximo de acumulaciones, infliges daño adaptable adicional al atacar.",
+      "larga": "Atacar a un campeón enemigo te otorga [6% cuerpo a cuerpo || 4% a distancia] de Velocidad de Ataque durante 6 seg, hasta un máximo de 6. Al alcanzar el máximo de acumulaciones, infliges [9 a 30 cuerpo a cuerpo || 6 a 24 a distancia] de daño adaptable adicional al atacar, que aumenta en un 1% por cada 1% de Velocidad de Ataque adicional."
+    },
+    "8021": {
+      "id": 8021,
+      "clave": "FleetFootwork",
+      "nombre": "Sobre la Marcha",
+      "arbol": "Precision",
+      "fila": 0,
+      "corta": "Al atacar y moverte, juntas acumulaciones de Energía. Al llegar a 100 acumulaciones, tu siguiente ataque te curará y otorgará VM aumentada.",
+      "larga": "Al atacar y moverte, acumulas energía. Al llegar a 100 acumulaciones, tu siguiente ataque quedará Energizado. Los ataques Energizados te curan 15 - 160 (+0.1 de Daño de Ataque adicional, +0.05 de Poder de Habilidad) de Vida y te otorgan un 20% de Velocidad de Movimiento durante 1 seg. Para campeones a distancia, la curación es 60% efectiva y la velocidad de movimiento es 75% efectiva. Toda la curación es un 15% efectiva al atacar súbditos."
+    },
+    "8010": {
+      "id": 8010,
+      "clave": "Conqueror",
+      "nombre": "Conquistador",
+      "arbol": "Precision",
+      "fila": 0,
+      "corta": "Obtienes acumulaciones de fuerza adaptable al atacar a campeones enemigos. Tras alcanzar 12 acumulaciones, te curas una parte del daño que infliges a campeones.",
+      "larga": "Los ataques básicos o hechizos que infligen daño a un campeón enemigo otorgan 2 acumulaciones de Conquistador durante 5 seg. Cada acumulación otorga de 1.8 a 4 de Fuerza Adaptable. Se acumula hasta 12 veces. Los campeones a distancia solo obtienen 1 acumulación por ataque básico. Al llegar al máximo de acumulaciones, te curas un 8% del daño infligido a campeones (5% para campeones a distancia)."
+    },
+    "9101": {
+      "id": 9101,
+      "clave": "AbsorbLife",
+      "nombre": "Absorber Vida",
+      "arbol": "Precision",
+      "fila": 1,
+      "corta": "Matar a un objetivo te cura.",
+      "larga": "Matar a un objetivo te cura por @HealAmount@."
+    },
+    "9111": {
+      "id": 9111,
+      "clave": "Triumph",
+      "nombre": "Triunfo",
+      "arbol": "Precision",
+      "fila": 1,
+      "corta": "Los derribos restauran un 5% de tu vida faltante y otorgan 20 de oro adicional.",
+      "larga": "Los derribos restauran un 5% de tu vida faltante, un 2.5% de tu Vida Máxima y otorgan 20 de oro adicional. ''El juego más peligroso trae consigo la más grande de las glorias''. —Gladiador Noxiano"
+    },
+    "8009": {
+      "id": 8009,
+      "clave": "PresenceOfMind",
+      "nombre": "Concentración Profunda",
+      "arbol": "Precision",
+      "fila": 1,
+      "corta": "Restaura una pequeña cantidad de maná o energía al dañar a un campeón enemigo. Los derribos restauran maná o energía.",
+      "larga": "Infligir daño a un campeón enemigo restaura 6-50 (80% para campeones a distancia) de Maná o 6 de energía. Los derribos restauran un 15% de tu Maná o Energía máximos. Enfriamiento de la restauración de daño: 8 seg."
+    },
+    "9104": {
+      "id": 9104,
+      "clave": "LegendAlacrity",
+      "nombre": "Leyenda: Celeridad",
+      "arbol": "Precision",
+      "fila": 2,
+      "corta": "Derriba enemigos para obtener velocidad de ataque permanente.",
+      "larga": "Otorga 3% de Velocidad de Ataque más un 1.5% adicional por cada acumulación de Leyenda (máx. 10 acumulaciones). Derriba súbditos, monstruos grandes, monstruos épicos y campeones para obtener progreso en tus acumulaciones de Leyenda."
+    },
+    "9105": {
+      "id": 9105,
+      "clave": "LegendHaste",
+      "nombre": "Leyenda: Aceleración",
+      "arbol": "Precision",
+      "fila": 2,
+      "corta": "Derribar enemigos otorga Aceleración de Habilidad permanente para las habilidades básicas.",
+      "larga": "Obtienes 1.5 de Aceleración de Habilidad para habilidades básicas por cada acumulación de Leyenda (máximo de 10 acumulaciones). Obtienes progreso de acumulaciones de Leyenda por cada derribo de campeón, derribo de monstruo épico, asesinato de monstruos grandes y asesinato de súbditos."
+    },
+    "9103": {
+      "id": 9103,
+      "clave": "LegendBloodline",
+      "nombre": "Leyenda: Linaje",
+      "arbol": "Precision",
+      "fila": 2,
+      "corta": "Los derribos de enemigos otorgan robo de vida permanente, hasta un límite. Una vez alcanzado el límite, aumenta tu Vida Máxima. Es más débil al principio, pero más fuerte en el juego tardío que otras Runas de Leyenda.",
+      "larga": "Obtienes un 0.45% de Robo de Vida por cada acumulación de Leyenda (máximo de 15 de acumulaciones). Al máximo de acumulaciones de Leyenda, obtienes 85 de Vida Máxima. Obtienes progreso de acumulaciones de Leyenda por cada derribo de campeón, derribo de monstruo épico, asesinato de monstruos grandes y asesinato de súbditos."
+    },
+    "8014": {
+      "id": 8014,
+      "clave": "CoupDeGrace",
+      "nombre": "Golpe de Gracia",
+      "arbol": "Precision",
+      "fila": 3,
+      "corta": "Inflige daño adicional a los campeones enemigos con poca vida.",
+      "larga": "Infliges 8% de daño adicional a campeones que tengan menos del 40% de Vida."
+    },
+    "8017": {
+      "id": 8017,
+      "clave": "CutDown",
+      "nombre": "Corte",
+      "arbol": "Precision",
+      "fila": 3,
+      "corta": "Inflige más daño a campeones enemigos con mucha vida.",
+      "larga": "Infliges un 8% de daño adicional a los campeones que tengan más del 60% de Vida."
+    },
+    "8299": {
+      "id": 8299,
+      "clave": "LastStand",
+      "nombre": "La Última Batalla",
+      "arbol": "Precision",
+      "fila": 3,
+      "corta": "Inflige más daño a campeones cuando tu vida está baja.",
+      "larga": "Inflige 5%-11% de daño aumentado a campeones mientras tengas menos del 60% de vida. El máximo de daño se obtiene al 30% de vida."
+    },
+    "8437": {
+      "id": 8437,
+      "clave": "GraspOfTheUndying",
+      "nombre": "Agarre del Perpetuo",
+      "arbol": "Resolve",
+      "fila": 0,
+      "corta": "Cada 4 seg, tu siguiente ataque a un campeón infligirá daño mágico adicional, te curará y aumentará permanentemente tu vida.",
+      "larga": "Cada 4 seg en combate, tu siguiente ataque básico contra un campeón:Inflige daño mágico adicional equivalente a un 3.5% de tu Vida MáximaTe cura por un 1.3% de tu Vida MáximaAumenta de forma permanente tu Vida en 5 Campeones a distancia: El daño, la curación y la vida permanente obtenidos tienen un 40% de eficacia."
+    },
+    "8439": {
+      "id": 8439,
+      "clave": "Aftershock",
+      "nombre": "Réplica",
+      "arbol": "Resolve",
+      "fila": 0,
+      "corta": "Después de inmovilizar a un campeón enemigo, obtienes defensas y después infliges una ráfaga de daño mágico a tu alrededor.",
+      "larga": "Tras inmovilizar a un campeón enemigo, tu Armadura y tu Resistencia Mágica aumentan en 45 + 75% de tus resistencias adicionales durante 2.5 seg. Luego, explota, lo que inflige daño mágico a los enemigos cercanos. Daño: de 25 a 120 (+8% de tu Vida adicional) Enfriamiento: 20 seg La resistencia adicional de Réplica tiene un límite: de 80 a 150 (según el nivel)"
+    },
+    "8465": {
+      "id": 8465,
+      "clave": "Guardian",
+      "nombre": "Guardián",
+      "arbol": "Resolve",
+      "fila": 0,
+      "corta": "Protege a los aliados sobre quienes lances hechizos y a quienes estén muy cerca. Si tú o tu aliado protegido reciben daño según su nivel, ambos obtendrán un escudo.",
+      "larga": "Protege a los aliados que se encuentren a 350 unidades de ti y a los aliados sobre quienes lances hechizos durante 2.5 seg. Mientras proteges, si tú o tu aliado reciben poco más de una pequeña cantidad de daño mientras dure el efecto de protección, ambos recibirán un escudo durante 1.5 seg. Enfriamiento: 75 - 40 seg Escudo: 40 - 150 + un 20% de tu Poder de Habilidad + un 6% de tu Vida adicional Límite de activación: 50 - 165 de daño posmitigación."
+    },
+    "8446": {
+      "id": 8446,
+      "clave": "Demolish",
+      "nombre": "Demolición",
+      "arbol": "Resolve",
+      "fila": 1,
+      "corta": "Tu tercer ataque contra torretas inflige daño adicional.",
+      "larga": "Tu tercer ataque contra torretas inflige [85 (+ 28% de la Vida Máxima) para campeones cuerpo a cuerpo || 50 (+ 20% de Vida Máxima) para campeones a distancia] de daño físico adicional. Enfriamiento: 30 seg"
+    },
+    "8463": {
+      "id": 8463,
+      "clave": "FontOfLife",
+      "nombre": "Fuente de Vida",
+      "arbol": "Resolve",
+      "fila": 1,
+      "corta": "Reducir el movimiento de un campeón enemigo cura a los campeones aliados cercanos.",
+      "larga": "Reducir el movimiento de un campeón enemigo te restaura @BaseHeal@ de Vida a ti y al campeón aliado cercano con la menor cantidad de vida. 70% del efecto para campeones a distancia. Enfriamiento: 20 seg"
+    },
+    "8401": {
+      "id": 8401,
+      "clave": "ShieldBash",
+      "nombre": "Golpe de Escudo",
+      "arbol": "Resolve",
+      "fila": 1,
+      "corta": "Al obtener un escudo, tu siguiente ataque básico contra un campeón inflige daño adaptable adicional.",
+      "larga": "Cada vez que obtienes un nuevo escudo, tu siguiente ataque básico contra un campeón inflige 5 - 30 (+2.5% de Vida adicional) (+15.0% del nuevo escudo) de daño adaptable adicional. Tienes hasta 2 seg después de que expire el escudo para utilizar este efecto."
+    },
+    "8429": {
+      "id": 8429,
+      "clave": "Conditioning",
+      "nombre": "Acondicionamiento",
+      "arbol": "Resolve",
+      "fila": 2,
+      "corta": "Luego de 12 min, obtienes +8 de Armadura y +8 de Resistencia Mágica, y aumenta tu Armadura y Resistencia Mágica en un 3%.",
+      "larga": "Luego de 12 min, obtienes +8 de Armadura y +8 de Resistencia Mágica, y aumenta tu Armadura y Resistencia Mágica en un 3%."
+    },
+    "8444": {
+      "id": 8444,
+      "clave": "SecondWind",
+      "nombre": "Segundo Aire",
+      "arbol": "Resolve",
+      "fila": 2,
+      "corta": "Después de recibir daño de un campeón enemigo, recuperarás progresivamente una parte de tu vida faltante.",
+      "larga": "Después de recibir daño de un campeón enemigo, te curas un 4% de tu vida faltante durante 10 seg."
+    },
+    "8473": {
+      "id": 8473,
+      "clave": "BonePlating",
+      "nombre": "Coraza Ósea",
+      "arbol": "Resolve",
+      "fila": 2,
+      "corta": "Tras recibir daño de un campeón enemigo, los siguientes 3 hechizos o ataques que recibas de él infligen de 30 a 60 (según el nivel) menos de daño. Duración: 1.5 seg Enfriamiento: 55 seg",
+      "larga": "Tras recibir daño de un campeón enemigo, los siguientes 3 hechizos o ataques que recibas de él infligen de 30 a 60 (según el nivel) menos de daño. Duración: 1.5 seg Enfriamiento: 55 seg"
+    },
+    "8451": {
+      "id": 8451,
+      "clave": "Overgrowth",
+      "nombre": "Crecimiento Excesivo",
+      "arbol": "Resolve",
+      "fila": 3,
+      "corta": "Otorga vida máxima permanente cuando monstruos o súbditos enemigos mueren cerca de ti.",
+      "larga": "Absorbes esencia de vida de los monstruos o súbditos enemigos que mueren cerca de ti, lo que otorga 3 de vida máxima de forma permanente por cada 8. Al absorber 120 monstruos o súbditos enemigos, otorga 3.5% de vida máxima adicional."
+    },
+    "8453": {
+      "id": 8453,
+      "clave": "Revitalize",
+      "nombre": "Revitalizar",
+      "arbol": "Resolve",
+      "fila": 3,
+      "corta": "Obtienes un 5% de poder de curaciones y escudos. Las curaciones y escudos que lanzas o recibes son un 10% más fuertes en objetivos por debajo del 40% de Vida.",
+      "larga": "Obtienes un 5% de poder de curaciones y escudos. Las curaciones y escudos que lanzas o recibes son un 10% más fuertes en objetivos por debajo del 40% de Vida."
+    },
+    "8242": {
+      "id": 8242,
+      "clave": "Unflinching",
+      "nombre": "Inquebrantable",
+      "arbol": "Resolve",
+      "fila": 3,
+      "corta": "Obtienes armadura y resistencia mágica cuando te afectan con control de masas.",
+      "larga": "Obtienes 10 de Armadura y Resistencia Mágica cuando te afectan con control de masas y durante 2 seg después."
+    },
+    "8214": {
+      "id": 8214,
+      "clave": "SummonAery",
+      "nombre": "Invocación: Aery",
+      "arbol": "Sorcery",
+      "fila": 0,
+      "corta": "Tus ataques y habilidades envían a Aery hacia un objetivo, lo que daña a los enemigos o escuda a los aliados.",
+      "larga": "Infligir daño a campeones enemigos con ataques básicos o habilidades envía a Aery hacia ellos, lo que les inflige de 10 a 50 de daño según el nivel (+0.05 de Poder de Habilidad) (+0.1 de Daño de Ataque adicional). Potenciar o proteger a aliados con habilidades envía a Aery hacia ellos, lo que les otorga de 20 a 100 de escudo según el nivel (+0.05 de Poder de Habilidad) (+0.1 de Daño de Ataque adicional). No puedes volver a enviar a Aery hacia otro campeón hasta que no haya regresado a ti."
+    },
+    "8229": {
+      "id": 8229,
+      "clave": "ArcaneComet",
+      "nombre": "Cometa Arcano",
+      "arbol": "Sorcery",
+      "fila": 0,
+      "corta": "Dañar a un campeón con una habilidad desata un cometa que inflige daño en su ubicación.",
+      "larga": "Al infligir daño a un campeón con una habilidad, le disparas un cometa y le infliges una cantidad de daño que aumenta según la distancia. Daño adaptable: De 15 a 100 según el nivel (+ 0.05 de Poder de Habilidad y + 0.1 de Daño de Ataque adicional) Enfriamiento: De 20 a 8 seg La amplificación de daño aumenta hasta un 100% cuando el cometa recorre una distancia de 750."
+    },
+    "8230": {
+      "id": 8230,
+      "clave": "PhaseRush",
+      "nombre": "Arrebato del Cabalgatormentas",
+      "arbol": "Sorcery",
+      "fila": 0,
+      "corta": "Al infligir un 25% de la Vida Máxima de un campeón como daño, obtienes un aumento súbito de velocidad de movimiento y resistencia a ralentizaciones.",
+      "larga": "Al infligir un 25% de la Vida Máxima de un campeón como daño en un lapso de 3 seg, obtienes un 48% de Velocidad de Movimiento y un 50% de resistencia a ralentizaciones durante 4 seg. La bonificación de velocidad de movimiento tiene un 75% de eficacia para campeones a distancia. Enfriamiento: De 20 a 10 seg"
+    },
+    "8992": {
+      "id": 8992,
+      "clave": "DeathfireTouch",
+      "nombre": "Toque de la Muerte Ígnea",
+      "arbol": "Sorcery",
+      "fila": 0,
+      "corta": "Al infligir daño a un campeón con una habilidad, lo quemas de forma prolongada.",
+      "larga": "Al infligir daño a un campeón con una habilidad, lo quemas, lo que le inflige entre 3 y 12 según el nivel (+ 2.5% de Poder de Habilidad) (+ 7% de Daño de Ataque adicional) de daño mágico por seg. Luego de 3 seg, el daño de la quemadura aumenta un 75% mientras el objetivo esté bajo el efecto. Duración: Objetivo único: 4 seg Área de efecto: 2 seg Daño prolongado: 1 seg"
+    },
+    "8224": {
+      "id": 8224,
+      "clave": "NullifyingOrb",
+      "nombre": "Arcanista Axiomático",
+      "arbol": "Sorcery",
+      "fila": 1,
+      "corta": "Tu definitiva tiene daño, curaciones y escudos aumentados. Derribar a un campeón enemigo reduce el enfriamiento actual de tu definitiva.",
+      "larga": "Tu definitiva tiene un 12% de daño, curaciones y escudos aumentados. (El daño de área de efecto se reduce a un 8% de aumento). Derribar a un campeón enemigo reduce el enfriamiento actual de tu definitiva en un 7%."
+    },
+    "8226": {
+      "id": 8226,
+      "clave": "ManaflowBand",
+      "nombre": "Anillo de Flujo de Maná",
+      "arbol": "Sorcery",
+      "fila": 1,
+      "corta": "Alcanzar a un campeón con una habilidad incrementa permanentemente tu maná máximo por 25, hasta 250 de maná. Después de alcanzar 250 de maná adicional, restaura 1% de tu maná faltante cada 5 seg.",
+      "larga": "Alcanzar a un campeón con una habilidad incrementa permanentemente tu maná máximo por 25, hasta 250 de maná. Después de alcanzar 250 de maná adicional, restaura 1% de tu maná faltante cada 5 seg. Enfriamiento: 15 seg."
+    },
+    "8275": {
+      "id": 8275,
+      "clave": "NimbusCloak",
+      "nombre": "Capa del Nimbo",
+      "arbol": "Sorcery",
+      "fila": 1,
+      "corta": "Después de lanzar un hechizo de invocador, obtienes un breve aumento de velocidad de movimiento que te permite atravesar unidades.",
+      "larga": "Después de lanzar un Hechizo de Invocador, obtienes un aumento de velocidad de movimiento que dura 2 seg y que te permite atravesar unidades. Aumento: Del 15% al 45% de Velocidad de Movimiento, según el enfriamiento del hechizo de invocador. (Entre mayor enfriamiento tenga el Hechizo de Invocador, más alto será el aumento de velocidad de movimiento)."
+    },
+    "8210": {
+      "id": 8210,
+      "clave": "Transcendence",
+      "nombre": "Trascendencia",
+      "arbol": "Sorcery",
+      "fila": 2,
+      "corta": "Otorga efectos adicionales tras alcanzar los siguientes niveles: Nivel 5: +5 de Aceleración de Habilidad Nivel 8: +5 de Aceleración de Habilidad Nivel 11: Al lograr derribos de campeones, reduce el enfriamiento restante de habilidades básicas un 20%.",
+      "larga": "Otorga bonus al alcanzar los siguientes niveles: Nivel 5: +5 de Aceleración de Habilidad Nivel 8: +5 de Aceleración de Habilidad Nivel 11: Con el derribo de un campeón, reduce el enfriamiento restante de las habilidades básicas en un 20%."
+    },
+    "8234": {
+      "id": 8234,
+      "clave": "Celerity",
+      "nombre": "Celeridad",
+      "arbol": "Sorcery",
+      "fila": 2,
+      "corta": "Todos los efectos de velocidad de movimiento adicional son un 7% más efectivos para ti y obtienes un 1% de Velocidad de Movimiento.",
+      "larga": "Todos los efectos de velocidad de movimiento adicional son un 7% más efectivos para ti y obtienes un 1% de Velocidad de Movimiento."
+    },
+    "8233": {
+      "id": 8233,
+      "clave": "AbsoluteFocus",
+      "nombre": "Concentración Absoluta",
+      "arbol": "Sorcery",
+      "fila": 2,
+      "corta": "Al tener más del 70% de vida, obtienes daño adaptable adicional.",
+      "larga": "Al tener más del 70% de vida, obtienes una bonificación adaptable de hasta 18 de daño de ataque o 30 de poder de habilidad (según el nivel). Otorga 1.8 de Daño de Ataque o 3 de Poder de Habilidad en el nivel 1."
+    },
+    "8237": {
+      "id": 8237,
+      "clave": "Scorch",
+      "nombre": "Quemadura",
+      "arbol": "Sorcery",
+      "fila": 3,
+      "corta": "El primer impacto de habilidad cada 10 seg quema a los campeones.",
+      "larga": "Tu siguiente impacto de habilidad ofensiva prenderá fuego a los campeones, lo que inflige de 20 a 40 de daño mágico adicional según el nivel después de 1 seg. Enfriamiento: 10 seg"
+    },
+    "8232": {
+      "id": 8232,
+      "clave": "Waterwalking",
+      "nombre": "Caminata Sobre Agua",
+      "arbol": "Sorcery",
+      "fila": 3,
+      "corta": "Otorga VM y PH o DA adaptable en el río.",
+      "larga": "Otorga 10 de Velocidad de Movimiento y de 13 a 30 de Fuerza Adaptable (según el nivel) al estar en el río. Que seas tan veloz como el río que corre y tan ágil como un cangrejo escurridizo asustado."
+    },
+    "8236": {
+      "id": 8236,
+      "clave": "GatheringStorm",
+      "nombre": "Tormenta Creciente",
+      "arbol": "Sorcery",
+      "fila": 3,
+      "corta": "Otorga cantidades crecientes de DA o PH adaptable durante el progreso de la partida.",
+      "larga": "Cada 10 min, obtienes poder de habilidad o daño de ataque, adaptable. 10 min: + 8 de Poder de Habilidad o 5 de Daño de Ataque 20 min: + 24 de Poder de Habilidad o 14 de Daño de Ataque 30 min: + 48 de Poder de Habilidad o 29 de Daño de Ataque 40 min: + 80 de Poder de Habilidad o 48 de Daño de Ataque 50 min: + 120 de Poder de Habilidad o 72 de Daño de Ataque 60 min: + 168 de Poder de Habilidad o 101 de Daño de Ataque etc..."
+    }
+  }
+}

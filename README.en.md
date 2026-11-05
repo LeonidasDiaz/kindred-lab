@@ -38,6 +38,9 @@ flowchart LR
 - **Editable rules** (`reglas/kindred_runas.json`, `reglas/kindred_objetos.json`): on every patch, `runas
   actualizar` diffs the runes against the previous patch and `reglas validar` flags any rule that points to a rune
   that no longer exists (and suggests the closest one).
+- **Items in two layers:** `objetos actualizar` fills prices and stats from Data Dragon on every patch; the
+  mechanics (`reglas/objetos_mecanicas.json`) are written and verified by hand and record the patch they were
+  verified on. If an item's official description changes, it warns until I review it.
 - **A CSV log that imports never overwrite:** they only append new matches and keep the manual notes (what I
   decided in champion select, free-text notes, matches to exclude).
 - **A post-game routine** (`rutina.ps1`): imports, asks what I decided in champion select, shows the summary and
@@ -124,7 +127,7 @@ own jungle if we're behind at minute 10, and fighting all-in for the 4th dragon 
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-45 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
+73 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
 real responses. GitHub Actions runs them on every push.
 
 ## License and notice

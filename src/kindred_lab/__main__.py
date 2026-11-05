@@ -9,12 +9,16 @@
   python -m kindred_lab partidas importar --riot-id "Nombre#TAG" [--cantidad 10]
   python -m kindred_lab partidas calibrar <match_id> --riot-id "Nombre#TAG" PressTheAttack=3545 ...
   python -m kindred_lab partidas resumen
+  python -m kindred_lab objetos actualizar [--version 16.22.1]
+  python -m kindred_lab objetos verificar 6333
+  python -m kindred_lab objetos migrar              (una sola vez: de referencia/ a la capa manual)
   python -m kindred_lab temprano [--minuto 10]      (extra: primeros minutos, no afecta las runas)
   python -m kindred_lab objetivos [--minuto 20]     (extra: dragones, Barón, torres... por partida)
   python -m kindred_lab jungla [--ultima]           (extra: visión, muertes caras y dónde mueres)
   python -m kindred_lab momentos                    (extra: en qué tramo de 5 min se tuerce la partida)
 """
 import argparse
+import json
 import os
 import sys
 from pathlib import Path
@@ -404,6 +408,57 @@ def cmd_momentos(a) -> int:
     return 0
 
 
+def cmd_objetos_migrar(a) -> int:
+    from . import ddragon, objetos
+    if config.OBJETOS_MECANICAS.exists():
+        print(f"Ya existe {config.OBJETOS_MECANICAS.name}: es la capa manual y no se sobrescribe.", file=sys.stderr)
+        return 1
+    manual = json.loads(config.OBJETOS_REFERENCIA.read_text(encoding="utf-8"))
+    version = config.OBJETOS_VERSION_REFERENCIA
+    dd = ddragon.descargar(version, config.IDIOMA, objetos.ARCHIVO_DDRAGON)["data"]
+    capa, informe = objetos.migrar(manual, dd, version)
+    objetos.guardar_capa(capa)
+    config.OBJETOS_INFORME.write_text(objetos.informe_markdown(informe), encoding="utf-8")
+    print(f"{informe['total']} objetos migrados a {config.OBJETOS_MECANICAS.name} "
+          f"({informe['con_mecanicas']} con mecánicas).")
+    print(f"{len(informe['discrepancias'])} no coinciden con Data Dragon {version}: "
+          f"lista en {config.OBJETOS_INFORME.name}.")
+    return 0
+
+
+def cmd_objetos_actualizar(a) -> int:
+    from . import objetos
+    res = objetos.actualizar(version=a.version, idioma=a.idioma)
+    objs = list(res["datos"]["objetos"].values())
+    disponibles = sum(1 for o in objs if o["metadata"]["disponible"])
+    print(f"Parche {res['version']}: {len(objs)} objetos en {res['ruta']}")
+    print(f"  {disponibles} comprables en la Grieta; {len(objs) - disponibles} con disponible: false.")
+    c = res["comparacion"]
+    if c is None:
+        print("Primer parche guardado: no hay nada con qué comparar todavía.")
+    else:
+        print(f"Cambios respecto a {c['desde']}: {len(c['stats'])} de estadísticas, {len(c['precio'])} de precio, "
+              f"{len(c['nuevos'])} objetos nuevos, {len(c['quitados'])} quitados.")
+        print(f"Reporte: {res['reporte']}")
+    if res["avisos"]:
+        print(f"\nAVISO: cambió la descripción oficial de {len(res['avisos'])} objetos con mecánicas:")
+        for x in res["avisos"]:
+            print(f"  {x['id']} {x['nombre']} (verificada en {x['parche_verificado']})")
+        print("Revísalos y después: python -m kindred_lab objetos verificar <id>")
+    atrasadas = sum(1 for o in objs if o["mecanicas"] and not o["revisar"] and o["parche_verificado"] != res["version"])
+    if atrasadas:
+        print(f"\n{atrasadas} mecánicas más siguen verificadas en un parche anterior. Sin aviso no significa vigentes: "
+              "la descripción no siempre muestra los números.")
+    return 0
+
+
+def cmd_objetos_verificar(a) -> int:
+    from . import objetos
+    r = objetos.verificar(a.id, a.version)
+    print(f"{r['nombre']}: mecánicas verificadas en el parche {r['version']}.")
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="kindred_lab")
     sub = p.add_subparsers(dest="grupo", required=True)
@@ -467,6 +522,21 @@ def main(argv=None) -> int:
     s.add_argument("--registro", help="Otro CSV en vez de registro/partidas.csv "
                                       "(p. ej. ejemplos/partidas_ejemplo.csv, sin clave de Riot)")
     s.set_defaults(fn=cmd_resumen)
+
+    o = sub.add_parser("objetos", help="Objetos: Data Dragon más la capa manual de mecánicas") \
+        .add_subparsers(dest="cmd", required=True)
+    s = o.add_parser("migrar", help="Crea la capa manual desde referencia/ (una sola vez)")
+    s.set_defaults(fn=cmd_objetos_migrar)
+
+    s = o.add_parser("actualizar", help="Genera los objetos del parche y avisa de las mecánicas por revisar")
+    s.add_argument("--version", help="Por defecto, la última publicada")
+    s.add_argument("--idioma", default=config.IDIOMA)
+    s.set_defaults(fn=cmd_objetos_actualizar)
+
+    s = o.add_parser("verificar", help="Marca las mecánicas de un objeto como revisadas en el parche")
+    s.add_argument("id", help="Id del objeto, p. ej. 6333")
+    s.add_argument("--version", default="latest")
+    s.set_defaults(fn=cmd_objetos_verificar)
 
     s = sub.add_parser("jungla", help="Extra: visión, centinelas antes de objetivos, muertes caras y dónde mueres")
     s.add_argument("--ultima", action="store_true",
