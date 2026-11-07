@@ -29,7 +29,7 @@ if ($nuevas -lt 1) {
     do {
         $alcance = (Read-Host "`nEn la selección, ¿decidiste que alguien te alcanzaba sin fallar en los primeros 5 minutos? (si/no)").Trim().ToLower() -replace "í", "i"
     } until ($alcance -in @("si", "no"))
-    $nota = (Read-Host "Nota (opcional, Enter para omitir)").Trim()
+    $nota = (Read-Host "Lección de la partida (una sola, Enter para omitir)").Trim()
     if ($nota) {
         python -m kindred_lab partidas anotar ultima --alcance $alcance --nota $nota
     } else {

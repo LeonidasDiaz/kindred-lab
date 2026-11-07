@@ -99,6 +99,17 @@ def clase_componente(obj: dict | None) -> str | None:
     return _clase_por_defensas([d for d in _defensas(obj) if not d.startswith("escudo")])
 
 
+def arbol(objetos: dict, id_) -> set[str]:
+    """Todos los componentes de un objeto, a cualquier profundidad, según las rutas de Data Dragon."""
+    salida, pendientes = set(), list(objetos.get(str(id_), {}).get("metadata", {}).get("componentes", []))
+    while pendientes:
+        x = pendientes.pop()
+        if x not in salida:
+            salida.add(x)
+            pendientes += objetos.get(x, {}).get("metadata", {}).get("componentes", [])
+    return salida
+
+
 def compras(eventos: list[dict], pid: int) -> list[dict]:
     """Compras en orden, aplicando ventas y deshacer. ITEM_UNDO: afterId 0 deshace una compra; beforeId 0, una venta."""
     historial = []
@@ -255,10 +266,22 @@ def _sirve(compra_: dict, tipo: str) -> bool:
     return compra_["clase"] in ("general", "ambos", tipo)
 
 
+def _destino(primera: dict, defensivos: list[dict]) -> dict:
+    """Qué pasó con la primera compra útil. Las botas cuentan como objeto terminado, pero se marcan."""
+    if "arbol" in primera:
+        return {"estado": "objeto entero", "termina": primera["nombre"], "botas": primera["botas"]}
+    despues = [d for d in defensivos if d["t"] > primera["t"]]
+    suyos = [d for d in despues if primera["id"] in d["arbol"]]
+    if suyos:
+        return {"estado": "parte del objeto", "termina": suyos[0]["nombre"], "botas": suyos[0]["botas"]}
+    return {"estado": "otro objeto" if despues else "sin terminar", "termina": None, "botas": False}
+
+
 def retraso(lista: list[dict], defensivos: list[dict], fin_ms: int, componentes: tuple = ()) -> dict | None:
     """Del primer enemigo que fue quien más daño hizo en 2 muertes: cuánto tardó un defensivo que sirva contra él.
     Su tipo de daño sale de las muertes hasta esa 2ª, no de lo que hizo después. "componente": la primera compra útil
-    tras esa muerte, sea componente o defensivo completo (a veces se compra el objeto entero de una vez)."""
+    tras esa muerte, sea componente o defensivo completo (a veces se compra el objeto entero de una vez), y si formaba
+    parte del defensivo que terminaste después."""
     cuenta = Counter()
     for m in lista:
         if not m["mas_dano"]:
@@ -279,7 +302,9 @@ def retraso(lista: list[dict], defensivos: list[dict], fin_ms: int, componentes:
     respuestas = sorted((x for x in [*componentes, *utiles] if x["t"] > t2 and _sirve(x, tipo)),
                         key=lambda x: x["t"])
     if respuestas:
-        base["componente"] = {"objeto": respuestas[0]["nombre"], "minutos": (respuestas[0]["t"] - t2) / 60_000}
+        primera = respuestas[0]
+        base["componente"] = {"objeto": primera["nombre"], "minutos": (primera["t"] - t2) / 60_000,
+                              **_destino(primera, defensivos)}
     despues = [d for d in utiles if d["t"] > t2]
     if despues:
         return {**base, "estado": "comprado", "objeto": despues[0]["nombre"], "minutos": (despues[0]["t"] - t2) / 60_000}
@@ -340,6 +365,7 @@ def analizar(partida: dict, timeline: dict, yo: dict, objetos: dict, situaciones
         hay_despues = fin - h["t"] >= MIN_DESPUES_MS
         defensivos.append({
             "id": h["id"], "nombre": nombre, "t": h["t"], "vendido": h["vendido"], "clase": clase,
+            "arbol": arbol(objetos, h["id"]), "botas": bool(obj["metadata"].get("botas")),
             "defensas": _defensas(obj), "perfil_antes": p_antes, "amenaza_antes": amenaza_antes,
             "tipo": coincide_tipo(clase, p_antes),
             "regla": coincide_reglas(nombre, amenaza_antes, enemigos, p_antes, situaciones, ya_tenia),
@@ -351,7 +377,7 @@ def analizar(partida: dict, timeline: dict, yo: dict, objetos: dict, situaciones
                                "ultimo_golpe": sum(1 for m in despues if m["asesino"] == amenaza_antes)}
                               if amenaza_antes else None})
 
-    componentes = [{"t": h["t"], "nombre": objetos[str(h["id"])]["metadata"]["nombre"],
+    componentes = [{"t": h["t"], "id": str(h["id"]), "nombre": objetos[str(h["id"])]["metadata"]["nombre"],
                     "clase": clase_componente(objetos[str(h["id"])]),
                     "defensas": [x for x in _defensas(objetos[str(h["id"])]) if not x.startswith("escudo")]}
                    for h in historial if clase_componente(objetos.get(str(h["id"])))]
@@ -426,6 +452,8 @@ def resumen(analisis: list[dict], tabla: dict) -> dict:
         retrasos = [r["retraso"] for r in xs if r["retraso"]]
         minutos = [x["minutos"] for x in retrasos if x["estado"] == "comprado"]
         componente = [x["componente"]["minutos"] for x in retrasos if x["componente"]]
+        destinos = Counter(x["componente"]["estado"] for x in retrasos if x["componente"])
+        en_botas = sum(1 for x in retrasos if x["componente"] and x["componente"]["botas"])
         muertes_ = [m for r in xs for m in r["muertes"]]
         salida[periodo] = {
             "partidas": len(xs), "con_defensivo": sum(1 for r in xs if r["defensivos"]), "muertes": len(muertes_),
@@ -435,7 +463,8 @@ def resumen(analisis: list[dict], tabla: dict) -> dict:
                         "nunca": sum(1 for x in retrasos if x["estado"] == "nunca"),
                         "componente_partidas": len(componente),
                         "componente_mediana": median(componente) if componente else None,
-                        "sin_respuesta": sum(1 for x in retrasos if x["estado"] == "nunca" and not x["componente"])}}
+                        "sin_respuesta": sum(1 for x in retrasos if x["estado"] == "nunca" and not x["componente"]),
+                        "destinos": destinos, "en_botas": en_botas}}
     return salida
 
 
@@ -519,7 +548,11 @@ def texto_partida(r: dict, tabla: dict) -> list[str]:
         else:
             lineas.append(f"{inicio}ningún defensivo que sirva (quedaban {q['minutos']:.1f} min)")
         if q["componente"]:
-            lineas.append(f"  primera compra útil: {q['componente']['minutos']:.1f} min, {q['componente']['objeto']}")
+            c = q["componente"]
+            destino = {"parte del objeto": f"parte de {c['termina']}", "objeto entero": "objeto entero",
+                       "otro objeto": "no era parte del defensivo que terminé",
+                       "sin terminar": "no terminé ningún defensivo después"}[c["estado"]]
+            lineas.append(f"  primera compra útil: {c['minutos']:.1f} min, {c['objeto']} ({destino})")
         elif q["estado"] == "nunca":
             lineas.append("  primera compra útil: ninguna, ni un componente")
     lineas += ["", "Base = muertes cada 10 min de ese periodo en los mismos minutos; compara, no prueba causa. "
@@ -549,7 +582,10 @@ def texto_resumen(res: dict) -> list[str]:
         lineas += ["", f"Retraso, en {q['partidas']} partidas con un enemigo en 2 muertes: mediana {mediana} "
                        f"({q['comprado']} partidas); ya lo tenía {q['ya']}; nunca {q['nunca']}.",
                    f"Primera compra útil, aunque sea un componente: mediana {comp} ({q['componente_partidas']} partidas); "
-                   f"ni un componente: {q['sin_respuesta']}.", ""]
+                   f"ni un componente: {q['sin_respuesta']}.",
+                   "  De esas compras: " + ", ".join(f"{k} {q['destinos'][k]}" for k in
+                                                     ("parte del objeto", "objeto entero", "otro objeto", "sin terminar"))
+                   + f"; acaban en botas: {q['en_botas']}.", ""]
     lineas += [f"* Menos de {POCOS_CASOS} compras: es anécdota, no cambies una regla por esto.",
                "Base = muertes cada 10 min de ese periodo en los mismos minutos; compara, no prueba causa.",
                "No mezcles periodos: las partidas de febrero a junio son de otra época."]

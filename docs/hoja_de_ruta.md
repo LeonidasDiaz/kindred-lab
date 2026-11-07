@@ -15,3 +15,4 @@ objeto probar en partida) están en la sección "Pendiente" de [hallazgos.md](ha
 | 8 | `partidas resumen` | Mostrar los tiempos de runas (Concentración Absoluta, Caminata Sobre Agua) como % de la partida. | pendiente |
 | 9 | Recalcular hallazgos | Recalcular `hallazgos.md` con todas las partidas cuando termine la prueba de Brujería, no antes. | pendiente |
 | 10 | Oro por carril y jungla | Agregar el oro por carril al minuto 10 y mi jungla contra la suya (campamentos, nivel), si en ~5 partidas sube mi participación temprana en las derrotas y sigo perdiendo. | pendiente |
+| 11 | Guía de compras | Documento generado por `objetos actualizar`, con una tabla por cada objeto de `reglas/kindred_objetos.json` y por Matakrakens y Rey Arruinado: sus componentes, el precio de cada uno y el total, del parche actual, ordenado por "contra qué" (crítico, luchador, asesino AD, AP, daño verdadero, supresión). | pendiente |

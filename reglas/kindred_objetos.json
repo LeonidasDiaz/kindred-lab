@@ -180,6 +180,7 @@
     "La lectura del equipo en la selección decide runas y primer defensivo; los siguientes se deciden por quién te está pegando (marcador), porque el campeón engaña: el 02/11 el equipo parecía 'de AP' y recibí 74% de daño AD.",
     "Si un mismo enemigo te mata 2 o 3 veces, el siguiente objeto es contra él y en las peleas te colocas lejos de él.",
     "Hipótesis: tras la 2ª muerte contra el mismo enemigo, en la siguiente vuelta a base compro un componente defensivo contra él, aunque no me alcance para el objeto completo.",
+    "Hipótesis, cómo se mete en la build: Matakrakens, luego el componente defensivo (solo si el mismo enemigo ya hizo más daño en 2 de mis muertes), luego Rey Arruinado, y al final termino el defensivo de ese componente. El componente tiene que formar parte del objeto que voy a terminar. En jungla, una capa de RM temprana solo cuando un enemigo AP concreto me gana directamente (jungla AP que invade o mid que rota), no porque su equipo tenga mucho AP.",
     "Volver a preguntar '¿quién me mata?' en cada vuelta a base: si un enemigo se dispara (p. ej. Katarina con Mejai, Viego con sus bajas), el siguiente objeto defensivo responde a esa persona aunque el plan inicial fuera otro."
   ]
 }

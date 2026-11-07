@@ -4,13 +4,13 @@ import unittest
 from kindred_lab import defensivo
 
 
-def obj(nombre, final=True, botas=False, precio=3000, desc="", **stats):
+def obj(nombre, final=True, botas=False, precio=3000, desc="", componentes=(), **stats):
     return {"metadata": {"nombre": nombre, "final": final, "botas": botas, "precio": precio,
-                         "descripcion_legible": desc}, "stats_base": stats}
+                         "descripcion_legible": desc, "componentes": list(componentes)}, "stats_base": stats}
 
 
 OBJETOS = {
-    "10": obj("Danza", Armadura_plana=50),
+    "10": obj("Danza", componentes=["23", "22"], Armadura_plana=50),
     "11": obj("Randuin", Armadura_plana=75, Vida_maxima_plana=350),
     "12": obj("Fauces", Resist_Magica_plana=40, desc="Otorga un escudo mágico"),
     "13": obj("Sterak", Vida_maxima_plana=400, desc="Un escudo al bajar de vida"),
@@ -23,6 +23,7 @@ OBJETOS = {
     "20": obj("Tela", final=False, precio=300, Armadura_plana=15),
     "21": obj("Cristal", final=False, precio=400, Vida_maxima_plana=150),
     "22": obj("Espada", final=False, precio=350, desc="un escudo", AD_plano=10),
+    "23": obj("Cota", final=False, precio=800, componentes=["20", "20"], Armadura_plana=30),
 }
 SITUACIONES = [
     {"objeto": "Randuin", "aplica": {"campeones_1": ["Sett", "Jhin"]}},
@@ -110,6 +111,11 @@ class TestClases(unittest.TestCase):
                       "hayas otorgado una curación o un escudo"):
             self.assertEqual(defensivo._defensas(obj("X", desc=texto)), [], texto)
             self.assertIsNone(defensivo.clase_objeto(obj("X", desc=texto)), texto)
+
+    def test_arbol_a_cualquier_profundidad(self):
+        self.assertEqual(defensivo.arbol(OBJETOS, 10), {"23", "22", "20"})
+        self.assertEqual(defensivo.arbol(OBJETOS, 20), set())
+        self.assertEqual(defensivo.arbol(OBJETOS, 999), set())
 
     def test_compras_con_deshacer_y_vender(self):
         ev = [compra(1, 10), {"type": "ITEM_UNDO", "timestamp": 61_000, "participantId": 1, "beforeId": 10, "afterId": 0},
@@ -206,9 +212,15 @@ class TestRetraso(unittest.TestCase):
     def m(self, minuto, nombre, dano):
         return {"t": minuto * 60_000, "mas_dano": nombre, "por_enemigo": {nombre: dano}, "dano": dano}
 
-    def d(self, minuto, clase, nombre="X", vendido=None, defensas=None):
+    def d(self, minuto, clase, nombre="X", vendido=None, defensas=None, arbol=(), botas=False):
         defensas = defensas or {"fisico": ["armadura"], "magico": ["resistencia mágica"], "general": ["vida"]}[clase]
-        return {"t": minuto * 60_000, "clase": clase, "nombre": nombre, "vendido": vendido, "defensas": defensas}
+        return {"t": minuto * 60_000, "clase": clase, "nombre": nombre, "vendido": vendido, "defensas": defensas,
+                "arbol": set(arbol), "botas": botas}
+
+    def c(self, minuto, clase, nombre, id_="20"):
+        d = self.d(minuto, clase, nombre)
+        del d["arbol"], d["botas"], d["vendido"]        # un componente no es un defensivo completo
+        return {**d, "id": id_}
 
     def test_sin_dos_muertes_contra_el_mismo(self):
         self.assertIsNone(defensivo.retraso([self.m(5, "A", [1, 0, 0]), self.m(6, "B", [1, 0, 0])], [], 1_800_000))
@@ -226,25 +238,41 @@ class TestRetraso(unittest.TestCase):
 
     def test_primer_componente_util(self):
         lista = [self.m(5, "A", [9, 0, 0]), self.m(10, "A", [9, 0, 0])]
-        comps = (self.d(4, "fisico", "Antes"), self.d(11, "magico", "No sirve"), self.d(12, "fisico", "Tela"))
-        r = defensivo.retraso(lista, [self.d(16, "fisico", "Danza")], 1_800_000, comps)
-        self.assertEqual(r["componente"], {"objeto": "Tela", "minutos": 2.0})
+        comps = (self.c(4, "fisico", "Antes"), self.c(11, "magico", "No sirve"), self.c(12, "fisico", "Tela"))
+        r = defensivo.retraso(lista, [self.d(16, "fisico", "Danza", arbol=["20"])], 1_800_000, comps)
+        self.assertEqual(r["componente"], {"objeto": "Tela", "minutos": 2.0, "estado": "parte del objeto",
+                                           "termina": "Danza", "botas": False})
         self.assertEqual((r["objeto"], r["minutos"]), ("Danza", 6.0))
 
     def test_objeto_entero_cuenta_como_primera_compra(self):
         lista = [self.m(5, "A", [9, 0, 0]), self.m(10, "A", [9, 0, 0])]
         r = defensivo.retraso(lista, [self.d(16, "fisico", "Danza")], 1_800_000)
-        self.assertEqual(r["componente"], {"objeto": "Danza", "minutos": 6.0})
+        self.assertEqual(r["componente"], {"objeto": "Danza", "minutos": 6.0, "estado": "objeto entero",
+                                           "termina": "Danza", "botas": False})
+
+    def test_destino_de_la_primera_compra(self):
+        lista = [self.m(5, "A", [9, 0, 0]), self.m(10, "A", [9, 0, 0])]
+
+        def destino(*defensivos):
+            c = defensivo.retraso(lista, list(defensivos), 1_800_000, (self.c(12, "fisico", "Tela"),))["componente"]
+            return (c["estado"], c["termina"], c["botas"])
+
+        self.assertEqual(destino(self.d(16, "magico", "Fauces", arbol=["1033"])), ("otro objeto", None, False))
+        self.assertEqual(destino(self.d(16, "fisico", "Punteras", arbol=["20"], botas=True)),
+                         ("parte del objeto", "Punteras", True))
+        # El objeto que ya estaba terminado antes del componente no es su destino
+        self.assertEqual(destino(self.d(11, "magico", "Fauces", arbol=["20"])), ("sin terminar", None, False))
 
     def test_componente_sin_completar_el_objeto(self):
         lista = [self.m(5, "A", [9, 0, 0]), self.m(10, "A", [9, 0, 0])]
-        r = defensivo.retraso(lista, [], 1_800_000, (self.d(13, "fisico", "Tela"),))
-        self.assertEqual((r["estado"], r["componente"]), ("nunca", {"objeto": "Tela", "minutos": 3.0}))
+        r = defensivo.retraso(lista, [], 1_800_000, (self.c(13, "fisico", "Tela"),))
+        self.assertEqual((r["estado"], r["componente"]), ("nunca", {"objeto": "Tela", "minutos": 3.0, "estado": "sin terminar",
+                                                                    "termina": None, "botas": False}))
         self.assertIsNone(defensivo.retraso(lista, [], 1_800_000)["componente"])
 
     def test_ya_lo_tenia_no_busca_componente(self):
         lista = [self.m(5, "A", [9, 0, 0]), self.m(10, "A", [9, 0, 0])]
-        r = defensivo.retraso(lista, [self.d(3, "fisico")], 1_800_000, (self.d(13, "fisico", "Tela"),))
+        r = defensivo.retraso(lista, [self.d(3, "fisico")], 1_800_000, (self.c(13, "fisico", "Tela"),))
         self.assertIsNone(r["componente"])
 
     def test_contra_verdadero_cuenta_vida_o_escudo(self):
@@ -329,6 +357,14 @@ class TestAnalizar(unittest.TestCase):
         r = defensivo.analizar(self.p, frames(muertes_ + vendido), self.yo, OBJETOS, SITUACIONES)
         self.assertEqual(r["defensivos"][1]["regla"]["estado"], "otro objeto")
 
+    def test_componente_y_objeto_que_lo_contiene(self):
+        ev = [muerte(5, 6, golpe(6, f=2000)), muerte(8, 6, golpe(6, f=2000)), compra(10, 20), compra(15, 10)]
+        r = defensivo.analizar(self.p, frames(ev), self.yo, OBJETOS, SITUACIONES)
+        c = r["retraso"]["componente"]
+        self.assertEqual((c["objeto"], c["estado"], c["termina"], c["minutos"]), ("Tela", "parte del objeto", "Danza", 2.0))
+        self.assertIn("primera compra útil: 2.0 min, Tela (parte de Danza)",
+                      "\n".join(defensivo.texto_partida(r, defensivo.tabla_base([r]))))
+
     def test_partida_sin_muertes_ni_defensivos(self):
         r = defensivo.analizar(self.p, frames([]), dict(self.yo, item1=0), OBJETOS, SITUACIONES)
         self.assertIsNone(r["amenaza"])
@@ -381,7 +417,8 @@ class TestBaseYResumen(unittest.TestCase):
         self.assertEqual(f["despues"], 0.5)
         self.assertEqual((f["base_antes"], f["base_despues"]), (2.0, 0.5))
         self.assertEqual(x["retraso"], {"partidas": 1, "mediana": 2.0, "comprado": 1, "ya": 0, "nunca": 0,
-                                        "componente_partidas": 1, "componente_mediana": 2.0, "sin_respuesta": 0})
+                                        "componente_partidas": 1, "componente_mediana": 2.0, "sin_respuesta": 0,
+                                        "destinos": {"objeto entero": 1}, "en_botas": 0})
         texto = "\n".join(defensivo.texto_resumen(res))
         self.assertIn("Danza*", texto)
         self.assertNotIn("victoria", texto.lower())

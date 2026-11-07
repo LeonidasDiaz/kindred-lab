@@ -257,7 +257,10 @@ Lee las mismas timelines guardadas; no descarga nada. No calcula % de victorias 
   primer defensivo cuyo tipo sirva contra él, según su daño hasta ese momento. Contra daño sobre todo verdadero cuenta lo
   que dé vida o escudo, aunque también dé armadura o resistencia mágica; los escudos de un solo tipo (Fauces, Blindadas de Avance) no cuentan. "Ya lo tenía" y "nunca" se cuentan aparte. Además mide la **primera compra útil** tras esa
   muerte, aunque sea un componente barato con armadura, resistencia mágica o vida: sirve para probar la regla de
-  comprar un componente en la siguiente vuelta a base.
+  comprar un componente en la siguiente vuelta a base. También dice qué pasó con esa compra, según las rutas de Data
+  Dragon del último parche: `parte del objeto` (formaba parte del defensivo que terminaste después), `objeto entero`,
+  `otro objeto` (terminaste un defensivo que no la lleva) o `sin terminar`. Las botas cuentan como objeto terminado y
+  el resumen las cuenta aparte.
 - **Efecto:** muertes cada 10 min antes y después, junto a la **base**: la tasa de ese periodo en los mismos minutos.
   Hace falta porque tus muertes suben con los minutos en cualquier partida. Compara, no prueba causa. También cuenta
   las muertes posteriores contra quien era la amenaza al comprar, por más daño y por último golpe.
@@ -309,8 +312,8 @@ propio historial, y se actualiza con:
    .\rutina.ps1
    ```
 
-   Importa (`--cantidad 10`), te pregunta si en la selección decidiste que alguien te alcanzaba (si/no) y una nota
-   opcional, los guarda con `partidas anotar ultima`, muestra `partidas resumen`, luego `jungla --ultima` (tus
+   Importa (`--cantidad 10`), te pregunta si en la selección decidiste que alguien te alcanzaba (si/no) y la lección
+   de la partida (opcional), los guarda con `partidas anotar ultima`, muestra `partidas resumen`, luego `jungla --ultima` (tus
    muertes de la partida que acabas de jugar) y `objetos defensivo --ultima` (tus defensivos en ella). Si la importación falla
    (p. ej. clave caducada) se detiene; si no entró ninguna partida nueva, no anota nada (`ultima` sería la anterior);
    si entraron varias, anota solo la más reciente y te avisa. Al final, si `registro/partidas.csv` cambió, hace

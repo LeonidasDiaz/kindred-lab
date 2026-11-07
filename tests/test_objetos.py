@@ -227,6 +227,13 @@ class TestGenerar(unittest.TestCase):
         self.assertEqual((d["5"]["metadata"]["final"], d["5"]["metadata"]["botas"]), (True, True))
         self.assertFalse(d["3"]["metadata"]["final"])              # sin Data Dragon no se sabe
 
+    def test_componentes(self):
+        self.dd["1"]["from"] = ["5", "5", "6"]
+        d = objetos.generar(self.dd, self.capa, self.ref, "16.22.1")["objetos"]
+        self.assertEqual(d["1"]["metadata"]["componentes"], ["5", "5", "6"])
+        self.assertEqual(d["5"]["metadata"]["componentes"], [])
+        self.assertEqual(d["3"]["metadata"]["componentes"], [])     # sin Data Dragon no se sabe
+
     def test_conserva_capa_manual(self):
         o = self.d["1"]
         self.assertEqual(o["mecanicas"], {"pasiva": {"x": 1}})

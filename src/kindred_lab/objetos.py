@@ -326,7 +326,8 @@ def generar(dd_items: dict, capa: dict, referencia: dict, version: str, idioma: 
         metadata = {"nombre": nombre, "precio": item["gold"]["total"] if item else ref_meta.get("precio"),
                     "descripcion_legible": oficial, "disponible": bool(item and es_comprable(item)),
                     "final": bool(item and not item.get("into")),        # no se mejora en otro objeto
-                    "botas": "Boots" in (item or {}).get("tags", [])}
+                    "botas": "Boots" in (item or {}).get("tags", []),
+                    "componentes": (item or {}).get("from", [])}         # ids directos; pueden repetirse
         if "descripcion_manual" in c:
             metadata["descripcion_manual"] = c["descripcion_manual"]
         metadata.update(c.get("metadata_manual", {}))

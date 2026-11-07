@@ -20,12 +20,14 @@ python -m kindred_lab temprano --minuto 5
 python -m kindred_lab momentos          # cada ~10 partidas: en qué tramo se tuercen tus derrotas
 ```
 
-- Atajo: `.\rutina.ps1` hace las tres primeras (importa, te pregunta `alcance` y una nota opcional, y muestra
+- Atajo: `.\rutina.ps1` hace las tres primeras (importa, te pregunta `alcance` y la lección de la partida, y muestra
   el resumen), después muestra tus muertes de esa partida (`jungla --ultima`: minuto, zona, quién te mató y si
   fue cara), luego tus defensivos (`objetos defensivo --ultima`) y al final hace commit de `registro/partidas.csv`. Si la importación falla o no hay partida nueva,
   no anota nada.
 - Primero `importar`, después `anotar`: si no, `ultima` apunta a la partida anterior.
 - `--alcance` es lo que **decidiste en la selección**, no lo que pasó (eso ya lo guarda `muertes_antes_min10`).
+- En la nota de la rutina, escribe una sola lección por partida, por ejemplo "Fauces bien, Syndra me mataba" o "llegué
+  tarde al componente".
 - No vacíes el CSV para reimportar: perderías tus anotaciones.
 - Cada parche nuevo: `runas actualizar` y `reglas validar`.
 
@@ -173,12 +175,18 @@ Lista completa y editable en [`reglas/kindred_objetos.json`](../reglas/kindred_o
 - **Compro tarde el defensivo, o no lo compro (`objetos defensivo`, 100 partidas, 05/11).** Cuando un enemigo fue quien más daño hizo en 2 de mis muertes, en cerca de la mitad de las partidas nunca compré un defensivo completo útil contra él: 26 de 44 antes del 16.20 y 18 de 38 desde entonces. Cuando lo compré, tardé una mediana de 7.0 min (14 partidas) y 11.6 min (16 partidas) desde esa 2ª muerte. Algunos "nunca" pueden ser partidas que terminaron pronto.
 - **Regla nueva (hipótesis):** tras la 2ª muerte contra el mismo enemigo, en la siguiente vuelta a base compro un componente defensivo contra él, aunque no me alcance para el objeto completo. Punto de partida para probarla, primera compra útil aunque sea un
   componente: mediana de 5.4 min (15 de 44 partidas) antes del 16.20 y 8.3 min (21 de 38) desde entonces; sin ni un
-  componente, 25 y 13 partidas.
+  componente, 25 y 13 partidas. De esas compras desde el 16.20, 13 de 21 eran parte del defensivo que terminé, 3 fueron el
+  objeto entero y 5 quedaron sin terminar. Antes del 16.20 no son comparables: 11 de
+  15 acababan en botas (desde el 16.20, 1 de 21).
   El componente tiene que ser contra el tipo de daño que te mata, y contra daño verdadero solo sirve la vida (Cristal de
   Rubí, Cinturón de Gigante), no la armadura ni la RM. Ejemplo: 03/11, el Sello de Acero contra Sett, que hizo 57% de
   daño verdadero en mis muertes. Al comprarlo, Sett llevaba 89% físico; el daño verdadero llegó después: el Sello fue
   razonable con lo que se sabía en ese momento. Contra campeones que se sabe desde la selección que hacen daño
   verdadero (como Sett), conviene sumar vida.
+  **Cómo se mete en la build:** Matakrakens, luego el componente defensivo (solo si el mismo enemigo ya hizo más daño en 2 de mis muertes),
+  luego Rey Arruinado, y al final termino el defensivo de ese componente. El componente tiene que formar parte del objeto
+  que voy a terminar. En jungla, una capa de RM temprana solo cuando un enemigo AP concreto me gana directamente (jungla
+  AP que invade o mid que rota), no porque su equipo tenga mucho AP.
 - **El último golpe engaña (1 partida, 03/11; `objetos defensivo`).** Sett me dio el último golpe en 6 de 8 muertes, pero fue quien más daño hizo solo en 4: en dos de las otras puso 64 y 342. Ir por Fauces no fue error: Syndra fue quien más daño hizo en mis 2 muertes anteriores, con más de 1000 mágico cada una.
 - **Daño verdadero (1 partida, 03/11).** Sett hizo 57% de daño verdadero en mis muertes (`settw`): contra eso, la armadura no sirve; solo vida y colocación.
 - **Vuelve a preguntar "¿quién me mata?" en cada vuelta a base.** Si un enemigo se dispara (Katarina con
