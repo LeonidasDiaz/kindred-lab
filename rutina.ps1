@@ -11,7 +11,7 @@ function Contar-Partidas {
 
 # 1. Importar
 $antes = Contar-Partidas
-python -m kindred_lab partidas importar --cantidad 10
+python -m kindred_lab partidas importar
 if ($LASTEXITCODE -ne 0) {
     Write-Host "La importación falló (¿caducó la clave de Riot?). No se anota nada para no tocar la partida anterior."
     exit 1
@@ -30,10 +30,17 @@ if ($nuevas -lt 1) {
         $alcance = (Read-Host "`nEn la selección, ¿decidiste que alguien te alcanzaba sin fallar en los primeros 5 minutos? (si/no)").Trim().ToLower() -replace "í", "i"
     } until ($alcance -in @("si", "no"))
     $nota = (Read-Host "Lección de la partida (una sola, Enter para omitir)").Trim()
+    # --nota=... para que una nota que empieza con guion no se lea como opción; PowerShell 5.1 pierde las
+    # comillas dobles al pasar argumentos, así que se cambian por simples.
     if ($nota) {
-        python -m kindred_lab partidas anotar ultima --alcance $alcance --nota $nota
+        python -m kindred_lab partidas anotar ultima --alcance $alcance "--nota=$($nota -replace '"', "'")"
     } else {
         python -m kindred_lab partidas anotar ultima --alcance $alcance
+    }
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "`nNo se pudo anotar la partida (arriba está el error). No se hace commit; anótala a mano:"
+        Write-Host "python -m kindred_lab partidas anotar ultima --alcance $alcance --nota=`"...`""
+        exit 1
     }
 }
 
@@ -71,3 +78,5 @@ try {
 } catch {
     Write-Host "`nAviso: no se pudo hacer el commit del registro ($_). Hazlo a mano con git."
 }
+
+exit 0

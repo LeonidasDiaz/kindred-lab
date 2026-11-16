@@ -53,7 +53,8 @@ class TestPartidas(unittest.TestCase):
     def test_nota_de_dano_cuenta_el_verdadero(self):
         self.partida["info"]["participants"][0]["trueDamageTaken"] = 10000
         f = partidas.fila_desde_partida(self.partida, "yo", self.datos, self.valores, self.timeline)
-        self.assertIn("recibido: 60% físico / 20% mágico / 20% verdadero", f["notas"])
+        self.assertEqual(f["notas_auto"], "recibido: 60% físico / 20% mágico / 20% verdadero")
+        self.assertEqual(f["notas"], "")                       # las notas son solo tuyas
         self.assertEqual(f["dano_que_me_mata"], "AD")        # esta columna sigue comparando físico contra mágico
 
     def test_secundaria_se_ordena_por_fila(self):
@@ -81,18 +82,18 @@ class TestPartidas(unittest.TestCase):
         self.assertEqual(r["Unflinching"], {"var": "var1", "div": 1000})
         self.assertNotIn("Triumph", r)           # sin valor distinto de 0 que coincida
 
-    def test_agregar_migra_encabezado_y_no_duplica(self):
+    def test_agregar_no_duplica_y_conserva_anotaciones(self):
         with tempfile.TemporaryDirectory() as d:
             ruta = Path(d) / "p.csv"
-            vieja = [c for c in partidas.COLUMNAS if c != "match_id"]
-            with ruta.open("w", encoding="utf-8", newline="") as fh:
-                w = csv.writer(fh); w.writerow(vieja); w.writerow(["2026-10-18"] + [""] * (len(vieja) - 1))
+            vieja = dict(partidas.fila_desde_partida(self.partida, "yo", self.datos, self.valores, self.timeline),
+                         match_id="LA1_5", alcance_temprano="si", notas="Ivern mid robó la jungla")
+            partidas.escribir_registro([vieja], ruta)
             f = partidas.fila_desde_partida(self.partida, "yo", self.datos, self.valores, self.timeline)
             self.assertEqual(partidas.agregar([f], ruta), 1)
             self.assertEqual(partidas.agregar([f], ruta), 0)
             filas = partidas.leer_registro(ruta)
-            self.assertEqual(len(filas), 2)
-            self.assertEqual(filas[0]["fecha"], "2026-10-18")
+            self.assertEqual([x["match_id"] for x in filas], ["LA1_5", "LA1_1"])
+            self.assertEqual((filas[0]["alcance_temprano"], filas[0]["notas"]), ("si", "Ivern mid robó la jungla"))
 
     def test_resumen(self):
         f = partidas.fila_desde_partida(self.partida, "yo", self.datos, self.valores, self.timeline)
@@ -159,7 +160,8 @@ class TestCDragon(unittest.TestCase):
         r = partidas.anotar(filas, "ultima", alcance="no", nota="Ivern mid robó la jungla", excluir=True)
         self.assertIs(r, vieja)
         self.assertEqual(r["alcance_temprano"], "no")
-        self.assertTrue(r["notas"].endswith("Ivern mid robó la jungla; excluir"))
+        self.assertTrue(r["notas"].endswith("Ivern mid robó la jungla"))
+        self.assertEqual(r["excluir"], "si")
         res = {(x["campo"], x["runa"]): x for x in partidas.resumen(filas)}
         self.assertEqual(res[("fila_3", "LastStand")]["partidas"], 1)
         partidas.anotar(filas, "LA1_5", excluir=False)
@@ -173,6 +175,184 @@ class TestCDragon(unittest.TestCase):
         corta = dict(f, duracion_min="25.0", valor_fila_3="2000")   # 80/min
         r = {(x["campo"], x["runa"]): x for x in partidas.resumen([larga, corta])}
         self.assertEqual(r[("fila_3", "LastStand")]["por_minuto"], 90.0)
+
+
+class TestRegistroDanado(unittest.TestCase):
+    """Los casos de la revisión del 15/11: un CSV dañado no debe vaciar ni cambiar el registro."""
+
+    def setUp(self):
+        TestPartidas.setUp(self)
+        self.dir = tempfile.TemporaryDirectory()
+        self.addCleanup(self.dir.cleanup)
+        self.ruta = Path(self.dir.name) / "p.csv"
+        self.f = partidas.fila_desde_partida(self.partida, "yo", self.datos, self.valores, self.timeline)
+
+    def escribir(self, encabezado, *filas, delimiter=","):
+        with self.ruta.open("w", encoding="utf-8", newline="") as fh:
+            w = csv.writer(fh, delimiter=delimiter)
+            w.writerow(encabezado)
+            w.writerows(filas)
+        return self.ruta.read_bytes()
+
+    def fila(self, **cambios):
+        return [dict(self.f, **cambios)[c] for c in partidas.COLUMNAS]
+
+    def aborta_sin_tocar(self, antes, texto):
+        with self.assertRaisesRegex(partidas.RegistroInvalido, texto):
+            partidas.agregar([dict(self.f, match_id="LA1_9")], self.ruta)
+        self.assertEqual(self.ruta.read_bytes(), antes)
+
+    def test_guardado_con_punto_y_coma(self):
+        antes = self.escribir(partidas.COLUMNAS, self.fila(), delimiter=";")
+        self.aborta_sin_tocar(antes, "encabezado")
+
+    def test_encabezado_viejo_sin_match_id(self):
+        antes = self.escribir([c for c in partidas.COLUMNAS if c != "match_id"], self.fila()[:-1])
+        self.aborta_sin_tocar(antes, "faltan match_id")
+
+    def test_coma_sin_comillas_en_una_nota(self):
+        fila = self.fila(notas="Fauces bien", match_id="LA1_2")
+        i = partidas.COLUMNAS.index("notas")
+        antes = self.escribir(partidas.COLUMNAS, fila[:i] + ["Fauces bien", "Syndra me mataba"] + fila[i + 1:])
+        self.aborta_sin_tocar(antes, "más campos")
+
+    def test_match_id_invalido_o_repetido(self):
+        antes = self.escribir(partidas.COLUMNAS, self.fila(match_id="Syndra me mataba"))
+        self.aborta_sin_tocar(antes, "match_id inválido")
+        antes = self.escribir(partidas.COLUMNAS, self.fila(match_id="LA1_2"), self.fila(match_id="LA1_2"))
+        self.aborta_sin_tocar(antes, "repetido")
+
+    def test_valores_manuales_inesperados(self):
+        for columna, valor in (("excluir", "sí"), ("excluir", "x"), ("excluir", "1"), ("alcance_temprano", "quizá"),
+                               ("alcance_temprano", "Sí")):
+            antes = self.escribir(partidas.COLUMNAS, self.fila(match_id="LA1_2", **{columna: valor}))
+            self.aborta_sin_tocar(antes, f"{columna} = {valor!r}")
+
+    def test_valores_manuales_validos(self):
+        self.escribir(partidas.COLUMNAS, self.fila(match_id="LA1_2", excluir="si", alcance_temprano="no"),
+                      self.fila(match_id="LA1_3", excluir="", alcance_temprano="si"),
+                      self.fila(match_id="LA1_4", excluir=" si ", alcance_temprano=""))
+        self.assertEqual([partidas.es_excluida(f) for f in partidas.leer_registro(self.ruta)], [True, False, True])
+
+    def test_archivo_vacio(self):
+        self.ruta.write_bytes(b"")
+        self.aborta_sin_tocar(b"", "encabezado")
+
+    def test_conserva_columnas_agregadas_a_mano(self):
+        self.escribir(partidas.COLUMNAS + ["rival_jungla"], self.fila(match_id="LA1_2") + ["Kayn"])
+        self.assertEqual(partidas.agregar([self.f], self.ruta), 1)
+        filas = partidas.leer_registro(self.ruta)
+        self.assertEqual([x["rival_jungla"] for x in filas], ["Kayn", ""])
+        with self.ruta.open(encoding="utf-8", newline="") as fh:
+            self.assertEqual(next(csv.reader(fh))[-1], "rival_jungla")
+
+    def test_escritura_atomica_con_respaldo(self):
+        partidas.escribir_registro([dict(self.f, match_id="LA1_2", notas="primera")], self.ruta)
+        self.assertFalse(self.ruta.with_name("p.csv.bak").exists())          # no había nada que respaldar
+        antes = self.ruta.read_bytes()
+        partidas.escribir_registro([dict(self.f, match_id="LA1_2", notas="segunda")], self.ruta)
+        self.assertEqual(self.ruta.with_name("p.csv.bak").read_bytes(), antes)
+        self.assertEqual(partidas.leer_registro(self.ruta)[0]["notas"], "segunda")
+        self.assertEqual(sorted(p.name for p in Path(self.dir.name).iterdir()), ["p.csv", "p.csv.bak"])
+
+    def test_error_al_escribir_no_toca_el_registro(self):
+        partidas.escribir_registro([dict(self.f, match_id="LA1_2")], self.ruta)
+        antes = self.ruta.read_bytes()
+
+        from unittest import mock
+        nuevas = [dict(self.f, match_id=f"LA1_{i}") for i in range(2, 60)]
+        with mock.patch.object(partidas.os, "fsync", side_effect=OSError("disco lleno")):   # temporal ya escrito
+            with self.assertRaises(OSError):
+                partidas.escribir_registro(nuevas, self.ruta)
+        self.assertEqual(self.ruta.read_bytes(), antes)
+        self.assertFalse(self.ruta.with_name("p.csv.tmp").exists())
+
+    def test_no_escribe_filas_que_luego_no_se_podrian_leer(self):
+        partidas.escribir_registro([dict(self.f, match_id="LA1_2")], self.ruta)
+        antes = self.ruta.read_bytes()
+        with self.assertRaises(partidas.RegistroInvalido):
+            partidas.escribir_registro([dict(self.f, match_id="LA1_2"), dict(self.f, match_id="LA1_2")], self.ruta)
+        self.assertEqual(self.ruta.read_bytes(), antes)
+
+    def test_excluir_ya_no_es_una_subcadena_de_la_nota(self):
+        partidas.escribir_registro([dict(self.f, match_id="LA1_2", notas="no excluir, fue partida normal")], self.ruta)
+        fila = partidas.leer_registro(self.ruta)[0]
+        self.assertFalse(partidas.es_excluida(fila))
+        partidas.anotar([fila], "LA1_2", excluir=True)
+        self.assertEqual((fila["excluir"], fila["notas"]), ("si", "no excluir, fue partida normal"))
+        partidas.anotar([fila], "LA1_2", excluir=False)
+        self.assertEqual((fila["excluir"], fila["notas"]), ("", "no excluir, fue partida normal"))
+
+    def test_registro_viejo_migra_excluir_desde_las_notas(self):
+        vieja = [c for c in partidas.COLUMNAS if c not in ("excluir", "notas_auto")]
+        filas = [dict(self.f, match_id="LA1_2", notas="recibido: 70% AD / 30% AP; Ivern robó; excluir"),
+                 dict(self.f, match_id="LA1_3", notas="recibido: 70% AD / 30% AP; no excluir, fue normal"),
+                 dict(self.f, match_id="LA1_4", notas="excluir: mid AFK")]
+        antes = self.escribir(vieja, *[[f[c] for c in vieja] for f in filas])
+        a, b, c = partidas.leer_registro(self.ruta)
+        self.assertEqual((a["excluir"], a["notas_auto"], a["notas"]), ("si", "recibido: 70% AD / 30% AP", "Ivern robó"))
+        self.assertEqual((b["excluir"], b["notas"]), ("", "no excluir, fue normal"))
+        self.assertEqual((c["excluir"], c["notas_auto"], c["notas"]), ("", "", "excluir: mid AFK"))   # solo el exacto
+        self.assertEqual(self.ruta.read_bytes(), antes)                             # leer no reescribe
+        partidas.agregar([], self.ruta)
+        with self.ruta.open(encoding="utf-8", newline="") as fh:
+            self.assertEqual(next(csv.reader(fh)), partidas.COLUMNAS)
+
+    def test_registro_con_excluir_pero_sin_notas_auto(self):
+        vieja = [c for c in partidas.COLUMNAS if c != "notas_auto"]
+        self.escribir(vieja, [dict(self.f, match_id="LA1_2", notas="recibido: 1% AD / 99% AP; lección", excluir="si")[c]
+                              for c in vieja])
+        fila = partidas.leer_registro(self.ruta)[0]
+        self.assertEqual((fila["notas_auto"], fila["notas"], fila["excluir"]), ("recibido: 1% AD / 99% AP", "lección", "si"))
+
+    def test_recalcular_solo_toca_lo_automatico(self):
+        vieja = dict(self.f, match_id="LA1_2", kda="0/0/0", notas_auto="recibido: 70% AD / 30% AP",
+                     alcance_temprano="si", notas="Fauces bien, Syndra me mataba", excluir="si", rival_jungla="Kayn")
+        sin_cache = dict(self.f, match_id="LA1_3", kda="9/9/9", notas="mía")
+        filas = [vieja, sin_cache]
+        nueva = dict(self.f, match_id="LA1_2", alcance_temprano="", notas="", excluir="")
+        r = partidas.recalcular(filas, lambda mid: nueva if mid == "LA1_2" else None)
+        self.assertEqual(vieja["kda"], "11/7/20")
+        self.assertEqual(vieja["notas_auto"], "recibido: 75% físico / 25% mágico / 0% verdadero")
+        self.assertEqual((vieja["alcance_temprano"], vieja["notas"], vieja["excluir"], vieja["rival_jungla"]),
+                         ("si", "Fauces bien, Syndra me mataba", "si", "Kayn"))
+        self.assertEqual(vieja["muertes_antes_min10"], "1")              # se guarda como texto, como al leer
+        self.assertEqual(sin_cache["kda"], "9/9/9")
+        self.assertEqual(r["sin_cache"], ["LA1_3"])
+        self.assertIn(("LA1_2", "kda", "0/0/0", "11/7/20"), r["cambios"])
+        self.assertFalse(any(c in ("alcance_temprano", "notas", "excluir", "match_id") for _, c, _, _ in r["cambios"]))
+
+    def test_recalcular_sin_cambios_no_cambia_nada(self):
+        fila = {c: str(v) for c, v in dict(self.f, match_id="LA1_2").items()}
+        r = partidas.recalcular([fila], lambda mid: dict(self.f, match_id=mid))
+        self.assertEqual(r["cambios"], [])
+
+    def test_nunca_deja_menos_partidas(self):
+        filas = [dict(self.f, match_id=f"LA1_{i}", notas=f"nota {i}") for i in range(2, 9)]
+        partidas.escribir_registro(filas, self.ruta)
+        antes = self.ruta.read_bytes()
+        for pocas in ([], filas[:3], [dict(self.f, match_id="LA1_99")]):
+            with self.assertRaisesRegex(partidas.RegistroInvalido, "se perderían"):
+                partidas.escribir_registro(pocas, self.ruta)
+            self.assertEqual(self.ruta.read_bytes(), antes)
+
+    def test_quitar_partidas_a_proposito(self):
+        filas = [dict(self.f, match_id=f"LA1_{i}") for i in range(2, 5)]
+        partidas.escribir_registro(filas, self.ruta)
+        with self.assertRaises(partidas.RegistroInvalido):          # quitar una no autoriza quitar otra
+            partidas.escribir_registro(filas[:1], self.ruta, quitar=frozenset({"LA1_3"}))
+        partidas.escribir_registro(filas[:2], self.ruta, quitar=frozenset({"LA1_4"}))
+        self.assertEqual([f["match_id"] for f in partidas.leer_registro(self.ruta)], ["LA1_2", "LA1_3"])
+
+    def test_ida_y_vuelta_de_notas_dificiles(self):
+        notas = ['dijo "gg", y se fue', "línea 1\nlínea 2", "retorno\rsuelto", "  espacios  ", "Kayn 🐺; Ekko"]
+        filas = [dict(self.f, match_id=f"LA1_{i}", notas=n) for i, n in enumerate(notas, start=2)]
+        partidas.escribir_registro(filas, self.ruta)
+        self.assertEqual([f["notas"] for f in partidas.leer_registro(self.ruta)], notas)
+
+    def test_orden_de_columnas_distinto_se_acepta(self):
+        self.escribir(list(reversed(partidas.COLUMNAS)), list(reversed(self.fila(match_id="LA1_2"))))
+        self.assertEqual(partidas.leer_registro(self.ruta)[0]["match_id"], "LA1_2")
 
 
 class TestRegistroEjemplo(unittest.TestCase):

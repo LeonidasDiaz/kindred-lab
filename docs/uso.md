@@ -126,16 +126,30 @@ python -m kindred_lab objetos verificar 6333          # ya revisé las mecánica
 **Importar:**
 
 ```powershell
-python -m kindred_lab partidas importar --cantidad 10
+python -m kindred_lab partidas importar
 ```
 
 - Por defecto trae Solo/Dúo (`--cola 420`) y solo Kindred (`--campeon Kindred`; `--campeon ""` para todos).
-  LAN se consulta por la región `americas`. `--cantidad` cuenta partidas de la cola antes de filtrar por campeón.
-- No duplica partidas (usa `match_id`) y migra un CSV viejo sin esa columna.
+  LAN se consulta por la región `americas`.
+- Pide tus partidas de la cola de la más reciente hacia atrás, por páginas de 20, y se detiene en la primera que ya
+  está en el registro: no se pierden partidas aunque juegues muchas entre una importación y otra. `--cantidad` (100
+  por defecto) es el máximo a revisar; si llega a él, o se acaba el historial, sin encontrar ninguna registrada, avisa
+  de que puede haber partidas más viejas sin importar. Cuenta partidas de la cola antes de filtrar por campeón.
+- `--completo` revisa las `--cantidad` partidas más recientes sin detenerse en las registradas: sirve para rellenar
+  huecos, por ejemplo partidas de Kindred que el viejo `--cantidad 10` dejó sin importar. Córrelo una vez con
+  `python -m kindred_lab partidas importar --completo --cantidad 300`; las que ya están en caché no gastan llamadas.
+- No duplica partidas (usa `match_id`). Cada escritura del registro va primero a un temporal, se comprueba y
+  reemplaza el archivo de una vez; la versión anterior queda en `registro/partidas.csv.bak`. Antes de escribir, comprueba el registro: si el encabezado no es el
+  esperado (por ejemplo, guardado con `;` desde Excel), una fila tiene campos de más (una coma sin comillas en una
+  nota) o un `match_id` falta, no tiene esa forma o se repite, se detiene sin escribir nada y dice en qué línea.
+  Las columnas que agregues a mano se conservan, al final. Si editas el CSV a mano, `excluir` solo acepta vacío o
+  `si`, y `alcance_temprano` vacío, `si` o `no` (sin acento): otro valor detiene la lectura y dice la línea.
 - Se llenan solos: fecha (tu hora local), parche (`16.21`), resultado, duración, KDA, enemigos, runas,
-  hechizos de invocador (p. ej. `Fantasma+Castigo`; las partidas viejas se completan solas desde la caché), muertes antes del minuto 10, daño que más recibiste (AD/AP en `dano_que_me_mata`; físico, mágico y verdadero en `notas`) y los valores
+  hechizos de invocador (p. ej. `Fantasma+Castigo`; las partidas viejas se completan solas desde la caché), muertes antes del minuto 10, daño que más recibiste (AD/AP en `dano_que_me_mata`; físico, mágico y verdadero en `notas_auto`) y los valores
   de cada runa (`valor_*`, más `estadisticas_runas` con todos sus números).
-- Siguen siendo manuales `alcance_temprano` y tus notas.
+- Siguen siendo manuales `alcance_temprano`, `notas` (solo tuyas) y `excluir`. Un registro anterior al 15/11/2026
+  se migra solo al escribirlo: lo automático de `notas` ("recibido: …") pasa a `notas_auto` y la marca `excluir`, a
+  su columna.
 - La API da las runas secundarias en el orden en que las elegiste; se guardan ordenadas por fila.
 
 **Valores de runa.** Riot guarda los números de cada runa en `var1/var2/var3` sin decir cuál es cuál.
@@ -149,8 +163,20 @@ python -m kindred_lab partidas calibrar LA1_1234567890 LethalTempo=320
 ```
 
 Guarda en `reglas/valores_runas.json` lo que coincida y, a partir de ahí, ese valor manda sobre Community Dragon.
-El `match_id` está en la última columna de `registro/partidas.csv`. Después de calibrar, para recalcular partidas
-ya importadas deja el CSV solo con su encabezado y vuelve a correr `importar` (las partidas están en caché).
+El `match_id` está en la última columna de `registro/partidas.csv`. Después de calibrar, recalcula las partidas ya
+importadas con `partidas recalcular` (abajo).
+
+**Recalcular (sin red):**
+
+```powershell
+python -m kindred_lab partidas recalcular --simular     # muestra qué cambiaría, sin escribir
+python -m kindred_lab partidas recalcular
+```
+
+Vuelve a calcular desde la caché de `data/raw/riot/` todas las columnas automáticas de cada partida (runas, valores,
+hechizos, `notas_auto`...) y las reemplaza en el registro. No toca `alcance_temprano`, `notas`, `excluir`, `match_id`
+ni las columnas que agregaste a mano. Las partidas sin caché se dejan igual y se listan. Necesita `perks_es_mx.json`
+de Community Dragon en `data/raw/cdragon/` (lo baja `importar` la primera vez); si falta, no cambia nada.
 
 **Anotar (sin abrir el CSV):**
 
@@ -160,7 +186,7 @@ python -m kindred_lab partidas anotar LA1_1234567890 --alcance si
 python -m kindred_lab partidas anotar ultima --incluir      # quita la marca de excluir
 ```
 
-`ultima` es la partida más reciente del registro. `--excluir` añade la palabra `excluir` a las notas y el
+`ultima` es la partida más reciente del registro. `--excluir` pone `si` en la columna `excluir` y el
 resumen ignora esa partida (para partidas donde un compañero sabotea, abandonos, etc.). Después de anotar,
 **no vacíes el CSV para reimportar**: perderías las anotaciones. `importar` ya agrega solo las partidas nuevas.
 
@@ -280,10 +306,11 @@ tus muertes, tus muertes en tu jungla, tus participaciones en bajas, cuánto oro
 ese tramo y la diferencia de oro al final del tramo. Al final, en qué tramo cada derrota quedó atrás en oro
 para ya no recuperarse. Sirve para buscar la causa antes del Barón o del 4º dragón, que suelen ser la consecuencia.
 
-## Publicar (repositorio público)
+## Publicación
+Este repositorio de trabajo es privado: guarda tu registro de partidas.
 
-Este repositorio es privado: guarda tu registro de partidas. La versión pública vive en otra carpeta con su
-propio historial, y se actualiza con:
+La versión pública (`LeonidasDiaz/kindred-lab`) vive en otra carpeta con su propio historial y **solo** se actualiza
+con `publicar.ps1`; nunca la agregues como remoto de este repositorio:
 
 ```powershell
 .\publicar.ps1                                   # destino: ..\kindred-lab-publico
@@ -294,6 +321,10 @@ propio historial, y se actualiza con:
   licencia y workflow). Nunca copia `registro/`, `secretos.json`, `data/raw/`, `CLAUDE.md` ni `publicar.ps1`.
 - Es un espejo: lo que sale de la lista blanca desaparece del público en la siguiente publicación.
 - Quita los match_id reales entre paréntesis (p. ej. en `hallazgos.md`).
+- Quita lo que solo vale aquí: los bloques entre las marcas `solo-privado` y `/solo-privado` (comentarios HTML en
+  Markdown, `#` en PowerShell), como el nombre del respaldo en este manual y el push de `rutina.ps1`, y convierte en
+  texto los enlaces a `docs/revisiones/`, que no se publica. Si después quedara el nombre del repositorio privado,
+  una marca o uno de esos enlaces, no publica.
 - Antes del commit busca tu clave, tu Riot ID (sin espacios ni mayúsculas), match_id reales, tus correos privados
   (todos los de autor del historial privado menos el `noreply`, aunque cambies tu `user.email`) y
   cualquier `RGAPI-` con forma de clave; si encuentra algo, no publica y solo dice en qué archivo.
@@ -312,7 +343,7 @@ propio historial, y se actualiza con:
    .\rutina.ps1
    ```
 
-   Importa (`--cantidad 10`), te pregunta si en la selección decidiste que alguien te alcanzaba (si/no) y la lección
+   Importa (hasta la primera partida ya registrada), te pregunta si en la selección decidiste que alguien te alcanzaba (si/no) y la lección
    de la partida (opcional), los guarda con `partidas anotar ultima`, muestra `partidas resumen`, luego `jungla --ultima` (tus
    muertes de la partida que acabas de jugar) y `objetos defensivo --ultima` (tus defensivos en ella). Si la importación falla
    (p. ej. clave caducada) se detiene; si no entró ninguna partida nueva, no anota nada (`ultima` sería la anterior);

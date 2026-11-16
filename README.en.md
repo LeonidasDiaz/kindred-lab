@@ -42,7 +42,7 @@ flowchart LR
   mechanics (`reglas/objetos_mecanicas.json`) are written and verified by hand and record the patch they were
   verified on. If an item's official description or a number in the game files (Community Dragon) changes, it warns until I review it.
 - **A CSV log that imports never overwrite:** they only append new matches and keep the manual notes (what I
-  decided in champion select, free-text notes, matches to exclude).
+  decided in champion select, free-text notes, matches to exclude). `partidas recalcular` rebuilds only the automatic columns from the cache.
 - **A post-game routine** (`rutina.ps1`): imports, asks what I decided in champion select, shows the summary,
   my deaths and my defensive items in that match, and commits the log to git.
 - **Each analysis is its own module and command** (`temprano`, `objetivos`, `jungla`, `momentos`,
@@ -102,25 +102,28 @@ who killed me, and whether it was "expensive" (*cara*: within 90 seconds before 
 
 ## What I found
 
-From 93 Solo/Duo matches (February to October 2026). These are trends, not laws; the details and the rules that
-came out of them are in [docs/hallazgos.md](docs/hallazgos.md) (Spanish).
+From 95 Solo/Duo matches (February to October 2026). These are trends, not laws; the details and the rules that
+came out of them are in [docs/hallazgos.md](docs/hallazgos.md) (Spanish). A review on 15/11 recomputed these
+numbers and corrected three conclusions that didn't hold; the ones below are the corrected versions.
 
-- **Baron and the 4th dragon decide my long games.** When my team takes the first Baron I win 82%; when the enemy
-  does, 12%. With 4 dragons, 83% vs. 9%. The **first** dragon barely matters: the enemy gets it in 2 of every 3
-  matches and I still win half of them.
-- **I lose because of when and where I die, not because of vision.** My vision score per minute is almost the
-  same in wins and losses (1.47 vs. 1.34). What changes: 4.7 deaths per match in wins vs. 7.7 in losses, and **2.2
-  deaths in my own jungle** in losses vs. 0.8 in wins.
-- **Two moments:** half of my losses are already behind in gold at minute 5 (lanes, not me), but the big gap opens
-  **between minutes 10 and 20**, and that part is on me: I die 4 times more in my own jungle and take part in
-  about half as many kills.
-- **Runes matter much less than that, and comparing runes is misleading.** Domination looked better than Resolve
+- **Baron and the 4th dragon go with games I was already winning.** When my team takes the first Baron I win 82%;
+  when the enemy does, 12%. But team gold at minute 20, before Baron spawns, predicts almost the same (82% vs.
+  18%): there's no way to tell whether it's a cause. The **first** dragon is barely related to the result.
+- **In my losses I die more, and more in my own jungle; vision barely changes.** My vision score per minute is almost the
+  same in wins and losses (1.46 vs. 1.34). What changes: 4.6 deaths per match in wins vs. 7.7 in losses, and **2.2
+  deaths in my own jungle** in losses vs. 0.8 in wins, most of them in fights (41 of 62, minutes 10 to 30). If I die in the 90 seconds before a dragon
+  or Baron, the enemy takes it 68% of the time, vs. 46% if I'm alive.
+- **Minute 5 doesn't decide, and losses are decided early as often as late.** Before minute 5 I take part in the
+  same share of my team's kills in wins and losses (44% and 45%). By minute 15, 21 of 43 losses were already more
+  than 1,000 gold behind for good, but another 19 hadn't tipped either way by minute 20.
+- **No difference from runes has been measured, and comparing runes is misleading.** Domination looked better than Resolve
   (59% vs. 43% win rate), but most of it came from a good streak in March, and in October I only picked it in easy
-  matches. Within the same month the gap almost disappears. Lesson: **split by period and by type of match before
+  matches. Within the same month the gap almost disappears, and with these matches the margin is about ±23
+  points. Lesson: **split by period and by type of match before
   drawing conclusions**.
 
-That turned into concrete rules: one question in champion select to pick the secondary tree, no solo farming in my
-own jungle if we're behind at minute 10, and fighting all-in for the 4th dragon and Baron.
+That turned into concrete rules: one question in champion select to pick the secondary tree, not dying in the 90
+seconds before a dragon or Baron, and buying the defensive item sooner against whoever is killing me.
 
 What's next: [roadmap](docs/hoja_de_ruta.md) (in Spanish).
 
@@ -130,7 +133,7 @@ What's next: [roadmap](docs/hoja_de_ruta.md) (in Spanish).
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-130 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
+160 offline tests: the matches, timelines and Community Dragon data under `tests/` are synthetic, shaped like the
 real responses. GitHub Actions runs them on every push.
 
 ## License and notice

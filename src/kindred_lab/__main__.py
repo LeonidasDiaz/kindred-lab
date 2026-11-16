@@ -6,8 +6,9 @@
   python -m kindred_lab runas arbol Precision
   python -m kindred_lab runas versiones
   python -m kindred_lab reglas validar
-  python -m kindred_lab partidas importar --riot-id "Nombre#TAG" [--cantidad 10]
+  python -m kindred_lab partidas importar --riot-id "Nombre#TAG" [--cantidad 100]
   python -m kindred_lab partidas calibrar <match_id> --riot-id "Nombre#TAG" PressTheAttack=3545 ...
+  python -m kindred_lab partidas recalcular [--simular]   (sin red: columnas automáticas desde la caché)
   python -m kindred_lab partidas resumen
   python -m kindred_lab objetos actualizar [--version 16.22.1]
   python -m kindred_lab objetos verificar 6333
@@ -111,8 +112,17 @@ def cmd_importar(a) -> int:
     except OSError as e:
         estad = {}
         print(f"Aviso: no se pudo bajar perks.json de Community Dragon ({e}); solo se usan valores calibrados.")
+    conocidos = {f["match_id"] for f in partidas.leer_registro()}   # también valida el registro antes de bajar nada
     pu = riot.puuid(_riot_id(a), a.region)
-    ids = riot.ids_partidas(pu, a.cantidad, a.cola, a.region)
+    ids, motivo = riot.ids_nuevas(pu, conocidos, a.cantidad, a.cola, a.region, completo=a.completo)
+    if a.completo:
+        hasta = "todo el historial que da la API" if motivo == "fin" else f"las {a.cantidad} más recientes"
+        print(f"Modo completo: revisé {hasta} de la cola, sin detenerme en las ya registradas.")
+    elif conocidos and motivo != "conocida":
+        hasta = (f"las {a.cantidad} más recientes de la cola" if motivo == "limite"
+                 else "todo el historial que da la API")
+        print(f"AVISO: revisé {hasta} y ninguna estaba en el registro. Puede haber partidas más viejas sin importar; "
+              f"prueba con --cantidad {a.cantidad * 2}.")
     filas, otras = [], 0
     for mid in ids:
         p = riot.partida(mid, region=a.region)
@@ -128,7 +138,7 @@ def cmd_importar(a) -> int:
     if completadas:
         partidas.escribir_registro(registro)
         print(f"Hechizos de invocador completados en {completadas} partidas anteriores.")
-    print(f"{len(ids)} partidas revisadas: {len(filas)} de {a.campeon or 'cualquier campeón'}, "
+    print(f"{len(ids)} partidas de la cola sin registrar: {len(filas)} de {a.campeon or 'cualquier campeón'}, "
           f"{otras} de otros campeones omitidas, {nuevas} nuevas añadidas a {config.REGISTRO_CSV.name}.")
     return 0
 
@@ -159,6 +169,51 @@ def cmd_anotar(a) -> int:
     print(f"{f['match_id']} ({f['fecha']}, {f['resultado']}, {f['kda']})")
     print(f"  alcance_temprano: {f['alcance_temprano'] or '(vacío)'}")
     print(f"  notas: {f['notas'] or '(vacío)'}")
+    print(f"  excluir: {f['excluir'] or 'no'}")
+    return 0
+
+
+def cmd_recalcular(a) -> int:
+    """Regenera las columnas automáticas desde la caché (sin red): tras calibrar o cambiar cómo se calcula algo."""
+    from collections import Counter
+    from . import temprano
+    perks = config.CDRAGON_RAW / "perks_es_mx.json"
+    if not perks.exists():
+        print(f"Falta {perks.name} en la caché ({perks.parent}). 'partidas importar' lo baja la primera vez; "
+              "sin él, los valores de runa quedarían vacíos. No se cambió nada.", file=sys.stderr)
+        return 1
+    datos_runas, valores = runas.cargar(), partidas.cargar_valores()
+    estad = cdragon.estadisticas(cdragon.descargar())          # lee la caché: ya comprobamos que existe
+    rid = _riot_id(a)
+    registro = partidas.leer_registro()
+
+    def desde_cache(match_id):
+        cache = temprano.cargar_cache(match_id)
+        if not cache:
+            return None
+        partida_, timeline_ = cache
+        try:
+            yo = temprano.buscar_yo(partida_, riot_id=rid)
+        except KeyError:
+            return None
+        return partidas.fila_desde_partida(partida_, yo["puuid"], datos_runas, valores, timeline_, estad)
+
+    r = partidas.recalcular(registro, desde_cache)
+    cambiadas = {mid for mid, *_ in r["cambios"]}
+    print(f"{len(registro)} partidas: {len(registro) - len(r['sin_cache'])} recalculadas desde la caché, "
+          f"{len(cambiadas)} con algún cambio.")
+    for columna, n in Counter(c for _, c, _, _ in r["cambios"]).most_common():
+        print(f"  {columna}: {n}")
+    if r["sin_cache"]:
+        print(f"Sin caché o sin ti en la partida (no se tocan): {', '.join(r['sin_cache'])}")
+    if a.simular:
+        for mid, c, antes, despues in r["cambios"][:a.ejemplos]:
+            print(f"  {mid} {c}: {antes[:60]!r} -> {despues[:60]!r}")
+        print("No se escribió nada (--simular).")
+    elif r["cambios"]:
+        partidas.escribir_registro(registro)
+        print(f"Guardado en {config.REGISTRO_CSV.name} (la versión anterior queda en {config.REGISTRO_CSV.name}.bak).")
+    print("alcance_temprano, notas, excluir y las columnas que agregaste a mano no se tocan.")
     return 0
 
 
@@ -549,7 +604,10 @@ def main(argv=None) -> int:
     g = sub.add_parser("partidas", help="Importar y resumir tus partidas").add_subparsers(dest="cmd", required=True)
     s = g.add_parser("importar", help="Baja tus últimas partidas de la API de Riot y las añade al registro")
     s.add_argument("--riot-id", help="Nombre#TAG (o variable RIOT_ID)")
-    s.add_argument("--cantidad", type=int, default=10)
+    s.add_argument("--cantidad", type=int, default=100,
+                   help="Máximo de partidas de la cola a revisar; se detiene antes, en la primera ya registrada")
+    s.add_argument("--completo", action="store_true",
+                   help="Revisa las --cantidad más recientes sin detenerse en las registradas: rellena huecos")
     s.add_argument("--cola", type=int, default=config.COLA_SOLO_DUO)
     s.add_argument("--campeon", default=config.CAMPEON, help="Solo este campeón ('' para todos)")
     s.add_argument("--region", default=config.RIOT_REGION)
@@ -569,6 +627,12 @@ def main(argv=None) -> int:
     x.add_argument("--excluir", action="store_true", help="El resumen ignora esta partida")
     x.add_argument("--incluir", action="store_true", help="Quita la marca de excluir")
     s.set_defaults(fn=cmd_anotar)
+
+    s = g.add_parser("recalcular", help="Regenera las columnas automáticas desde la caché sin tocar tus anotaciones")
+    s.add_argument("--simular", action="store_true", help="Muestra qué cambiaría, sin escribir")
+    s.add_argument("--ejemplos", type=int, default=15, help="Con --simular, cuántos cambios mostrar")
+    s.add_argument("--riot-id")
+    s.set_defaults(fn=cmd_recalcular)
 
     s = g.add_parser("resumen", help="Partidas, victorias y valor medio por runa")
     s.add_argument("--minimo", type=int, default=1)

@@ -8,7 +8,7 @@
       "contra": "Sobre todo críticos (Caitlyn, Jhin, Tristana, Samira). También luchadores que se pegan (Darius, Mundo, Garen, Sett, Aatrox, Briar): primera opción, antes que Danza de la Muerte.",
       "objeto": "Presagio de Randuin",
       "por_que": "75 de armadura, 350 de vida, 30% menos daño de críticos y activa que ralentiza 70% durante 2 s. Su pasiva solo reduce críticos: no hace nada contra habilidades.",
-      "estado": "probado",
+      "estado": "hipótesis (1 partida a favor)",
       "aplica": {
         "campeones_1": [
           "Caitlyn",
@@ -31,7 +31,7 @@
       "contra": "Daño mágico repartido (varios AP, ninguno muy fedeado)",
       "objeto": "Fauces de Malmortius",
       "por_que": "60 AD, 40 RM, escudo mágico al bajar del 30% y 10% de omnivampirismo. Es Salvavidas: no se combina con Sterak ni Arcoescudo.",
-      "estado": "probado",
+      "estado": "hipótesis (1 partida a favor)",
       "aplica": {
         "perfil": "magico"
       },
@@ -55,7 +55,7 @@
       "contra": "Una habilidad que abre el combo: asesinos AD con habilidades (Zed, Talon, Pantheon, Kha'Zix, Qiyana), atadura de Morgana o Lux, definitiva de Veigar o Cho'Gath",
       "objeto": "Filo de la Noche",
       "por_que": "50 AD, 250 de vida, 15 de letalidad y un escudo antihechizos cada 40 s. Contra 2 asesinos solo frena al primero.",
-      "estado": "probado",
+      "estado": "hipótesis (1 partida a favor)",
       "aplica": {
         "campeones_1": [
           "Zed",

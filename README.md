@@ -42,7 +42,8 @@ flowchart LR
   las mecánicas (`reglas/objetos_mecanicas.json`) las escribí y verifiqué a mano y guardan en qué parche se
   verificaron. Si cambia la descripción oficial de un objeto o un número de los archivos del juego (Community Dragon), avisa hasta que lo revise.
 - **Registro en CSV** que la importación nunca sobrescribe: solo agrega partidas nuevas y respeta las anotaciones
-  manuales (qué decidí en la selección, notas, partidas a excluir).
+  manuales (qué decidí en la selección, notas, partidas a excluir). `partidas recalcular` regenera desde la caché
+  solo las columnas automáticas.
 - **Una rutina después de cada partida** (`rutina.ps1`): importa, pregunta lo que decidí en la selección, muestra
   el resumen, mis muertes y mis defensivos de esa partida, y guarda el registro en git.
 - **Cada análisis es un módulo y un comando propio** (`temprano`, `objetivos`, `jungla`, `momentos`,
@@ -98,25 +99,28 @@ Tramo en el que cada derrota quedó atrás en oro para ya no recuperarse:
 
 ## Qué descubrí
 
-Con 93 partidas de Solo/Dúo (febrero a octubre de 2026). Son tendencias, no leyes; el detalle y las reglas que
-salieron de aquí están en [docs/hallazgos.md](docs/hallazgos.md).
+Con 95 partidas de Solo/Dúo (febrero a octubre de 2026). Son tendencias, no leyes; el detalle y las reglas que
+salieron de aquí están en [docs/hallazgos.md](docs/hallazgos.md). Una revisión del 15/11 recalculó estas cifras y
+corrigió tres conclusiones que no se sostenían; las de abajo ya son las corregidas.
 
-- **El Barón y el 4º dragón deciden mis partidas largas.** Con el primer Barón gano el 82%; si lo toma el enemigo,
-  el 12%. Con 4 dragones, 83% contra 9%. El **primer** dragón casi no importa: el enemigo se lo lleva en 2 de cada 3
-  partidas y aun así gano la mitad.
-- **Pierdo por cuándo y dónde muero, no por la visión.** Mi visión por minuto es casi igual en victorias y derrotas
-  (1.47 y 1.34). Lo que cambia: 4.7 muertes por partida en victorias y 7.7 en derrotas, y **2.2 muertes en mi propia
-  jungla** en derrotas contra 0.8 en victorias.
-- **Dos momentos:** la mitad de mis derrotas ya va atrás en oro al minuto 5 (carriles, no yo), pero la diferencia
-  grande se hace **del minuto 10 al 20**, y ahí sí depende de mí: muero 4 veces más en mi jungla y participo en
-  casi la mitad de bajas que en mis victorias.
-- **Las runas mueven mucho menos que eso, y comparar runas engaña.** Dominación parecía ganar más que Valor (59%
+- **El Barón y el 4º dragón acompañan a las partidas que ya iba ganando.** Con el primer Barón gano el 82%; si lo
+  toma el enemigo, el 12%. Pero el oro al minuto 20, antes de que aparezca el Barón, predice casi lo mismo (82%
+  contra 18%): no se puede saber si es causa. El **primer** dragón casi no se asocia con el resultado.
+- **En mis derrotas muero más, y más en mi propia jungla; la visión casi no cambia.** Mi visión por minuto es casi igual en victorias y derrotas
+  (1.46 y 1.34). Lo que cambia: 4.6 muertes por partida en victorias y 7.7 en derrotas, y **2.2 muertes en mi propia
+  jungla** en derrotas contra 0.8 en victorias, la mayoría en peleas (41 de 62, del minuto 10 al 30). Si muero en el minuto y medio antes de un
+  dragón o Barón, el enemigo se lo lleva el 68% de las veces, contra el 46% si sigo vivo.
+- **El minuto 5 no decide, y las derrotas se deciden tanto temprano como tarde.** Antes del minuto 5 participo
+  igual en victorias y derrotas (44% y 45% de las bajas de mi equipo). Al minuto 15 ya iban más de 1,000 de oro
+  atrás para siempre 21 de 43 derrotas, pero otras 19 no quedaron de un lado antes del minuto 20.
+- **No se ha medido una diferencia por las runas, y comparar runas engaña.** Dominación parecía ganar más que Valor (59%
   contra 43%), pero casi todo venía de una buena racha en marzo, y en octubre solo la elegía en partidas fáciles.
-  Comparando el mismo mes, la diferencia casi desaparece. Lección: **separar por periodo y por tipo de partida
+  Comparando el mismo mes, la diferencia casi desaparece, y con estas partidas el margen es de unos ±23 puntos.
+  Lección: **separar por periodo y por tipo de partida
   antes de concluir**.
 
-De ahí salieron reglas concretas: una pregunta en la selección de campeones para elegir la secundaria, no farmear
-solo en mi jungla si al minuto 10 vamos atrás, y pelear el 4º dragón y el Barón con todo.
+De ahí salieron reglas concretas: una pregunta en la selección de campeones para elegir la secundaria, no morir en
+el minuto y medio antes de cada dragón o Barón, y comprar antes el defensivo contra quien me está matando.
 
 Qué sigue: [hoja de ruta](docs/hoja_de_ruta.md).
 
@@ -126,7 +130,7 @@ Qué sigue: [hoja de ruta](docs/hoja_de_ruta.md).
 $env:PYTHONPATH="src"; python -m unittest discover -s tests -v
 ```
 
-130 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
+160 pruebas sin red: las partidas, timelines y datos de Community Dragon de `tests/` son sintéticos, con la forma
 de las respuestas reales. GitHub Actions las corre en cada push.
 
 ## Licencia y aviso

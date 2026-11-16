@@ -1,12 +1,15 @@
 """Partidas: de la respuesta de la API de Riot a una fila de registro/partidas.csv.
 
 Se llena solo: resultado, duración, KDA, enemigos, runas elegidas, muertes antes del minuto 10,
-qué daño recibiste más (AD/AP) y los valores de cada runa. Qué var1/var2/var3 es cada valor sale de
+qué daño recibiste más (AD/AP, y el reparto en notas_auto) y los valores de cada runa. Qué var1/var2/var3 es cada valor sale de
 Community Dragon (cdragon.py); `calibrar` solo hace falta si alguna runa no trae ese texto.
-Sigue siendo manual lo subjetivo: alcance_temprano y las notas.
+Sigue siendo manual lo subjetivo: alcance_temprano, notas y excluir.
 """
 import csv
 import json
+import os
+import re
+import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -16,7 +19,9 @@ COLUMNAS = ["fecha", "parche", "resultado", "duracion_min", "kda", "enemigos", "
             "dano_que_me_mata", "piedra_angular", "fila_1", "fila_2", "fila_3", "secundaria",
             "secundaria_1", "secundaria_2", "hechizos", "muertes_antes_min10", "valor_piedra_angular",
             "valor_fila_1", "valor_fila_2", "valor_fila_3", "valor_secundaria_1", "valor_secundaria_2",
-            "estadisticas_runas", "notas", "match_id"]
+            "estadisticas_runas", "notas_auto", "notas", "excluir", "match_id"]
+# notas_auto se llena sola (daño recibido); notas, alcance_temprano y excluir son tuyas y nada las regenera.
+MANUALES = ("alcance_temprano", "notas", "excluir")
 
 
 # ---------- valores de runas ----------
@@ -154,7 +159,9 @@ def fila_desde_partida(partida: dict, puuid: str, datos_runas: dict, valores: di
         "estadisticas_runas": " | ".join(
             f"{k}: {cdragon.todas(s, estad[s['perk']])}"
             for k, s in zip(pp + ss, prim["selections"] + sec_sel) if s["perk"] in estad),
-        "notas": nota_dano,
+        "notas_auto": nota_dano,
+        "notas": "",
+        "excluir": "",
         "match_id": partida["metadata"]["matchId"],
     }
 
@@ -191,24 +198,148 @@ def calibrar(partida: dict, puuid: str, datos_runas: dict, esperados: dict[str, 
 
 # ---------- registro CSV ----------
 
+MATCH_ID = re.compile(r"[A-Z][A-Z0-9]*_\d+")     # LA1_1234567890 (el registro de ejemplo usa EJEMPLO_01)
+
+
+# Valores que entienden los análisis. Otro valor (p. ej. "sí" o "x" escrito a mano) se leería mal en silencio.
+VALORES_MANUALES = {"excluir": ("", "si"), "alcance_temprano": ("", "si", "no")}
+
+
+class RegistroInvalido(ValueError):
+    """El CSV no tiene la forma esperada. Se aborta antes de escribir para no perder anotaciones."""
+
+
+MARCA_EXCLUIR = "excluir"
+# Columnas que un registro anterior al 15/11/2026 no tiene: se derivan al leerlo (_migrar)
+DERIVABLES = ("excluir", "notas_auto")
+
+
+def _partes(nota: str) -> list[str]:
+    return [x.strip() for x in nota.split(";") if x.strip()]
+
+
+def _migrar(fila: dict, encabezado: list[str]) -> dict:
+    """Registro viejo: la marca 'excluir' vivía en notas; pasa a su columna si un fragmento es exactamente
+    'excluir' (así 'no excluir, fue normal' ya no excluye la partida). Los fragmentos automáticos
+    ('recibido: ...') pasan a notas_auto y en notas queda solo lo tuyo."""
+    if "notas_auto" not in encabezado:
+        partes = _partes(fila["notas"])
+        fila["notas_auto"] = "; ".join(p for p in partes if p.lower().startswith("recibido:"))
+        fila["notas"] = "; ".join(p for p in partes if not p.lower().startswith("recibido:"))
+    if "excluir" not in encabezado:
+        partes = _partes(fila["notas"])
+        fila["excluir"] = "si" if any(p.lower() == MARCA_EXCLUIR for p in partes) else ""
+        fila["notas"] = "; ".join(p for p in partes if p.lower() != MARCA_EXCLUIR)
+    return fila
+
+
+def _validar(ruta: Path, encabezado: list[str] | None, filas: list[tuple[int, dict]]) -> None:
+    faltan = [c for c in COLUMNAS if c not in (encabezado or []) and c not in DERIVABLES]
+    if faltan:
+        raise RegistroInvalido(
+            f"{ruta.name}: el encabezado no es el del registro (faltan {', '.join(faltan[:4])}"
+            f"{'...' if len(faltan) > 4 else ''}). ¿Se guardó con ';' desde Excel? No se escribió nada.")
+    problemas, vistos = [], {}
+    for linea, fila in filas:
+        if None in fila:
+            problemas.append(f"línea {linea}: tiene más campos que el encabezado (¿una coma sin comillas en una nota?)")
+        for columna, validos in VALORES_MANUALES.items():
+            valor = (fila.get(columna) or "").strip()
+            if valor not in validos:
+                problemas.append(f"línea {linea}: {columna} = {valor!r}; solo se acepta "
+                                 + " o ".join(repr(v) if v else "vacío" for v in validos))
+        mid = fila.get("match_id") or ""
+        if not MATCH_ID.fullmatch(mid):
+            problemas.append(f"línea {linea}: match_id inválido ({mid[:30]!r})")
+        elif mid in vistos:
+            problemas.append(f"línea {linea}: match_id repetido (también en la línea {vistos[mid]})")
+        else:
+            vistos[mid] = linea
+    if problemas:
+        resto = f"\n  ... y {len(problemas) - 10} más" if len(problemas) > 10 else ""
+        raise RegistroInvalido(f"{ruta.name} tiene filas dañadas; no se escribió nada:\n  "
+                               + "\n  ".join(problemas[:10]) + resto)
+
+
 def leer_registro(ruta: Path | None = None) -> list[dict]:
+    """Filas del registro. Aborta (RegistroInvalido) si el encabezado no es el esperado, si una fila tiene campos de
+    más o si un match_id falta, no tiene forma de match_id o se repite. Conserva las columnas que agregues a mano."""
     ruta = ruta or config.REGISTRO_CSV
     if not ruta.exists():
         return []
     with ruta.open(encoding="utf-8-sig", newline="") as f:
-        return [{c: (fila.get(c) or "") for c in COLUMNAS} for fila in csv.DictReader(f)]
+        lector = csv.DictReader(f)
+        filas = []
+        for fila in lector:
+            filas.append((lector.line_num, fila))
+        encabezado = lector.fieldnames
+    _validar(ruta, encabezado, filas)
+    extra = [c for c in encabezado if c not in COLUMNAS]
+    return [_migrar({c: (fila.get(c) or "") for c in COLUMNAS + extra}, encabezado) for _, fila in filas]
 
 
-def escribir_registro(filas: list[dict], ruta: Path | None = None) -> None:
+def _campos(filas: list[dict]) -> list[str]:
+    """COLUMNAS y, al final, las columnas agregadas a mano, en el orden en que aparecen."""
+    extra = []
+    for f in filas:
+        extra += [c for c in f if c not in COLUMNAS and c not in extra]
+    return COLUMNAS + extra
+
+
+def escribir_registro(filas: list[dict], ruta: Path | None = None, quitar: frozenset = frozenset()) -> None:
+    """Escribe a un temporal, comprueba que se relee igual, celda por celda, guarda el registro anterior en
+    <nombre>.bak y solo entonces reemplaza el archivo (os.replace). Un error a media escritura no toca el registro.
+
+    Nunca deja menos partidas de las que había: aborta si falta algún match_id del registro actual, salvo los que se
+    pasen en `quitar` para borrarlos a propósito."""
     ruta = ruta or config.REGISTRO_CSV
-    with ruta.open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=COLUMNAS)
-        w.writeheader()
-        w.writerows(filas)
+    nuevos = {f["match_id"] for f in filas}
+    if ruta.exists():
+        perdidas = sorted({f["match_id"] for f in leer_registro(ruta)} - nuevos - set(quitar))
+        if perdidas:
+            raise RegistroInvalido(
+                f"{ruta.name}: se perderían {len(perdidas)} partidas del registro ({', '.join(perdidas[:3])}"
+                f"{'...' if len(perdidas) > 3 else ''}). No se escribió nada.")
+    campos = _campos(filas)
+    temporal = ruta.with_name(ruta.name + ".tmp")
+    try:
+        with temporal.open("w", encoding="utf-8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=campos, restval="")
+            w.writeheader()
+            w.writerows(filas)
+            f.flush()
+            os.fsync(f.fileno())
+        esperado = [{c: "" if f.get(c) is None else str(f[c]) for c in campos} for f in filas]
+        if leer_registro(temporal) != esperado:
+            raise RegistroInvalido(f"{ruta.name}: lo escrito no se relee igual que lo pedido; no se cambió.")
+        if ruta.exists():
+            shutil.copy2(ruta, ruta.with_name(ruta.name + ".bak"))
+        os.replace(temporal, ruta)
+    finally:
+        temporal.unlink(missing_ok=True)
+
+
+def recalcular(filas: list[dict], nueva_fila) -> dict:
+    """Regenera en la lista las columnas automáticas de cada partida con nueva_fila(match_id), que devuelve la fila
+    calculada desde la caché o None si no la hay. No toca MANUALES, match_id ni las columnas agregadas a mano.
+    Devuelve los cambios [(match_id, columna, antes, después)] y los match_id sin caché."""
+    automaticas = [c for c in COLUMNAS if c not in MANUALES and c != "match_id"]
+    cambios, sin_cache = [], []
+    for f in filas:
+        nueva = nueva_fila(f["match_id"])
+        if nueva is None:
+            sin_cache.append(f["match_id"])
+            continue
+        for c in automaticas:
+            valor = str(nueva.get(c, ""))
+            if f[c] != valor:
+                cambios.append((f["match_id"], c, f[c], valor))
+                f[c] = valor
+    return {"cambios": cambios, "sin_cache": sin_cache}
 
 
 def agregar(nuevas: list[dict], ruta: Path | None = None) -> int:
-    """Añade filas al CSV sin duplicar match_id; migra el encabezado viejo (sin match_id). Devuelve cuántas añadió."""
+    """Añade filas al CSV sin duplicar match_id. Devuelve cuántas añadió."""
     filas = leer_registro(ruta)
     vistos = {f["match_id"] for f in filas if f["match_id"]}
     nuevas = [n for n in nuevas if n["match_id"] not in vistos]
@@ -218,11 +349,8 @@ def agregar(nuevas: list[dict], ruta: Path | None = None) -> int:
 
 # ---------- anotaciones manuales ----------
 
-MARCA_EXCLUIR = "excluir"
-
-
 def es_excluida(fila: dict) -> bool:
-    return MARCA_EXCLUIR in fila.get("notas", "").lower()
+    return fila.get("excluir", "").strip().lower() == "si"
 
 
 def _numero_partida(match_id: str) -> int:
@@ -245,14 +373,10 @@ def anotar(filas: list[dict], match_id: str, alcance: str | None = None, nota: s
         fila = coinciden[0]
     if alcance is not None:
         fila["alcance_temprano"] = alcance
-    partes = [x.strip() for x in fila["notas"].split(";") if x.strip()]
-    if nota:
-        partes.append(nota.strip())
-    if excluir is True and not es_excluida(fila):
-        partes.append(MARCA_EXCLUIR)
-    elif excluir is False:
-        partes = [x for x in partes if x.lower() != MARCA_EXCLUIR]
-    fila["notas"] = "; ".join(partes)
+    if nota and nota.strip():
+        fila["notas"] = "; ".join(_partes(fila["notas"]) + [nota.strip()])
+    if excluir is not None:
+        fila["excluir"] = "si" if excluir else ""
     return fila
 
 
@@ -276,7 +400,7 @@ def resumen(filas: list[dict], minimo: int = 1, duracion_minima: float = 20) -> 
     """Agrupa por piedra angular / fila 3 / secundaria y calcula partidas, victorias y valor medio por runa.
 
     Ignora remakes, partidas de menos de `duracion_minima` minutos (rendiciones tempranas: las runas
-    casi no influyeron) y las marcadas con "excluir" en notas (p. ej. un compañero que sabotea).
+    casi no influyeron) y las marcadas con excluir = si (p. ej. un compañero que sabotea).
     """
     grupos: dict[tuple, list[dict]] = {}
     for f in filas:
